@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background: url('../public/downloaded_image_UOi_cropped_mirrored_white_75.jpg') center/contain;
+  background-repeat: repeat-y;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,177 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content-container {
+  max-width: 1200px; /* Largura máxima do contêiner de texto */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+ /* background: #f5fbfc;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+.content-container img {
+  max-width: 100%; /* A imagem ocupa toda a largura da coluna */
+  display: block;
+}
+.content-container .text {
+  max-width: 50%; /* Largura máxima do texto */
+  text-align: left; /* Alinhar o texto à esquerda */
+}
+
+.logo-image {
+  max-width: 100%; /* Set the maximum width to 100% of its container */
+  height: auto;    /* Maintain the aspect ratio */
+  display: block;  /* Remove any inline spacing */
+  margin: 0 auto;  /* Center the image horizontally */
+}
+
+.btn-inscricao {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-inscricao:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.section {
+  padding: 30px 0;
+  text-align: center;
+  grid-template-columns: 1fr 2fr; /* Define uma coluna para a imagem e uma coluna para o texto */
+  gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilos de layout responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column; /* Alterado para posicionar a imagem acima do texto em dispositivos móveis */
+  }
+  .content-container img {
+      max-width: 100%; /* A imagem ocupa toda a largura em dispositivos móveis */
+  }
+  .content-container .text {
+      max-width: 100%; /* O texto ocupa toda a largura em dispositivos móveis */
+      text-align: center; /* Centralizar o texto em dispositivos móveis */
+  }
+  .video-container iframe {
+      width: 100%; /* Full width on smaller screens */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Estilos para ocultar a lista de aulas por padrão */
+.lesson-list {
+    display: none;
+}
+
+/* Estilos para o cabeçalho do módulo */
+.module-header {
+    cursor: pointer;
+    user-select: none; /* Evita que o texto seja selecionável */
+}
+
+/* Estilos para realçar o cabeçalho do módulo quando o mouse passa sobre ele */
+.module-header:hover {
+    background-color: #e7efcd;
+}
+
+/* Estilos para o formulário */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto; 
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container label {
+  text-align: left; /* Alinhar os rótulos à esquerda */
+  margin-bottom: 0px;
+}
+.form-container input,
+.form-container textarea {
+  width: 100%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+  padding: 5px 0px 5px 5px;
+  margin-bottom: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container .acceptance-container {
+  display: flex;
+  align-items: center;
+}
+.form-container .acceptance-container label {
+white-space: normal; /* Define a quebra de linha automática para o texto */
+line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferentes valores) */
+}
+.form-container .acceptance-container input[type="checkbox"] {
+  margin-right: 1px; /* Espaçamento entre o checkbox e o rótulo */
+  max-width: 10%;
+}
+.form-container button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2px; /* Adicione margem na parte superior do botão */
+  font-size: 16px; /* Tamanho da fonte desejado, por exemplo, 16px */
+}
+.form-container button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.content-container-single-column {
+  background: #E6F3FC;
+  max-width: 1000px; /* Largura máxima do contêiner de texto */
+  margin: 0 auto;
+  display: grid;
+  text-align: left; /* Alinhar o texto à esquerda */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Largura e cor da borda */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra com deslocamento, difusão e cor */
+}
+.content-container-single-column img {
+  max-width: 100%; /* A imagem ocupa toda a largura da coluna */
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+.politicadeprivacidade {
+font-size: 12px; /* Defina o tamanho da fonte desejado (por exemplo, 14 pixels) */
+text-align: center;
+}
+.image-overlay {
+display: none;
+}
+.privacidade-container {
+  max-width: 600px;
+  margin: 0 auto; 
+  padding: 10px;
+  border-radius: 5px;
+  background: #E8F4FC;
+  border: 1px solid #ccc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.privacidade-container .text {
+  max-width: 50%; /* Largura máxima do texto */
+  text-align: left; /* Alinhar o texto à esquerda */
 }

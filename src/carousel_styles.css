@@ -1,0 +1,103 @@
+/* CSS for the carousel container */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    position: relative; /* Add position relative */
+}
+
+/* CSS for the carousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+    max-width: calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-left: 10px;
+    max-height: 300px; /* Limit the height */
+    max-width: 300px;
+    display: inline-block;
+}
+
+/* Add margin between carousel items */
+.carousel-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* CSS for image captions */
+.image-caption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* /* CSS for image enlarging overlay */
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS for the enlarged image */
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* CSS for navigation arrows */
+.carousel-arrow {
+    cursor: pointer;
+    font-size: 20px;
+    position: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .carousel {
+        display: block; /* Display images in a single column */
+    }
+    .carousel-item {
+        max-width: 100%; /* Show only one image per row on smaller screens */
+        margin-right: 0; /* Remove margin between images */
+        display: block; /* Display images as inline-block elements */
+    }
+}
