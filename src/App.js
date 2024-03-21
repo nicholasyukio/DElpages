@@ -8,6 +8,7 @@ import {
 import Home from "./pages";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
+import Oferta from "./pages/oferta";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route exact path="/espera-dominio-eletrico" element={<Home />} />
             <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
             <Route path="/termosdeuso" element={<TermosDeUso />} />
+            <Route path="/oferta" element={<Oferta />} />
         </Routes>
     </Router>
 );
