@@ -58,13 +58,19 @@ function Video() {
     );
 }
 
+function FormButton() {
+    return (
+        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Quero ser aluno do Domínio Elétrico</button>
+    );
+}
+
 function HeaderCTA() {
     return (
       <div id="headercta" className="form-container">
           <h2>O curso online de circuitos elétricos criado para alunos de engenharia</h2>
           <p>Diferente de muita coisa na internet (e nas faculdades também), focamos em entendimento sólido dos conceitos ao invés de simples decoreba para passar.</p>
           <p>O curso foi criado por mim, <b>Prof. Nicholas Yukio</b>, especialmente para quem deseja dominar o assunto, com aulas gravadas e tirando dúvidas da matéria direto comigo.</p>
-          <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Quero ser aluno do Domínio Elétrico</button>
+          <FormButton />
       </div>
     );
 }
@@ -137,7 +143,8 @@ function Form({ showOffer, onVariableChange }) {
 
     return (
       <div id="form" className="form-container">
-          <h2>Dificuldade com circuitos na faculdade?</h2>
+         <script src="https://www.google.com/recaptcha/api.js"></script>
+          <h2>Vamos começar no Domínio Elétrico?</h2>
           <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
           <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
           <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
@@ -167,7 +174,7 @@ function BriefDescription() {
         <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
         <p><strong>Porém,</strong> é comum que os alunos de faculdades brasileiras, tanto públicas quanto privadas, tenham dificuldades para aprender a matéria apenas com o material e aulas do professor da faculdade. O Domínio Elétrico vem atender melhor essa demanda com um curso de circuitos elétricos com aulas didáticas, exercícios resolvidos, suporte para tira-dúvidas e muito mais.</p>
         <p>Ao longo desta página, você verá todas as informações importantes do curso e poderá decidir se faz sentido para você. Para entrar nesta turma, clique no botão abaixo.</p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
     </div>
     </section>
@@ -190,7 +197,7 @@ function Bio() {
         <p>De lá para cá, já são cerca de 500 alunos do curso que aprendem comigo e que podem tirar dúvidas individualmente comigo.</p>
         <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
         <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
     </div>
     </section>
@@ -506,7 +513,7 @@ function StudentsProfile() {
         <p>Fizemos uma pesquisa entre os alunos do curso Domínio Elétrico para saber em que instituição eles estudam. Você pode ver o resultado na imagem. Os nomes com fonte maior são os mais representados.</p>
         <p>Perceba que o Domínio Elétrico tem alunos de todo tipo de faculdade ou escola técnica. Veja se você encontra a sua faculdade na lista. Se não encontrar, seja o primeiro da sua faculdade a entrar para o Domínio Elétrico.</p>
         <p>Isso significa que o Domínio Elétrico serve para qualquer pessoa com interesse em estudar circuitos elétricos, não importa quão básico ou avançado seja.</p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
     </div>
     </section>
@@ -523,7 +530,7 @@ function ElectronicsContent() {
         <div className="text">
         <h2>Também tem conteúdo mais específico para o pessoal de eletrônica:</h2>
         <p>Quem tem interesse mais específico em eletrônica vai gostar especialmente dos módulos finais (9 – Semicondutores, 10 – Circuitos Analógicos e 11 – Circuitos Digitais).</p><p>No entanto, preciso explicar bem que quero dizer eletrônica no contexto de engenharia e ensino superior. Não faço esta distinção para excluir quem é de fora da engenharia, mas para deixar definido o direcionamento dado no curso, que <span style={{ textDecoration: 'underline'}}>não é aquela ideia popular de eletrônica de montar receitas prontas sem entender nada e consertar aparelhos.</span></p><p><strong>Todos os interessados no assunto de circuitos e que estejam dispostos a estudar são bem vindos.</strong></p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
         </div>
     </section>
@@ -540,7 +547,7 @@ function FromBasicsToAdvanced() {
         <div className="text">
         <h2>Serve para quem é iniciante, mas também para quem já se considera avançado.</h2>
         <p>Se você é um completo iniciante, totalmente perdido em circuitos elétricos, fique tranquilo porque no curso você começará aprendendo dos conceitos mais básicos de tensão e corrente elétrica.</p><p>Você estudará os circuitos elétricos mais básicos, que são aqueles em corrente contínua, para então progredir para o aprendizado de circuitos RL, RC, RLC em resposta transiente e regime permanente, bem como circuitos em corrente alternada (regime permanente senoidal).</p><p>Se você já sabe alguma coisa de circuitos e se considera intermediário ou avançado, poderá partir logo para análise de circuitos usando Laplace e Fourier, bem como para o estudo dos módulos mais finais do curso, mais voltados para projeto de circuitos eletrônicos.&nbsp;</p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
         </div>
     </section>
@@ -557,7 +564,7 @@ function MatematicaDoEletron() {
         <div className="text">
         <h2>Dificuldade na matemática para estudar circuitos? Aprenda no Matemática do Elétron.</h2>
         <p>Antes o Matemática do Elétron era um curso separado, mas agora ele foi anexado ao curso Domínio Elétrico para auxiliar quem tem dificuldades em matemática básica.</p><p>Se você tem dificuldade em fazer contas mais simples, resolver equações básicas, cálculos com trigonometria ou números complexos, não se preocupe mais. </p><p>Todos esses conceitos de matemática de ensino fundamental e médio são fundamentais para o estudo de circuitos, mas com o Matemática do Elétron você estará amparado. São cerca de 25 horas de aulas gravadas para revisar a matemática básica que você precisa para estudar circuitos.&nbsp;</p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
         </div>
     </section>
@@ -574,7 +581,7 @@ function TheoryAndPractice() {
         <div className="text">
         <h2>Não é só teoria, mas prática também. Conheça o Domínio Elétrico Labs.</h2>
         <p>O Domínio Elétrico Labs é a parte do curso que consiste em aulas de laboratório de eletrônica voltadas especialmente para estudantes no nível de engenharia.</p><p>Ou seja, não são aqueles vídeos quem existem aos montes na internet mostrando a montagem de um circuito com receita pronta que ninguém sabe ao certo como funciona.&nbsp;</p><p>Ao invés disso, o foco nestas aulas de laboratório é mostrar na prática os conceitos explicados nas aulas teóricas, não de fugir delas.</p><p><strong>Para isso, cada aula de laboratório vem com um pré-lab, que é um exercício prévio para você entender o circuito estudado previamente, seguido pelo vídeo do experimento em si, terminando com uma aula teórica sobre o experimento.</strong></p>
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+        <FormButton />
         </div>
         </div>
     </section>
@@ -591,7 +598,7 @@ function EletronQuest() {
     <div className="text">
     <h2>Avaliação do aprendizado de verdade, com certificado só para quem levou o curso a sério. Conheça o Elétron Quest.</h2>
     <p>Tem um monte de curso online que dá certificado automático. Basta você se inscrever, ir passando de aula em aula marcando como concluído (sem nem precisar assistir nem entender) e chegando ao final você consegue um certificado para baixar, podendo até imprimir e colocar na parede.</p><p><strong>Qual o valor de um certificado desses?</strong> Sinceramente, nenhum.</p><p>Por isso resolvi fazer diferente no meu curso. Resolvi criar o Elétron Quest, que será uma jornada de desafios de circuitos elétricos que serve para avaliar o seu aprendizado de modo a parecer um jogo em que você precisa passar de fases. Depois você recebe o certificado, <strong>mas só se conseguir chegar ao final.</strong></p>
-    <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Buscar oferta para o curso</button>
+    <FormButton />
     </div>
     </div>
     </section>
