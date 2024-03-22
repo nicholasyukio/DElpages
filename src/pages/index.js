@@ -1,6 +1,7 @@
 // Filename - pages/index.js
 
 import React, { useState } from 'react';
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { enlargeImage, closeOverlay, moveCarousel } from './carousel_script.js';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
@@ -76,6 +77,9 @@ function HeaderCTA() {
 }
 
 function Form({ showOffer, onVariableChange }) {
+    // Google ReCaptcha v3
+    const [token, setToken] = useState("");
+    const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
 
 	//Email form
 	const [emailForm, setEmailForm] = useState({
@@ -114,6 +118,7 @@ function Form({ showOffer, onVariableChange }) {
 		let details = {
 			name: name.value,
 			email: email.value,
+            "g-recaptcha-response": token
 		};
 
 		try {
@@ -135,15 +140,19 @@ function Form({ showOffer, onVariableChange }) {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
 			}
 		} catch (error) {
+            setRefreshReCaptcha(!refreshReCaptcha);
 			console.error(error);
 			setStatus('Buscar oferta para o curso');
 			setResult('Ocorreu um erro.');
 		}
 	};
 
+    const setTokenFunc = (getToken) => {
+        setToken(getToken);
+    };
+
     return (
       <div id="form" className="form-container">
-         <script src="https://www.google.com/recaptcha/api.js"></script>
           <h2>Vamos começar no Domínio Elétrico?</h2>
           <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
           <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
@@ -152,10 +161,15 @@ function Form({ showOffer, onVariableChange }) {
               <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
               <label for="email">Email:</label>
               <input placeholder="Endereço de email*" type="email" id="email" name="email" required={true} value={emailForm.email} onChange={handleEmailFormChange} /><br />
-              <button type="submit" className="g-recaptcha full-width"
-                  data-sitekey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET"
-                  data-callback='onSubmit' data-action='submit'>{status}</button>
-                <h3>{result}</h3>
+              <button type="submit">{status}</button>
+              <GoogleReCaptchaProvider reCaptchaKey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET">
+              <GoogleReCaptcha
+                className="google-recaptcha-custom-class"
+                onVerify={setTokenFunc}
+                refreshReCaptcha={refreshReCaptcha}
+              />
+              </GoogleReCaptchaProvider>
+              <h3>{result}</h3>
               <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
           </form>
       </div>
