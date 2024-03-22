@@ -1,6 +1,6 @@
 // Filename - pages/index.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { enlargeImage, closeOverlay, moveCarousel } from './carousel_script.js';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
