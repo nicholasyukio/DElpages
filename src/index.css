@@ -17,7 +17,7 @@ code {
 
 .content-container {
   max-width: 1200px; /* Largura máxima do contêiner de texto */
-  margin: 0 auto;
+  margin: 20px auto auto auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
