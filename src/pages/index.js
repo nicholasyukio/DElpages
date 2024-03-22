@@ -136,6 +136,10 @@ function Form({ showOffer, onVariableChange }) {
 				setResult('Oferta encontrada. Encaminhando para o pagamento.');
 				resetEmailForm();
                 onVariableChange(true);
+                window.dataLayer.push({
+                    event: 'formSubmission', // Custom event name
+                    buttonName: 'exampleButton', // Custom event data
+                });
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
 			}
