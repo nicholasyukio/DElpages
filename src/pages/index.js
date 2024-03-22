@@ -1,18 +1,25 @@
 // Filename - pages/index.js
 
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { enlargeImage, closeOverlay, moveCarousel } from './carousel_script.js';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
+import OfertaBreve from './oferta_breve.js';
 
 const Home = () => {
+    const [showOffer, setGlobalVariable] = useState(false);
+
+    const handleVariableChange = (newValue) => {
+        // Update the globalVariable when needed
+        setGlobalVariable(newValue);
+    };
 	return (
         <>
         <section className="section">
         <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
 		<div className="content-container">
             <Video />
-            <Form />
+            <HeaderCTA />
 		</div>
         </section>
         <BriefDescription />
@@ -25,6 +32,7 @@ const Home = () => {
         <EletronQuest />
         <Depoimentos />
         <SpecialWarnings />
+        {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} /> : <OfertaBreve />}
         <Bio />
         <Rodape />
         </>
@@ -50,20 +58,97 @@ function Video() {
     );
 }
 
-function Form() {
+function HeaderCTA() {
+    return (
+      <div id="headercta" className="form-container">
+          <h2>O curso online de circuitos elétricos criado para alunos de engenharia</h2>
+          <p>Diferente de muita coisa na internet (e nas faculdades também), focamos em entendimento sólido dos conceitos ao invés de simples decoreba para passar.</p>
+          <p>O curso foi criado por mim, <b>Prof. Nicholas Yukio</b>, especialmente para quem deseja dominar o assunto, com aulas gravadas e tirando dúvidas da matéria direto comigo.</p>
+          <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Quero ser aluno do Domínio Elétrico</button>
+      </div>
+    );
+}
+
+function Form({ showOffer, onVariableChange }) {
+
+	//Email form
+	const [emailForm, setEmailForm] = useState({
+		name: '',
+		email: '',
+	});
+	//Result of message
+	const [result, setResult] = useState('');
+	//Status of sending message
+	const [status, setStatus] = useState('Buscar oferta para o curso');
+
+	function resetEmailForm() {
+		setEmailForm({ name: '', email: '', message: '' });
+	}
+
+	function handleEmailFormChange(event) {
+		setEmailForm((prevEmailData) => {
+			return {
+				...prevEmailData,
+				[event.target.name]: event.target.value,
+			};
+		});
+
+		if (result.length > 0) {
+			setResult('');
+		}
+	}
+
+	const handleSubmit = async (e) => {
+		setResult('');
+		e.preventDefault();
+		setStatus('Buscando...');
+
+		const { name, email } = e.target.elements;
+
+		let details = {
+			name: name.value,
+			email: email.value,
+		};
+
+		try {
+			let response = await fetch('http://localhost:5000/send', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8',
+				},
+				body: JSON.stringify(details),
+			});
+			setStatus('Buscar oferta para o curso');
+			let result = await response.json();
+
+			if (result.status === 'success') {
+				setResult('Oferta encontrada. Encaminhando para o pagamento.');
+				resetEmailForm();
+                onVariableChange(true);
+			} else if (result.status === 'fail') {
+				alert('Ocorreu um erro. Tente novamente mais tarde.');
+			}
+		} catch (error) {
+			console.error(error);
+			setStatus('Buscar oferta para o curso');
+			setResult('Ocorreu um erro.');
+		}
+	};
+
     return (
       <div id="form" className="form-container">
           <h2>Dificuldade com circuitos na faculdade?</h2>
           <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
           <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
-          <form id="frm" method="post" action="processar_formulario.php">
+          <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
               <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome" required /><br />
+              <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required /><br />
+              <input placeholder="Endereço de email*" type="email" id="email" name="email" required={true} value={emailForm.email} onChange={handleEmailFormChange} /><br />
               <button type="submit" className="g-recaptcha full-width"
                   data-sitekey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET"
-                  data-callback='onSubmit' data-action='submit'>Buscar oferta para o curso</button>
+                  data-callback='onSubmit' data-action='submit'>{status}</button>
+                <h3>{result}</h3>
               <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
           </form>
       </div>

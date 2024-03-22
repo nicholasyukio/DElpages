@@ -112,6 +112,9 @@ code {
   display: flex;
   flex-direction: column;
 }
+.form-container p {
+  text-align: left;
+}
 .form-container label {
   text-align: left; /* Alinhar os rótulos à esquerda */
   margin-bottom: 0px;
