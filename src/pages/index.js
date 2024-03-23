@@ -40,7 +40,34 @@ const Home = () => {
 	);
 };
 
-export default Home;
+const Direto = () => {
+	return (
+        <>
+        <section className="section">
+        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+		<div className="content-container">
+            <Video />
+            <HeaderCTA />
+		</div>
+        </section>
+        <BriefDescription />
+        <CourseContent />
+        <StudentsProfile />
+        <ElectronicsContent />
+        <FromBasicsToAdvanced />
+        <MatematicaDoEletron />
+        <TheoryAndPractice />
+        <EletronQuest />
+        <Depoimentos />
+        <SpecialWarnings />
+        <OfertaBreve />
+        <Bio />
+        <Rodape />
+        </>
+	);
+};
+
+export { Home, Direto };
 
 function Video() {
     return (

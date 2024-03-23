@@ -5,7 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Home from "./pages";
+import { Home , Direto } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
@@ -17,6 +17,7 @@ export default function App() {
         <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/espera-dominio-eletrico" element={<Home />} />
+            <Route exact path="/direto-dominio-eletrico" element={<Direto />} />
             <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
             <Route path="/termosdeuso" element={<TermosDeUso />} />
             <Route path="/oferta" element={<Oferta />} />

@@ -1,5 +1,6 @@
 // Filename - pages/oferta_breve.js
 
+import { OriginalPrice, OfferPrice } from "./price";
 import React from "react";
 
 const OfertaBreve = () => {
@@ -7,14 +8,14 @@ const OfertaBreve = () => {
     <>
     <section id="form" className="section">
     <div className="offer-container">
-        <h2 align="center">Oferta especial para você:</h2>
-        <h2 align="center">R$ 462 / ano</h2>
+        <h2 align="center">Para dominar os circuitos com todo este conteúdo e tirar dúvidas direto com o professor, o preço é:</h2>
+        <h2 align="center">{/*de: <OriginalPrice />,<br /> por: */}<OfferPrice /></h2>
         <h3 align="left">Formas de pagamento:</h3>
         <table>
             <tr>
                 <td>
                     <h4 align="left">Parcelado no cartão de crédito:</h4>
-                    <p> 12 x R$ 43,69</p>
+                    <p> 12 x R$ 43,69 (juros de 2% a.m.)</p>
                 </td>
                 <td>
                     <button className="btn-pagamento" onClick={() => window.location.href='https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=2fd10c29-92d0-40a3-b404-76cdc09d59cd'}>Pagar com cartão de crédito</button>
@@ -31,10 +32,9 @@ const OfertaBreve = () => {
             </tr>
         </table>
         <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
-        <h3 align="left">Aviso: esta oferta pode expirar a qualquer momento.</h3>
+        <h3 align="left">Aviso: este preço é válido por tempo limitado.</h3>
         <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
         <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
-        <p><i>(Mas se você já estiver pensando em entrar e pedir reembolso por motivos suspeitos, peço que nem faça inscrição para evitar estresse para nós dois.)</i></p>
     </div>
     </section>
     </>

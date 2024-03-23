@@ -192,11 +192,15 @@ display: none;
 }
 
 .offer-container {
+  background: #fbffd9;
   max-width: 600px; /* Largura máxima do contêiner de texto */
   margin: 0 auto;
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */
   padding: 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc; /* Largura e cor da borda */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra com deslocamento, difusão e cor */
 }
 .btn-pagamento {
   width: 100%; /* Set the button width to 100% */
