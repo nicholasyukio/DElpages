@@ -149,7 +149,7 @@ function Form({ showOffer, onVariableChange }) {
 		};
 
 		try {
-			let response = await fetch('https://localhost:5000/send', {
+			let response = await fetch('https://dominioeletrico.com.br:5000/send', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json;charset=utf-8',
