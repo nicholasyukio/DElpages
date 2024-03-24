@@ -87,8 +87,21 @@ function Video() {
 }
 
 function FormButton() {
+    const handleClick = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForOfertaDE', // Custom event name
+            buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
+        });
+
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = '#form'; // Redirect to the form anchor
+    };
+
     return (
-        <button className="btn-inscricao" onClick={() => window.location.href='#form'}>Quero ser aluno do Domínio Elétrico</button>
+        <button className="btn-inscricao" onClick={handleClick}>
+            Quero ser aluno do Domínio Elétrico
+        </button>
     );
 }
 

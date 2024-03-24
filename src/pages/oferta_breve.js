@@ -4,6 +4,29 @@ import { OriginalPrice, OfferPrice } from "./price";
 import React from "react";
 
 const OfertaBreve = () => {
+
+    const handleClickForCreditCard = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForCreditCard', // Custom event name
+            buttonName: 'clickForCreditCard', // Custom event data, you can adjust this as needed
+        });
+
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = 'https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=2fd10c29-92d0-40a3-b404-76cdc09d59cd'; // Redirect to the form anchor
+    };
+
+    const handleClickForPix = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForPix', // Custom event name
+            buttonName: 'clickForPix', // Custom event data, you can adjust this as needed
+        });
+
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = 'https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=e4f62bd4-4dd7-444e-9efb-c17331df763a'; // Redirect to the form anchor
+    };
+
 	return (
     <>
     <section id="form" className="section">
@@ -18,7 +41,7 @@ const OfertaBreve = () => {
                     <p> 12 x R$ 43,69 (juros de 2% a.m.)</p>
                 </td>
                 <td>
-                    <button className="btn-pagamento" onClick={() => window.location.href='https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=2fd10c29-92d0-40a3-b404-76cdc09d59cd'}>Pagar com cartão de crédito</button>
+                    <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
                 </td>
             </tr>
             <tr>
@@ -27,7 +50,7 @@ const OfertaBreve = () => {
                     <p>R$ 438,90 (5% de desconto)</p>
                 </td>
                 <td>
-                    <button className="btn-pagamento" onClick={() => window.location.href='https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=e4f62bd4-4dd7-444e-9efb-c17331df763a'}>Pagar com Pix/boleto</button>
+                    <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
                 </td>
             </tr>
         </table>
