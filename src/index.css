@@ -4,8 +4,10 @@ body {
   font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background: url('../public/downloaded_image_UOi_cropped_mirrored_white_75.jpg') center/contain;
-  background-repeat: repeat;
+  color: #FFFFFF;
+  background: url('../public/FUNDO2_tamanho_menor_com_cor.jpg') center/contain;
+  background-repeat: repeat-y;
+  background-color: #041D4C;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,16 +18,17 @@ code {
 }
 
 .content-container {
-  max-width: 1200px; /* Largura máxima do contêiner de texto */
+  max-width: 1000px; /* Largura máxima do contêiner de texto */
+  color: #000000;
   margin: 30px auto auto auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
- /* background: #f5fbfc;
-  border-radius: 5px;
+  padding: 20px;
+  background: #f5fbfc;
+  border-radius: 25px;
   border: 1px solid #ccc; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 .content-container img {
   max-width: 100%; /* A imagem ocupa toda a largura da coluna */
@@ -103,10 +106,13 @@ code {
 
 /* Estilos para o formulário */
 .form-container {
+  background-color: #fbffd9;
+  color: #000000;
   max-width: 500px;
   margin: 0 auto; 
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #fbffd9;
 }
 .form-container form {
   display: flex;
@@ -154,15 +160,16 @@ line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferent
 }
 
 .content-container-single-column {
-  background: #E6F3FC;
+  background: #f5fbfc;
+  color: #000000;
   max-width: 1000px; /* Largura máxima do contêiner de texto */
   margin: 0 auto;
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 25px;
   border: 1px solid #ccc; /* Largura e cor da borda */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra com deslocamento, difusão e cor */
+  box-shadow: 0 0 5px rgb(255, 255, 255); /* Sombra com deslocamento, difusão e cor */
 }
 .content-container-single-column img {
   max-width: 100%; /* A imagem ocupa toda a largura da coluna */
@@ -182,6 +189,7 @@ display: none;
   padding: 10px;
   border-radius: 5px;
   background: #E8F4FC;
+  color:#000000;
   border: 1px solid #ccc; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: left;
@@ -193,6 +201,7 @@ display: none;
 
 .offer-container {
   background: #fbffd9;
+  color: #000000;
   max-width: 600px; /* Largura máxima do contêiner de texto */
   margin: 0 auto;
   display: grid;
@@ -200,7 +209,7 @@ display: none;
   padding: 20px;
   border-radius: 25px;
   border: 1px solid #ccc; /* Largura e cor da borda */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra com deslocamento, difusão e cor */
+  box-shadow: 0 0 10px #fbffd9; /* Sombra com deslocamento, difusão e cor */
 }
 .btn-pagamento {
   width: 100%; /* Set the button width to 100% */
@@ -218,4 +227,11 @@ display: none;
 }
 .btn-pagamento:hover {
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.header-container {
+  text-align: left;
+  padding: 10px 10px 10px 30px;
+}
+.urgente {
+  color: #CC1B4D;
 }

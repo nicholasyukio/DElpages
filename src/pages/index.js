@@ -107,7 +107,7 @@ function FormButton() {
 
 function HeaderCTA() {
     return (
-      <div id="headercta" className="form-container">
+      <div id="headercta" className="header-container">
           <h2>O curso online de circuitos elétricos criado para alunos de engenharia</h2>
           <p>Diferente de muita coisa na internet (e nas faculdades também), focamos em entendimento sólido dos conceitos ao invés de simples decoreba para passar.</p>
           <p>O curso foi criado por mim, <b>Prof. Nicholas Yukio</b>, especialmente para quem deseja dominar o assunto, com aulas gravadas e tirando dúvidas da matéria direto comigo.</p>
@@ -264,14 +264,17 @@ function Bio() {
 
 function CourseContent() {
     // Seleciona todos os cabeçalhos de módulo
-const moduleHeaders = document.querySelectorAll('.module-header');
-    // Adiciona um ouvinte de evento de clique a cada cabeçalho de módulo
-    moduleHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const lessonList = header.nextElementSibling;
-            toggleLessonList(lessonList);
+    document.addEventListener('DOMContentLoaded', function() {
+        const moduleHeaders = document.querySelectorAll('.module-header');
+        // Adiciona um ouvinte de evento de clique a cada cabeçalho de módulo
+        moduleHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const lessonList = header.nextElementSibling;
+                toggleLessonList(lessonList);
+            });
         });
     });
+     
     return (
         <section className="section">
         <div className="content-container-single-column">
