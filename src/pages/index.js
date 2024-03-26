@@ -108,8 +108,7 @@ function FormButton() {
 function HeaderCTA() {
     return (
       <div id="headercta" className="header-container">
-          <h2>O curso online de circuitos elétricos criado para alunos de engenharia</h2>
-          <p>Diferente de muita coisa na internet (e nas faculdades também), focamos em entendimento sólido dos conceitos ao invés de simples decoreba para passar.</p>
+          <h2>O curso online de circuitos em nível de engenharia</h2>
           <p>O curso foi criado por mim, <b>Prof. Nicholas Yukio</b>, especialmente para quem deseja dominar o assunto, com aulas gravadas e tirando dúvidas da matéria direto comigo.</p>
           <FormButton />
       </div>
