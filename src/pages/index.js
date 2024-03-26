@@ -109,7 +109,7 @@ function HeaderCTA() {
     return (
       <div id="headercta" className="header-container">
           <h2>O curso online de circuitos em nível de engenharia</h2>
-          <p>O curso foi criado por mim, <b>Prof. Nicholas Yukio</b>, especialmente para quem deseja dominar o assunto, com aulas gravadas e tirando dúvidas da matéria direto comigo.</p>
+          <p>Para começar a aprender circuitos com as minhas aulas e tirar dúvidas direto comigo (<b>Prof. Nicholas Yukio</b>), leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
           <FormButton />
       </div>
     );
@@ -230,7 +230,7 @@ function BriefDescription() {
         <div className="text">
         <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
         <p><strong>Porém,</strong> é comum que os alunos de faculdades brasileiras, tanto públicas quanto privadas, tenham dificuldades para aprender a matéria apenas com o material e aulas do professor da faculdade. O Domínio Elétrico vem atender melhor essa demanda com um curso de circuitos elétricos com aulas didáticas, exercícios resolvidos, suporte para tira-dúvidas e muito mais.</p>
-        <p>Ao longo desta página, você verá todas as informações importantes do curso e poderá decidir se faz sentido para você. Para entrar nesta turma, clique no botão abaixo.</p>
+        <p>Ao longo desta página, você verá todas as informações importantes do curso e poderá decidir se faz sentido para você. Para se inscrever no curso, clique no botão abaixo.</p>
         <FormButton />
         </div>
     </div>
