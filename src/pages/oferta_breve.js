@@ -1,16 +1,31 @@
 // Filename - pages/oferta_breve.js
-
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './price.css';
 
-function isOfferStillValid(deadlineString) {
-    const deadlineDate = new Date(deadlineString);
-    const currentDate = new Date();
-    if (currentDate < deadlineDate) {
+async function getCurrentTimeFromWorldTimeAPI() {
+    try {
+        const response = await fetch('http://worldtimeapi.org/api/ip');
+        const data = await response.json();
+        const currentTime = new Date(data.utc_datetime);
+        return currentTime;
+    } catch (error) {
+        console.error('Error fetching current time from WorldTimeAPI:', error);
+        return null;
+    }
+}
+
+async function isOfferStillValid(deadlineString) {
+    try {
+        const deadlineDate = new Date(deadlineString);
+        const currentDate = await getCurrentTimeFromWorldTimeAPI();
+        if (!currentDate) {
+            return true;
+        }
+        return currentDate < deadlineDate;
+    } catch (error) {
+        console.error('Error checking offer validity:', error);
         return true;
-    } else {
-        return false;
     }
 }
 
@@ -20,13 +35,13 @@ const OfertaBreve = () => {
     const offerId = queryParams.get('id');
     const offerInfo = {
         D10ABR24: {
-            headline: "Oferta válida apenas para o dia 10/04/2024",
+            headline: "Oferta válida só até 08h00 de 11/04/2024",
             deadline: "2024-04-11T08:00:00.000-03:00",
-            price: "R$ 462 / ano",
-            pricePix: "R$ 438,90",
-            linkPix: "",
-            priceParcelado12x: "12 x R$ 43,69",
-            linkCartaoDeCredito: ""
+            price: "R$ 415,80 / ano",
+            pricePix: "R$ 395,01",
+            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=fda2c4d6-459c-45a7-a482-b320e06b2a15",
+            priceParcelado12x: "12 x R$ 39,32",
+            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d6c703dd-0c98-49cd-906f-4d889447355d"
         },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
@@ -40,7 +55,15 @@ const OfertaBreve = () => {
     };
     let offerHeadline = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].headline: offerInfo["default"].headline;
     const offerDeadline = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].deadline: offerInfo["default"].deadline;
-    const offerValid = isOfferStillValid(offerDeadline);
+    const [offerValid, setOfferValid] = useState(false);
+
+    useEffect(() => {
+        async function checkOfferValidity() {
+            const valid = await isOfferStillValid(offerDeadline);
+            setOfferValid(valid);
+        }
+        checkOfferValidity();
+    }, [offerDeadline]);
 
     const offerPrice = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].price: offerInfo["default"].price;
     const offerPricePix = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].pricePix: offerInfo["default"].pricePix;
@@ -79,7 +102,7 @@ const OfertaBreve = () => {
     <div className="offer-container">
         <h2 align="center">{offerHeadline}</h2>
         {offerInfo.hasOwnProperty(offerId) && offerValid && (<h2 align="center"><span className="original-price">de: {originalPrice}</span></h2>)}
-        <h2 align="center"><span className="offer-price">por: {offerPrice}</span></h2>
+        <h2 align="center"><span className="offer-price">por: {offerPrice} (preço base)</span></h2>
         <h2 align="left">Formas de pagamento:</h2>
         <table>
             <tr>
@@ -94,7 +117,7 @@ const OfertaBreve = () => {
             </tr>
             <tr>
                 <td>
-                    <h4 align="left">À vista no Pix ou boleto <br/>(5% de desconto):</h4>
+                    <h4 align="left">À vista no Pix ou boleto <br/>(5% de desconto sobre preço base):</h4>
                     {offerInfo.hasOwnProperty(offerId) && offerValid && (<p><span className="original-price">de: {originalPricePix}</span></p>)}
                     <p><span className="offer-price">por: {offerPricePix}</span></p>
                 </td>
