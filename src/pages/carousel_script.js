@@ -20,7 +20,7 @@ export function moveCarousel(direction) {
 
     const images = document.querySelectorAll('.carousel-item');
     const imageCount = images.length;
-    const visibleImages = 3; // Number of images visible in the carousel
+    const visibleImages = 5; // Number of images visible in the carousel
     if (direction === 'left') {
         currentImageIndex = (currentImageIndex - 1 + imageCount) % imageCount;
     } else if (direction === 'right') {
