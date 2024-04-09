@@ -15,17 +15,26 @@ async function getCurrentTimeFromWorldTimeAPI() {
     }
 }
 
-async function isOfferStillValid(deadlineString) {
+async function isOfferActive(startTimeString, endTimeString) {
     try {
-        const deadlineDate = new Date(deadlineString);
+        const startDate = new Date(startTimeString);
+        const endDate = new Date(endTimeString);
         const currentDate = await getCurrentTimeFromWorldTimeAPI();
         if (!currentDate) {
-            return true;
+            return "error";
         }
-        return currentDate < deadlineDate;
+        if (startDate < currentDate) {
+            if (currentDate < endDate) {
+                return "active";
+            } else {
+                return "late";
+            }
+        } else {
+            return "early";
+        }
     } catch (error) {
         console.error('Error checking offer validity:', error);
-        return true;
+        return "error";
     }
 }
 
@@ -36,7 +45,8 @@ const OfertaBreve = () => {
     const offerInfo = {
         D10ABR24: {
             headline: "Oferta válida só até 08h00 de 11/04/2024",
-            deadline: "2024-04-11T08:00:00.000-03:00",
+            startTime: "2024-04-10T08:00:00.000-03:00",
+            endTime: "2024-04-11T08:00:00.000-03:00",
             price: "R$ 415,80 / ano",
             pricePix: "R$ 395,01",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=fda2c4d6-459c-45a7-a482-b320e06b2a15",
@@ -45,7 +55,8 @@ const OfertaBreve = () => {
         },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
-            deadline: "2124-04-11T08:00:00.000-03:00",
+            startTime: "2024-04-08T08:00:00.000-03:00",
+            endTime: "2124-04-11T08:00:00.000-03:00",
             price: "R$ 495 / ano",
             pricePix: "R$ 470,25",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d997bb7c-4e4b-4472-95ce-50ad197a5dfa",
@@ -53,30 +64,32 @@ const OfertaBreve = () => {
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=32655ab6-c847-4db0-ab62-c49f342487e4"
         }
     };
-    let offerHeadline = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].headline: offerInfo["default"].headline;
-    const offerDeadline = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].deadline: offerInfo["default"].deadline;
+    
+    const offerStartTime = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].startTime: offerInfo["default"].startTime;
+    const offerEndTime = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].endTime: offerInfo["default"].endTime;
     const [offerValid, setOfferValid] = useState(false);
 
     useEffect(() => {
         async function checkOfferValidity() {
-            const valid = await isOfferStillValid(offerDeadline);
+            const valid = await isOfferActive(offerStartTime, offerEndTime);
             setOfferValid(valid);
         }
         checkOfferValidity();
-    }, [offerDeadline]);
+    }, [offerStartTime, offerEndTime]);
 
-    const offerPrice = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].price: offerInfo["default"].price;
-    const offerPricePix = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].pricePix: offerInfo["default"].pricePix;
-    const offerLinkPix = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].linkPix: offerInfo["default"].linkPix;
-    const offerPriceParcelado12x = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].priceParcelado12x: offerInfo["default"].priceParcelado12x;
-    const offerLinkCartaoDeCredito = offerInfo.hasOwnProperty(offerId) && offerValid ? offerInfo[offerId].linkCartaoDeCredito: offerInfo["default"].linkCartaoDeCredito;
+    const offerActive = (offerValid === "active"); 
+
+    let offerHeadline = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].headline: offerInfo["default"].headline;
+    const offerPrice = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].price: offerInfo["default"].price;
+    const offerPricePix = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].pricePix: offerInfo["default"].pricePix;
+    const offerLinkPix = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].linkPix: offerInfo["default"].linkPix;
+    const offerPriceParcelado12x = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].priceParcelado12x: offerInfo["default"].priceParcelado12x;
+    const offerLinkCartaoDeCredito = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].linkCartaoDeCredito: offerInfo["default"].linkCartaoDeCredito;
     
 
     const originalPrice = offerInfo["default"].price;
-    const originalPricePix = offerInfo["default"].pricePix;
-    const originalPriceParcelado12x = offerInfo["default"].priceParcelado12x;
 
-    if (!offerValid) {
+    if (offerValid === "late") {
         offerHeadline = "Oferta expirada. Veja o preço padrão do curso:"
     }
 
@@ -101,14 +114,13 @@ const OfertaBreve = () => {
     <section id="form" className="section">
     <div className="offer-container">
         <h2 align="center">{offerHeadline}</h2>
-        {offerInfo.hasOwnProperty(offerId) && offerValid && (<h2 align="center"><span className="original-price">de: {originalPrice}</span></h2>)}
+        {offerInfo.hasOwnProperty(offerId) && offerActive && (<h2 align="center"><span className="original-price">de: {originalPrice}</span></h2>)}
         <h2 align="center"><span className="offer-price">por: {offerPrice} (preço base)</span></h2>
         <h2 align="left">Formas de pagamento:</h2>
         <table>
             <tr>
                 <td>
                     <h4 align="left">Parcelado no cartão de crédito <br/>(juros de 2% a.m.):</h4>
-                    {offerInfo.hasOwnProperty(offerId) && offerValid && (<p><span className="original-price">de: {originalPriceParcelado12x}</span></p>)}
                     <p><span className="offer-price">por: {offerPriceParcelado12x}</span></p>
                 </td>
                 <td>
@@ -118,7 +130,6 @@ const OfertaBreve = () => {
             <tr>
                 <td>
                     <h4 align="left">À vista no Pix ou boleto <br/>(5% de desconto sobre preço base):</h4>
-                    {offerInfo.hasOwnProperty(offerId) && offerValid && (<p><span className="original-price">de: {originalPricePix}</span></p>)}
                     <p><span className="offer-price">por: {offerPricePix}</span></p>
                 </td>
                 <td>
