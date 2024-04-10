@@ -6,6 +6,7 @@ import { enlargeImage, closeOverlay, moveCarousel } from './carousel_script.js';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import OfertaBreve from './oferta_breve.js';
+import SectionTracker from './sectiontracker.js';
 
 const Home = () => {
     const [showOffer, setGlobalVariable] = useState(false);
@@ -72,6 +73,7 @@ export { Home, Direto };
 function Video() {
     return (
         <div className="video-container">
+            <SectionTracker sectionId="Video" />
             <div style={{ position: 'auto' }}>
             <iframe 
             src="https://iframe.mediadelivery.net/embed/188909/9a1e7507-19c9-4240-ac99-aeccd21b5120?autoplay=false&loop=false&muted=false&preload=true&responsive=true" 
@@ -108,6 +110,7 @@ function FormButton() {
 function HeaderCTA() {
     return (
       <div id="headercta" className="header-container">
+          <SectionTracker sectionId="HeaderCTA" />
           <h2>O curso online de circuitos em nível de engenharia</h2>
           <p>Para começar a aprender circuitos com as minhas aulas e tirar dúvidas direto comigo (<b>Prof. Nicholas Yukio</b>), leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
           <FormButton />
@@ -196,6 +199,7 @@ function Form({ showOffer, onVariableChange }) {
 
     return (
       <div id="form" className="form-container">
+        <SectionTracker sectionId="FormCont" />
           <h2>Vamos começar no Domínio Elétrico?</h2>
           <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
           <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
@@ -220,10 +224,11 @@ function Form({ showOffer, onVariableChange }) {
 }
 
 function BriefDescription() {
-    return (
+    return (     
     <section className="section">
     <h2 align="center">O Domínio Elétrico é um curso online de circuitos elétricos. Como assim?</h2>
     <div className="content-container">
+        <SectionTracker sectionId="BriefDescription" />
         <figure>
         <img src="circuito2_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
         </figure>
@@ -242,6 +247,7 @@ function Bio() {
     return (
     <section className="section">
     <div className="content-container">
+    <SectionTracker sectionId="Bio" />
         <figure>
         <img src="foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
         </figure>
@@ -277,6 +283,7 @@ function CourseContent() {
     return (
         <section className="section">
         <div className="content-container-single-column">
+        <SectionTracker sectionId="CourseContent" />
         <h2>Veja o conteúdo principal do curso:</h2>
         <p>(clique nos nomes dos módulos para ver a lista das aulas com a duração de cada uma):</p>
         <div className="module" onClick={(event) => toggleLessonList(event)}>
@@ -564,6 +571,7 @@ function CourseContent() {
 function StudentsProfile() {
     return (
     <section className="section">
+    <SectionTracker sectionId="StudentsProfile" />
     <div className="content-container">
         <figure>
         <img src="Word-Art_fundo_transparente.png" alt="Imagem da Seção 1" width="1200" />
@@ -583,6 +591,7 @@ function StudentsProfile() {
 function ElectronicsContent() {
     return (
     <section className="section">
+        <SectionTracker sectionId="ElectronicsContent" />
         <div className="content-container">
         <figure>
             <img src="circuito_eletronico_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
@@ -600,6 +609,7 @@ function ElectronicsContent() {
 function FromBasicsToAdvanced() {
     return (
     <section className="section">
+        <SectionTracker sectionId="FromBasicsToAdvanced" />
         <div className="content-container">
         <figure>
         <img src="do_basico_ao_avancado_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
@@ -617,6 +627,7 @@ function FromBasicsToAdvanced() {
 function MatematicaDoEletron() {
     return (
     <section className="section">
+        <SectionTracker sectionId="MatematicaDoEletron" />
         <div className="content-container">
         <figure>
         <img src="logo_mat_de.png" alt="Logo do curso MdE" width="800" />
@@ -634,6 +645,7 @@ function MatematicaDoEletron() {
 function TheoryAndPractice() {
     return (
     <section className="section">
+        <SectionTracker sectionId="TheoryAndPractice" />
         <div className="content-container">
         <figure>
         <img src="de_labs.jpg" alt="Imagem da Seção 1" width="800" />
@@ -651,6 +663,7 @@ function TheoryAndPractice() {
 function EletronQuest() {
     return (
     <section className="section">
+    <SectionTracker sectionId="EletronQuest" />
     <div className="content-container">
     <figure>
     <img src="eletron_quest_thumbnail.png" alt="Imagem da Seção 1" width="800" />
@@ -668,6 +681,7 @@ function EletronQuest() {
 function Depoimentos() {
     return (
     <section className="section">
+    <SectionTracker sectionId="Depoimentos" />
     <h2>O que dizem os alunos do curso?</h2>
     <p>(Clique nas imagens para ampliar)</p>
     <div className="carousel-container">
@@ -724,6 +738,7 @@ function Depoimentos() {
 function SpecialWarnings() {
     return (
     <section className="section">
+    <SectionTracker sectionId="SpecialWarnings" />
     <div className="content-container-single-column">
     <img src="pngwing.com_-300x269.png" alt="Imagem da Seção 1" width="100" />
     <h2>AVISO IMPORTANTE</h2>
