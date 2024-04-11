@@ -63,7 +63,7 @@ const SectionTracker = ({ sectionId }) => {
 // Function to send events to API
 const sendEventsToAPI = async () => {
     // Send eventsArray to API via POST request
-    let response = await fetch('https://dominioeletrico.com.br:5000/events', {
+    let response = await fetch('https://api.dominioeletrico.com.br/events', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8',
