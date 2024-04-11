@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
-import { enlargeImage, closeOverlay, moveCarousel } from './carousel_script.js';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import OfertaBreve from './oferta_breve.js';
@@ -88,14 +87,14 @@ function Video() {
     );
 }
 
-function FormButton() {
+function FormButton({ buttonName }) {
     const handleClick = () => {
         // Push the data to the dataLayer when the button is clicked
         window.dataLayer.push({
             event: 'clickForOfertaDE', // Custom event name
             buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
         });
-
+        console.log(`Button ${buttonName} clicked.`);
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = '#form'; // Redirect to the form anchor
     };
@@ -113,7 +112,7 @@ function HeaderCTA() {
           <SectionTracker sectionId="HeaderCTA" />
           <h2>O curso online de circuitos em nível de engenharia</h2>
           <p>Para começar a aprender circuitos com as minhas aulas e tirar dúvidas direto comigo (<b>Prof. Nicholas Yukio</b>), leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
-          <FormButton />
+          <FormButton buttonName="HeaderCTA" />
       </div>
     );
 }
@@ -236,7 +235,7 @@ function BriefDescription() {
         <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
         <p><strong>Porém,</strong> é comum que os alunos de faculdades brasileiras, tanto públicas quanto privadas, tenham dificuldades para aprender a matéria apenas com o material e aulas do professor da faculdade. O Domínio Elétrico vem atender melhor essa demanda com um curso de circuitos elétricos com aulas didáticas, exercícios resolvidos, suporte para tira-dúvidas e muito mais.</p>
         <p>Ao longo desta página, você verá todas as informações importantes do curso e poderá decidir se faz sentido para você. Para se inscrever no curso, clique no botão abaixo.</p>
-        <FormButton />
+        <FormButton buttonName="BriefDescription" />
         </div>
     </div>
     </section>
@@ -260,7 +259,7 @@ function Bio() {
         <p>De lá para cá, já são cerca de 500 alunos do curso que aprendem comigo e que podem tirar dúvidas individualmente comigo.</p>
         <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
         <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
-        <FormButton />
+        <FormButton buttonName="Bio" />
         </div>
     </div>
     </section>
@@ -581,7 +580,7 @@ function StudentsProfile() {
         <p>Fizemos uma pesquisa entre os alunos do curso Domínio Elétrico para saber em que instituição eles estudam. Você pode ver o resultado na imagem. Os nomes com fonte maior são os mais representados.</p>
         <p>Perceba que o Domínio Elétrico tem alunos de todo tipo de faculdade ou escola técnica. Veja se você encontra a sua faculdade na lista. Se não encontrar, seja o primeiro da sua faculdade a entrar para o Domínio Elétrico.</p>
         <p>Isso significa que o Domínio Elétrico serve para qualquer pessoa com interesse em estudar circuitos elétricos, não importa quão básico ou avançado seja.</p>
-        <FormButton />
+        <FormButton buttonName="StudentsProfile" />
         </div>
     </div>
     </section>
@@ -599,7 +598,7 @@ function ElectronicsContent() {
         <div className="text">
         <h2>Também tem conteúdo mais específico para o pessoal de eletrônica:</h2>
         <p>Quem tem interesse mais específico em eletrônica vai gostar especialmente dos módulos finais (9 – Semicondutores, 10 – Circuitos Analógicos e 11 – Circuitos Digitais).</p><p>No entanto, preciso explicar bem que quero dizer eletrônica no contexto de engenharia e ensino superior. Não faço esta distinção para excluir quem é de fora da engenharia, mas para deixar definido o direcionamento dado no curso, que <span style={{ textDecoration: 'underline'}}>não é aquela ideia popular de eletrônica de montar receitas prontas sem entender nada e consertar aparelhos.</span></p><p><strong>Todos os interessados no assunto de circuitos e que estejam dispostos a estudar são bem vindos.</strong></p>
-        <FormButton />
+        <FormButton buttonName="ElectronicsContent" />
         </div>
         </div>
     </section>
@@ -617,7 +616,7 @@ function FromBasicsToAdvanced() {
         <div className="text">
         <h2>Serve para quem é iniciante, mas também para quem já se considera avançado.</h2>
         <p>Se você é um completo iniciante, totalmente perdido em circuitos elétricos, fique tranquilo porque no curso você começará aprendendo dos conceitos mais básicos de tensão e corrente elétrica.</p><p>Você estudará os circuitos elétricos mais básicos, que são aqueles em corrente contínua, para então progredir para o aprendizado de circuitos RL, RC, RLC em resposta transiente e regime permanente, bem como circuitos em corrente alternada (regime permanente senoidal).</p><p>Se você já sabe alguma coisa de circuitos e se considera intermediário ou avançado, poderá partir logo para análise de circuitos usando Laplace e Fourier, bem como para o estudo dos módulos mais finais do curso, mais voltados para projeto de circuitos eletrônicos.&nbsp;</p>
-        <FormButton />
+        <FormButton buttonName="FromBasicsToAdvanced" />
         </div>
         </div>
     </section>
@@ -635,7 +634,7 @@ function MatematicaDoEletron() {
         <div className="text">
         <h2>Dificuldade na matemática para estudar circuitos? Aprenda no Matemática do Elétron.</h2>
         <p>Antes o Matemática do Elétron era um curso separado, mas agora ele foi anexado ao curso Domínio Elétrico para auxiliar quem tem dificuldades em matemática básica.</p><p>Se você tem dificuldade em fazer contas mais simples, resolver equações básicas, cálculos com trigonometria ou números complexos, não se preocupe mais. </p><p>Todos esses conceitos de matemática de ensino fundamental e médio são fundamentais para o estudo de circuitos, mas com o Matemática do Elétron você estará amparado. São cerca de 25 horas de aulas gravadas para revisar a matemática básica que você precisa para estudar circuitos.&nbsp;</p>
-        <FormButton />
+        <FormButton buttonName="MatematicaDoEletron" />
         </div>
         </div>
     </section>
@@ -653,7 +652,7 @@ function TheoryAndPractice() {
         <div className="text">
         <h2>Não é só teoria, mas prática também. Conheça o Domínio Elétrico Labs.</h2>
         <p>O Domínio Elétrico Labs é a parte do curso que consiste em aulas de laboratório de eletrônica voltadas especialmente para estudantes no nível de engenharia.</p><p>Ou seja, não são aqueles vídeos quem existem aos montes na internet mostrando a montagem de um circuito com receita pronta que ninguém sabe ao certo como funciona.&nbsp;</p><p>Ao invés disso, o foco nestas aulas de laboratório é mostrar na prática os conceitos explicados nas aulas teóricas, não de fugir delas.</p><p><strong>Para isso, cada aula de laboratório vem com um pré-lab, que é um exercício prévio para você entender o circuito estudado previamente, seguido pelo vídeo do experimento em si, terminando com uma aula teórica sobre o experimento.</strong></p>
-        <FormButton />
+        <FormButton buttonName="TheoryAndPractice" />
         </div>
         </div>
     </section>
@@ -671,7 +670,7 @@ function EletronQuest() {
     <div className="text">
     <h2>Avaliação do aprendizado de verdade, com certificado só para quem levou o curso a sério. Conheça o Elétron Quest.</h2>
     <p>Tem um monte de curso online que dá certificado automático. Basta você se inscrever, ir passando de aula em aula marcando como concluído (sem nem precisar assistir nem entender) e chegando ao final você consegue um certificado para baixar, podendo até imprimir e colocar na parede.</p><p><strong>Qual o valor de um certificado desses?</strong> Sinceramente, nenhum.</p><p>Por isso resolvi fazer diferente no meu curso. Resolvi criar o Elétron Quest, que será uma jornada de desafios de circuitos elétricos que serve para avaliar o seu aprendizado de modo a parecer um jogo em que você precisa passar de fases. Depois você recebe o certificado, <strong>mas só se conseguir chegar ao final.</strong></p>
-    <FormButton />
+    <FormButton buttonName="EletronQuest" />
     </div>
     </div>
     </section>
@@ -679,6 +678,52 @@ function EletronQuest() {
 }
 
 function Depoimentos() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [visibleImagesIndices, setVisibleImagesIndices] = useState([1, 2, 3, 4, 5]);
+
+    function enlargeImage(event) {
+        const clickedElement = event.currentTarget;
+        const imageId = clickedElement.getAttribute('id');
+        const src = 'depoimentos/'+imageId+'.png';
+        const overlay = document.getElementById('image-overlay');
+        const enlargedImage = document.getElementById('enlarged-image');
+        enlargedImage.src = src;
+        overlay.style.display = 'flex';
+        console.log(`enlargeImage click`);
+    }
+    
+    function closeOverlay() {
+        const overlay = document.getElementById('image-overlay');
+        overlay.style.display = 'none';
+        console.log(`closeOverlay click`);
+    }
+    
+    function moveCarousel(direction) {
+        const imageCount = 10;
+        const visibleImages = 5;
+        if (direction === 'left') {
+            setCurrentImageIndex((currentImageIndex - 1 + imageCount) % imageCount);
+        } else if (direction === 'right') {
+            setCurrentImageIndex((currentImageIndex + 1) % imageCount);
+        }
+        const updatedVisibleImagesIndices = [];
+        for (let i = currentImageIndex; i < currentImageIndex + visibleImages; i++) {
+            const index = i % imageCount;
+            updatedVisibleImagesIndices.push(index + 1);
+        }
+        setVisibleImagesIndices(updatedVisibleImagesIndices);
+        console.log(`moveCarousel click`);
+    }
+
+    function CarouselItem({ imageNumber, onClick }) {
+        const imageName = `dep_${imageNumber.toString().padStart(2, '0')}`; 
+        return (
+            <div className="carousel-item" id={imageName} onClick={onClick}>
+                <img src={`depoimentos/${imageName}.png`} alt={`Depoimento ${imageNumber}`} />
+            </div>
+        );
+    }
+
     return (
     <section className="section">
     <SectionTracker sectionId="Depoimentos" />
@@ -686,36 +731,13 @@ function Depoimentos() {
     <p>(Clique nas imagens para ampliar)</p>
     <div className="carousel-container">
         <div className="carousel">
-            <div className="carousel-item" id = "dep_01" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_01.png" alt="Depoimento 1" />
-            </div>
-            <div className="carousel-item" id = "dep_02" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_02.png" alt="Depoimento 2" />
-            </div>
-            <div className="carousel-item" id = "dep_03" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_03.png" alt="Depoimento 3" />
-            </div>
-            <div className="carousel-item" id = "dep_04" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_04.png" alt="Depoimento 4" />
-            </div>
-            <div className="carousel-item" id = "dep_05" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_05.png" alt="Depoimento 5" />
-            </div>
-            <div className="carousel-item" id = "dep_06" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_06.png" alt="Depoimento 6" />
-            </div>
-            <div className="carousel-item" id = "dep_07" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_07.png" alt="Depoimento 7" />
-            </div>
-            <div className="carousel-item" id = "dep_08" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_08.png" alt="Depoimento 8" />
-            </div>
-            <div className="carousel-item" id = "dep_09" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_09.png" alt="Depoimento 9" />
-            </div>
-            <div className="carousel-item" id = "dep_10" onClick={(event) => enlargeImage(event)}>
-                <img src="depoimentos/dep_10.png" alt="Depoimento 10" />
-            </div>
+            {visibleImagesIndices.map((imageNumber, index) => (
+                <CarouselItem 
+                    key={index} 
+                    imageNumber={imageNumber} 
+                    onClick={(event) => enlargeImage(event)} 
+                />
+            ))}
         </div>
     </div>
     <table className="arrow-container">

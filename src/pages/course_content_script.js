@@ -12,5 +12,6 @@ export function toggleLessonList(event) {
         });
         lessonList.style.display = 'block';
     }
+    console.log(`toggleLessonList click`);
 }
 
