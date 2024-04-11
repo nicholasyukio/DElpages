@@ -11,6 +11,9 @@ let eventsArray = [];
 const logEvent = (eventName, eventData) => {
     eventsArray.push({ eventName, eventData });
     console.log(eventsArray);
+    if (eventsArray.length == 25) {
+        sendEventsToAPI();
+    }
 };
 
 const SectionTracker = ({ sectionId }) => {
