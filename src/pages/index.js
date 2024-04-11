@@ -1,11 +1,85 @@
 // Filename - pages/index.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import OfertaBreve from './oferta_breve.js';
-import SectionTracker from './sectiontracker.js';
+
+let eventsArray = [];
+
+const logEvent = (eventName, eventData) => {
+    eventsArray.push({ eventName, eventData });
+    console.log(eventsArray);
+};
+
+const SectionTracker = ({ sectionId }) => {
+    const [startTime, setStartTime] = useState(null);
+    const [endTime, setEndTime] = useState(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setStartTime(new Date());
+          } else {
+            setEndTime(new Date());
+          }
+        });
+      });
+  
+      const section = document.querySelector(`#${sectionId}`);
+      if (section) {
+        observer.observe(section);
+      }
+  
+      return () => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      };
+    }, [sectionId]);
+  
+    useEffect(() => {
+      if (endTime) {
+        const timeSpent = endTime - startTime;
+        logEvent('TimeSpent', `${timeSpent} milliseconds spent in ${sectionId}`);
+        // Perform any other actions with the time spent
+        // setStartTime(null); 
+        // setEndTime(null); 
+      }
+    }, [endTime, sectionId]);
+  
+    return (
+      <section id={sectionId}>
+        {/* Section content */}
+      </section>
+    );
+};
+
+// Function to send events to API
+const sendEventsToAPI = async () => {
+    // Send eventsArray to API via POST request
+    let response = await fetch('https://dominioeletrico.com.br:5000/events', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+        },
+        body: JSON.stringify(eventsArray),
+    });
+    let result = await response.json();
+    if (result.status === 'success') {
+        console.log("Send Events to API Success");
+    } else if (result.status === 'fail') {
+        console.log("Send Events to API Fail");
+    }
+};
+
+// Listen for page exit event
+window.addEventListener('beforeunload', () => {
+    // Call sendEventsToAPI just before the user exits the page
+    sendEventsToAPI();
+});
 
 const Home = () => {
     const [showOffer, setGlobalVariable] = useState(false);
@@ -94,7 +168,7 @@ function FormButton({ buttonName }) {
             event: 'clickForOfertaDE', // Custom event name
             buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
         });
-        console.log(`Button ${buttonName} clicked.`);
+        logEvent('ButtonClick', `${buttonName} clicked`);
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = '#form'; // Redirect to the form anchor
     };
@@ -181,14 +255,17 @@ function Form({ showOffer, onVariableChange }) {
                     event: 'formSubmission', // Custom event name
                     buttonName: 'exampleButton', // Custom event data
                 });
+                logEvent('FormSubmitSucess', details);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
+                logEvent('FormSubmitFail', details);
 			}
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
 			console.error(error);
 			setStatus('Buscar oferta para o curso');
 			setResult('Ocorreu um erro.');
+            logEvent('FormSubmitCatchError', details);
 		}
 	};
 
@@ -689,13 +766,13 @@ function Depoimentos() {
         const enlargedImage = document.getElementById('enlarged-image');
         enlargedImage.src = src;
         overlay.style.display = 'flex';
-        console.log(`enlargeImage click`);
+        logEvent('ButtonClick', 'enlargeImage clicked');
     }
     
     function closeOverlay() {
         const overlay = document.getElementById('image-overlay');
         overlay.style.display = 'none';
-        console.log(`closeOverlay click`);
+        logEvent('ButtonClick', 'closeOverlay clicked');
     }
     
     function moveCarousel(direction) {
@@ -712,7 +789,7 @@ function Depoimentos() {
             updatedVisibleImagesIndices.push(index + 1);
         }
         setVisibleImagesIndices(updatedVisibleImagesIndices);
-        console.log(`moveCarousel click`);
+        logEvent('ButtonClick', 'moveCarousel clicked');
     }
 
     function CarouselItem({ imageNumber, onClick }) {
