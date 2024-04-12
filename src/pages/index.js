@@ -95,6 +95,9 @@ const SectionTracker = ({ sectionId }) => {
 
 // Function to send events to API
 const sendEventsToAPI = async () => {
+    // Log endTime before sending
+    const endDate = await getCurrentTimeFromWorldTimeAPI();
+    logEvent('endTime', endDate);
     // Send eventsArray to API via POST request
     let response = await fetch('https://api.dominioeletrico.com.br/events', {
         method: 'POST',
