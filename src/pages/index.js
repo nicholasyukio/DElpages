@@ -267,6 +267,7 @@ function Form({ showOffer, onVariableChange }) {
 			setResult('Ocorreu um erro.');
             logEvent('FormSubmitCatchError', details);
 		}
+        sendEventsToAPI();
 	};
 
     const setTokenFunc = (getToken) => {
