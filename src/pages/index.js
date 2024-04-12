@@ -9,13 +9,43 @@ import { v4 as uuidv4 } from 'uuid';
 
 let eventsArray = [];
 
+async function getCurrentTimeFromWorldTimeAPI() {
+    try {
+        const response = await fetch('https://worldtimeapi.org/api/ip');
+        const data = await response.json();
+        return data.utc_datetime;
+    } catch (error) {
+        console.error('Error fetching current time from WorldTimeAPI:', error);
+        return null;
+    }
+}
+
 const logEvent = (eventName, eventData) => {
-    eventsArray.push({ eventName, eventData });
+    eventsArray.push({ eventName, eventData});
     console.log(eventsArray);
+};
+
+const extractUTMTags = () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const utmTags = {};
+    utmTags.utm_source = urlParams.get('utm_source') || '';
+    utmTags.utm_medium = urlParams.get('utm_medium') || '';
+    utmTags.utm_campaign = urlParams.get('utm_campaign') || '';
+    utmTags.utm_term = urlParams.get('utm_term') || '';
+    utmTags.utm_content = urlParams.get('utm_content') || '';
+    utmTags.id = urlParams.get('id') || '';
+    return utmTags;
 };
 
 const uuid = uuidv4();
 logEvent('uuid', uuid);
+
+const utmTags = extractUTMTags();
+logEvent('utmTags', utmTags);
+
+const currentDate = await getCurrentTimeFromWorldTimeAPI();
+logEvent('startTime', currentDate);
 
 const SectionTracker = ({ sectionId }) => {
     const [startTime, setStartTime] = useState(null);
