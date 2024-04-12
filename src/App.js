@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
         <Route path="/direto-dominio-eletrico" element={<Direto />} />
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
