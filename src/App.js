@@ -3,8 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Outlet
+  Route
 } from "react-router-dom";
 import { Home , Espera, Direto } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
@@ -16,11 +15,9 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Outlet />}>
-          <Route index element={<Home />} />
-          <Route path="/espera-dominio-eletrico" element={<Espera />} />
-          <Route path="/direto-dominio-eletrico" element={<Direto />} />
-        </Route>
+        <Route index element={<Home />} />
+        <Route path="/espera-dominio-eletrico" element={<Espera />} />
+        <Route path="/direto-dominio-eletrico" element={<Direto />} />
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
         <Route path="/termosdeuso" element={<TermosDeUso />} />
         <Route path="/oferta" element={<Oferta />} />
