@@ -6,7 +6,7 @@ import {
   Route,
   Outlet
 } from "react-router-dom";
-import { Home , Direto } from "./pages/index";
+import { Home , Espera, Direto } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
@@ -18,7 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Outlet />}>
           <Route index element={<Home />} />
-          <Route path="/espera-dominio-eletrico" element={<Home />} />
+          <Route path="/espera-dominio-eletrico" element={<Espera />} />
           <Route path="/direto-dominio-eletrico" element={<Direto />} />
         </Route>
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
