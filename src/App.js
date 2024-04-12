@@ -31,7 +31,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
+        <Route path="/espera-dominio-eletrico/" element={<Espera />} />
         <Route path="/direto-dominio-eletrico" element={<Direto />} />
+        <Route path="/direto-dominio-eletrico/" element={<Direto />} />
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
         <Route path="/termosdeuso" element={<TermosDeUso />} />
         <Route path="/oferta" element={<Oferta />} />
