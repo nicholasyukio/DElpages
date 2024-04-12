@@ -91,7 +91,7 @@ const Home = () => {
 	return (
         <>
         <section className="section">
-        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
 		<div className="content-container">
             <Video />
             <HeaderCTA />
@@ -124,7 +124,7 @@ const Espera = () => {
 	return (
         <>
         <section className="section">
-        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
 		<div className="content-container">
             <Video />
             <HeaderCTA />
@@ -151,7 +151,7 @@ const Direto = () => {
 	return (
         <>
         <section className="section">
-        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
 		<div className="content-container">
             <Video />
             <HeaderCTA />
@@ -340,7 +340,7 @@ function BriefDescription() {
     <div className="content-container">
         <SectionTracker sectionId="BriefDescription" />
         <figure>
-        <img src="circuito2_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
+        <img src="/circuito2_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
         </figure>
         <div className="text">
         <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
@@ -359,7 +359,7 @@ function Bio() {
     <div className="content-container">
     <SectionTracker sectionId="Bio" />
         <figure>
-        <img src="foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
+        <img src="/foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
         </figure>
         <div className="text">
         <h2>Sobre o Prof. Nicholas Yukio</h2>
@@ -684,7 +684,7 @@ function StudentsProfile() {
     <SectionTracker sectionId="StudentsProfile" />
     <div className="content-container">
         <figure>
-        <img src="Word-Art_fundo_transparente.png" alt="Imagem da Seção 1" width="1200" />
+        <img src="/Word-Art_fundo_transparente.png" alt="Imagem da Seção 1" width="1200" />
         </figure>
         <div className="text">
         <h2>Qual o perfil de aluno do Domínio Elétrico?</h2>
@@ -704,7 +704,7 @@ function ElectronicsContent() {
         <SectionTracker sectionId="ElectronicsContent" />
         <div className="content-container">
         <figure>
-            <img src="circuito_eletronico_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
+            <img src="/circuito_eletronico_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
         </figure>
         <div className="text">
         <h2>Também tem conteúdo mais específico para o pessoal de eletrônica:</h2>
@@ -722,7 +722,7 @@ function FromBasicsToAdvanced() {
         <SectionTracker sectionId="FromBasicsToAdvanced" />
         <div className="content-container">
         <figure>
-        <img src="do_basico_ao_avancado_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
+        <img src="/do_basico_ao_avancado_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
         </figure>
         <div className="text">
         <h2>Serve para quem é iniciante, mas também para quem já se considera avançado.</h2>
@@ -740,7 +740,7 @@ function MatematicaDoEletron() {
         <SectionTracker sectionId="MatematicaDoEletron" />
         <div className="content-container">
         <figure>
-        <img src="logo_mat_de.png" alt="Logo do curso MdE" width="800" />
+        <img src="/logo_mat_de.png" alt="Logo do curso MdE" width="800" />
         </figure>
         <div className="text">
         <h2>Dificuldade na matemática para estudar circuitos? Aprenda no Matemática do Elétron.</h2>
@@ -758,7 +758,7 @@ function TheoryAndPractice() {
         <SectionTracker sectionId="TheoryAndPractice" />
         <div className="content-container">
         <figure>
-        <img src="de_labs.jpg" alt="Imagem da Seção 1" width="800" />
+        <img src="/de_labs.jpg" alt="Imagem da Seção 1" width="800" />
         </figure>
         <div className="text">
         <h2>Não é só teoria, mas prática também. Conheça o Domínio Elétrico Labs.</h2>
@@ -776,7 +776,7 @@ function EletronQuest() {
     <SectionTracker sectionId="EletronQuest" />
     <div className="content-container">
     <figure>
-    <img src="eletron_quest_thumbnail.png" alt="Imagem da Seção 1" width="800" />
+    <img src="/eletron_quest_thumbnail.png" alt="Imagem da Seção 1" width="800" />
     </figure>
     <div className="text">
     <h2>Avaliação do aprendizado de verdade, com certificado só para quem levou o curso a sério. Conheça o Elétron Quest.</h2>
@@ -830,7 +830,7 @@ function Depoimentos() {
         const imageName = `dep_${imageNumber.toString().padStart(2, '0')}`; 
         return (
             <div className="carousel-item" id={imageName} onClick={onClick}>
-                <img src={`depoimentos/${imageName}.png`} alt={`Depoimento ${imageNumber}`} />
+                <img src={`/depoimentos/${imageName}.png`} alt={`Depoimento ${imageNumber}`} />
             </div>
         );
     }
@@ -862,7 +862,7 @@ function Depoimentos() {
     </tr>
     </table>
     <div className="image-overlay" id="image-overlay" style={{ display: 'none' }} onClick={() => closeOverlay()}>
-    <img src="" className="enlarged-image" id="enlarged-image" alt="Foco" />
+    <img src="/" className="enlarged-image" id="enlarged-image" alt="Foco" />
     </div>  
     </section>
     );
@@ -873,7 +873,7 @@ function SpecialWarnings() {
     <section className="section">
     <SectionTracker sectionId="SpecialWarnings" />
     <div className="content-container-single-column">
-    <img src="pngwing.com_-300x269.png" alt="Imagem da Seção 1" width="100" />
+    <img src="/pngwing.com_-300x269.png" alt="Imagem da Seção 1" width="100" />
     <h2>AVISO IMPORTANTE</h2>
     <h3>O curso Domínio Elétrico NÃO é para quem:</h3>
     <ul>

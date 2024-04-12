@@ -7,7 +7,7 @@ const Login = () => {
 	return (
     <>
         <section id="form" className="section">
-            <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" className="logo-image" />
+            <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" className="logo-image" />
             <h1>Aviso importante (LEIA TUDO COM ATENÇÃO):</h1>
             <div className="form-container">
                 <p>Os cursos foram migrados para uma nova plataforma no sistema Moodle.</p>

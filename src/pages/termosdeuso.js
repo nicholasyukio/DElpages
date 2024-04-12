@@ -7,7 +7,7 @@ const TermosDeUso = () => {
 	return (
         <>
         <section id="form" class="section">
-        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" class="logo-image" />
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" class="logo-image" />
         <h1>Termos de uso</h1>
         <div className="privacidade-container"> 
         <p><strong>IMPORTANTE: ESTES TERMOS DE SERVIÇO REGULAM O USO DESTE SITE DISPONIBILIZADO PELA N.Y.M. SUGIMOTO LTDA. (“CANAL DO ELÉTRON”) E DEMAIS EMPRESAS PERTENCENTES AO MESMO GRUPO ECONÔMICO.</strong></p>

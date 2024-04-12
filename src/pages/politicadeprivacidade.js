@@ -7,7 +7,7 @@ const PoliticaDePrivacidade = () => {
 	return (
     <>
 	<section id="form" className="section">
-        <img src="dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" className="logo-image" />
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="400" className="logo-image" />
         <h1>Política de privacidade</h1>
         <div className="privacidade-container">         
             <p>NÓS TEMOS UM COMPROMISSO COM A TRANSPARÊNCIA DO TRATAMENTO DE DADOS PESSOAIS DOS NOSSOS USUÁRIOS. POR ISSO, ESTA POLÍTICA DE PRIVACIDADE ESTABELECE COMO É FEITA A COLETA, USO E TRANSFERÊNCIA DE INFORMAÇÕES DOS USUÁRIOS QUE ACESSAM OU USAM NOSSO SITE.</p>       
