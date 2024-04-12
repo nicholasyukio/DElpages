@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate
+  Navigate,
+  useLocation
 } from "react-router-dom";
 import { Home , Espera, Direto } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
@@ -12,19 +13,21 @@ import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
 import Login from "./pages/login";
 
+const RemoveTrailingSlash = ({...rest}) => {
+  const location = useLocation()
+  // If the last character of the url is '/'
+  if (location.pathname.match('/.*/$')) {
+      return <Navigate replace {...rest} to={{
+          pathname: location.pathname.replace(/\/+$/, ""),
+          search: location.search
+      }}/>
+  } else return null
+}
+
 export default function App() {
-  const navigate = useNavigate();
-
-  // Redirect routes with trailing slash to routes without trailing slash
-  React.useEffect(() => {
-    const currentPath = window.location.pathname;
-    if (currentPath.endsWith('/') && currentPath !== '/') {
-      navigate(currentPath.slice(0, -1), { replace: true });
-    }
-  }, [navigate]);
-
   return (
     <Router>
+      <RemoveTrailingSlash/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
