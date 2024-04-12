@@ -5,6 +5,7 @@ import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import OfertaBreve from './oferta_breve.js';
+import { v4 as uuidv4 } from 'uuid';
 
 let eventsArray = [];
 
@@ -12,6 +13,9 @@ const logEvent = (eventName, eventData) => {
     eventsArray.push({ eventName, eventData });
     console.log(eventsArray);
 };
+
+const uuid = uuidv4();
+logEvent('uuid', uuid);
 
 const SectionTracker = ({ sectionId }) => {
     const [startTime, setStartTime] = useState(null);
@@ -43,7 +47,9 @@ const SectionTracker = ({ sectionId }) => {
     useEffect(() => {
       if (endTime) {
         const timeSpent = endTime - startTime;
-        logEvent('TimeSpent', `${timeSpent} milliseconds spent in ${sectionId}`);
+        if (timeSpent < 31000000000) {
+            logEvent('TimeSpent', `${timeSpent} milliseconds spent in ${sectionId}`);
+        }
         // Perform any other actions with the time spent
         // setStartTime(null); 
         // setEndTime(null); 
