@@ -834,7 +834,7 @@ function Depoimentos() {
     function enlargeImage(event) {
         const clickedElement = event.currentTarget;
         const imageId = clickedElement.getAttribute('id');
-        const src = 'depoimentos/'+imageId+'.png';
+        const src = '/depoimentos/'+imageId+'.png';
         const overlay = document.getElementById('image-overlay');
         const enlargedImage = document.getElementById('enlarged-image');
         enlargedImage.src = src;
