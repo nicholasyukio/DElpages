@@ -305,7 +305,10 @@ function Form({ showOffer, onVariableChange }) {
 		let details = {
 			name: name.value,
 			email: email.value,
-            "g-recaptcha-response": token
+            "g-recaptcha-response": token,
+            utm_source: utmTags.utm_source,
+            utm_term: utmTags.utm_term,
+            utm_medium: utmTags.utm_medium
 		};
 
 		try {
