@@ -330,7 +330,7 @@ function Form({ showOffer, onVariableChange }) {
                     event: 'formSubmission', // Custom event name
                     buttonName: 'exampleButton', // Custom event data
                 });
-                logEvent('FormSubmitSucess', details);
+                logEvent('FormSubmitSuccess', details);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
                 logEvent('FormSubmitFail', details);
