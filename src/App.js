@@ -11,6 +11,7 @@ import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
 import Login from "./pages/login";
+import Watch from "./pages/watch";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/termosdeuso" element={<TermosDeUso />} />
         <Route path="/oferta" element={<Oferta />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/watch" element={<Watch />} />
         <Route path="*" element={<Espera />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>

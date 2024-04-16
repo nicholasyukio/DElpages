@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    color: #FFFFFF;
+    background-color: #041D4C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.watch-container {
+    max-width: 480px; /* Largura máxima do contêiner de texto */
+    color: #000000;
+    margin: auto auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+}
+.watch-container img {
+    max-width: 100%; /* A imagem ocupa toda a largura da coluna */
+    display: block;
+}
+.watch-container .text {
+    max-width: 50%; /* Largura máxima do texto */
+    text-align: left; /* Alinhar o texto à esquerda */
+}
+
+.watch-header-container {
+    max-width: 480px; /* Largura máxima do contêiner de texto */
+    margin: auto auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.text-header {
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilos de layout responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .watch-container {
+        flex-direction: column; /* Alterado para posicionar a imagem acima do texto em dispositivos móveis */
+    }
+    .watch-container img {
+        max-width: 100%; /* A imagem ocupa toda a largura em dispositivos móveis */
+    }
+    .watch-container .text {
+        max-width: 100%; /* O texto ocupa toda a largura em dispositivos móveis */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
+    .video-container iframe {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+  }
+  
