@@ -185,7 +185,9 @@ const Watch = () => {
         <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" headerText="Aula de circuitos elétricos: título do vídeo de circuitos" />
         <Video videoId={videoId} />
         <section id="form" class="section">
-        <h1>Termos de uso</h1>
+        <h1>Conheça o curso Domínio Elétrico:</h1>
+        <h1>Vídeos da mesma playlist:</h1>
+        <h1>Veja também:</h1>
         </section>
         <Form showOffer={false} onVariableChange={handleVariableChange} />
         <Rodape />
