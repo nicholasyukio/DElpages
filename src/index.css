@@ -5,7 +5,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   color: #FFFFFF;
-  background: url('../public/FUNDO2_tamanho_menor_com_cor.jpg') center/contain;
+  background: url('../public/FUNDO2_tamanho_menor_com_cor.jpg') ;
   background-repeat: repeat-y;
   background-color: #041D4C;
   -webkit-font-smoothing: antialiased;

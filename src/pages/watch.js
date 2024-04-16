@@ -29,8 +29,8 @@ function Video({ videoId }) {
             <div style={{ position: 'auto' }}>
                 <iframe 
                     src={video_src}
-                    width="480" 
-                    height="270" 
+                    width="720" 
+                    height="405" 
                     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
                     allowFullScreen={true}
                     title="Embedded Video"
@@ -51,10 +51,10 @@ function Header() {
 function HeaderComponent({ imageSrc, headerText }) {
     return (
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
-            <div style={{ flex: '1', width: '20%' }}>
+            <div style={{ flex: '1', width: '10%' }}>
                 <img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
-            <div style={{ flex: '4', width: '80%' }} className="text-header">
+            <div style={{ flex: '9', width: '90%' }} className="text-header">
                 <h2>{headerText}</h2>
             </div>
         </div>
@@ -149,7 +149,7 @@ function Form({ showOffer, onVariableChange }) {
 
     return (
       <div id="form" className="form-container">
-          <h2>Vamos começar no Domínio Elétrico?</h2>
+          <h2>Pronto para começar no Domínio Elétrico?</h2>
           <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
           <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
           <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
@@ -181,17 +181,23 @@ const Watch = () => {
         setGlobalVariable(newValue);
     };
 	return (
-        <div>
-        <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" headerText="Aula de circuitos elétricos: título do vídeo de circuitos" />
-        <Video videoId={videoId} />
-        <section id="form" class="section">
-        <h1>Conheça o curso Domínio Elétrico:</h1>
-        <h1>Vídeos da mesma playlist:</h1>
-        <h1>Veja também:</h1>
-        </section>
-        <Form showOffer={false} onVariableChange={handleVariableChange} />
-        <Rodape />
+        <>
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="top-container">
+            <div style={{ flex: '4', width: '80%' }}>
+            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" headerText="Aula de circuitos elétricos: título do vídeo de circuitos" />
+            <Video videoId={videoId} />
+            <section id="form" class="section">
+            <h1>Conheça o curso Domínio Elétrico:</h1>
+            </section>
+            <Form showOffer={false} onVariableChange={handleVariableChange} />
+            </div>
+            <div style={{ flex: '1', width: '20%' }}>
+            <h2>Vídeos da mesma playlist:</h2>
+            <h2>Veja também:</h2>
+            </div>
         </div>
+        <Rodape />
+        </>
 	);
 };
 

@@ -10,8 +10,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+.top-container {
+    max-width: 1800px; /* Largura máxima do contêiner de texto */
+    margin: auto auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .watch-container {
-    max-width: 480px; /* Largura máxima do contêiner de texto */
+    max-width: 720px; /* Largura máxima do contêiner de texto */
     color: #000000;
     margin: auto auto auto auto;
     display: flex;
@@ -29,7 +37,7 @@ body {
 }
 
 .watch-header-container {
-    max-width: 480px; /* Largura máxima do contêiner de texto */
+    max-width: 720px; /* Largura máxima do contêiner de texto */
     margin: auto auto auto auto;
     display: flex;
     align-items: center;
