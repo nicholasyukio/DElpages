@@ -48,18 +48,18 @@ function Header() {
     );
 }
 
-function HeaderComponent({ imageSrc }) {
+function HeaderComponent({ imageSrc, videoId }) {
     const [videoInfo, setVideoInfo] = useState([]);
 
     useEffect(() => {
         // Fetch recommendations when the component mounts
-        getVideoInfo();
+        getVideoInfo(videoId);
     }, []);
 
-    const getVideoInfo = async () => {
+    const getVideoInfo = async (videoId) => {
         try {
             // Make a GET request to fetch recommendations
-            const response = await fetch('https://dominioeletrico.com.br:5000/videoinfo');
+            const response = await fetch(`https://dominioeletrico.com.br:5000/videoinfo/${videoId}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
