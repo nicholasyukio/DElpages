@@ -50,6 +50,16 @@ body {
     padding: 10px;
 }
 
+.recommendations a {
+    color: white; /* Set the color of the links to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.recommendations a:hover {
+    color: white; /* Set the color of the links to white when hovered */
+}
+
+
 /* Estilos de layout responsivo para dispositivos móveis */
 @media (max-width: 768px) {
     .watch-container {

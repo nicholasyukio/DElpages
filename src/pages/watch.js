@@ -223,7 +223,7 @@ const Recommendations = () => {
             <h2>Veja também:</h2>
             <div>
                 {recommendations.map(recommendation => (
-                    <div key={recommendation.id} style={{ marginBottom: '20px' }}>
+                    <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
                         <a href={`https://dominioeletrico.com.br/watch?v=${recommendation.id}`} rel="noopener noreferrer">
                             <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
                             <br></br>
