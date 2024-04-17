@@ -241,6 +241,7 @@ const Watch = () => {
     }, []);
 
     const videoTitle = videoInfo.title;
+    const videoDescription = videoInfo.metaTags.value;
 
     const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
@@ -253,6 +254,7 @@ const Watch = () => {
             <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
             <Video videoId={videoId} />
             <section id="form" class="section">
+            <p>{videoDescription}</p>
             <h1>Conheça o curso Domínio Elétrico:</h1>
             </section>
             <Form showOffer={false} onVariableChange={handleVariableChange} />
