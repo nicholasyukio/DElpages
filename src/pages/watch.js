@@ -48,14 +48,38 @@ function Header() {
     );
 }
 
-function HeaderComponent({ imageSrc, headerText }) {
+function HeaderComponent({ imageSrc }) {
+    const [videoInfo, setVideoInfo] = useState([]);
+
+    useEffect(() => {
+        // Fetch recommendations when the component mounts
+        getVideoInfo();
+    }, []);
+
+    const getVideoInfo = async () => {
+        try {
+            // Make a GET request to fetch recommendations
+            const response = await fetch('https://dominioeletrico.com.br:5000/videoinfo');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setVideoInfo(data);
+        } catch (error) {
+            console.error('Fetch error:', error);
+            console.log("Error");
+        }
+    };
+
+    const videoTitle = videoInfo.title;
+
     return (
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
             <div style={{ flex: '1', width: '10%' }}>
                 <img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
             <div style={{ flex: '9', width: '90%' }} className="text-header">
-                <h2>{headerText}</h2>
+                <h2>{`Vídeo: ${videoTitle}`}</h2>
             </div>
         </div>
     );
@@ -224,7 +248,7 @@ const Watch = () => {
         <>
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="top-container">
             <div style={{ flex: '3', width: '60%' }}>
-            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" headerText="Aula de circuitos elétricos: título do vídeo de circuitos" />
+            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId}/>
             <Video videoId={videoId} />
             <section id="form" class="section">
             <h1>Conheça o curso Domínio Elétrico:</h1>
