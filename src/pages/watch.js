@@ -20,6 +20,25 @@ const extractURLparams = () => {
 
 const URLparams = extractURLparams();
 
+const [videoInfo, setVideoInfo] = useState([]);
+
+const getVideoInfo = async (videoId) => {
+    try {
+        // Make a GET request to fetch recommendations
+        const response = await fetch(`https://dominioeletrico.com.br:5000/videoinfo/${videoId}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setVideoInfo(data);
+    } catch (error) {
+        console.error('Fetch error:', error);
+        console.log("Error");
+    }
+};
+
+const videoTitle = videoInfo.title;
+
 function Video({ videoId }) {
     console.log(videoId);
     const video_src = `https://iframe.mediadelivery.net/embed/188909/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
@@ -49,29 +68,10 @@ function Header() {
 }
 
 function HeaderComponent({ imageSrc, videoId }) {
-    const [videoInfo, setVideoInfo] = useState([]);
-
     useEffect(() => {
         // Fetch recommendations when the component mounts
         getVideoInfo(videoId);
     }, []);
-
-    const getVideoInfo = async (videoId) => {
-        try {
-            // Make a GET request to fetch recommendations
-            const response = await fetch(`https://dominioeletrico.com.br:5000/videoinfo/${videoId}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setVideoInfo(data);
-        } catch (error) {
-            console.error('Fetch error:', error);
-            console.log("Error");
-        }
-    };
-
-    const videoTitle = videoInfo.title;
 
     return (
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
