@@ -33,9 +33,11 @@ const getRecommendations = async (videoId) => {
             return response.json();
         } else if (result.status === 'fail') {
             console.error('Error:', result);
+            console.log("Error 1");
         }
     } catch (error) {
         console.error('Fetch error:', error);
+        console.log("Error 2");
     }
 };
 
