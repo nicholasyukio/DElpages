@@ -18,32 +18,6 @@ const extractURLparams = () => {
     return utmTags;
 };
 
-const getRecommendations = async (videoId) => {
-    try {
-        let response = await fetch('https://dominioeletrico.com.br:5000/similar', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8',
-            },
-        });
-        let result = await response.json();
-
-        if (result.status === 'success') {
-            console.log('Array of objects:', result);
-            return response.json();
-        } else if (result.status === 'fail') {
-            console.error('Error:', result);
-            console.log("Error 1");
-        }
-    } catch (error) {
-        console.error('Fetch error:', error);
-        console.log("Error 2");
-    }
-};
-
-let recommendations = getRecommendations("7dfc6572-3139-4f86-88b4-febdde2d3d56");
-console.log(recommendations)
-
 const URLparams = extractURLparams();
 
 function Video({ videoId }) {
@@ -198,6 +172,46 @@ function Form({ showOffer, onVariableChange }) {
     );
 }
 
+const Recommendations = () => {
+    const [recommendations, setRecommendations] = useState([]);
+
+    useEffect(() => {
+        // Fetch recommendations when the component mounts
+        getRecommendations();
+    }, []);
+
+    const getRecommendations = async () => {
+        try {
+            // Make a GET request to fetch recommendations
+            const response = await fetch('https://dominioeletrico.com.br:5000/similar');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setRecommendations(data);
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    };
+
+    return (
+        <div>
+            <h2>Veja também:</h2>
+            <div>
+                {recommendations.map(recommendation => (
+                    <div key={recommendation.id} style={{ marginBottom: '20px' }}>
+                        <a href={`https://dominioeletrico.com.br/watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                            <br></br>
+                            <span>{recommendation.title}</span>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 const Watch = () => {
     const videoId = URLparams.v;
     const [showOffer, setGlobalVariable] = useState(false);
@@ -209,7 +223,7 @@ const Watch = () => {
 	return (
         <>
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="top-container">
-            <div style={{ flex: '4', width: '80%' }}>
+            <div style={{ flex: '3', width: '60%' }}>
             <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" headerText="Aula de circuitos elétricos: título do vídeo de circuitos" />
             <Video videoId={videoId} />
             <section id="form" class="section">
@@ -217,9 +231,9 @@ const Watch = () => {
             </section>
             <Form showOffer={false} onVariableChange={handleVariableChange} />
             </div>
-            <div style={{ flex: '1', width: '20%' }}>
+            <div style={{ flex: '2', width: '40%' }}>
+            <Recommendations />
             <h2>Vídeos da mesma playlist:</h2>
-            <h2>Veja também:</h2>
             </div>
         </div>
         <Rodape />
