@@ -241,7 +241,11 @@ const Watch = () => {
     }, []);
 
     const videoTitle = videoInfo.title;
-    const videoDescription = videoInfo.metaTags[0].value;
+    let videoDescription = '';
+
+    if (videoInfo.metaTags && videoInfo.metaTags.length > 0) {
+        videoDescription = videoInfo.metaTags[0].value;
+    }
 
     const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
