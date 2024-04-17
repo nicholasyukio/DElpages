@@ -20,24 +20,7 @@ const extractURLparams = () => {
 
 const URLparams = extractURLparams();
 
-const [videoInfo, setVideoInfo] = useState([]);
 
-const getVideoInfo = async (videoId) => {
-    try {
-        // Make a GET request to fetch recommendations
-        const response = await fetch(`https://dominioeletrico.com.br:5000/videoinfo/${videoId}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setVideoInfo(data);
-    } catch (error) {
-        console.error('Fetch error:', error);
-        console.log("Error");
-    }
-};
-
-const videoTitle = videoInfo.title;
 
 function Video({ videoId }) {
     console.log(videoId);
@@ -67,12 +50,7 @@ function Header() {
     );
 }
 
-function HeaderComponent({ imageSrc, videoId }) {
-    useEffect(() => {
-        // Fetch recommendations when the component mounts
-        getVideoInfo(videoId);
-    }, []);
-
+function HeaderComponent({ imageSrc, videoId, videoTitle }) {
     return (
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
             <div style={{ flex: '1', width: '10%' }}>
@@ -240,6 +218,30 @@ const Watch = () => {
     const videoId = URLparams.v;
     const [showOffer, setGlobalVariable] = useState(false);
 
+    const [videoInfo, setVideoInfo] = useState([]);
+
+    const getVideoInfo = async (videoId) => {
+        try {
+            // Make a GET request to fetch recommendations
+            const response = await fetch(`https://dominioeletrico.com.br:5000/videoinfo/${videoId}`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setVideoInfo(data);
+        } catch (error) {
+            console.error('Fetch error:', error);
+            console.log("Error");
+        }
+    };
+
+    useEffect(() => {
+        // Fetch recommendations when the component mounts
+        getVideoInfo(videoId);
+    }, []);
+
+    const videoTitle = videoInfo.title;
+
     const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
         setGlobalVariable(newValue);
@@ -248,7 +250,7 @@ const Watch = () => {
         <>
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="top-container">
             <div style={{ flex: '3', width: '60%' }}>
-            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId}/>
+            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
             <Video videoId={videoId} />
             <section id="form" class="section">
             <h1>Conheça o curso Domínio Elétrico:</h1>
