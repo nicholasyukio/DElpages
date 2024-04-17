@@ -253,8 +253,8 @@ const Watch = () => {
     };
 	return (
         <>
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="top-container">
-            <div style={{ flex: '3', width: '60%' }}>
+        <div className="top-container">
+            <div className="left-div">
             <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
             <Video videoId={videoId} />
             <section id="form" class="section">
@@ -263,7 +263,7 @@ const Watch = () => {
             </section>
             <Form showOffer={false} onVariableChange={handleVariableChange} />
             </div>
-            <div style={{ flex: '2', width: '40%' }}>
+            <div className="right-div">
             <Recommendations />
             <h2>Vídeos da mesma playlist:</h2>
             </div>

@@ -12,10 +12,21 @@ body {
 
 .top-container {
     max-width: 1800px; /* Largura máxima do contêiner de texto */
+    width: 100%;
     margin: auto auto auto auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.left-div {
+    flex: 3;
+    width: 60%;
+}
+
+.right-div {
+    flex: 2;
+    width: 40%;
 }
 
 .watch-container {
@@ -61,7 +72,15 @@ body {
 
 
 /* Estilos de layout responsivo para dispositivos móveis */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+    .top-container {
+        flex-direction: column; /* Stack the divs vertically */
+    }
+    .left-div,
+    .right-div {
+        width: 100%; /* Make both divs take full width */
+    }
+
     .watch-container {
         flex-direction: column; /* Alterado para posicionar a imagem acima do texto em dispositivos móveis */
     }
