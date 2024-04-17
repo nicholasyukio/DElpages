@@ -18,6 +18,30 @@ const extractURLparams = () => {
     return utmTags;
 };
 
+const getRecommendations = async (videoId) => {
+    try {
+        let response = await fetch('https://dominioeletrico.com.br:5000/similar', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+            },
+        });
+        let result = await response.json();
+
+        if (result.status === 'success') {
+            console.log('Array of objects:', result);
+            return response.json();
+        } else if (result.status === 'fail') {
+            console.error('Error:', result);
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+};
+
+let recommendations = getRecommendations("7dfc6572-3139-4f86-88b4-febdde2d3d56");
+console.log(recommendations)
+
 const URLparams = extractURLparams();
 
 function Video({ videoId }) {
