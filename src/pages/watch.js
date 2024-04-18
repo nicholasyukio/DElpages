@@ -167,7 +167,6 @@ function Form({ showOffer, onVariableChange }) {
                 refreshReCaptcha={refreshReCaptcha}
               />
               </GoogleReCaptchaProvider>
-              <h3>{result}</h3>
               <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
           </form>
       </div>
