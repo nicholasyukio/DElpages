@@ -281,7 +281,7 @@ const Watch = () => {
         <>
         <div className="top-container">
             <div className="left-div">
-                <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
+                <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
                 <Video videoId={videoId} />
                 <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
                 <Form showOffer={false} onVariableChange={handleVariableChange} />

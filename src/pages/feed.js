@@ -10,7 +10,7 @@ function FeedHeaderComponent() {
             <div style={{ flex: '1', width: '10%' }}>
             </div>
             <div style={{ flex: '1', width: '10%' }}>
-                <img src="dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} />
+                <img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} />
             </div>
             <div style={{ flex: '3', width: '30%' }} className="feed-button">
                 <ButtonConhecerCurso />
