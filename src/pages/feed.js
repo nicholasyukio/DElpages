@@ -12,13 +12,55 @@ function FeedHeaderComponent() {
             <div style={{ flex: '1', width: '10%' }}>
                 <img src="dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} />
             </div>
-            <div style={{ flex: '4', width: '40%' }} className="feed-button">
-                <a href='espera-dominio-eletrico'><h2>Conhecer o curso</h2></a>
+            <div style={{ flex: '3', width: '30%' }} className="feed-button">
+                <ButtonConhecerCurso />
             </div>
             <div style={{ flex: '4', width: '40%' }} className="feed-button">
-                <a href='https://curso.dominioeletrico.com.br/login'><h2>Acessar o curso (somente para alunos)</h2></a>
+                <ButtonAcessarCurso />
+            </div>
+            <div style={{ flex: '1', width: '10%' }}>
             </div>
         </div>
+    );
+}
+
+function ButtonConhecerCurso({ buttonName }) {
+    const handleClick = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForConhecerCurso', // Custom event name
+            buttonName: 'clickForConhecerCurso', // Custom event data, you can adjust this as needed
+        });
+        // logEvent('ButtonClick', `${buttonName} clicked`);
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = 'espera-dominio-eletrico'; // Redirect to the form anchor
+    };
+
+    return (
+        <button className="btn-conhecer-curso" onClick={handleClick}>
+            <img src='pencil-16.png'></img>
+            Conhecer o curso
+        </button>
+    );
+}
+
+function ButtonAcessarCurso({ buttonName }) {
+    const handleClick = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForAcessarCurso', // Custom event name
+            buttonName: 'clickForAcessarCurso', // Custom event data, you can adjust this as needed
+        });
+        // logEvent('ButtonClick', `${buttonName} clicked`);
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = 'https://curso.dominioeletrico.com.br/login'; // Redirect to the form anchor
+    };
+
+    return (
+        <button className="btn-acessar-curso" onClick={handleClick}>
+            <img src='padlock-3-16.png'></img>
+            Acessar o curso (somente para alunos)
+        </button>
     );
 }
 

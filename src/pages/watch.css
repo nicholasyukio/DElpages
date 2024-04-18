@@ -85,9 +85,9 @@ body {
 .watch-form-container {
     background-color: #fbffd9;
     color: #000000;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto; 
-    padding: 20px;
+    padding: 10px 20px 0px 20px;
     border-radius: 5px;
     box-shadow: 0 0 1px #fbffd9;
   }
@@ -104,9 +104,9 @@ body {
   }
   .watch-form-container input,
   .watch-form-container textarea {
-    width: 100%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
-    padding: 5px 0px 5px 5px;
-    margin-bottom: 2px;
+    width: 90%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+    padding: 5px 10px 5px 5px;
+    margin: 0px 0px 1px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -176,6 +176,45 @@ body {
   color: white; /* Set the color of the links to white when hovered */
 }
 
+.btn-conhecer-curso {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-conhecer-curso:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-conhecer-curso img {
+  margin: 0px 10px 0px 0px;
+}
+
+.btn-acessar-curso {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-acessar-curso:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-acessar-curso img {
+  margin: 0px 10px 0px 0px;
+}
 
 /* Estilos de layout responsivo para dispositivos móveis */
 @media only screen and (max-width: 768px) {

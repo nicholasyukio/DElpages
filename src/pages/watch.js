@@ -211,7 +211,7 @@ const Recommendations = () => {
         const formattedMinutes = String(minutes).padStart(2, '0');
         const formattedSeconds = String(seconds).padStart(2, '0');
 
-        if (hours == 0) {
+        if (hours === 0) {
             return `${formattedMinutes}:${formattedSeconds}`;
         } else {
             return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
