@@ -76,7 +76,7 @@ function Form({ showOffer, onVariableChange }) {
 	//Result of message
 	const [result, setResult] = useState('');
 	//Status of sending message
-	const [status, setStatus] = useState('Buscar oferta para o curso');
+	const [status, setStatus] = useState('Quero conhecer o curso');
 
 	function resetEmailForm() {
 		setEmailForm({ name: '', email: '', message: '' });
@@ -119,7 +119,7 @@ function Form({ showOffer, onVariableChange }) {
 				},
 				body: JSON.stringify(details),
 			});
-			setStatus('Buscar oferta para o curso');
+			setStatus('Quero conhecer o curso');
 			let result = await response.json();
 
 			if (result.status === 'success') {
@@ -138,7 +138,7 @@ function Form({ showOffer, onVariableChange }) {
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
 			console.error(error);
-			setStatus('Buscar oferta para o curso');
+			setStatus('Quero conhecer o curso');
 			setResult('Ocorreu um erro.');
             // logEvent('FormSubmitCatchError', details);
 		}
@@ -150,10 +150,10 @@ function Form({ showOffer, onVariableChange }) {
     };
 
     return (
-      <div id="form" className="form-container">
+      <div id="form" className="watch-form-container">
           <h2>Pronto para começar no Domínio Elétrico?</h2>
-          <p>Com uma assinatura anual, você aprende circuitos elétricos com aulas gravadas e tira dúvidas com o Prof. Nicholas Yukio.</p>
-          <p>Para você começar a dominar os circuitos, <b>preencha os campos abaixo que vamos buscar uma oferta para você:</b></p>
+          <p>Estes vídeos aqui são apenas amostras gratuitas. No curso Domínio Elétrico, você tem uma sequência didática de aulas para estudar, podendo até tirar dúvidas com o Prof. Nicholas Yukio.</p>
+          <p>Para conhecer, <b>preencha os campos abaixo para enviarmos todas informações:</b></p>
           <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
               <label for="nome">Nome:</label>
               <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
@@ -190,6 +190,7 @@ const Recommendations = () => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
+            console.log(data);
             setRecommendations(data);
         } catch (error) {
             console.error('Fetch error:', error);
@@ -200,9 +201,9 @@ const Recommendations = () => {
         <div>
             <h2>Veja também:</h2>
             <div>
-                {recommendations.map(recommendation => (
+                {recommendations.slice(0, 4).map(recommendation => (
                     <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
-                        <a href={`https://dominioeletrico.com.br/watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                        <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
                             <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
                             <br></br>
                             <span>{recommendation.title}</span>
@@ -240,7 +241,8 @@ const Watch = () => {
         getVideoInfo(videoId);
     }, []);
 
-    const videoTitle = videoInfo.title;
+    let videoTitle = '';
+    videoTitle = videoInfo.title;
     let videoDescription = '';
 
     if (videoInfo.metaTags && videoInfo.metaTags.length > 0) {
@@ -265,7 +267,6 @@ const Watch = () => {
             </div>
             <div className="right-div">
             <Recommendations />
-            <h2>Vídeos da mesma playlist:</h2>
             </div>
         </div>
         <Rodape />

@@ -70,6 +70,63 @@ body {
     color: white; /* Set the color of the links to white when hovered */
 }
 
+/* Watch page form */
+
+/* Estilos para o formulário */
+.watch-form-container {
+    background-color: #fbffd9;
+    color: #000000;
+    max-width: 500px;
+    margin: 0 auto; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #fbffd9;
+  }
+  .watch-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .watch-form-container p {
+    text-align: left;
+  }
+  .watch-form-container label {
+    text-align: left; /* Alinhar os rótulos à esquerda */
+    margin-bottom: 0px;
+  }
+  .watch-form-container input,
+  .watch-form-container textarea {
+    width: 100%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .watch-form-container .acceptance-container {
+    display: flex;
+    align-items: center;
+  }
+  .watch-form-container .acceptance-container label {
+  white-space: normal; /* Define a quebra de linha automática para o texto */
+  line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferentes valores) */
+  }
+  .watch-form-container .acceptance-container input[type="checkbox"] {
+    margin-right: 1px; /* Espaçamento entre o checkbox e o rótulo */
+    max-width: 10%;
+  }
+  .watch-form-container button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px; /* Adicione margem na parte superior do botão */
+    font-size: 16px; /* Tamanho da fonte desejado, por exemplo, 16px */
+  }
+  .watch-form-container button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }
+
 
 /* Estilos de layout responsivo para dispositivos móveis */
 @media only screen and (max-width: 768px) {
