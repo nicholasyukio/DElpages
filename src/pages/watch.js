@@ -54,7 +54,7 @@ function HeaderComponent({ imageSrc, videoId, videoTitle }) {
     return (
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
             <div style={{ flex: '1', width: '10%' }}>
-                <img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
             </div>
             <div style={{ flex: '9', width: '90%' }} className="text-header">
                 <h2>{`Vídeo: ${videoTitle}`}</h2>
@@ -176,10 +176,14 @@ function Form({ showOffer, onVariableChange }) {
 
 const Recommendations = () => {
     const [recommendations, setRecommendations] = useState([]);
+    let rendered = false;
 
     useEffect(() => {
         // Fetch recommendations when the component mounts
-        getRecommendations();
+        if (!rendered) {
+            getRecommendations();
+            rendered = true;
+        }
     }, []);
 
     const getRecommendations = async () => {
@@ -197,6 +201,23 @@ const Recommendations = () => {
         }
     };
 
+    function formatVideoDuration(durationInSeconds) {
+        const totalSeconds = durationInSeconds -1;
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+    
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        if (hours == 0) {
+            return `${formattedMinutes}:${formattedSeconds}`;
+        } else {
+            return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+    }
+
     return (
         <div>
             <h2>Veja também:</h2>
@@ -206,7 +227,10 @@ const Recommendations = () => {
                         <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
                             <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
                             <br></br>
-                            <span>{recommendation.title}</span>
+                            <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                <span>{recommendation.title}</span>
+                                <span> ({formatVideoDuration(recommendation.length)})</span>
+                            </div>
                         </a>
                     </div>
                 ))}
@@ -257,16 +281,13 @@ const Watch = () => {
         <>
         <div className="top-container">
             <div className="left-div">
-            <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
-            <Video videoId={videoId} />
-            <section id="form" class="section">
-            <p dangerouslySetInnerHTML={{ __html: videoDescription }}></p>
-            <h1>Conheça o curso Domínio Elétrico:</h1>
-            </section>
-            <Form showOffer={false} onVariableChange={handleVariableChange} />
+                <HeaderComponent imageSrc="dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
+                <Video videoId={videoId} />
+                <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
+                <Form showOffer={false} onVariableChange={handleVariableChange} />
             </div>
-            <div className="right-div">
-            <Recommendations />
+                <div className="right-div">
+                <Recommendations />
             </div>
         </div>
         <Rodape />
