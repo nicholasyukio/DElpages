@@ -139,7 +139,7 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
     if (isMobileDevice) {
         return (
             <div className='feed-content'>
-                    {recommendations.slice(0, 4).map(recommendation => (
+                    {recommendations.slice(0, 12).map(recommendation => (
                             <div className='each-div-mobile'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
                                 <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
