@@ -18,6 +18,13 @@ body {
     justify-content: center;
 }
 
+.top-container-mobile {
+  width: 100%;
+  margin: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .left-div {
     justify-content: center;
     align-items: center;
@@ -26,6 +33,8 @@ body {
 }
 
 .right-div {
+    justify-content: center;
+    align-items: center;
     flex: 2;
     width: 40%;
 }
@@ -37,7 +46,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000000;
 }
 .watch-container img {
     max-width: 100%; /* A imagem ocupa toda a largura da coluna */
@@ -57,9 +65,22 @@ body {
     padding: 5px;
 }
 
+.watch-header-container-mobile {
+  max-width: 360px; /* Largura máxima do contêiner de texto */
+  margin: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-header {
     align-items: center;
     padding: 10px;
+}
+
+.recommendations {
+  margin: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .recommendations a {
@@ -76,7 +97,13 @@ body {
 .watch-video-description {
   max-width: 500px;
   margin: 0 auto; 
-  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.watch-video-description-mobile {
+  max-width: 360px;
+  margin: 0 auto; 
   align-items: center;
   text-align: left;
 }
@@ -135,6 +162,60 @@ body {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
   }
 
+  .watch-form-container-mobile {
+    background-color: #fbffd9;
+    color: #000000;
+    max-width: 360px;
+    margin: 0 auto; 
+    padding: 10px 20px 0px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #fbffd9;
+  }
+  .watch-form-container-mobile form {
+    display: flex;
+    flex-direction: column;
+  }
+  .watch-form-container-mobile p {
+    text-align: left;
+  }
+  .watch-form-container-mobile label {
+    text-align: left; /* Alinhar os rótulos à esquerda */
+    margin-bottom: 0px;
+  }
+  .watch-form-container-mobile input,
+  .watch-form-container-mobile textarea {
+    width: 90%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+    padding: 5px 10px 5px 5px;
+    margin: 0px 0px 1px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .watch-form-container-mobile .acceptance-container {
+    display: flex;
+    align-items: center;
+  }
+  .watch-form-container-mobile .acceptance-container label {
+  white-space: normal; /* Define a quebra de linha automática para o texto */
+  line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferentes valores) */
+  }
+  .watch-form-container-mobile .acceptance-container input[type="checkbox"] {
+    margin-right: 1px; /* Espaçamento entre o checkbox e o rótulo */
+    max-width: 10%;
+  }
+  .watch-form-container-mobile button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px; /* Adicione margem na parte superior do botão */
+    font-size: 16px; /* Tamanho da fonte desejado, por exemplo, 16px */
+  }
+  .watch-form-container-mobile button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }
+
 
   /* Feed page */
 
@@ -163,7 +244,15 @@ body {
   }
 
   .feed-content {
-    margin: 20px 10px 10px 10px;
+    margin: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .feed-content-mobile {
+    margin: auto auto auto auto;
+    max-width: 360px;
+    justify-content: center;
+    align-items: center;
   }
 
   .row-div {

@@ -22,24 +22,41 @@ const URLparams = extractURLparams();
 
 
 
-function Video({ videoId }) {
+function Video({ videoId, isMobileDevice }) {
     console.log(videoId);
     const video_src = `https://iframe.mediadelivery.net/embed/188909/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
     console.log(video_src);
-    return (
-        <div className="watch-container">
-            <div style={{ position: 'auto' }}>
-                <iframe 
-                    src={video_src}
-                    width="720" 
-                    height="405" 
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
-                    allowFullScreen={true}
-                    title="Embedded Video"
-                ></iframe>
+    if (isMobileDevice) {
+        return (
+            <div className="watch-container">
+                <div style={{ position: 'auto' }}>
+                    <iframe 
+                        src={video_src}
+                        width="360" 
+                        height="202" 
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+                        allowFullScreen={true}
+                        title="Embedded Video"
+                    ></iframe>
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className="watch-container">
+                <div style={{ position: 'auto' }}>
+                    <iframe 
+                        src={video_src}
+                        width="720" 
+                        height="405" 
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+                        allowFullScreen={true}
+                        title="Embedded Video"
+                    ></iframe>
+                </div>
+            </div>
+        );
+    }
 }
 
 function Header() {
@@ -50,20 +67,33 @@ function Header() {
     );
 }
 
-function HeaderComponent({ imageSrc, videoId, videoTitle }) {
-    return (
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
-            <div style={{ flex: '1', width: '10%' }}>
-                <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
+function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
+    if (isMobileDevice) {
+        return (
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container-mobile">
+                <div style={{ flex: '2', width: '20%' }}>
+                    <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
+                </div>
+                <div style={{ flex: '8', width: '80%' }} className="text-header">
+                    <h3>{`Vídeo: ${videoTitle}`}</h3>
+                </div>
             </div>
-            <div style={{ flex: '9', width: '90%' }} className="text-header">
-                <h2>{`Vídeo: ${videoTitle}`}</h2>
+        );
+    } else {
+        return (
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
+                <div style={{ flex: '1', width: '10%' }}>
+                    <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
+                </div>
+                <div style={{ flex: '9', width: '90%' }} className="text-header">
+                    <h2>{`Vídeo: ${videoTitle}`}</h2>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
-function Form({ showOffer, onVariableChange }) {
+function Form({ showOffer, onVariableChange, isMobileDevice }) {
     // Google ReCaptcha v3
     const [token, setToken] = useState("");
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
@@ -149,31 +179,57 @@ function Form({ showOffer, onVariableChange }) {
         setToken(getToken);
     };
 
-    return (
-      <div id="form" className="watch-form-container">
-          <h2>Pronto para começar no Domínio Elétrico?</h2>
-          <p>Estes vídeos aqui são apenas amostras gratuitas. No curso Domínio Elétrico, você tem uma sequência didática de aulas para estudar, podendo até tirar dúvidas com o Prof. Nicholas Yukio.</p>
-          <p>Para conhecer, <b>preencha os campos abaixo para enviarmos todas informações:</b></p>
-          <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
-              <label for="nome">Nome:</label>
-              <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
-              <label for="email">Email:</label>
-              <input placeholder="Endereço de email*" type="email" id="email" name="email" required={true} value={emailForm.email} onChange={handleEmailFormChange} /><br />
-              <button type="submit">{status}</button>
-              <GoogleReCaptchaProvider reCaptchaKey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET">
-              <GoogleReCaptcha
-                className="google-recaptcha-custom-class"
-                onVerify={setTokenFunc}
-                refreshReCaptcha={refreshReCaptcha}
-              />
-              </GoogleReCaptchaProvider>
-              <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
-          </form>
-      </div>
-    );
+    if (isMobileDevice) {
+        return (
+            <div id="form" className="watch-form-container-mobile">
+                <h2>Pronto para começar no Domínio Elétrico?</h2>
+                <p>Estes vídeos aqui são apenas amostras gratuitas. No curso Domínio Elétrico, você tem uma sequência didática de aulas para estudar, podendo até tirar dúvidas com o Prof. Nicholas Yukio.</p>
+                <p>Para conhecer, <b>preencha os campos abaixo para enviarmos todas informações:</b></p>
+                <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
+                    <label for="nome">Nome:</label>
+                    <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
+                    <label for="email">Email:</label>
+                    <input placeholder="Endereço de email*" type="email" id="email" name="email" required={true} value={emailForm.email} onChange={handleEmailFormChange} /><br />
+                    <button type="submit">{status}</button>
+                    <GoogleReCaptchaProvider reCaptchaKey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET">
+                    <GoogleReCaptcha
+                      className="google-recaptcha-custom-class"
+                      onVerify={setTokenFunc}
+                      refreshReCaptcha={refreshReCaptcha}
+                    />
+                    </GoogleReCaptchaProvider>
+                    <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
+                </form>
+            </div>
+          );
+    } else {
+        return (
+            <div id="form" className="watch-form-container">
+                <h2>Pronto para começar no Domínio Elétrico?</h2>
+                <p>Estes vídeos aqui são apenas amostras gratuitas. No curso Domínio Elétrico, você tem uma sequência didática de aulas para estudar, podendo até tirar dúvidas com o Prof. Nicholas Yukio.</p>
+                <p>Para conhecer, <b>preencha os campos abaixo para enviarmos todas informações:</b></p>
+                <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
+                    <label for="nome">Nome:</label>
+                    <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
+                    <label for="email">Email:</label>
+                    <input placeholder="Endereço de email*" type="email" id="email" name="email" required={true} value={emailForm.email} onChange={handleEmailFormChange} /><br />
+                    <button type="submit">{status}</button>
+                    <GoogleReCaptchaProvider reCaptchaKey="6LfaEm0pAAAAABZ2_j0qDhbGcqbPoRSQgBexc3ET">
+                    <GoogleReCaptcha
+                      className="google-recaptcha-custom-class"
+                      onVerify={setTokenFunc}
+                      refreshReCaptcha={refreshReCaptcha}
+                    />
+                    </GoogleReCaptchaProvider>
+                    <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
+                </form>
+            </div>
+          );
+    }
+
 }
 
-const Recommendations = () => {
+const Recommendations = ({isMobileDevice}) => {
     const [recommendations, setRecommendations] = useState([]);
     let rendered = false;
 
@@ -216,15 +272,15 @@ const Recommendations = () => {
             return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
         }
     }
-
-    return (
-        <div>
-            <h2>Veja também:</h2>
-            <div>
+    
+    if (isMobileDevice) {
+        return (
+            <div className='feed-content-mobile'>
+                <h2>Veja também:</h2>
                 {recommendations.slice(0, 4).map(recommendation => (
                     <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
                         <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
                             <br></br>
                             <div style={{ display: 'inline-block', maxWidth: '360px' }}>
                                 <span>{recommendation.title}</span>
@@ -234,11 +290,47 @@ const Recommendations = () => {
                     </div>
                 ))}
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className='feed-content'>
+                <h2>Veja também:</h2>
+                {recommendations.slice(0, 4).map(recommendation => (
+                    <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
+                        <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
+                            <br></br>
+                            <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                <span>{recommendation.title}</span>
+                                <span> ({formatVideoDuration(recommendation.length)})</span>
+                            </div>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        );
+    }
 };
 
 const Watch = () => {
+    // State to track the device type
+    const [isMobile, setIsMobile] = useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        console.log(`isMobileDevice: ${isMobileDevice}`);
+        setIsMobile(isMobileDevice);
+    };
+
+    // Check the device type when the component mounts
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
     const videoId = URLparams.v;
     const [showOffer, setGlobalVariable] = useState(false);
 
@@ -276,22 +368,42 @@ const Watch = () => {
         // Update the globalVariable when needed
         setGlobalVariable(newValue);
     };
-	return (
-        <>
-        <div className="top-container">
-            <div className="left-div">
-                <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle}/>
-                <Video videoId={videoId} />
-                <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
-                <Form showOffer={false} onVariableChange={handleVariableChange} />
-            </div>
+
+    if (isMobile) {
+        return (
+            <>
+            <div className="top-container-mobile">
+                <div className="left-div">
+                    <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
+                    <Video videoId={videoId} isMobileDevice={isMobile}/>
+                    <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
+                    <Form showOffer={false} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/>
+                    <Recommendations isMobileDevice={isMobile}/>
+                </div>
                 <div className="right-div">
-                <Recommendations />
+                </div>
             </div>
-        </div>
-        <Rodape />
-        </>
-	);
+            <Rodape />
+            </>
+        );
+    } else {
+        return (
+            <>
+            <div className="top-container">
+                <div className="left-div">
+                    <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
+                    <Video videoId={videoId} isMobileDevice={isMobile}/>
+                    <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
+                    <Form showOffer={false} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/>
+                </div>
+                <div className="right-div">
+                    <Recommendations />
+                </div>
+            </div>
+            <Rodape />
+            </>
+        );
+    }
 };
 
 export default Watch;
