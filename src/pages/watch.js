@@ -358,6 +358,7 @@ const Watch = () => {
 
     let videoTitle = '';
     videoTitle = videoInfo.title;
+    document.title = videoInfo.title;
     let videoDescription = '';
 
     if (videoInfo.metaTags && videoInfo.metaTags.length > 0) {

@@ -222,6 +222,7 @@ const Feed = () => {
         return () => window.removeEventListener('resize', checkIfMobile);
     }, []);
 
+    document.title = 'Site Domínio Elétrico';
     console.log(`isMobile in Feed: ${isMobile}`);
 	return (
         <div className="top-feed-div">
