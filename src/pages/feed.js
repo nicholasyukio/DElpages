@@ -142,9 +142,9 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
                     {recommendations.slice(0, 4).map(recommendation => (
                             <div className='each-div-mobile'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '420px', height: 'auto' }} />
+                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
                                 <br />
-                                <div style={{ display: 'inline-block', maxWidth: '420px' }}>
+                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
                                     <span>{recommendation.title}</span>
                                     <span> ({formatVideoDuration(recommendation.length)})</span>
                                 </div>
