@@ -11,12 +11,11 @@ body {
   }
 
 .top-container {
-    max-width: 1800px; /* Largura máxima do contêiner de texto */
     width: 100%;
     margin: auto auto auto auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .left-div {
@@ -139,9 +138,24 @@ body {
 
   /* Feed page */
 
+  .top-feed-div {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
   .feed-header {
-    margin: 20px 10px 10px 10px;
+    margin: 20px auto auto auto;
+    max-width: 1200px;
     color: white; /* Set the color of the links to white */
+    justify-content: center;
+  }
+
+  .feed-header-mobile {
+    margin: 10px auto auto auto;
+    max-width: 300px;
+    color: white; /* Set the color of the links to white */
+    justify-content: center;
   }
 
   .feed-button a {
@@ -176,6 +190,21 @@ body {
   color: white; /* Set the color of the links to white when hovered */
 }
 
+.each-div-mobile {
+  margin: 10px 10px 10px 10px;
+  flex: 1;
+  width: 100%;
+}
+
+.each-div-mobile a {
+color: white; /* Set the color of the links to white */
+text-decoration: none; /* Remove underline */
+}
+
+.each-div-mobile a:hover {
+color: white; /* Set the color of the links to white when hovered */
+}
+
 .btn-conhecer-curso {
   background-color: #007BFF; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto do botão */
@@ -196,6 +225,26 @@ body {
   margin: 0px 10px 0px 0px;
 }
 
+.btn-conhecer-curso-mobile {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-conhecer-curso-mobile:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-conhecer-curso-mobile img {
+  margin: 0px 0px 0px 0px;
+}
+
 .btn-acessar-curso {
   background-color: #007BFF; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto do botão */
@@ -214,6 +263,26 @@ body {
 }
 .btn-acessar-curso img {
   margin: 0px 10px 0px 0px;
+}
+
+.btn-acessar-curso-mobile {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-acessar-curso-mobile:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-acessar-curso-mobile img {
+  margin: 0px 0px 0px 0px;
 }
 
 /* Estilos de layout responsivo para dispositivos móveis */

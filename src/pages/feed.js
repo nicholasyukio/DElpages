@@ -4,27 +4,40 @@ import React, { useState, useEffect } from 'react';
 import Rodape from './rodape.js';
 import './watch.css';
 
-function FeedHeaderComponent() {
-    return (
-        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header">
-            <div style={{ flex: '1', width: '10%' }}>
+function FeedHeaderComponent({isMobileDevice}) {
+    console.log(`isMobileDevice in FeedHeaderComponent: ${isMobileDevice}`);
+    if (isMobileDevice) {
+        return (
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header-mobile">
+                <div style={{ flex: '1', width: '33%' }}>
+                    <img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '60px', height: 'auto', display: 'block' }} />
+                </div>
+                <div style={{ flex: '1', width: '34%' }} className="feed-button">
+                    <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
+                </div>
+                <div style={{ flex: '1', width: '33%' }} className="feed-button">
+                    <ButtonAcessarCurso buttonName='ButtonAcessarCurso' isMobileDevice={isMobileDevice} />
+                </div>
             </div>
-            <div style={{ flex: '1', width: '10%' }}>
-                <img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} />
+        );
+    } else {
+        return (
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header">
+                <div style={{ flex: '1', width: '33%' }}>
+                    <img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} />
+                </div>
+                <div style={{ flex: '1', width: '34%' }} className="feed-button">
+                    <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
+                </div>
+                <div style={{ flex: '1', width: '33%' }} className="feed-button">
+                    <ButtonAcessarCurso buttonName='ButtonAcessarCurso' isMobileDevice={isMobileDevice} />
+                </div>
             </div>
-            <div style={{ flex: '3', width: '30%' }} className="feed-button">
-                <ButtonConhecerCurso />
-            </div>
-            <div style={{ flex: '4', width: '40%' }} className="feed-button">
-                <ButtonAcessarCurso />
-            </div>
-            <div style={{ flex: '1', width: '10%' }}>
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
-function ButtonConhecerCurso({ buttonName }) {
+function ButtonConhecerCurso({ buttonName, isMobileDevice }) {
     const handleClick = () => {
         // Push the data to the dataLayer when the button is clicked
         window.dataLayer.push({
@@ -35,16 +48,24 @@ function ButtonConhecerCurso({ buttonName }) {
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = 'espera-dominio-eletrico'; // Redirect to the form anchor
     };
-
-    return (
-        <button className="btn-conhecer-curso" onClick={handleClick}>
-            <img src='pencil-16.png'></img>
-            Conhecer o curso
-        </button>
-    );
+    console.log(`isMobileDevice in ButtonConhecerCurso: ${isMobileDevice}`);
+    if (isMobileDevice) {
+        return (
+            <button className="btn-conhecer-curso-mobile" onClick={handleClick}>
+                <img src='pencil-16.png'></img>
+            </button>
+        );
+    } else {
+        return (
+            <button className="btn-conhecer-curso" onClick={handleClick}>
+                <img src='pencil-16.png'></img>
+                Conhecer o curso
+            </button>
+        );
+    }
 }
 
-function ButtonAcessarCurso({ buttonName }) {
+function ButtonAcessarCurso({ buttonName, isMobileDevice }) {
     const handleClick = () => {
         // Push the data to the dataLayer when the button is clicked
         window.dataLayer.push({
@@ -55,16 +76,23 @@ function ButtonAcessarCurso({ buttonName }) {
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = 'https://curso.dominioeletrico.com.br/login'; // Redirect to the form anchor
     };
-
-    return (
-        <button className="btn-acessar-curso" onClick={handleClick}>
-            <img src='padlock-3-16.png'></img>
-            Acessar o curso (somente para alunos)
-        </button>
-    );
+    if (isMobileDevice) {
+        return (
+            <button className="btn-acessar-curso-mobile" onClick={handleClick}>
+                <img src='padlock-3-16.png'></img>
+            </button>
+        );
+    } else {
+        return (
+            <button className="btn-acessar-curso" onClick={handleClick}>
+                <img src='padlock-3-16.png'></img>
+                Acessar o curso (somente para alunos)
+            </button>
+        );
+    }
 }
 
-const RecommendationsForFeed = () => {
+const RecommendationsForFeed = ({isMobileDevice}) => {
     const [recommendations, setRecommendations] = useState([]);
     let rendered = false;
 
@@ -108,63 +136,101 @@ const RecommendationsForFeed = () => {
         }
     }
 
-    return (
-        <div className='feed-content'>
-            <div className='row-div'>
-                {recommendations.slice(0, 4).map(recommendation => (
-                        <div className='each-div'>
-                        <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                            <br />
-                            <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                <span>{recommendation.title}</span>
-                                <span> ({formatVideoDuration(recommendation.length)})</span>
+    if (isMobileDevice) {
+        return (
+            <div className='feed-content'>
+                    {recommendations.slice(0, 4).map(recommendation => (
+                            <div className='each-div-mobile'>
+                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '420px', height: 'auto' }} />
+                                <br />
+                                <div style={{ display: 'inline-block', maxWidth: '420px' }}>
+                                    <span>{recommendation.title}</span>
+                                    <span> ({formatVideoDuration(recommendation.length)})</span>
+                                </div>
+                            </a>
                             </div>
-                        </a>
-                        </div>
-                ))}
+                    ))}
             </div>
-            <div className='row-div'>
-                {recommendations.slice(4, 8).map(recommendation => (
-                        <div className='each-div'>
-                        <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                            <br />
-                            <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                <span>{recommendation.title}</span>
-                                <span> ({formatVideoDuration(recommendation.length)})</span>
+        );
+    } else {
+        return (
+            <div className='feed-content'>
+                <div className='row-div'>
+                    {recommendations.slice(0, 4).map(recommendation => (
+                            <div className='each-div'>
+                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                <br />
+                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                    <span>{recommendation.title}</span>
+                                    <span> ({formatVideoDuration(recommendation.length)})</span>
+                                </div>
+                            </a>
                             </div>
-                        </a>
-                        </div>
-                ))}
-            </div>
-            <div className='row-div'>
-                {recommendations.slice(8, 12).map(recommendation => (
-                        <div className='each-div'>
-                        <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                            <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                            <br />
-                            <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                <span>{recommendation.title}</span>
-                                <span> ({formatVideoDuration(recommendation.length)})</span>
+                    ))}
+                </div>
+                <div className='row-div'>
+                    {recommendations.slice(4, 8).map(recommendation => (
+                            <div className='each-div'>
+                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                <br />
+                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                    <span>{recommendation.title}</span>
+                                    <span> ({formatVideoDuration(recommendation.length)})</span>
+                                </div>
+                            </a>
                             </div>
-                        </a>
-                        </div>
-                ))}
+                    ))}
+                </div>
+                <div className='row-div'>
+                    {recommendations.slice(8, 12).map(recommendation => (
+                            <div className='each-div'>
+                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                <br />
+                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                    <span>{recommendation.title}</span>
+                                    <span> ({formatVideoDuration(recommendation.length)})</span>
+                                </div>
+                            </a>
+                            </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 const Feed = () => {
+    // State to track the device type
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        console.log(`isMobileDevice: ${isMobileDevice}`);
+        setIsMobile(isMobileDevice);
+    };
+
+    // Check the device type when the component mounts
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
+    console.log(`isMobile in Feed: ${isMobile}`);
 	return (
-        <>
-        <FeedHeaderComponent />
+        <div className="top-feed-div">
+        <FeedHeaderComponent isMobileDevice={isMobile}/>
         <div className="top-container">
-            <RecommendationsForFeed />
+            <RecommendationsForFeed isMobileDevice={isMobile}/>
         </div>
         <Rodape />
-        </>
+        </div>
 	);
 };
 
