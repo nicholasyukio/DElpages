@@ -12,7 +12,7 @@ import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
 import Login from "./pages/login";
 import Watch from "./pages/watch";
-import Feed from "./pages/feed";
+import { Feed , Playlist } from "./pages/feed";
 
 export default function App() {
   return (
@@ -28,6 +28,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/playlist" element={<Playlist />} />
         <Route path="*" element={<Espera />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
