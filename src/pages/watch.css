@@ -255,6 +255,13 @@ body {
     align-items: center;
   }
 
+  .feed-content-mobile h2 {
+    margin: 10px auto auto auto;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .row-div {
     max-width: 2500px; /* Largura máxima do contêiner de texto */
     width: 100%;
