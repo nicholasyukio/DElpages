@@ -257,8 +257,8 @@ body {
 
   .feed-content-mobile h2 {
     margin: 10px auto auto auto;
-    max-width: 300px;
     justify-content: center;
+    width: 80%;
     align-items: center;
   }
 

@@ -161,7 +161,7 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
     if (isMobileDevice) {
         return (
             <div className='feed-content-mobile'>
-                    <h2>Recomendações de vídeos de circuitos elétricos:</h2>
+                    {/* <h2>Recomendações de vídeos de circuitos elétricos:</h2> */}
                     {recommendations.slice(0, 12).map(recommendation => (
                             <div className='each-div-mobile'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
@@ -231,7 +231,7 @@ const ListPlaylists = ({isMobileDevice}) => {
     if (isMobileDevice) {
         return (
             <div className='feed-content'>
-                    <h2>Playlists disponíveis: </h2>
+                    {/* <h2>Playlists disponíveis: </h2> */}
                     {availablePlaylists.slice(0, 12).map(recommendation => (
                             <div className='each-div-mobile'>
                             <a href={`playlist?id=${recommendation.id}`} rel="noopener noreferrer">
@@ -318,7 +318,7 @@ const ListPlaylists = ({isMobileDevice}) => {
         // Render each chunk within a row-div
         return (
             <div className='feed-content'>
-                <h2>Playlists disponíveis: </h2>
+                {/* <h2>Playlists disponíveis: </h2> */}
                 {chunks.map((chunk, index) => (
                     <div className='row-div' key={index}>
                         {chunk.map(recommendation => (
@@ -401,7 +401,7 @@ const PlaylistVideos = ({playlistId, isMobileDevice}) => {
     if (isMobileDevice) {
         return (
             <div className='feed-content-mobile'>
-                    <h2>Playlist: {playlistName}</h2>
+                    {/* <h2>Playlist: {playlistName}</h2> */}
                     {recommendations.slice(0, 100).map(recommendation => (
                             <div className='each-div-mobile'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
