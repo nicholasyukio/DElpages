@@ -32,7 +32,7 @@ function FeedHeaderComponent({isMobileDevice}) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header-mobile">
                 <div style={{ flex: '1', width: '33%' }}>
-                    <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '60px', height: 'auto', display: 'block' }} /></a>
+                    <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Site logo" style={{ width: '60px', height: 'auto', display: 'block' }} /></a>
                 </div>
                 <div style={{ flex: '1', width: '34%' }} className="feed-button">
                     <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
@@ -46,7 +46,7 @@ function FeedHeaderComponent({isMobileDevice}) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header">
                 <div style={{ flex: '1', width: '33%' }}>
-                <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Square Image" style={{ width: '100px', height: 'auto', display: 'block' }} /></a>
+                <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Site logo" style={{ width: '100px', height: 'auto', display: 'block' }} /></a>
                 </div>
                 <div style={{ flex: '1', width: '34%' }} className="feed-button">
                     <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
@@ -74,13 +74,13 @@ function ButtonConhecerCurso({ buttonName, isMobileDevice }) {
     if (isMobileDevice) {
         return (
             <button className="btn-conhecer-curso-mobile" onClick={handleClick}>
-                <img src='pencil-16.png'></img>
+                <img src='pencil-16.png' alt="Pencil"></img>
             </button>
         );
     } else {
         return (
             <button className="btn-conhecer-curso" onClick={handleClick}>
-                <img src='pencil-16.png'></img>
+                <img src='pencil-16.png' alt="Pencil"></img>
                 Conhecer o curso
             </button>
         );
@@ -101,13 +101,13 @@ function ButtonAcessarCurso({ buttonName, isMobileDevice }) {
     if (isMobileDevice) {
         return (
             <button className="btn-acessar-curso-mobile" onClick={handleClick}>
-                <img src='padlock-3-16.png'></img>
+                <img src='padlock-3-16.png' alt="Padlock"></img>
             </button>
         );
     } else {
         return (
             <button className="btn-acessar-curso" onClick={handleClick}>
-                <img src='padlock-3-16.png'></img>
+                <img src='padlock-3-16.png' alt="Padlock"></img>
                 Acessar o curso (somente para alunos)
             </button>
         );
