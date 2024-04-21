@@ -247,53 +247,6 @@ const ListPlaylists = ({isMobileDevice}) => {
             </div>
         );
     } else {
-/*         return (
-            <div className='feed-content'>
-                <h2>Playlists disponíveis: </h2>
-                <div className='row-div'>
-                    {availablePlaylists.slice(0, 4).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`playlist?id=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.name} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.name}</span>
-                                    <span> ({recommendation.num_videos} vídeos)</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
-                <div className='row-div'>
-                    {availablePlaylists.slice(4, 8).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`playlist?id=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.name} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.name}</span>
-                                    <span> ({recommendation.num_videos} vídeos)</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
-                <div className='row-div'>
-                    {availablePlaylists.slice(8, 12).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`playlist?id=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.name} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.name}</span>
-                                    <span> ({recommendation.num_videos} vídeos)</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
-            </div>
-        ); */
 
         // Define the size of each chunk
         const chunkSize = 4;

@@ -235,7 +235,6 @@ body {
   .feed-header-mobile {
     margin: 10px auto auto auto;
     max-width: 360px;
-    border: 1px solid #ccc;
     color: white; /* Set the color of the links to white */
     justify-content: center;
   }
@@ -252,7 +251,6 @@ body {
   .feed-content-mobile {
     margin: auto auto auto auto;
     max-width: 360px;
-    border: 1px solid #ccc;
     justify-content: center;
     align-items: center;
   }
