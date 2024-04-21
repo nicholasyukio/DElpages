@@ -271,7 +271,7 @@ const ListPlaylists = ({isMobileDevice}) => {
         // Render each chunk within a row-div
         return (
             <div className='feed-content'>
-                {/* <h2>Playlists disponíveis: </h2> */}
+                <h2>Playlists disponíveis: </h2>
                 {chunks.map((chunk, index) => (
                     <div className='row-div' key={index}>
                         {chunk.map(recommendation => (
