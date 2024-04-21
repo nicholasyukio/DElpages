@@ -160,7 +160,7 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
 
     if (isMobileDevice) {
         return (
-            <div className='feed-content'>
+            <div className='feed-content-mobile'>
                     <h2>Recomendações de vídeos de circuitos elétricos:</h2>
                     {recommendations.slice(0, 12).map(recommendation => (
                             <div className='each-div-mobile'>
@@ -400,7 +400,7 @@ const PlaylistVideos = ({playlistId, isMobileDevice}) => {
 
     if (isMobileDevice) {
         return (
-            <div className='feed-content'>
+            <div className='feed-content-mobile'>
                     <h2>Playlist: {playlistName}</h2>
                     {recommendations.slice(0, 100).map(recommendation => (
                             <div className='each-div-mobile'>
