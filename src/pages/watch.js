@@ -137,8 +137,8 @@ function Form({ showOffer, onVariableChange, isMobileDevice }) {
 			email: email.value,
             "g-recaptcha-response": token,
             utm_source: URLparams.utm_source,
-            utm_term: URLparams.utm_term,
-            utm_medium: URLparams.utm_medium
+            utm_term: URLparams.v,
+            utm_medium: "de_site"
 		};
 
 		try {
