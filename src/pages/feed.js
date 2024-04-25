@@ -28,7 +28,6 @@ const availablePlaylists = [
 const URLparams = extractURLparams();
 
 function FeedHeaderComponent({isMobileDevice}) {
-    console.log(`isMobileDevice in FeedHeaderComponent: ${isMobileDevice}`);
     if (isMobileDevice) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header-mobile">
@@ -71,7 +70,6 @@ function ButtonConhecerCurso({ buttonName, isMobileDevice }) {
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = 'espera-dominio-eletrico'; // Redirect to the form anchor
     };
-    console.log(`isMobileDevice in ButtonConhecerCurso: ${isMobileDevice}`);
     if (isMobileDevice) {
         return (
             <button className="btn-conhecer-curso-mobile" onClick={handleClick}>
@@ -135,7 +133,6 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            console.log(data);
             setRecommendations(data);
         } catch (error) {
             console.error('Fetch error:', error);
@@ -266,7 +263,6 @@ const ListPlaylists = ({isMobileDevice}) => {
 
         // Calculate the number of empty divs needed to complete the last chunk
         const emptyDivsSize = chunkSize - availablePlaylists.length % chunkSize;
-        console.log(`emptyDivSize: ${emptyDivsSize}`);
         const emptyDivs = Array.from({ length: emptyDivsSize }, (_, index) => <div key={`empty-${index}`} className="each-div"></div>);
 
         // Render each chunk within a row-div
@@ -316,7 +312,6 @@ const PlaylistVideos = ({playlistId, isMobileDevice}) => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            console.log(data);
             setRecommendations(data);
         } catch (error) {
             console.error('Fetch error:', error);
@@ -424,7 +419,6 @@ const Feed = () => {
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
         const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
-        console.log(`isMobileDevice: ${isMobileDevice}`);
         setIsMobile(isMobileDevice);
     };
 
@@ -438,7 +432,6 @@ const Feed = () => {
     }, []);
 
     document.title = 'Site Domínio Elétrico';
-    console.log(`isMobile in Feed: ${isMobile}`);
 	return (
         <div className="top-feed-div">
         <FeedHeaderComponent isMobileDevice={isMobile}/>
@@ -459,7 +452,6 @@ const Playlist = () => {
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
         const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
-        console.log(`isMobileDevice: ${isMobileDevice}`);
         setIsMobile(isMobileDevice);
     };
 
@@ -474,7 +466,6 @@ const Playlist = () => {
 
     const playlistId = URLparams.id;
     document.title = 'Site Domínio Elétrico';
-    console.log(`isMobile in Feed: ${isMobile}`);
 	return (
         <div className="top-feed-div">
         <FeedHeaderComponent isMobileDevice={isMobile}/>

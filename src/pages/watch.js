@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import Rodape from './rodape.js';
 import './watch.css';
+import OfertaBreve from './oferta_breve.js';
+import { logEvent, sendEventsToAPI } from './tracking.js';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -23,9 +25,7 @@ const URLparams = extractURLparams();
 
 
 function Video({ videoId, isMobileDevice }) {
-    console.log(videoId);
     const video_src = `https://iframe.mediadelivery.net/embed/188909/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
-    console.log(video_src);
     if (isMobileDevice) {
         return (
             <div className="watch-container">
@@ -59,20 +59,12 @@ function Video({ videoId, isMobileDevice }) {
     }
 }
 
-function Header() {
-    return (
-      <div id="headercta" className="watch-header-container">
-          <h2>O curso online de circuitos em nível de engenharia</h2>
-      </div>
-    );
-}
-
 function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
     if (isMobileDevice) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container-mobile">
                 <div style={{ flex: '2', width: '20%' }}>
-                    <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
+                    <a href='feed'><img src={imageSrc} alt="Site logo" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
                 </div>
                 <div style={{ flex: '8', width: '80%' }} className="text-header">
                     <h3>{`Vídeo: ${videoTitle}`}</h3>
@@ -83,7 +75,7 @@ function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="watch-header-container">
                 <div style={{ flex: '1', width: '10%' }}>
-                    <a href='feed'><img src={imageSrc} alt="Square Image" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
+                    <a href='feed'><img src={imageSrc} alt="Site logo" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
                 </div>
                 <div style={{ flex: '9', width: '90%' }} className="text-header">
                     <h2>{`Vídeo: ${videoTitle}`}</h2>
@@ -160,19 +152,19 @@ function Form({ showOffer, onVariableChange, isMobileDevice }) {
                     event: 'formSubmission', // Custom event name
                     buttonName: 'exampleButton', // Custom event data
                 });
-                // logEvent('FormSubmitSuccess', details);
+                logEvent('FormSubmitSuccess', details);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
-                // logEvent('FormSubmitFail', details);
+                logEvent('FormSubmitFail', details);
 			}
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
 			console.error(error);
 			setStatus('Quero conhecer o curso');
 			setResult('Ocorreu um erro.');
-            // logEvent('FormSubmitCatchError', details);
+            logEvent('FormSubmitCatchError', details);
 		}
-        // sendEventsToAPI();
+        sendEventsToAPI();
 	};
 
     const setTokenFunc = (getToken) => {
@@ -249,7 +241,6 @@ const Recommendations = ({isMobileDevice}) => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            console.log(data);
             setRecommendations(data);
         } catch (error) {
             console.error('Fetch error:', error);
@@ -318,7 +309,6 @@ const Watch = () => {
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
         const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
-        console.log(`isMobileDevice: ${isMobileDevice}`);
         setIsMobile(isMobileDevice);
     };
 
@@ -378,7 +368,7 @@ const Watch = () => {
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
-                    <Form showOffer={false} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/>
+                    {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                     <Recommendations isMobileDevice={isMobile}/>
                 </div>
                 <div className="right-div">
@@ -395,7 +385,7 @@ const Watch = () => {
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
-                    <Form showOffer={false} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/>
+                    {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                 </div>
                 <div className="right-div">
                     <Recommendations />
