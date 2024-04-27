@@ -114,7 +114,7 @@ function Form({ isMobileDevice }) {
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
                 <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
-                <h3>Mas o que você ganha resolvendo o desafio?</h3>
+                <h3>Mas o que você ganha com isso?</h3>
                 <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
@@ -141,7 +141,7 @@ function Form({ isMobileDevice }) {
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
                 <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
-                <h3>Mas o que você ganha resolvendo o desafio?</h3>
+                <h3>Mas o que você ganha com isso?</h3>
                 <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
