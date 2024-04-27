@@ -57,7 +57,7 @@ function Form({ isMobileDevice }) {
 	const handleSubmit = async (e) => {
 		setResult('');
 		e.preventDefault();
-		setStatus('Buscando...');
+		setStatus('Enviando...');
 
 		const { name, email } = e.target.elements;
 
@@ -66,8 +66,8 @@ function Form({ isMobileDevice }) {
 			email: email.value,
             "g-recaptcha-response": token,
             utm_source: URLparams.utm_source,
-            utm_term: URLparams.v,
-            utm_medium: "de_site"
+            utm_term: "de_desafio",
+            utm_medium: URLparams.utm_medium
 		};
 
 		try {
@@ -112,10 +112,10 @@ function Form({ isMobileDevice }) {
             <div id="form" className="desafio-form-container-mobile">
                 <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
-                <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
-                <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
+                <p>Você vai receber por email o acesso a algumas aulas online de <u>circuitos elétricos</u>.</p>
+                <p>Então no dia <u>07/05/24</u>, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
                 <h3>Mas o que você ganha com isso?</h3>
-                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
+                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (vou explicar tudo).</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
@@ -130,6 +130,7 @@ function Form({ isMobileDevice }) {
                       refreshReCaptcha={refreshReCaptcha}
                     />
                     </GoogleReCaptchaProvider>
+                    <h3>{result}</h3>
                     <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
                 </form>
             </div>
@@ -139,10 +140,10 @@ function Form({ isMobileDevice }) {
             <div id="form" className="desafio-form-container">
                 <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
-                <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
-                <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
+                <p>Você vai receber por email o acesso a algumas aulas online de <u>circuitos elétricos</u>.</p>
+                <p>Então no dia <u>07/05/24</u>, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
                 <h3>Mas o que você ganha com isso?</h3>
-                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
+                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (vou explicar tudo).</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
@@ -157,6 +158,7 @@ function Form({ isMobileDevice }) {
                       refreshReCaptcha={refreshReCaptcha}
                     />
                     </GoogleReCaptchaProvider>
+                    <h3>{result}</h3>
                     <p className="politicadeprivacidade">Seus dados estão seguros. <a href="../politicadeprivacidade">Política de privacidade</a></p>
                 </form>
             </div>
