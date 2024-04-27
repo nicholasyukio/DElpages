@@ -1,0 +1,107 @@
+.desafio-form-container {
+    background-color: #fbffd9;
+    color: #000000;
+    max-width: 600px;
+    margin: 20px auto auto auto; 
+    padding: 10px 20px 0px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #fbffd9;
+  }
+  .desafio-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .desafio-form-container p {
+    text-align: left;
+  }
+  .desafio-form-container label {
+    text-align: left; /* Alinhar os rótulos à esquerda */
+    margin-bottom: 0px;
+  }
+  .desafio-form-container input,
+  .desafio-form-container textarea {
+    width: 90%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+    padding: 5px 10px 5px 5px;
+    margin: 0px 0px 1px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .desafio-form-container .acceptance-container {
+    display: flex;
+    align-items: center;
+  }
+  .desafio-form-container .acceptance-container label {
+  white-space: normal; /* Define a quebra de linha automática para o texto */
+  line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferentes valores) */
+  }
+  .desafio-form-container .acceptance-container input[type="checkbox"] {
+    margin-right: 1px; /* Espaçamento entre o checkbox e o rótulo */
+    max-width: 10%;
+  }
+  .desafio-form-container button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px; /* Adicione margem na parte superior do botão */
+    font-size: 16px; /* Tamanho da fonte desejado, por exemplo, 16px */
+  }
+  .desafio-form-container button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }
+
+  .desafio-form-container-mobile {
+    background-color: #fbffd9;
+    color: #000000;
+    max-width: 360px;
+    margin: 20px auto auto auto; 
+    padding: 10px 10px 0px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #fbffd9;
+  }
+  .desafio-form-container-mobile form {
+    display: flex;
+    flex-direction: column;
+  }
+  .desafio-form-container-mobile p {
+    text-align: left;
+  }
+  .desafio-form-container-mobile label {
+    text-align: left; /* Alinhar os rótulos à esquerda */
+    margin-bottom: 0px;
+  }
+  .desafio-form-container-mobile input,
+  .desafio-form-container-mobile textarea {
+    width: 90%; /* Os campos do formulário ocupam toda a largura do contêiner do formulário */
+    padding: 5px 10px 5px 5px;
+    margin: 0px 0px 1px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .desafio-form-container-mobile .acceptance-container {
+    display: flex;
+    align-items: center;
+  }
+  .desafio-form-container-mobile .acceptance-container label {
+  white-space: normal; /* Define a quebra de linha automática para o texto */
+  line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferentes valores) */
+  }
+  .desafio-form-container-mobile .acceptance-container input[type="checkbox"] {
+    margin-right: 1px; /* Espaçamento entre o checkbox e o rótulo */
+    max-width: 10%;
+  }
+  .desafio-form-container-mobile button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px; /* Adicione margem na parte superior do botão */
+    font-size: 16px; /* Tamanho da fonte desejado, por exemplo, 16px */
+  }
+  .desafio-form-container-mobile button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }

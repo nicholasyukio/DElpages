@@ -12,6 +12,7 @@ import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
 import Login from "./pages/login";
 import Watch from "./pages/watch";
+import DesafioCadastro from './pages/desafio.js';
 import { Feed , Playlist } from "./pages/feed";
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/watch" element={<Watch />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/playlist" element={<Playlist />} />
+        <Route path="/desafio-cadastro" element={<DesafioCadastro />} />
         <Route path="*" element={<Espera />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
