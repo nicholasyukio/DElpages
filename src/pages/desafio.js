@@ -113,10 +113,9 @@ function Form({ isMobileDevice }) {
                 <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
-                <p>Então no dia 07/05/24, você receberá o desafio para resolver, que será uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
+                <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
                 <h3>Mas o que você ganha resolvendo o desafio?</h3>
                 <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
-                <p>Quanto mais itens do desafio você acertar, melhor será a oferta que será liberada para você.</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
@@ -141,10 +140,9 @@ function Form({ isMobileDevice }) {
                 <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
-                <p>Então no dia 07/05/24, você receberá o desafio para resolver, que será uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
+                <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
                 <h3>Mas o que você ganha resolvendo o desafio?</h3>
                 <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (todas informações sobre o curso serão passadas por email também).</p>
-                <p>Quanto mais itens do desafio você acertar, melhor será a oferta que será liberada para você.</p>
                 <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
