@@ -110,7 +110,7 @@ function Form({ isMobileDevice }) {
     if (isMobileDevice) {
         return (
             <div id="form" className="desafio-form-container-mobile">
-                <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+                <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
                 <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
@@ -137,7 +137,7 @@ function Form({ isMobileDevice }) {
     } else {
         return (
             <div id="form" className="desafio-form-container">
-                <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+                <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
                 <h3>Como vai funcionar?</h3>
                 <p>Você vai receber por email o acesso a algumas aulas online de circuitos elétricos.</p>
                 <p>Então no dia 07/05/24, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
@@ -215,7 +215,7 @@ export default DesafioCadastro;
 function Bio() {
     return (
     <section className="section">
-    <div className="content-container">
+    <div className="content-container-desafio">
         <figure>
         <img src="/foto_pessoal_pequena-768x765.jpg" alt="Bio" width="360" className="bio-image" />
         </figure>

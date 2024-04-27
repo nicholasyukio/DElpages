@@ -1,5 +1,6 @@
 .desafio-form-container {
     background-color: #fbffd9;
+    background-image: url('../../public/fundo_transparente_de_circuitos.png') ;
     color: #000000;
     max-width: 600px;
     margin: 20px auto auto auto; 
@@ -54,6 +55,7 @@
 
   .desafio-form-container-mobile {
     background-color: #fbffd9;
+    background-image: url('../../public/fundo_transparente_de_circuitos.png') ;
     color: #000000;
     max-width: 360px;
     margin: 20px auto auto auto; 
@@ -104,4 +106,39 @@
   }
   .desafio-form-container-mobile button:hover {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  }
+
+  .content-container-desafio {
+    max-width: 800px; /* Largura máxima do contêiner de texto */
+    color: #000000;
+    margin: 10px auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f5fbfc;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    box-shadow: 0 0 1px #fbffd9;
+  }
+  .content-container-desafio img {
+    max-width: 100%; /* A imagem ocupa toda a largura da coluna */
+    display: block;
+  }
+  .content-container-desafio .text {
+    max-width: 50%; /* Largura máxima do texto */
+    text-align: left; /* Alinhar o texto à esquerda */
+  }
+
+  @media (max-width: 768px) {
+    .content-container-desafio {
+        flex-direction: column; /* Alterado para posicionar a imagem acima do texto em dispositivos móveis */
+    }
+    .content-container-desafio img {
+        max-width: 100%; /* A imagem ocupa toda a largura em dispositivos móveis */
+    }
+    .content-container-desafio .text {
+        max-width: 100%; /* O texto ocupa toda a largura em dispositivos móveis */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
   }
