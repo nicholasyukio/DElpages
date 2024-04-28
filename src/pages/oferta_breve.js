@@ -66,7 +66,7 @@ const OfertaBreve = () => {
         D25ABR24_ji2: {
             headline: "Oferta especial e exclusiva para o dia 25/04/24",
             startTime: "2024-04-25T00:00:01.000-03:00",
-            endTime: "2025-04-25T23:59:59.000-03:00",
+            endTime: "2024-04-25T23:59:59.000-03:00",
             price: "R$ 415,80 / ano",
             pricePix: "R$ 395,01",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=fda2c4d6-459c-45a7-a482-b320e06b2a15",
@@ -74,7 +74,7 @@ const OfertaBreve = () => {
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d6c703dd-0c98-49cd-906f-4d889447355d"
         },
         YTGADS284jknds84: {
-            headline: "Oferta especial para campanha feita no YouTube",
+            headline: "Oferta especial para campanha feita no YouTube:",
             startTime: "2024-04-25T00:00:01.000-03:00",
             endTime: "2125-04-25T23:59:59.000-03:00",
             price: "R$ 415,80 / ano",
@@ -118,9 +118,11 @@ const OfertaBreve = () => {
     
 
     const originalPrice = offerInfo["default"].price;
+    const originalPricePix = offerInfo["default"].pricePix;
+    const originalPriceParcelado12x = offerInfo["default"].priceParcelado12x;
 
     if (offerValid === "late") {
-        offerHeadline = "Oferta expirada. Veja o preço padrão do curso:"
+        offerHeadline = "Oferta expirada. Veja o preço padrão do curso:";
     }
 
     const handleClickForCreditCard = () => {
@@ -139,42 +141,76 @@ const OfertaBreve = () => {
         window.location.href = offerLinkPix;
     };
 
-	return (
-    <>
-    <section id="form" className="section">
-    <div className="offer-container">
-        <h2 align="center">{offerHeadline}</h2>
-        {offerInfo.hasOwnProperty(offerId) && offerActive && (<h2 align="center"><span className="original-price">de: {originalPrice}</span></h2>)}
-        <h2 align="center"><span className="offer-price">por: {offerPrice} (preço base)</span></h2>
-        <h2 align="left">Formas de pagamento:</h2>
-        <table>
-            <tr>
-                <td>
-                    <h4 align="left">Parcelado no cartão de crédito <br/>(juros de 2% a.m.):</h4>
-                    <p><span className="offer-price">por: {offerPriceParcelado12x}</span></p>
-                </td>
-                <td>
-                    <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h4 align="left">À vista no Pix ou boleto <br/>(5% de desconto sobre preço base):</h4>
-                    <p><span className="offer-price">por: {offerPricePix}</span></p>
-                </td>
-                <td>
-                    <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
-                </td>
-            </tr>
-        </table>
-        <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
-        <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
-        <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
-        <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
-    </div>
-    </section>
-    </>
-	);
+    if (offerInfo.hasOwnProperty(offerId) && offerActive) {
+        return (
+            <>
+            <section id="form" className="section">
+            <div className="offer-container">
+                <h2 align="center">{offerHeadline}</h2>
+                <h2 className="urgente" align="center">-16% na anuidade da plataforma do curso</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <div className='payment-form'>
+                            <h4 align="left">No cartão de crédito <br/>(até 12x, juros de 2% a.m.):</h4>
+                            <p>se parcelar em 12x, fica: <br />de: <span className="original-price">{originalPriceParcelado12x}</span> <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
+                            <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div className='payment-form'>
+                            <h4 align="left">À vista no Pix ou boleto <br/>(-5% sobre a oferta):</h4>
+                            <p>preço base: <span className="original-price">{originalPrice}</span><br />
+                            com a oferta aplicada: <span className="original-price">{originalPricePix}</span><br />
+                            <span className="offer-price">-5% do Pix/boleto: <b>{offerPricePix}</b></span></p>
+                            <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
+                            </div>
+                        </td>    
+                    </tr>
+                </table>
+                <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
+                <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
+                <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
+                <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
+            </div>
+            </section>
+            </>
+        );
+    } else {
+        return (
+            <>
+            <section id="form" className="section">
+            <div className="offer-container">
+                <h2 align="center">{offerHeadline}</h2>
+                <h2 align='center' className="urgente">{originalPrice}</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <div className='payment-form'>
+                            <h4 align="left">No cartão de crédito <br/>(até 12x, juros de 2% a.m.):</h4>
+                            <p>se parcelar em 12x, fica: <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
+                            <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div className='payment-form'>
+                            <h4 align="left">À vista no Pix ou boleto <br/>(-5% sobre a preço base):</h4>
+                            <p>preço base: <span className="original-price">{originalPrice}</span><br />
+                            -5% do Pix/boleto: <span className="offer-price"><b>{originalPricePix}</b></span><br /></p>
+                            <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
+                            </div>
+                        </td>    
+                    </tr>
+                </table>
+                <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
+                <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
+                <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
+                <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
+            </div>
+            </section>
+            </>
+            );
+    }
 };
 
 export default OfertaBreve;

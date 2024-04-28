@@ -2,4 +2,23 @@
     text-decoration: line-through;
     text-decoration-color: red;
   }
-  
+
+.payment-form {
+  border: 1px solid #749c5a;
+  border-radius: 5px;
+  padding: 5px;
+  height: 200px;
+  background: #b9fa91;
+  box-shadow: 0 0 10px #b9fa91;
+}
+
+@media (max-width: 768px) {
+  .payment-form {
+    border: 1px solid #749c5a;
+    border-radius: 5px;
+    padding: 5px;
+    height: 250px;
+    background: #b9fa91;
+    box-shadow: 0 0 10px #b9fa91;
+  }
+}
