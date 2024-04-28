@@ -86,14 +86,14 @@ const Espera = () => {
         </section>
         <BriefDescription />
         <CourseContent />
-        <StudentsProfile />
+        {/* <StudentsProfile />
         <ElectronicsContent />
         <FromBasicsToAdvanced />
         <MatematicaDoEletron />
         <TheoryAndPractice />
         <EletronQuest />
         <Depoimentos />
-        <SpecialWarnings />
+        <SpecialWarnings /> */}
         {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} /> : <OfertaBreve />}
         <Bio />
         <Rodape />
@@ -113,15 +113,15 @@ const Direto = () => {
         </section>
         <BriefDescription />
         <CourseContent />
+        <OfertaBreve />
+        <Depoimentos />
         <StudentsProfile />
         <ElectronicsContent />
         <FromBasicsToAdvanced />
         <MatematicaDoEletron />
         <TheoryAndPractice />
         <EletronQuest />
-        <Depoimentos />
         <SpecialWarnings />
-        <OfertaBreve />
         <Bio />
         <Rodape />
         </>
