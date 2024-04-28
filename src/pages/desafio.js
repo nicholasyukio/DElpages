@@ -22,6 +22,18 @@ const extractURLparams = () => {
 
 const URLparams = extractURLparams();
 
+function FormCopy () {
+    return (
+        <>
+        <h3>Como vai funcionar?</h3>
+        <p>Vou liberar o acesso a algumas aulas especiais de <u>circuitos elétricos</u> com exercícios resolvidos. Em seguida, no dia <u>07/05/24</u>, você receberá uma questão de circuitos bem parecida para resolver valendo pontos. </p>
+        <h3>Mas o que você ganha com isso?</h3>
+        <p>Você receberá uma oferta especial ("desconto") para fazer a sua inscrição no curso Domínio Elétrico. <u>Quanto mais pontos fizer no desafio, melhor a oferta.</u></p>
+        <p>Para participar, <b>cadastre-se gratuitamente preenchendo os campos abaixo:</b></p>
+        </>
+    );
+}
+
 function Form({ isMobileDevice }) {
     // Google ReCaptcha v3
     const [token, setToken] = useState("");
@@ -111,12 +123,7 @@ function Form({ isMobileDevice }) {
         return (
             <div id="form" className="desafio-form-container-mobile">
                 <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-                <h3>Como vai funcionar?</h3>
-                <p>Você vai receber por email o acesso a algumas aulas online de <u>circuitos elétricos</u>.</p>
-                <p>Então no dia <u>07/05/24</u>, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
-                <h3>Mas o que você ganha com isso?</h3>
-                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (vou explicar tudo).</p>
-                <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
+                <FormCopy />
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
                     <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
@@ -139,12 +146,7 @@ function Form({ isMobileDevice }) {
         return (
             <div id="form" className="desafio-form-container">
                 <img src="/desafio_eletrico_logo.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-                <h3>Como vai funcionar?</h3>
-                <p>Você vai receber por email o acesso a algumas aulas online de <u>circuitos elétricos</u>.</p>
-                <p>Então no dia <u>07/05/24</u>, você receberá uma questão de circuitos bem parecida com os exemplos das aulas indicadas. Você terá 24 horas para resolver.</p>
-                <h3>Mas o que você ganha com isso?</h3>
-                <p>Além do conhecimento em si, você receberá uma oferta especial para fazer a sua inscrição no curso Domínio Elétrico (vou explicar tudo).</p>
-                <p>Para participar, <b>cadastre-se preenchendo os campos abaixo:</b></p>
+                <FormCopy />
                 <form id="frm" className="contact_form" onSubmit={handleSubmit} method="post">
                     <label for="nome">Nome:</label>
                     <input placeholder="Nome*" type="text" id="nome" name="name" required={true} value={emailForm.name} onChange={handleEmailFormChange} /><br />
