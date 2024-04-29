@@ -79,10 +79,7 @@ const Espera = () => {
         <>
         <section className="section">
         <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-		<div className="content-container">
-            <Video />
-            <HeaderCTA />
-		</div>
+		<NewIntro />
         </section>
         <BriefDescription />
         <CourseContent />
@@ -130,6 +127,41 @@ const Direto = () => {
 
 export { Home, Espera, Direto };
 
+function NewIntro() {
+    // State to track the device type
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+
+    // Check the device type when the component mounts
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+    if (isMobile) {
+        return(
+            <div className="content-container-header">
+                <div className='empty-div'></div>
+                <NewHeaderCTA isMobile={isMobile}/>
+            </div>
+        );
+    } else {
+        return(
+            <div className="content-container-header">
+                <NewHeaderCTA isMobile={isMobile}/>
+                <div className='empty-div'></div>
+            </div>
+        );
+    }
+
+}
+
 function Video() {
     return (
         <div className="video-container">
@@ -165,6 +197,31 @@ function FormButton({ buttonName }) {
             Quero ser aluno do Domínio Elétrico
         </button>
     );
+}
+
+function NewHeaderCTA({isMobile}) {
+    if (isMobile) {
+        return (
+            <div id="headercta" className="new-header-container">
+                <SectionTracker sectionId="HeaderCTA" />
+                <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
+                <p>Muitos estudantes de diversas faculdades, públicas e privadas, têm dificuldade para aprender a disciplina de circuitos elétricos só com a faculdade, por vários motivos.</p>
+                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, tenho um curso online de circuitos elétricos (o Domínio Elétrico).</p>
+                <FormButton buttonName="HeaderCTA" />
+            </div>
+          );
+    } else {
+        return (
+            <div id="headercta" className="new-header-container">
+                <SectionTracker sectionId="HeaderCTA" />
+                <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
+                <p>Muitos estudantes de diversas faculdades, públicas e privadas, têm dificuldade para aprender a disciplina de circuitos elétricos só com a faculdade. Seja porque o professor não explica bem, ou porque o material didático é ruim, ou porque o professor não sabe, fato é que é comum ter dificuldade nesta matéria.</p>
+                <p>Eu, (<b>Prof. Nicholas Yukio</b>), também não entendi bem o assunto no semestre em que tive a matéria quando era aluno no ITA. Mas continuando os estudos, o assunto foi ficando claro ao longo dos anos, chegando a ser professor da mesma disciplina após me formar.</p>
+                <p>Agora tenho um curso online de circuitos elétricos (o Domínio Elétrico), e se você quiser aprender circuitos com as minhas aulas e tirar dúvidas direto comigo, leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
+                <FormButton buttonName="HeaderCTA" />
+            </div>
+          );
+    }
 }
 
 function HeaderCTA() {
@@ -290,15 +347,30 @@ function Form({ showOffer, onVariableChange }) {
     );
 }
 
+function CircuitImage() {
+    return (
+        <figure>
+        <img src="/circuito2_fundo_transparente.png" alt="Circuito elétrico RLC" width="800" />
+        </figure>
+    );
+}
+
 function BriefDescription() {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    const handleButtonClick = () => {
+      setIsVideoLoaded(!isVideoLoaded);
+    };
+
     return (     
     <section className="section">
     <h2 align="center">O Domínio Elétrico é um curso online de circuitos elétricos. Como assim?</h2>
     <div className="content-container">
         <SectionTracker sectionId="BriefDescription" />
-        <figure>
-        <img src="/circuito2_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
-        </figure>
+        <div>
+        {isVideoLoaded ? <Video /> : <CircuitImage />}
+        <button className='btn-video' onClick={handleButtonClick}>Ver vídeo sobre o curso</button>
+        </div>
         <div className="text">
         <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
         <p><strong>Porém,</strong> é comum que os alunos de faculdades brasileiras, tanto públicas quanto privadas, tenham dificuldades para aprender a matéria apenas com o material e aulas do professor da faculdade. O Domínio Elétrico vem atender melhor essa demanda com um curso de circuitos elétricos com aulas didáticas, exercícios resolvidos, suporte para tira-dúvidas e muito mais.</p>

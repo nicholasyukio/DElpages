@@ -26,15 +26,39 @@ code {
   justify-content: space-between;
   padding: 20px;
   background: #f5fbfc;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 1px solid #ccc; 
-  box-shadow: 0 0 5px rgb(255, 255, 255);
+  box-shadow: 0 0 2px rgb(255, 255, 255);
 }
 .content-container img {
   max-width: 100%; /* A imagem ocupa toda a largura da coluna */
   display: block;
 }
 .content-container .text {
+  max-width: 50%; /* Largura máxima do texto */
+  text-align: left; /* Alinhar o texto à esquerda */
+}
+
+.content-container-header {
+  max-width: 1000px; /* Largura máxima do contêiner de texto */
+  color: #000000;
+  margin: 30px auto auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-image: url('../public/header_image.jpg') ;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  border: 1px solid #ccc; 
+  box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+.content-container-header img {
+  max-width: 100%; /* A imagem ocupa toda a largura da coluna */
+  display: block;
+}
+.content-container-header .text {
   max-width: 50%; /* Largura máxima do texto */
   text-align: left; /* Alinhar o texto à esquerda */
 }
@@ -63,6 +87,23 @@ code {
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
+.btn-video {
+  background-color: #1eff69; /* Cor de fundo do botão */
+  color: #000000; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block;
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto;
+}
+.btn-video:hover {
+  background-color: #17da58; /* Cor de fundo ao passar o mouse */
+}
+
 .section {
   padding: 30px 0;
   text-align: center;
@@ -82,9 +123,27 @@ code {
       max-width: 100%; /* O texto ocupa toda a largura em dispositivos móveis */
       text-align: center; /* Centralizar o texto em dispositivos móveis */
   }
+
+  .content-container-header {
+    flex-direction: column; /* Alterado para posicionar a imagem acima do texto em dispositivos móveis */
+    background-image: url('../public/header_image_mobile.jpg') ;
+    background-size: cover;
+    background-position: center;
+  }
+  .content-container-header img {
+      max-width: 100%; /* A imagem ocupa toda a largura em dispositivos móveis */
+  }
+  .content-container-header .text {
+      max-width: 100%; /* O texto ocupa toda a largura em dispositivos móveis */
+      text-align: center; /* Centralizar o texto em dispositivos móveis */
+  }
   .video-container iframe {
       width: 100%; /* Full width on smaller screens */
       height: auto; /* Maintain aspect ratio */
+  }
+
+  .empty-div {
+    height: 120px;
   }
 }
 
@@ -167,9 +226,9 @@ line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferent
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 1px solid #ccc; /* Largura e cor da borda */
-  box-shadow: 0 0 5px rgb(255, 255, 255); /* Sombra com deslocamento, difusão e cor */
+  box-shadow: 0 0 2px rgb(255, 255, 255); /* Sombra com deslocamento, difusão e cor */
 }
 .content-container-single-column img {
   max-width: 100%; /* A imagem ocupa toda a largura da coluna */
@@ -232,6 +291,22 @@ display: none;
   text-align: left;
   padding: 5px 5px 5px 20px;
 }
+
+.new-header-container {
+  width: 90%;
+  text-align: left;
+  padding: 1px 1px 1px 1px;
+}
 .urgente {
   color: #CC1B4D;
+}
+
+.empty-div {
+  width: 350px;
+}
+
+.highlighted-heading {
+  background-color: rgba(238, 255, 0, 0.66); /* Background color with some transparency */
+  padding: 2px 4px; /* Add padding to create some space around the text */
+  display: inline-block; /* Make the background cover only the text, not the entire width of the container */
 }

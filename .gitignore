@@ -24,3 +24,5 @@ yarn-error.log*
 src/pages/.env
 DElpages.pem
 ssh_script
+public/header_image.xcf
+public/header_image_mobile.xcf
