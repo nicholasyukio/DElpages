@@ -75,7 +75,7 @@ const OfertaBreve = () => {
         },
         D29ABR24_10h_36h: {
             headline: "Oferta especial válida de 10h00 de 29/04/24 às 22h00 de 30/04/24",
-            startTime: "2024-04-29T09:00:00.000-03:00",
+            startTime: "2024-04-29T10:00:00.000-03:00",
             endTime: "2024-04-30T22:00:00.000-03:00",
             price: "R$ 415,80 / ano",
             pricePix: "R$ 395,01",
