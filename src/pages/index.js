@@ -103,22 +103,19 @@ const Direto = () => {
         <>
         <section className="section">
         <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-		<div className="content-container">
-            <Video />
-            <HeaderCTA />
-		</div>
+		<NewIntro />
         </section>
         <BriefDescription />
         <CourseContent />
         <OfertaBreve />
         <Depoimentos />
-        <StudentsProfile />
+        {/* <StudentsProfile /> */}
         <ElectronicsContent />
         <FromBasicsToAdvanced />
         <MatematicaDoEletron />
         <TheoryAndPractice />
-        <EletronQuest />
-        <SpecialWarnings />
+        {/* <EletronQuest />
+        <SpecialWarnings /> */}
         <Bio />
         <Rodape />
         </>
