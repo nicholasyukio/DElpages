@@ -19,10 +19,12 @@ const extractURLparams = () => {
 };
 
 const availablePlaylists = [
-    {id: "93eea27b-f1ed-47c6-bb44-c989d86797ff", name: "Multivibrador Astável", num_videos: 5, thumbnail_url: "playlist_multivibrador_astavel_thumbnail.jpg"},
-    {id: "bb29f908-2f6f-43cf-a044-6fb1c4a6c02b", name: "Exercícios Resolvidos - 2023", num_videos: 32, thumbnail_url: "playlist_exercicios_resolvidos_2023_thumbnail.jpg"},
+    {id: "3f128956-5e89-410b-8072-203b8d266390", name: "Multivibrador Astável", num_videos: 6, thumbnail_url: "playlist_multivibrador_astavel_thumbnail.jpg"},
+    {id: "c385ae61-4635-4ef2-a76f-6762dce1ac2d", name: "Vídeos de experimentos", num_videos: 22, thumbnail_url: "playlist_multivibrador_astavel_thumbnail.jpg"},
+    {id: "a63b2748-daaf-4e68-bd35-a0c6d5453b64", name: "Exercícios Resolvidos - 2022", num_videos: 43, thumbnail_url: "playlist_exercicios_resolvidos_2023_thumbnail.jpg"},
+    {id: "bb29f908-2f6f-43cf-a044-6fb1c4a6c02b", name: "Exercícios Resolvidos - 2023", num_videos: 35, thumbnail_url: "playlist_exercicios_resolvidos_2023_thumbnail.jpg"},
     {id: "15d46305-b813-4b0c-89f1-f0eb5b003ce5", name: "Erros Elétricos", num_videos: 15, thumbnail_url: "playlist_erros_eletricos_thumbnail.jpg"},
-    {id: "7441c2a3-57e0-45b5-8d54-0b1050ae1065", name: "Aulas Longas de Circuitos Elétricos", num_videos: 13, thumbnail_url: "playlist_aulas_longas_thumbnail.jpg"}
+    {id: "ba37a8c8-f3b6-44b2-a1bb-07cdef9085f3", name: "Aulas Longas de Circuitos Elétricos", num_videos: 13, thumbnail_url: "playlist_aulas_longas_thumbnail.jpg"}
 ];
 
 const URLparams = extractURLparams();
