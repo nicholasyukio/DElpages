@@ -25,7 +25,7 @@ const URLparams = extractURLparams();
 
 
 function Video({ videoId, isMobileDevice }) {
-    const video_src = `https://iframe.mediadelivery.net/embed/188909/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
+    const video_src = `https://iframe.mediadelivery.net/embed/236258/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
     if (isMobileDevice) {
         return (
             <div className="watch-container">
