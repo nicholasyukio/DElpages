@@ -21,7 +21,7 @@ const extractURLparams = () => {
 const availablePlaylists = [
     {id: "93eea27b-f1ed-47c6-bb44-c989d86797ff", name: "Multivibrador Astável", num_videos: 5, thumbnail_url: "playlist_multivibrador_astavel_thumbnail.jpg"},
     {id: "bb29f908-2f6f-43cf-a044-6fb1c4a6c02b", name: "Exercícios Resolvidos - 2023", num_videos: 32, thumbnail_url: "playlist_exercicios_resolvidos_2023_thumbnail.jpg"},
-    {id: "4efb0079-1a3a-44b0-87e3-6e0af1ac56a6", name: "Erros Elétricos", num_videos: 15, thumbnail_url: "playlist_erros_eletricos_thumbnail.jpg"},
+    {id: "15d46305-b813-4b0c-89f1-f0eb5b003ce5", name: "Erros Elétricos", num_videos: 15, thumbnail_url: "playlist_erros_eletricos_thumbnail.jpg"},
     {id: "7441c2a3-57e0-45b5-8d54-0b1050ae1065", name: "Aulas Longas de Circuitos Elétricos", num_videos: 13, thumbnail_url: "playlist_aulas_longas_thumbnail.jpg"}
 ];
 
