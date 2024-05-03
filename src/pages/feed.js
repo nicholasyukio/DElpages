@@ -370,23 +370,32 @@ const PlaylistVideos = ({playlistId, isMobileDevice}) => {
     const playlistName = getPlaylistName(playlistId);
 
     if (isMobileDevice) {
-        return (
+        if (recommendations.length === 0) {
+            return (
             <div className='feed-content-mobile'>
-                    <h2>Playlist: {playlistName}</h2>
-                    {recommendations.slice(0, 100).map(recommendation => (
-                            <div className='each-div-mobile'>
-                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.title}</span>
-                                    <span> ({formatVideoDuration(recommendation.length)})</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
+                <h2>Playlist: {playlistName} (carregando)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
-        );
+            );
+        } else {
+            return (
+                <div className='feed-content-mobile'>
+                        <h2>Playlist: {playlistName}</h2>
+                        {recommendations.slice(0, 100).map(recommendation => (
+                                <div className='each-div-mobile'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                </div>
+            );
+        }
     } else {
         // Define the size of each chunk
         const chunkSize = 4;
@@ -408,30 +417,38 @@ const PlaylistVideos = ({playlistId, isMobileDevice}) => {
         const emptyDivs = Array.from({ length: emptyDivsSize }, (_, index) => <div key={`empty-${index}`} className="each-div empty-div"></div>);
 
         // Render each chunk within a row-div
-        return (
+        if (recommendations.length === 0) {
+            return (
             <div className='feed-content'>
-                <h2>Playlist: {playlistName}</h2>
-                {chunks.map((chunk, index) => (
-                    <div className='row-div' key={index}>
-                        {chunk.map(recommendation => (
-                            <div className='each-div' key={recommendation.id}>
-                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                    <br />
-                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                        <span>{recommendation.title}</span>
-                                        <span> ({formatVideoDuration(recommendation.length)})</span>
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
-                        {/* Render empty divs for the last chunk to maintain alignment */}
-                        {recommendations.length % chunkSize !== 0 && index === chunks.length - 1 && emptyDivs}
-                    </div>
-                ))}
+                <h2>Playlist: {playlistName} (carregando)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
-        );
-
+            );
+        } else {
+            return (
+                <div className='feed-content'>
+                    <h2>Playlist: {playlistName}</h2>
+                    {chunks.map((chunk, index) => (
+                        <div className='row-div' key={index}>
+                            {chunk.map(recommendation => (
+                                <div className='each-div' key={recommendation.id}>
+                                    <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                        <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                        <br />
+                                        <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                            <span>{recommendation.title}</span>
+                                            <span> ({formatVideoDuration(recommendation.length)})</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            ))}
+                            {/* Render empty divs for the last chunk to maintain alignment */}
+                            {recommendations.length % chunkSize !== 0 && index === chunks.length - 1 && emptyDivs}
+                        </div>
+                    ))}
+                </div>
+            );
+        }
     }
 };
 
