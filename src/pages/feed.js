@@ -131,7 +131,8 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
     const getRecommendations = async () => {
         try {
             // Make a GET request to fetch recommendations
-            const response = await fetch('https://dominioeletrico.com.br:5000/similar');
+            // const response = await fetch('https://dominioeletrico.com.br:5000/similar');
+            const response = await fetch('https://api.dominioeletrico.com.br/recom/12/totalWatchTime/none');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -160,71 +161,89 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
     }
 
     if (isMobileDevice) {
-        return (
+        if (recommendations.length === 0) {
+            return (
             <div className='feed-content-mobile'>
-                    <h2>Recomendações de vídeos de circuitos elétricos:</h2>
-                    {recommendations.slice(0, 12).map(recommendation => (
-                            <div className='each-div-mobile'>
-                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.title}</span>
-                                    <span> ({formatVideoDuration(recommendation.length)})</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
+                <h2>Recomendações de vídeos de circuitos elétricos: (carregando...)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
-        );
+            );
+        } else {
+            return (
+                <div className='feed-content-mobile'>
+                        <h2>Recomendações de vídeos de circuitos elétricos:</h2>
+                        {recommendations.slice(0, 12).map(recommendation => (
+                                <div className='each-div-mobile'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                </div>
+            );
+        }
     } else {
-        return (
+        if (recommendations.length === 0) {
+            return (
             <div className='feed-content'>
-                <h2>Recomendações de vídeos de circuitos elétricos:</h2>
-                <div className='row-div'>
-                    {recommendations.slice(0, 4).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.title}</span>
-                                    <span> ({formatVideoDuration(recommendation.length)})</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
-                <div className='row-div'>
-                    {recommendations.slice(4, 8).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.title}</span>
-                                    <span> ({formatVideoDuration(recommendation.length)})</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
-                <div className='row-div'>
-                    {recommendations.slice(8, 12).map(recommendation => (
-                            <div className='each-div'>
-                            <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
-                                <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
-                                <br />
-                                <div style={{ display: 'inline-block', maxWidth: '360px' }}>
-                                    <span>{recommendation.title}</span>
-                                    <span> ({formatVideoDuration(recommendation.length)})</span>
-                                </div>
-                            </a>
-                            </div>
-                    ))}
-                </div>
+                <h2>Recomendações de vídeos de circuitos elétricos: (carregando...)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
-        );
+            );
+        } else {
+            return (
+                <div className='feed-content'>
+                    <h2>Recomendações de vídeos de circuitos elétricos:</h2>
+                    <div className='row-div'>
+                        {recommendations.slice(0, 4).map(recommendation => (
+                                <div className='each-div'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                    </div>
+                    <div className='row-div'>
+                        {recommendations.slice(4, 8).map(recommendation => (
+                                <div className='each-div'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                    </div>
+                    <div className='row-div'>
+                        {recommendations.slice(8, 12).map(recommendation => (
+                                <div className='each-div'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
     }
 };
 
