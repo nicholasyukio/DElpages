@@ -114,6 +114,10 @@ const Signup = () => {
               alert("Erro");
             } else {
               // console.log(data);
+              window.dataLayer.push({
+                event: 'siteSignUp', // Custom event name
+                buttonName: 'signUpButton', // Custom event data
+              });
               const user_id = data.userSub;
               saveUserInDB(user_id);
               Navigate(`/verify?email=${email}`);
