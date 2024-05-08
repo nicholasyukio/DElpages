@@ -10,6 +10,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+.h4title-mobile {
+  max-width: 360px;
+  margin: 5px auto 5px auto;
+}
+
+.h4title {
+  max-width: 720px;
+  margin: 5px auto 5px auto;
+}
+
 .top-container {
     width: 100%;
     margin: auto auto auto auto;
@@ -452,6 +462,28 @@ color: white; /* Set the color of the links to white when hovered */
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 .btn-acessar-curso-mobile img {
+  margin: 0px 0px 0px 0px;
+  width: 24px;
+}
+
+.btn-salvar-mobile {
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: flex;
+  align-items: center; 
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 50px 0px 0px 0px;
+}
+.btn-salvar-mobile:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-salvar-mobile img {
   margin: 0px 0px 0px 0px;
   width: 24px;
 }

@@ -222,7 +222,7 @@ function ButtonSave({ isMobileDevice }) {
 
     if (isMobileDevice) {
         return (
-            <button className="btn-acessar-curso-mobile" onClick={handleClick}>
+            <button className="btn-salvar-mobile" onClick={handleClick}>
                 <img src={iconImageFile} alt="Save"></img>
             </button>
         );

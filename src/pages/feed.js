@@ -32,7 +32,7 @@ const availablePlaylists = [
 
 const URLparams = extractURLparams();
 
-function FeedHeaderComponent({isMobileDevice}) {
+export function FeedHeaderComponent({isMobileDevice}) {
     if (isMobileDevice) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header-mobile">

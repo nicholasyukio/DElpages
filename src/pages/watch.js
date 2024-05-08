@@ -8,6 +8,7 @@ import OfertaBreve from './oferta_breve.js';
 import { logEvent, sendEventsToAPI } from './tracking.js';
 import { GreetingWatch, ButtonAccount, ButtonSave } from './greeting.js';
 import {saveDesiteEventInDB} from './tracking';
+import { FeedHeaderComponent } from './feed.js';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -68,10 +69,10 @@ function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
                 <div style={{ flex: '2', width: '20%' }}>
                     <a href='feed'><img src={imageSrc} alt="Site logo" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
                 </div>
-                <div style={{ flex: '7', width: '70%' }} className="text-header">
+                <div style={{ flex: '6', width: '60%' }} className="text-header">
                     <h4>{`Vídeo: ${videoTitle}`}</h4>
                 </div>
-                <div style={{ flex: '1', width: '10%' }} className="text-header">
+                <div style={{ flex: '2', width: '20%' }} className="text-header">
                     <ButtonAccount buttonName='ButtonAccount' isMobileDevice={isMobileDevice} />
                 </div>
             </div>
@@ -401,10 +402,12 @@ const Watch = () => {
             <>
             <div className="top-container-mobile">
                 <div className="left-div">
-                    <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
+                    <FeedHeaderComponent isMobileDevice={isMobile} />
+                    <h4 className='h4title-mobile'>{`Vídeo: ${videoTitle}`}</h4>
+                    {/* <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/> */}
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
-                    <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
                     <ButtonSave />
+                    <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                     <Recommendations isMobileDevice={isMobile}/>
                 </div>
@@ -419,6 +422,8 @@ const Watch = () => {
             <>
             <div className="top-container">
                 <div className="left-div">
+                    {/* <FeedHeaderComponent isMobileDevice={isMobile} />
+                    <h3 className='h4title'>{`Vídeo: ${videoTitle}`}</h3> */}
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div className="side-by-side-container">
