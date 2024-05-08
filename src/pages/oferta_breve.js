@@ -87,20 +87,20 @@ const OfertaBreve = () => {
             headline: "Oferta especial para campanha feita no YouTube:",
             startTime: "2024-04-25T00:00:01.000-03:00",
             endTime: "2125-04-25T23:59:59.000-03:00",
-            price: "R$ 415,80 / ano",
-            pricePix: "R$ 395,01",
+            price: "R$ 426,72 / ano",
+            pricePix: "R$ 405,38",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=fda2c4d6-459c-45a7-a482-b320e06b2a15",
-            priceParcelado12x: "12 x R$ 39,32",
+            priceParcelado12x: "12 x R$ 40,35",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d6c703dd-0c98-49cd-906f-4d889447355d"
         },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
             startTime: "2024-04-08T08:00:00.000-03:00",
             endTime: "2124-04-11T08:00:00.000-03:00",
-            price: "R$ 495 / ano",
-            pricePix: "R$ 470,25",
+            price: "R$ 508 / ano",
+            pricePix: "R$ 482,60",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d997bb7c-4e4b-4472-95ce-50ad197a5dfa",
-            priceParcelado12x: "12 x R$ 46,81",
+            priceParcelado12x: "12 x R$ 48,04",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=32655ab6-c847-4db0-ab62-c49f342487e4"
         }
     };
