@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {getSession} from './greeting';
 
 let eventsArray = [];
 
@@ -15,7 +16,7 @@ export async function getCurrentTimeFromWorldTimeAPI() {
 
 export const logEvent = (eventName, eventData) => {
     eventsArray.push({ eventName, eventData});
-    console.log(eventsArray);
+    // console.log(eventsArray);
 };
 
 export const SectionTracker = ({ sectionId }) => {
@@ -83,4 +84,41 @@ export const sendEventsToAPI = async () => {
     } else if (result.status === 'fail') {
         console.log("Send Events to API Fail");
     } */
+};
+
+export const saveDesiteEventInDB = (event_name, video_id) => {
+  getSession()
+    .then((session) => {
+        const eventData = {
+          event_name: event_name,
+          user_id: "",
+          video_id: video_id
+        };
+      if (session) {
+        const { accessToken } = session;
+        eventData.user_id = accessToken.payload.username;
+      }
+      fetch('https://api.dominioeletrico.com.br/desiteevent/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(eventData),
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // console.log('Saved event in DB:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 };

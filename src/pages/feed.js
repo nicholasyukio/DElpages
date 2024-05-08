@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Rodape from './rodape.js';
 import './watch.css';
+import { getUserId, Greeting , ButtonAccount } from './greeting.js';
+import {saveDesiteEventInDB} from './tracking';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -34,28 +36,34 @@ function FeedHeaderComponent({isMobileDevice}) {
     if (isMobileDevice) {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header-mobile">
-                <div style={{ flex: '1', width: '33%' }}>
+                <div style={{ flex: '1', width: '25%' }}>
                     <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Site logo" style={{ width: '60px', height: 'auto', display: 'block' }} /></a>
                 </div>
-                <div style={{ flex: '1', width: '34%' }} className="feed-button">
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
                     <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
                 </div>
-                <div style={{ flex: '1', width: '33%' }} className="feed-button">
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
                     <ButtonAcessarCurso buttonName='ButtonAcessarCurso' isMobileDevice={isMobileDevice} />
+                </div>
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
+                    <ButtonAccount buttonName='ButtonAccount' isMobileDevice={isMobileDevice} />
                 </div>
             </div>
         );
     } else {
         return (
             <div style={{ display: 'flex', alignItems: 'center', width: '100%' }} className="feed-header">
-                <div style={{ flex: '1', width: '33%' }}>
+                <div style={{ flex: '1', width: '25%' }}>
                 <a href='feed'><img src="/dominio_eletrico_logo_2023_square_fundo_transparente.png" alt="Site logo" style={{ width: '100px', height: 'auto', display: 'block' }} /></a>
                 </div>
-                <div style={{ flex: '1', width: '34%' }} className="feed-button">
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
                     <ButtonConhecerCurso buttonName='ButtonConhecerCurso' isMobileDevice={isMobileDevice} />
                 </div>
-                <div style={{ flex: '1', width: '33%' }} className="feed-button">
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
                     <ButtonAcessarCurso buttonName='ButtonAcessarCurso' isMobileDevice={isMobileDevice} />
+                </div>
+                <div style={{ flex: '1', width: '25%' }} className="feed-button">
+                    <ButtonAccount buttonName='ButtonAccount' isMobileDevice={isMobileDevice} />
                 </div>
             </div>
         );
@@ -71,18 +79,19 @@ function ButtonConhecerCurso({ buttonName, isMobileDevice }) {
         });
         // logEvent('ButtonClick', `${buttonName} clicked`);
         // Redirect the user after pushing the data to GTM if needed
+        saveDesiteEventInDB("click_know_course", URLparams.v);
         window.location.href = 'espera-dominio-eletrico'; // Redirect to the form anchor
     };
     if (isMobileDevice) {
         return (
             <button className="btn-conhecer-curso-mobile" onClick={handleClick}>
-                <img src='pencil-16.png' alt="Pencil"></img>
+                <img src='pencil-58.png' alt="Pencil"></img>
             </button>
         );
     } else {
         return (
             <button className="btn-conhecer-curso" onClick={handleClick}>
-                <img src='pencil-16.png' alt="Pencil"></img>
+                <img src='pencil-58.png' alt="Pencil"></img>
                 Conhecer o curso
             </button>
         );
@@ -98,19 +107,20 @@ function ButtonAcessarCurso({ buttonName, isMobileDevice }) {
         });
         // logEvent('ButtonClick', `${buttonName} clicked`);
         // Redirect the user after pushing the data to GTM if needed
+        saveDesiteEventInDB("click_access_course", URLparams.v);
         window.location.href = 'https://curso.dominioeletrico.com.br/login'; // Redirect to the form anchor
     };
     if (isMobileDevice) {
         return (
             <button className="btn-acessar-curso-mobile" onClick={handleClick}>
-                <img src='padlock-3-16.png' alt="Padlock"></img>
+                <img src='padlock-10.png' alt="Padlock"></img>
             </button>
         );
     } else {
         return (
             <button className="btn-acessar-curso" onClick={handleClick}>
-                <img src='padlock-3-16.png' alt="Padlock"></img>
-                Acessar o curso (somente para alunos)
+                <img src='padlock-10.png' alt="Padlock"></img>
+                Acessar curso (para alunos)
             </button>
         );
     }
@@ -164,15 +174,15 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
         if (recommendations.length === 0) {
             return (
             <div className='feed-content-mobile'>
-                <h2>Recomendações de vídeos de circuitos elétricos: (carregando...)</h2>
+                <h3 className='greeting'><Greeting /><br />Recomendações de vídeos de circuitos elétricos: (carregando...)</h3>
                 <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
             );
         } else {
             return (
                 <div className='feed-content-mobile'>
-                        <h2>Recomendações de vídeos de circuitos elétricos:</h2>
-                        {recommendations.slice(0, 12).map(recommendation => (
+                        <h3 className='greeting'><Greeting /><br />Aqui estão recomendações de vídeos de circuitos elétricos:</h3>
+                        {recommendations.slice(0, 8).map(recommendation => (
                                 <div className='each-div-mobile'>
                                 <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
                                     <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
@@ -191,14 +201,14 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
         if (recommendations.length === 0) {
             return (
             <div className='feed-content'>
-                <h2>Recomendações de vídeos de circuitos elétricos: (carregando...)</h2>
+                <h2 className='greeting'><Greeting /> Recomendações de vídeos de circuitos elétricos: (carregando...)</h2>
                 <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
             );
         } else {
             return (
                 <div className='feed-content'>
-                    <h2>Recomendações de vídeos de circuitos elétricos:</h2>
+                    <h2 className='greeting'><Greeting /> Aqui estão recomendações de vídeos de circuitos elétricos:</h2>
                     <div className='row-div'>
                         {recommendations.slice(0, 4).map(recommendation => (
                                 <div className='each-div'>
@@ -227,9 +237,135 @@ const RecommendationsForFeed = ({isMobileDevice}) => {
                                 </div>
                         ))}
                     </div>
+                </div>
+            );
+        }
+    }
+};
+
+const SavedVideos = ({isMobileDevice}) => {
+    const [saved, setSaved] = useState([]);
+    const [state, setState] = useState(false);
+    const [user_id, setUserId] = useState(null);
+
+    const getSaved = async () => {
+        try {
+            // Make a GET request to fetch recommendations
+            // const response = await fetch('https://dominioeletrico.com.br:5000/similar');
+            setUserId(await getUserId());
+            if (user_id) {
+                // console.log("User id inside getSavedVideos of SavedVideos: ", user_id);
+                const response = await fetch(`https://api.dominioeletrico.com.br/savedvideos/${user_id}/full`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setSaved(data);
+                setState(true);
+            }
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    };
+    if (!state) {
+        getSaved();
+    }
+
+    function determineDivClass(num_videos) {
+        if (num_videos === 1) return "each-div-1";
+        if (num_videos === 2) return "each-div-2";
+        if (num_videos === 3) return "each-div-3";
+        return "each-div";
+    };
+
+    function formatVideoDuration(durationInSeconds) {
+        const totalSeconds = durationInSeconds -1;
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+    
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        if (hours === 0) {
+            return `${formattedMinutes}:${formattedSeconds}`;
+        } else {
+            return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+    };
+
+    if (isMobileDevice) {
+        if (!user_id) {
+            return (
+                <div className='feed-content-mobile'>
+                    <h2 className='greeting'>Vídeos que você salvou para depois: (<a href="/logon">Fazer login </a>/<a href="/signup"> Criar conta</a>) para visualizar</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else if (!state) {
+            return (
+            <div className='feed-content-mobile'>
+                <h3 className='greeting'>Vídeos que você salvou para depois: (carregando...)</h3>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
+            </div>
+            );
+        } else if (saved.length === 0) {
+            return (
+                <div className='feed-content'>
+                    <h2>A sua lista de vídeos salvos está vazia!</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else {
+            return (
+                <div className='feed-content-mobile'>
+                        <h3 className='greeting'>Vídeos que você salvou para depois: (<a href='saved'>ver lista completa</a>)</h3>
+                        {saved.slice(0, 4).map(recommendation => (
+                                <div className='each-div-mobile'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                </div>
+            );
+        }
+    } else {
+        if (!user_id) {
+            return (
+                <div className='feed-content'>
+                    <h2 className='greeting'>Vídeos que você salvou para depois: (<a href="/logon">Fazer login </a>/<a href="/signup"> Criar conta</a>) para visualizar</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else if (!state) {
+            return (
+            <div className='feed-content'>
+                <h2 className='greeting'>Vídeos que você salvou para depois: (carregando...)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
+            </div>
+            );
+        } else if (saved.length === 0) {
+            return (
+                <div className='feed-content'>
+                    <h2>A sua lista de vídeos salvos está vazia!</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else {
+            let div_class = determineDivClass(saved.length);
+            return (
+                <div className='feed-content'>
+                    <h2 className='greeting'>Vídeos que você salvou para depois: (<a href='saved'>ver lista completa</a>)</h2>
                     <div className='row-div'>
-                        {recommendations.slice(8, 12).map(recommendation => (
-                                <div className='each-div'>
+                        {saved.slice(0, 4).map(recommendation => (
+                                <div className={div_class}>
                                 <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
                                     <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
                                     <br />
@@ -311,6 +447,169 @@ const ListPlaylists = ({isMobileDevice}) => {
                 ))}
             </div>
         );
+    }
+};
+
+const AllSavedVideos = ({isMobileDevice}) => {
+    const [recommendations, setRecommendations] = useState([]);
+    const [state, setState] = useState(false);
+    const [user_id, setUserId] = useState(null);
+
+    const getRecommendations = async () => {
+        try {
+            // let user_id = await getUserId();
+            setUserId(await getUserId());
+            // console.log("User id inside getSavedVideos of SavedVideos: ", user_id);
+            // Make a GET request to fetch recommendations
+            const response = await fetch(`https://api.dominioeletrico.com.br/savedvideos/${user_id}/full`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            //console.log(data);
+            setRecommendations(data);
+            setState(true);
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    };
+    if (!state) {
+        getRecommendations();
+    }
+    
+    function formatVideoDuration(durationInSeconds) {
+        const totalSeconds = durationInSeconds -1;
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+    
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        if (hours === 0) {
+            return `${formattedMinutes}:${formattedSeconds}`;
+        } else {
+            return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+    }
+
+    function determineDivClass(num_videos) {
+        if (num_videos === 1) return "each-div-1";
+        if (num_videos === 2) return "each-div-2";
+        if (num_videos === 3) return "each-div-3";
+        return "each-div";
+    }
+
+    if (isMobileDevice) {
+        if (!user_id) {
+            return (
+                <div className='feed-content-mobile'>
+                    <h2 className='greeting'>Vídeos que você salvou para depois: (<a href="/logon">Fazer login </a>/<a href="/signup"> Criar conta</a>) para visualizar</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else if (!state) {
+            return (
+            <div className='feed-content-mobile'>
+                <h2>Vídeos que você salvou para depois: (carregando)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
+            </div>
+            );
+        } else if (recommendations.length === 0) {
+            return (
+                <div className='feed-content'>
+                    <h2>A sua lista de vídeos salvos está vazia!</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else {
+            return (
+                <div className='feed-content-mobile'>
+                        <h2>Vídeos que você salvou para depois:</h2>
+                        {recommendations.slice(0, 100).map(recommendation => (
+                                <div className='each-div-mobile'>
+                                <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                    <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto' }} />
+                                    <br />
+                                    <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                        <span>{recommendation.title}</span>
+                                        <span> ({formatVideoDuration(recommendation.length)})</span>
+                                    </div>
+                                </a>
+                                </div>
+                        ))}
+                </div>
+            );
+        }
+    } else {
+        // Define the size of each chunk
+        const chunkSize = 4;
+
+        // Initialize an array to hold chunks of recommendations
+        let chunks = [];
+
+        // Loop to create chunks of recommendations
+        for (let i = 0; i < recommendations.length; i += chunkSize) {
+            // Get a chunk of recommendations using slice
+            let chunk = recommendations.slice(i, i + chunkSize);
+            
+            // Push the chunk into the chunks array
+            chunks.push(chunk);
+        }
+
+        // Calculate the number of empty divs needed to complete the last chunk
+        const emptyDivsSize = chunkSize - recommendations.length % chunkSize;
+        const emptyDivs = Array.from({ length: emptyDivsSize }, (_, index) => <div key={`empty-${index}`} className="each-div empty-div"></div>);
+
+        // Render each chunk within a row-div
+        if (!user_id) {
+            return (
+                <div className='feed-content'>
+                    <h2 className='greeting'>Vídeos que você salvou para depois: (<a href="/logon">Fazer login </a>/<a href="/signup"> Criar conta</a>) para visualizar</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else if (!state) {
+            return (
+            <div className='feed-content'>
+                <h2>Vídeos que você salvou para depois: (carregando)</h2>
+                <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
+            </div>
+            );
+        } else if (recommendations.length === 0) {
+            return (
+                <div className='feed-content'>
+                    <h2>A sua lista de vídeos salvos está vazia!</h2>
+                    <img src="empty-20.png" alt="lista vazia" style={{ display: 'block', margin: 'auto' }} />
+                </div>
+                );
+        } else {
+            let div_class = determineDivClass(recommendations.length);
+            return (
+                <div className='feed-content'>
+                    <h2>Vídeos que você salvou para depois:</h2>
+                    {chunks.map((chunk, index) => (
+                        <div className='row-div' key={index}>
+                            {chunk.map(recommendation => (
+                                <div className={div_class} key={recommendation.id}>
+                                    <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
+                                        <img src={recommendation.thumbnail_url} alt={recommendation.title} style={{ width: '360px', height: 'auto', marginRight: '10px' }} />
+                                        <br />
+                                        <div style={{ display: 'inline-block', maxWidth: '360px' }}>
+                                            <span>{recommendation.title}</span>
+                                            <span> ({formatVideoDuration(recommendation.length)})</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            ))}
+                            {/* Render empty divs for the last chunk to maintain alignment */}
+                            {recommendations.length % chunkSize !== 0 && index === chunks.length - 1 && emptyDivs}
+                        </div>
+                    ))}
+                </div>
+            );
+        }
     }
 };
 
@@ -478,6 +777,9 @@ const Feed = () => {
             <RecommendationsForFeed isMobileDevice={isMobile}/>
         </div>
         <div className="top-container">
+            <SavedVideos isMobileDevice={isMobile}/>
+        </div>
+        <div className="top-container">
             <ListPlaylists isMobileDevice={isMobile}/>
         </div>
         <Rodape />
@@ -488,6 +790,7 @@ const Feed = () => {
 const Playlist = () => {
     // State to track the device type
     const [isMobile, setIsMobile] = React.useState(false);
+    // const [user_id, setUserId] = useState(null);
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
         const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
@@ -497,6 +800,7 @@ const Playlist = () => {
     // Check the device type when the component mounts
     React.useEffect(() => {
         checkIfMobile();
+        saveDesiteEventInDB("access_playlist", URLparams.id);
         // Add event listener to check if the device type changes
         window.addEventListener('resize', checkIfMobile);
         // Remove event listener on component unmount
@@ -504,6 +808,14 @@ const Playlist = () => {
     }, []);
 
     const playlistId = URLparams.id;
+    getUserId().then(user_id => {
+        // console.log(`user_id in Playlist component: ${user_id}`);
+        if (!user_id) {
+            window.location.href = 'logon?nam=restricted';
+        }
+    }).catch(error => {
+        // console.log(`Error: ${error}`);
+    });
     document.title = 'Site Domínio Elétrico';
 	return (
         <div className="top-feed-div">
@@ -516,4 +828,36 @@ const Playlist = () => {
 	);
 };
 
-export {Feed, Playlist};
+const SavedVideosPage = () => {
+    // State to track the device type
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+
+    // Check the device type when the component mounts
+    React.useEffect(() => {
+        checkIfMobile();
+        saveDesiteEventInDB("view_saved_list", "");
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
+    const playlistId = URLparams.id;
+    document.title = 'Site Domínio Elétrico';
+	return (
+        <div className="top-feed-div">
+        <FeedHeaderComponent isMobileDevice={isMobile}/>
+        <div className="top-container">
+            <AllSavedVideos isMobileDevice={isMobile}/>
+        </div>
+        <Rodape />
+        </div>
+	);
+};
+
+export {Feed, SavedVideosPage, Playlist};

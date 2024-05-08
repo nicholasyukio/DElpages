@@ -35,6 +35,9 @@ window.addEventListener('beforeunload', () => {
     sendEventsToAPI();
 });
 
+/* let user=userpool.getCurrentUser();
+console.log(user); */
+
 const Home = () => {
     const [showOffer, setGlobalVariable] = useState(false);
 

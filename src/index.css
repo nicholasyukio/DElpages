@@ -235,6 +235,10 @@ line-height: 1.2; /* Ajusta o espaçamento entre as linhas (experimente diferent
   display: block;
   margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
+.avisosobresenha {
+font-size: 12px; /* Defina o tamanho da fonte desejado (por exemplo, 14 pixels) */
+text-align: left;
+}
 .politicadeprivacidade {
 font-size: 12px; /* Defina o tamanho da fonte desejado (por exemplo, 14 pixels) */
 text-align: center;
@@ -309,4 +313,21 @@ display: none;
   background-color: rgba(238, 255, 0, 0.66); /* Background color with some transparency */
   padding: 2px 4px; /* Add padding to create some space around the text */
   display: inline-block; /* Make the background cover only the text, not the entire width of the container */
+}
+
+.auth-container {
+  background: #f5fbfc;
+  color: #000000;
+  max-width: 240px; /* Largura máxima do contêiner de texto */
+  margin: 20px auto auto auto;
+  display: grid;
+  text-align: left; /* Alinhar o texto à esquerda */
+  padding: 5px 20px 20px 20px;
+  border-radius: 15px;
+  border: 1px solid #ccc; /* Largura e cor da borda */
+  box-shadow: 0 0 2px rgb(255, 255, 255); /* Sombra com deslocamento, difusão e cor */
+}
+
+.formfield {
+  margin: 0px 0px 15px 0px;
 }

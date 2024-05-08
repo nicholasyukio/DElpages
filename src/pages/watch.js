@@ -6,6 +6,8 @@ import Rodape from './rodape.js';
 import './watch.css';
 import OfertaBreve from './oferta_breve.js';
 import { logEvent, sendEventsToAPI } from './tracking.js';
+import { GreetingWatch, ButtonAccount, ButtonSave } from './greeting.js';
+import {saveDesiteEventInDB} from './tracking';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -66,8 +68,11 @@ function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
                 <div style={{ flex: '2', width: '20%' }}>
                     <a href='feed'><img src={imageSrc} alt="Site logo" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
                 </div>
-                <div style={{ flex: '8', width: '80%' }} className="text-header">
-                    <h3>{`Vídeo: ${videoTitle}`}</h3>
+                <div style={{ flex: '7', width: '70%' }} className="text-header">
+                    <h4>{`Vídeo: ${videoTitle}`}</h4>
+                </div>
+                <div style={{ flex: '1', width: '10%' }} className="text-header">
+                    <ButtonAccount buttonName='ButtonAccount' isMobileDevice={isMobileDevice} />
                 </div>
             </div>
         );
@@ -77,8 +82,11 @@ function HeaderComponent({ imageSrc, videoId, videoTitle, isMobileDevice }) {
                 <div style={{ flex: '1', width: '10%' }}>
                     <a href='feed'><img src={imageSrc} alt="Site logo" style={{ width: '100%', height: 'auto', display: 'block' }} /></a>
                 </div>
-                <div style={{ flex: '9', width: '90%' }} className="text-header">
+                <div style={{ flex: '7', width: '70%' }} className="text-header">
                     <h2>{`Vídeo: ${videoTitle}`}</h2>
+                </div>
+                <div style={{ flex: '2', width: '20%' }} className="text-header">
+                    <ButtonAccount buttonName='ButtonAccount' isMobileDevice={isMobileDevice} />
                 </div>
             </div>
         );
@@ -146,6 +154,7 @@ function Form({ showOffer, onVariableChange, isMobileDevice }) {
 
 			if (result.status === 'success') {
 				setResult('Oferta encontrada. Encaminhando para o pagamento.');
+                saveDesiteEventInDB("submit_form", URLparams.v);
 				resetEmailForm();
                 onVariableChange(true);
                 window.dataLayer.push({
@@ -269,14 +278,14 @@ const Recommendations = ({isMobileDevice}) => {
         if (recommendations.length === 0) {
             return (
             <div className='feed-content-mobile'>
-                <h2>Veja também: (carregando...)</h2>
+                <h3 className='lateral-bar'><GreetingWatch/> (carregando...)</h3>
                 <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
             );
         } else {
             return (
                 <div className='feed-content-mobile'>
-                    <h2>Veja também:</h2>
+                    <h3 className='lateral-bar'><GreetingWatch/></h3>
                     {recommendations.slice(0, 4).map(recommendation => (
                         <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
@@ -296,14 +305,14 @@ const Recommendations = ({isMobileDevice}) => {
         if (recommendations.length === 0) {
             return (
             <div className='feed-content'>
-                <h2>Veja também: (carregando...)</h2>
+                <h3 className='lateral-bar'><GreetingWatch/> (carregando...)</h3>
                 <img src="waiting.gif" alt="carregando..." style={{ display: 'block', margin: 'auto' }} />
             </div>
             );
         } else {
             return (
                 <div className='feed-content'>
-                    <h2>Veja também:</h2>
+                    <h3 className='lateral-bar'><GreetingWatch/></h3>
                     {recommendations.slice(0, 4).map(recommendation => (
                         <div key={recommendation.id} style={{ marginBottom: '20px' }} className='recommendations'>
                             <a href={`watch?v=${recommendation.id}`} rel="noopener noreferrer">
@@ -340,6 +349,13 @@ const Watch = () => {
         return () => window.removeEventListener('resize', checkIfMobile);
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+          saveDesiteEventInDB("view_video_min", URLparams.v);
+        }, 60000);
+        return () => clearInterval(interval); 
+      }, [])
+
     const videoId = URLparams.v;
     const [showOffer, setGlobalVariable] = useState(false);
 
@@ -363,6 +379,7 @@ const Watch = () => {
     useEffect(() => {
         // Fetch recommendations when the component mounts
         getVideoInfo(videoId);
+        saveDesiteEventInDB("access_video", videoId);
     }, []);
 
     let videoTitle = '';
@@ -387,6 +404,7 @@ const Watch = () => {
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
+                    <ButtonSave />
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                     <Recommendations isMobileDevice={isMobile}/>
                 </div>
@@ -403,7 +421,10 @@ const Watch = () => {
                 <div className="left-div">
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
-                    <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
+                    <div className="side-by-side-container">
+                        <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
+                        <ButtonSave />
+                    </div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                 </div>
                 <div className="right-div">

@@ -92,10 +92,31 @@ body {
     color: white; /* Set the color of the links to white when hovered */
 }
 
+.greeting a:link {
+  color: #fffb00; 
+}
+
+.greeting a:visited {
+  color: #748800;
+}
+
+.lateral-bar {
+  max-width: 360px;
+}
+
+.lateral-bar a:link {
+  color: #fffb00; 
+}
+
+.lateral-bar a:visited {
+  color: #748800;
+}
+
 /* Watch page form */
 
 .watch-video-description {
-  max-width: 500px;
+  max-width: 600px;
+  flex: 80%;
   margin: 0 auto; 
   align-items: center;
   text-align: left;
@@ -271,7 +292,52 @@ body {
     justify-content: space-between;
 }
 
-  .each-div {
+.each-div-1 {
+  margin: 10px 10px 10px 10px;
+  flex: 1;
+  width: 100%;
+}
+
+.each-div-1 a {
+  color: white; /* Set the color of the links to white */
+  text-decoration: none; /* Remove underline */
+}
+
+.each-div-1 a:hover {
+  color: white; /* Set the color of the links to white when hovered */
+}
+
+.each-div-2 {
+  margin: 10px 10px 10px 10px;
+  flex: 1;
+  width: 50%;
+}
+
+.each-div-2 a {
+  color: white; /* Set the color of the links to white */
+  text-decoration: none; /* Remove underline */
+}
+
+.each-div-2 a:hover {
+  color: white; /* Set the color of the links to white when hovered */
+}
+
+.each-div-3 {
+  margin: 10px 10px 10px 10px;
+  flex: 1;
+  width: 33%;
+}
+
+.each-div-3 a {
+  color: white; /* Set the color of the links to white */
+  text-decoration: none; /* Remove underline */
+}
+
+.each-div-3 a:hover {
+  color: white; /* Set the color of the links to white when hovered */
+}
+
+.each-div {
     margin: 10px 10px 10px 10px;
     flex: 1;
     width: 25%;
@@ -309,7 +375,8 @@ color: white; /* Set the color of the links to white when hovered */
   border-radius: 5px; /* Arredondamento das bordas */
   text-align: center; /* Centraliza o texto horizontalmente */
   text-decoration: none; /* Remove a decoração de link do texto */
-  display: block;
+  display: flex;
+  align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
   margin: 0 auto;
@@ -319,6 +386,7 @@ color: white; /* Set the color of the links to white when hovered */
 }
 .btn-conhecer-curso img {
   margin: 0px 10px 0px 0px;
+  width: 24px;
 }
 
 .btn-conhecer-curso-mobile {
@@ -329,7 +397,8 @@ color: white; /* Set the color of the links to white when hovered */
   border-radius: 5px; /* Arredondamento das bordas */
   text-align: center; /* Centraliza o texto horizontalmente */
   text-decoration: none; /* Remove a decoração de link do texto */
-  display: block;
+  display: flex;
+  align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
   margin: 0 auto;
@@ -339,17 +408,20 @@ color: white; /* Set the color of the links to white when hovered */
 }
 .btn-conhecer-curso-mobile img {
   margin: 0px 0px 0px 0px;
+  width: 24px;
 }
 
 .btn-acessar-curso {
+  max-height: 50px;
   background-color: #007BFF; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto do botão */
-  padding: 10px 20px; /* Espaçamento interno do botão */
+  padding: 10px 10px 10px 10px; /* Espaçamento interno do botão */
   border: none; /* Remove a borda padrão do botão */
   border-radius: 5px; /* Arredondamento das bordas */
   text-align: center; /* Centraliza o texto horizontalmente */
   text-decoration: none; /* Remove a decoração de link do texto */
-  display: block;
+  display: flex;
+  align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
   margin: 0 auto;
@@ -359,6 +431,7 @@ color: white; /* Set the color of the links to white when hovered */
 }
 .btn-acessar-curso img {
   margin: 0px 10px 0px 0px;
+  width: 24px;
 }
 
 .btn-acessar-curso-mobile {
@@ -369,7 +442,8 @@ color: white; /* Set the color of the links to white when hovered */
   border-radius: 5px; /* Arredondamento das bordas */
   text-align: center; /* Centraliza o texto horizontalmente */
   text-decoration: none; /* Remove a decoração de link do texto */
-  display: block;
+  display: flex;
+  align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
   margin: 0 auto;
@@ -379,6 +453,14 @@ color: white; /* Set the color of the links to white when hovered */
 }
 .btn-acessar-curso-mobile img {
   margin: 0px 0px 0px 0px;
+  width: 24px;
+}
+
+.side-by-side-container {
+  margin: 0 auto; 
+  padding: 10px 20px 0px 20px;
+  max-width: 720px;
+  display: flex;
 }
 
 /* Estilos de layout responsivo para dispositivos móveis */

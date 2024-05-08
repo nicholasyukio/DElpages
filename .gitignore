@@ -26,3 +26,5 @@ DElpages.pem
 ssh_script
 public/header_image.xcf
 public/header_image_mobile.xcf
+.env
+events_to_collect

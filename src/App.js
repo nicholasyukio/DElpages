@@ -12,8 +12,11 @@ import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
 import Login from "./pages/login";
 import Watch from "./pages/watch";
-import DesafioCadastro from './pages/desafio.js';
-import { Feed , Playlist } from "./pages/feed";
+import Signup from './pages/signup';
+import Logon from './pages/logon';
+import VerifyAccount from './pages/verify';
+import Recover from "./pages/recover.js";
+import { Feed , SavedVideosPage, Playlist } from "./pages/feed";
 
 export default function App() {
   return (
@@ -28,8 +31,12 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/saved" element={<SavedVideosPage />} />
         <Route path="/playlist" element={<Playlist />} />
-        <Route path="/desafio-cadastro" element={<DesafioCadastro />} />
+        <Route path='/signup' element={<Signup />}/>
+        <Route path='/logon' element={<Logon />}/>
+        <Route path="/verify" element={<VerifyAccount/>}/>
+        <Route path="/recover" element={<Recover/>}/>
         <Route path="*" element={<Espera />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
