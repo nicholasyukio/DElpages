@@ -73,14 +73,14 @@ const OfertaBreve = () => {
             priceParcelado12x: "12 x R$ 39,32",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d6c703dd-0c98-49cd-906f-4d889447355d"
         },
-        D29ABR24_10h_36h: {
-            headline: "Oferta especial válida de 10h00 de 29/04/24 às 22h00 de 30/04/24",
-            startTime: "2024-04-29T10:00:00.000-03:00",
-            endTime: "2024-04-30T22:00:00.000-03:00",
-            price: "R$ 415,80 / ano",
-            pricePix: "R$ 395,01",
+        D09MAI24_09h_36h: {
+            headline: "Oferta especial válida de 09h00 de 09/05/24 às 21h00 de 10/05/24",
+            startTime: "2024-05-09T09:00:00.000-03:00",
+            endTime: "2024-05-10T21:00:00.000-03:00",
+            price: "R$ 426,72 / ano",
+            pricePix: "R$ 405,38",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=fda2c4d6-459c-45a7-a482-b320e06b2a15",
-            priceParcelado12x: "12 x R$ 39,32",
+            priceParcelado12x: "12 x R$ 40,35",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=d6c703dd-0c98-49cd-906f-4d889447355d"
         },
         YTGADS284jknds84: {
