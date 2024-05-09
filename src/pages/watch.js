@@ -6,9 +6,10 @@ import Rodape from './rodape.js';
 import './watch.css';
 import OfertaBreve from './oferta_breve.js';
 import { logEvent, sendEventsToAPI } from './tracking.js';
-import { GreetingWatch, ButtonAccount, ButtonSave } from './greeting.js';
+import { GreetingWatch, ButtonSignUp, ButtonAccount, ButtonSave } from './greeting.js';
 import {saveDesiteEventInDB} from './tracking';
 import { FeedHeaderComponent } from './feed.js';
+import userpool from '../userpool';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -334,6 +335,7 @@ const Recommendations = ({isMobileDevice}) => {
 
 const Watch = () => {
     // State to track the device type
+    const user=userpool.getCurrentUser();
     const [isMobile, setIsMobile] = useState(false);
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
@@ -406,7 +408,10 @@ const Watch = () => {
                     <h4 className='h4title-mobile'>{`Vídeo: ${videoTitle}`}</h4>
                     {/* <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/> */}
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
-                    <ButtonSave />
+                    <div className="side-by-side-container">
+                        {!user && <h4 className='greeting-mobile'><a href='/signup'>Crie uma conta gratuitamente para desbloquear playlists, salvar vídeos e ter recomendações personalizadas.</a></h4>}
+                        {user && <ButtonSave />}
+                    </div>
                     <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                     <Recommendations isMobileDevice={isMobile}/>
@@ -428,7 +433,10 @@ const Watch = () => {
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div className="side-by-side-container">
                         <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
-                        <ButtonSave />
+                        <div>
+                            {!user && <h4 className='greeting-mobile'><a href='/signup'>Crie uma conta gratuitamente para desbloquear playlists, salvar vídeos e ter recomendações personalizadas.</a></h4>}
+                            {user && <ButtonSave />}
+                        </div>
                     </div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
                 </div>

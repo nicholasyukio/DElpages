@@ -102,11 +102,29 @@ body {
     color: white; /* Set the color of the links to white when hovered */
 }
 
+.greeting {
+  max-width: 1500px;
+  margin: 5px auto 5px auto;
+}
+
 .greeting a:link {
   color: #fffb00; 
 }
 
 .greeting a:visited {
+  color: #748800;
+}
+
+.greeting-mobile {
+  max-width: 360px;
+  margin: 5px auto 5px auto;
+}
+
+.greeting-mobile a:link {
+  color: #fffb00; 
+}
+
+.greeting-mobile a:visited {
   color: #748800;
 }
 
@@ -434,7 +452,7 @@ color: white; /* Set the color of the links to white when hovered */
   align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
-  margin: 0 auto;
+  margin: 5px auto 5px auto;
 }
 .btn-acessar-curso:hover {
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
@@ -463,6 +481,30 @@ color: white; /* Set the color of the links to white when hovered */
 }
 .btn-acessar-curso-mobile img {
   margin: 0px 0px 0px 0px;
+  width: 24px;
+}
+
+.btn-salvar {
+  width: 120px;
+  height: 50px;
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 10px 10px 10px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: flex;
+  align-items: center; 
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 5px auto 5px auto;
+}
+.btn-salvar:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+.btn-salvar img {
+  margin: 0px 20px 0px 0px;
   width: 24px;
 }
 

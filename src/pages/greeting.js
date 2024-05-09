@@ -53,6 +53,31 @@ const getUserId = async () => {
     return user_id;
 }
 
+function ButtonSignUp() {
+    const user=userpool.getCurrentUser();
+    const handleClick = () => {
+        // Push the data to the dataLayer when the button is clicked
+        window.dataLayer.push({
+            event: 'clickForAccount', // Custom event name
+            buttonName: 'clickForAccount', // Custom event data, you can adjust this as needed
+        });
+        // logEvent('ButtonClick', `${buttonName} clicked`);
+        // Redirect the user after pushing the data to GTM if needed
+        // window.location.href = 'https://curso.dominioeletrico.com.br/login'; // Redirect to the form anchor
+        window.location.href = 'signup';
+    };
+    if (!user) {
+        return (
+            <button className="btn-salvar" onClick={handleClick}>
+                <img src='account-14.png' alt="Pessoa"></img>
+                Criar conta
+            </button>
+        );
+    } else {
+        return (<></>);
+    }
+}
+
 function ButtonAccount({ buttonName, isMobileDevice }) {
     let buttonText = "";
     const user=userpool.getCurrentUser();
@@ -99,16 +124,16 @@ function ButtonSave({ isMobileDevice }) {
     let rendered = false;
     let user_id = '';
     let iconImageFile = 'paper-clip-15.png';
-    let buttonText = "Salvar vídeo";
+    let buttonText = "Salvar";
     const user=userpool.getCurrentUser();
    if(!user){
-        buttonText = "Salvar vídeo";
+        buttonText = "Salvar";
     } else {
         if (!saveState) {
-            buttonText = "Salvar vídeo";
+            buttonText = "Salvar";
             iconImageFile = 'paper-clip-15.png';
         } else {
-            buttonText = "Vídeo salvo";
+            buttonText = "Salvo";
             iconImageFile = 'check-73.png';
         }
         // console.log(`User: ${user}`);
@@ -149,7 +174,7 @@ function ButtonSave({ isMobileDevice }) {
         let savedVideos = await getSavedVideos();
         // console.log("savedVideos inside checkVideoState: ", savedVideos);
         if (!user) {
-            buttonText = "Salvar vídeo";
+            buttonText = "Salvar";
         } else {
             if (savedVideos.includes(URLparams.v)) {
                 // console.log("Video already saved in the list");
@@ -228,7 +253,7 @@ function ButtonSave({ isMobileDevice }) {
         );
     } else {
         return (
-            <button className="btn-acessar-curso" onClick={handleClick}>
+            <button className="btn-salvar" onClick={handleClick}>
                 <img src={iconImageFile} alt="Save"></img>
                 {buttonText}
             </button>
@@ -302,4 +327,4 @@ function GreetingWatch() {
     );
 };
 
-export {getSession, getUserId, Greeting, GreetingWatch, ButtonAccount, ButtonSave};
+export {getSession, getUserId, Greeting, GreetingWatch, ButtonSignUp, ButtonAccount, ButtonSave};
