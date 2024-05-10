@@ -30,10 +30,7 @@ export default function App() {
     if (!userId) {
       userId = uuidv4();
       Cookies.set('uid', userId, { expires: 365 }); // Cookie expires in 1 year
-      console.log(`New cookie id: ${userId}`);
-    } else {
-      console.log(`Existing cookie id: ${userId}`);
-    }
+    } 
   }, []);
 
   return (

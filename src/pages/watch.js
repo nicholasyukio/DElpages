@@ -30,7 +30,7 @@ const URLparams = extractURLparams();
 
 
 
-function Video({ videoId, isMobileDevice }) {
+function Video({ videoId, isMobileDevice, videoThumbnailURL }) {
     const video_src = `https://iframe.mediadelivery.net/embed/236258/${videoId}?autoplay=false&loop=false&muted=false&preload=true&responsive=true`;
     if (isMobileDevice) {
         return (
@@ -43,6 +43,7 @@ function Video({ videoId, isMobileDevice }) {
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
                         allowFullScreen={true}
                         title="Embedded Video"
+                        poster={videoThumbnailURL}
                     ></iframe>
                 </div>
             </div>
@@ -58,6 +59,7 @@ function Video({ videoId, isMobileDevice }) {
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
                         allowFullScreen={true}
                         title="Embedded Video"
+                        poster={videoThumbnailURL}
                     ></iframe>
                 </div>
             </div>
@@ -368,6 +370,10 @@ const Watch = () => {
     const [showOffer, setGlobalVariable] = useState(false);
 
     const [videoInfo, setVideoInfo] = useState([]);
+    let videoTitle = '';
+    let videoThumbnailFilename = '';
+    let videoDescription = '';
+    let videoThumbnailURL = '';
 
     const getVideoInfo = async (videoId) => {
         try {
@@ -389,12 +395,12 @@ const Watch = () => {
         getVideoInfo(videoId);
         saveDesiteEventInDB("access_video", videoId);
     }, []);
-
-    let videoTitle = '';
+    
     videoTitle = videoInfo.title;
+    videoThumbnailFilename = videoInfo.thumbnailFileName;
+    videoThumbnailURL = `https://vz-6f64f7fb-752.b-cdn.net/${videoId}/${videoThumbnailFilename}`;
     document.title = videoInfo.title;
-    let videoDescription = '';
-
+    
     if (videoInfo.metaTags && videoInfo.metaTags.length > 0) {
         videoDescription = videoInfo.metaTags[0].value;
     }
@@ -412,7 +418,7 @@ const Watch = () => {
                     <FeedHeaderComponent isMobileDevice={isMobile} />
                     <h4 className='h4title-mobile'>{`Vídeo: ${videoTitle}`}</h4>
                     {/* <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/> */}
-                    <Video videoId={videoId} isMobileDevice={isMobile}/>
+                    <Video videoId={videoId} isMobileDevice={isMobile} videoThumbnailURL={videoThumbnailURL}/>
                     <div className="side-by-side-container">
                         {!user && <h4 className='greeting-mobile'><a href='/signup'>Crie uma conta gratuitamente para desbloquear playlists, salvar vídeos e ter recomendações personalizadas.</a></h4>}
                         {user && 
@@ -470,7 +476,7 @@ const Watch = () => {
                     {/* <FeedHeaderComponent isMobileDevice={isMobile} />
                     <h3 className='h4title'>{`Vídeo: ${videoTitle}`}</h3> */}
                     <HeaderComponent imageSrc="/dominio_eletrico_logo_2023_square_fundo_transparente.png" videoId={videoId} videoTitle={videoTitle} isMobileDevice={isMobile}/>
-                    <Video videoId={videoId} isMobileDevice={isMobile}/>
+                    <Video videoId={videoId} isMobileDevice={isMobile} videoThumbnailURL={videoThumbnailURL}/>
                     <div className="side-by-side-container">
                         <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
                         <div>
