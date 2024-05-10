@@ -5,6 +5,7 @@ import {CognitoUserAttribute } from 'amazon-cognito-identity-js';
 import Rodape from './rodape.js';
 import userpool from '../userpool';
 import {extractUTMTags} from './utm_tags.js';
+import Cookies from 'js-cookie';
 
 const utmTags = extractUTMTags();
 
@@ -63,13 +64,15 @@ const Signup = () => {
   };
 
   const saveUserInDB = async (user_id) => {
+    const cookie_id = Cookies.get('uid');
     const userData = {
         user_id: user_id,
         name: name,
         email: email,
         utm_source: utmTags.utm_source,
         utm_term: utmTags.utm_term,
-        utm_medium: utmTags.utm_medium
+        utm_medium: utmTags.utm_medium,
+        cookie_id: cookie_id
     };
     fetch('https://api.dominioeletrico.com.br/adduser/', {
         method: 'POST',
