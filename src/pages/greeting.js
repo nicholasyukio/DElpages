@@ -124,16 +124,11 @@ function ButtonSave({ isMobileDevice }) {
     let rendered = false;
     let user_id = '';
     let iconImageFile = 'paper-clip-15.png';
-    let buttonText = "Salvar";
     const user=userpool.getCurrentUser();
-   if(!user){
-        buttonText = "Salvar";
-    } else {
+   if(user) {
         if (!saveState) {
-            buttonText = "Salvar";
             iconImageFile = 'paper-clip-15.png';
         } else {
-            buttonText = "Salvo";
             iconImageFile = 'check-73.png';
         }
         // console.log(`User: ${user}`);
@@ -173,9 +168,7 @@ function ButtonSave({ isMobileDevice }) {
     const updateVideoState = async () => {
         let savedVideos = await getSavedVideos();
         // console.log("savedVideos inside checkVideoState: ", savedVideos);
-        if (!user) {
-            buttonText = "Salvar";
-        } else {
+        if (user) {
             if (savedVideos.includes(URLparams.v)) {
                 // console.log("Video already saved in the list");
                 setSaveState(true);
@@ -255,7 +248,6 @@ function ButtonSave({ isMobileDevice }) {
         return (
             <button className="btn-salvar" onClick={handleClick}>
                 <img src={iconImageFile} alt="Save"></img>
-                {buttonText}
             </button>
         );
     }

@@ -485,11 +485,11 @@ color: white; /* Set the color of the links to white when hovered */
 }
 
 .btn-salvar {
-  width: 120px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   background-color: #007BFF; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto do botão */
-  padding: 10px 10px 10px 10px; /* Espaçamento interno do botão */
+  padding: 10px 1px 10px 12px; /* Espaçamento interno do botão */
   border: none; /* Remove a borda padrão do botão */
   border-radius: 5px; /* Arredondamento das bordas */
   text-align: center; /* Centraliza o texto horizontalmente */
@@ -498,13 +498,13 @@ color: white; /* Set the color of the links to white when hovered */
   align-items: center; 
   font-size: 18px; /* Tamanho da fonte */
   cursor: pointer; /* Altera o cursor ao passar por cima */
-  margin: 5px auto 5px auto;
+  margin: auto auto auto auto;
 }
 .btn-salvar:hover {
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 .btn-salvar img {
-  margin: 0px 20px 0px 0px;
+  margin: 0px 0px 0px 0px;
   width: 24px;
 }
 
@@ -528,6 +528,17 @@ color: white; /* Set the color of the links to white when hovered */
 .btn-salvar-mobile img {
   margin: 0px 0px 0px 0px;
   width: 24px;
+}
+
+.demo-some-network {
+  width: 48px;
+  height: 48px;
+  padding: 1px 1px 1px 1px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  display: flex;
+  align-items: center; 
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 2px auto 2px auto;
 }
 
 .side-by-side-container {

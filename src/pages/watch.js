@@ -10,6 +10,8 @@ import { GreetingWatch, ButtonSignUp, ButtonAccount, ButtonSave } from './greeti
 import {saveDesiteEventInDB} from './tracking';
 import { FeedHeaderComponent } from './feed.js';
 import userpool from '../userpool';
+import { EmailShareButton, TelegramShareButton, WhatsappShareButton } from "react-share";
+import { EmailIcon, TelegramIcon, WhatsappIcon } from "react-share";
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -337,6 +339,9 @@ const Watch = () => {
     // State to track the device type
     const user=userpool.getCurrentUser();
     const [isMobile, setIsMobile] = useState(false);
+
+    const shareUrl = window.location.href;
+    const title = document.title;
     // Function to check if the device is a mobile
     const checkIfMobile = () => {
         const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
@@ -410,7 +415,42 @@ const Watch = () => {
                     <Video videoId={videoId} isMobileDevice={isMobile}/>
                     <div className="side-by-side-container">
                         {!user && <h4 className='greeting-mobile'><a href='/signup'>Crie uma conta gratuitamente para desbloquear playlists, salvar vídeos e ter recomendações personalizadas.</a></h4>}
-                        {user && <ButtonSave />}
+                        {user && 
+                            <>
+                            <div className="demo-some-network">
+                                <ButtonSave />
+                            </div>
+                            <div className="demo-some-network">
+                                <EmailShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <EmailIcon size={48} borderRadius={5} round={false} />
+                                </EmailShareButton>
+                            </div>
+                            <div className="demo-some-network">
+                                <WhatsappShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <WhatsappIcon size={48} borderRadius={5} round={false} />
+                                </WhatsappShareButton>
+                            </div>
+                            <div className="demo-some-network">
+                                <TelegramShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <TelegramIcon size={48} borderRadius={5} round={false} />
+                                </TelegramShareButton>
+                            </div>
+                            </>}
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description-mobile'></div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
@@ -435,7 +475,42 @@ const Watch = () => {
                         <div dangerouslySetInnerHTML={{ __html: videoDescription }} className='watch-video-description'></div>
                         <div>
                             {!user && <h4 className='greeting-mobile'><a href='/signup'>Crie uma conta gratuitamente para desbloquear playlists, salvar vídeos e ter recomendações personalizadas.</a></h4>}
-                            {user && <ButtonSave />}
+                            {user && 
+                            <>
+                            <div className="demo-some-network">
+                                <ButtonSave />
+                            </div>
+                            <div className="demo-some-network">
+                                <EmailShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <EmailIcon size={48} borderRadius={5} round={false} />
+                                </EmailShareButton>
+                            </div>
+                            <div className="demo-some-network">
+                                <WhatsappShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <WhatsappIcon size={48} borderRadius={5} round={false} />
+                                </WhatsappShareButton>
+                            </div>
+                            <div className="demo-some-network">
+                                <TelegramShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="Demo__some-network__share-button"
+                                >
+                                <TelegramIcon size={48} borderRadius={5} round={false} />
+                                </TelegramShareButton>
+                            </div>
+                            </>}
                         </div>
                     </div>
                     {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} isMobileDevice={isMobile}/> : <OfertaBreve />}
