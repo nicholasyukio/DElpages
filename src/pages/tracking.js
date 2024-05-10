@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {getSession} from './greeting';
+import Cookies from 'js-cookie';
 
 let eventsArray = [];
 
@@ -87,11 +88,13 @@ export const sendEventsToAPI = async () => {
 };
 
 export const saveDesiteEventInDB = (event_name, video_id) => {
+  const cookie_id = Cookies.get('uid');
   getSession()
     .then((session) => {
         const eventData = {
           event_name: event_name,
           user_id: "",
+          cookie_id: cookie_id,
           video_id: video_id
         };
       if (session) {

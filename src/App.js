@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -17,10 +17,28 @@ import Logon from './pages/logon';
 import VerifyAccount from './pages/verify';
 import Recover from "./pages/recover.js";
 import { Feed , SavedVideosPage, Playlist } from "./pages/feed";
+import Cookies from 'js-cookie';
+import { v4 as uuidv4 } from 'uuid';
+import CookieConsent from './pages/cookie_consent';
 
 export default function App() {
+  useEffect(() => {
+    // Check if the user already has a UID stored in a cookie
+    let userId = Cookies.get('uid');
+
+    // If not, generate a new UID and set it as a cookie
+    if (!userId) {
+      userId = uuidv4();
+      Cookies.set('uid', userId, { expires: 365 }); // Cookie expires in 1 year
+      console.log(`New cookie id: ${userId}`);
+    } else {
+      console.log(`Existing cookie id: ${userId}`);
+    }
+  }, []);
+
   return (
     <Router>
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<Feed />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
