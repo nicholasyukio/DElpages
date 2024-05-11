@@ -78,6 +78,20 @@ const Espera = () => {
         // Update the globalVariable when needed
         setGlobalVariable(newValue);
     };
+
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
 	return (
         <>
         <section className="section">
@@ -94,7 +108,7 @@ const Espera = () => {
         <EletronQuest />
         <Depoimentos />
         <SpecialWarnings /> */}
-        {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} /> : <OfertaBreve />}
+        {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} /> : <OfertaBreve isMobile={isMobile}/>}
         <Bio />
         <Rodape />
         </>
@@ -102,6 +116,19 @@ const Espera = () => {
 };
 
 const Direto = () => {
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
 	return (
         <>
         <section className="section">
@@ -110,7 +137,7 @@ const Direto = () => {
         </section>
         <BriefDescription />
         <CourseContent />
-        <OfertaBreve />
+        <OfertaBreve isMobile={isMobile}/>
         <Depoimentos />
         {/* <StudentsProfile /> */}
         <ElectronicsContent />

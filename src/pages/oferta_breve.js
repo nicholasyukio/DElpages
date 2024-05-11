@@ -38,7 +38,24 @@ async function isOfferActive(startTimeString, endTimeString) {
     }
 }
 
-const OfertaBreve = () => {
+const DescricaoInicialOferta = () => {
+    return (
+        <>
+        <h2>Para você ter acesso a:</h2>
+        <ul className='content-listing'>
+            <li><b>Conteúdo principal: </b>11 módulos (mais de 88 horas de aulas gravadas)</li>
+            <li><b>DE Labs: </b>aulas experimentais de circuitos elétricos em laboratório</li>
+            <li><b>Matemática do Elétron: </b>curso de revisão de matemática básica para circuitos elétricos (cerca de 25 horas de aulas gravadas)</li>
+            <li><b>Suporte: </b>acompanhamento individual de tira-dúvidas pelo Telegram</li>
+            <li><b>Comunidade: </b>grupo exclusivo de alunos no Telegram</li>
+            <li><b>Acesso: </b>1 ano de acesso com suporte à plataforma do curso em site próprio no sistema Moodle</li>
+            <li><b>Extras: </b>outros conteúdos que só quem entra fica sabendo (surpresa)</li>
+        </ul>
+        </>
+    );
+}
+
+const OfertaBreve = ({isMobile}) => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const offerId = queryParams.get('id');
@@ -127,19 +144,39 @@ const OfertaBreve = () => {
             <section id="form" className="section">
             <div className="offer-container">
                 <h2 align="center">{offerHeadline}</h2>
-                <h2 className="urgente" align="center">-16% na anuidade da plataforma do curso</h2>
+                <DescricaoInicialOferta />
+                <h2 className="urgente" align="center">De <span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
+                <h3 align="center">(desconto de 16%)</h3>
+                <h2>Agora escolha a sua forma de pagamento:</h2>
+                {isMobile &&
+                <>
+                    <div className='payment-form'>
+                        <h3 align="left">No cartão de crédito (até 12x):</h3>
+                        <p>se parcelar em 12x, fica: <br />de: <span className="original-price">{originalPriceParcelado12x}</span> <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
+                        <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
+                    </div>
+                    <div className='payment-form'>
+                        <h3 align="left">À vista no Pix ou boleto:</h3>
+                        <p>preço base: <span className="original-price">{originalPrice}</span><br />
+                        com a oferta aplicada: <span className="original-price">{originalPricePix}</span><br />
+                        <span className="offer-price">-5% do Pix/boleto: <b>{offerPricePix}</b></span></p>
+                        <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
+                    </div>
+                </>
+                }
+                {!isMobile &&
                 <table>
                     <tr>
                         <td>
                             <div className='payment-form'>
-                            <h4 align="left">No cartão de crédito <br/>(até 12x, juros de 2% a.m.):</h4>
+                            <h3 align="left">No cartão de crédito (até 12x):</h3>
                             <p>se parcelar em 12x, fica: <br />de: <span className="original-price">{originalPriceParcelado12x}</span> <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
                             <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
                             </div>
                         </td>
                         <td>
                             <div className='payment-form'>
-                            <h4 align="left">À vista no Pix ou boleto <br/>(-5% sobre a oferta):</h4>
+                            <h3 align="left">À vista no Pix ou boleto:</h3>
                             <p>preço base: <span className="original-price">{originalPrice}</span><br />
                             com a oferta aplicada: <span className="original-price">{originalPricePix}</span><br />
                             <span className="offer-price">-5% do Pix/boleto: <b>{offerPricePix}</b></span></p>
@@ -148,6 +185,7 @@ const OfertaBreve = () => {
                         </td>    
                     </tr>
                 </table>
+                }
                 <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
                 <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
                 <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
@@ -162,26 +200,43 @@ const OfertaBreve = () => {
             <section id="form" className="section">
             <div className="offer-container">
                 <h2 align="center">{offerHeadline}</h2>
-                <h2 align='center' className="urgente">{originalPrice}</h2>
+                <DescricaoInicialOferta />
+                <h2 align='center' className="urgente">por {originalPriceParcelado12x}</h2>
+                <h2>Agora escolha a sua forma de pagamento:</h2>
+                {isMobile &&
+                <>
+                <div className='payment-form'>
+                    <h3 align="left">No cartão de crédito (até 12x):</h3>
+                    <p>se parcelar em 12x, fica: <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
+                    <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
+                </div>
+                <div className='payment-form'>
+                    <h3 align="left">À vista no Pix ou boleto:</h3>
+                    <p>preço base: <span className="original-price">{originalPrice}</span><br />
+                    -5% do Pix/boleto: <span className="offer-price"><b>{originalPricePix}</b></span><br /></p>
+                    <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
+                </div>
+                </>}
+                {!isMobile &&
                 <table>
                     <tr>
                         <td>
                             <div className='payment-form'>
-                            <h4 align="left">No cartão de crédito <br/>(até 12x, juros de 2% a.m.):</h4>
-                            <p>se parcelar em 12x, fica: <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
-                            <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
+                                <h3 align="left">No cartão de crédito (até 12x):</h3>
+                                <p>se parcelar em 12x, fica: <br /><span className="offer-price"> por: <b>{offerPriceParcelado12x}</b></span></p>
+                                <button className="btn-pagamento" onClick={handleClickForCreditCard}>Pagar com cartão de crédito</button>
                             </div>
                         </td>
                         <td>
                             <div className='payment-form'>
-                            <h4 align="left">À vista no Pix ou boleto <br/>(-5% sobre a preço base):</h4>
-                            <p>preço base: <span className="original-price">{originalPrice}</span><br />
-                            -5% do Pix/boleto: <span className="offer-price"><b>{originalPricePix}</b></span><br /></p>
-                            <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
+                                <h3 align="left">À vista no Pix ou boleto:</h3>
+                                <p>preço base: <span className="original-price">{originalPrice}</span><br />
+                                -5% do Pix/boleto: <span className="offer-price"><b>{originalPricePix}</b></span><br /></p>
+                                <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
                             </div>
-                        </td>    
+                       </td>    
                     </tr>
-                </table>
+                </table>}
                 <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
                 <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
                 <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
