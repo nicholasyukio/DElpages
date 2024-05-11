@@ -205,8 +205,7 @@ function NewHeaderCTA({isMobile}) {
             <div id="headercta" className="new-header-container">
                 <SectionTracker sectionId="HeaderCTA" />
                 <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
-                <p>Muitos estudantes de diversas faculdades, públicas e privadas, têm dificuldade para aprender a disciplina de circuitos elétricos só com a faculdade, por vários motivos.</p>
-                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, tenho um curso online de circuitos elétricos (o Domínio Elétrico).</p>
+                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, criei um curso online de circuitos elétricos (o Domínio Elétrico) e posso te ajudar a aprender a matéria.</p>
                 <FormButton buttonName="HeaderCTA" />
             </div>
           );
@@ -215,9 +214,7 @@ function NewHeaderCTA({isMobile}) {
             <div id="headercta" className="new-header-container">
                 <SectionTracker sectionId="HeaderCTA" />
                 <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
-                <p>Muitos estudantes de diversas faculdades, públicas e privadas, têm dificuldade para aprender a disciplina de circuitos elétricos só com a faculdade. Seja porque o professor não explica bem, ou porque o material didático é ruim, ou porque o professor não sabe, fato é que é comum ter dificuldade nesta matéria.</p>
-                <p>Eu, (<b>Prof. Nicholas Yukio</b>), também não entendi bem o assunto no semestre em que tive a matéria quando era aluno no ITA. Mas continuando os estudos, o assunto foi ficando claro ao longo dos anos, chegando a ser professor da mesma disciplina após me formar.</p>
-                <p>Agora tenho um curso online de circuitos elétricos (o Domínio Elétrico), e se você quiser aprender circuitos com as minhas aulas e tirar dúvidas direto comigo, leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
+                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, criei um curso online de circuitos elétricos (o Domínio Elétrico) e posso te ajudar a aprender a matéria.</p>
                 <FormButton buttonName="HeaderCTA" />
             </div>
           );
