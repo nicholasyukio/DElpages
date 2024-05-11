@@ -147,7 +147,7 @@ function NewIntro() {
     if (isMobile) {
         return(
             <div className="content-container-header">
-                <div className='empty-div'></div>
+                <div className='empty-div-header'></div>
                 <NewHeaderCTA isMobile={isMobile}/>
             </div>
         );
@@ -155,7 +155,7 @@ function NewIntro() {
         return(
             <div className="content-container-header">
                 <NewHeaderCTA isMobile={isMobile}/>
-                <div className='empty-div'></div>
+                <div className='empty-div-header'></div>
             </div>
         );
     }

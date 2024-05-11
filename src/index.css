@@ -142,6 +142,10 @@ code {
       height: auto; /* Maintain aspect ratio */
   }
 
+  .empty-div-header {
+    height: 60px;
+  }
+
   .empty-div {
     height: 120px;
   }
@@ -303,6 +307,10 @@ display: none;
 }
 .urgente {
   color: #CC1B4D;
+}
+
+.empty-div-header {
+  width: 300px;
 }
 
 .empty-div {
