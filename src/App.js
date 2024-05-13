@@ -3,8 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Navigate
+  Route
 } from "react-router-dom";
 import { Home , Espera, Direto } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
@@ -52,8 +51,6 @@ export default function App() {
         <Route path='/logon' element={<Logon />}/>
         <Route path="/verify" element={<VerifyAccount/>}/>
         <Route path="/recover" element={<Recover/>}/>
-        <Route path="*" element={<Espera />} />
-        <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
