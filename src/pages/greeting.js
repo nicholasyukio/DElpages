@@ -12,6 +12,7 @@ const extractURLparams = () => {
     utmTags.utm_campaign = urlParams.get('utm_campaign') || '';
     utmTags.utm_term = urlParams.get('utm_term') || '';
     utmTags.utm_content = urlParams.get('utm_content') || '';
+    utmTags.id = urlParams.get('id') || '';
     utmTags.v = urlParams.get('v') || '';
     return utmTags;
 };

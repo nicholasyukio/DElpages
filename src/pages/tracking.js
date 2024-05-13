@@ -89,12 +89,14 @@ export const sendEventsToAPI = async () => {
 
 export const saveDesiteEventInDB = (event_name, video_id) => {
   const cookie_id = Cookies.get('uid');
+  const currentURL = window.location.href;
   getSession()
     .then((session) => {
         const eventData = {
           event_name: event_name,
           user_id: "",
           cookie_id: cookie_id,
+          page_full_url: currentURL,
           video_id: video_id
         };
       if (session) {

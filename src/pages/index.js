@@ -6,6 +6,7 @@ import Rodape from './rodape.js';
 import OfertaBreve from './oferta_breve.js';
 import { getCurrentTimeFromWorldTimeAPI, logEvent, SectionTracker, sendEventsToAPI } from './tracking.js';
 import { v4 as uuidv4 } from 'uuid';
+import {saveDesiteEventInDB} from './tracking';
 
 const extractUTMTags = () => {
     const queryString = window.location.search;
@@ -17,6 +18,7 @@ const extractUTMTags = () => {
     utmTags.utm_term = urlParams.get('utm_term') || '';
     utmTags.utm_content = urlParams.get('utm_content') || '';
     utmTags.id = urlParams.get('id') || '';
+    utmTags.v = urlParams.get('v') || '';
     return utmTags;
 };
 
@@ -215,6 +217,7 @@ function FormButton({ buttonName }) {
             buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
         });
         logEvent('ButtonClick', `${buttonName} clicked`);
+        saveDesiteEventInDB("click_oferta", utmTags.v);
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = '#form'; // Redirect to the form anchor
     };
@@ -327,9 +330,11 @@ function Form({ showOffer, onVariableChange }) {
                     buttonName: 'exampleButton', // Custom event data
                 });
                 logEvent('FormSubmitSuccess', details);
+                saveDesiteEventInDB("form_submit_success", utmTags.v);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
                 logEvent('FormSubmitFail', details);
+                saveDesiteEventInDB("form_submit_fail", utmTags.v);
 			}
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
@@ -337,6 +342,7 @@ function Form({ showOffer, onVariableChange }) {
 			setStatus('Buscar oferta para o curso');
 			setResult('Ocorreu um erro.');
             logEvent('FormSubmitCatchError', details);
+            saveDesiteEventInDB("form_submit_catch_error", utmTags.v);
 		}
         sendEventsToAPI();
 	};
