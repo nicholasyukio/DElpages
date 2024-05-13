@@ -87,7 +87,7 @@ export const sendEventsToAPI = async () => {
     } */
 };
 
-export const saveDesiteEventInDB = (event_name, video_id) => {
+export const saveDesiteEventInDB = (event_name, video_id, user_email = "") => {
   const cookie_id = Cookies.get('uid');
   const currentURL = window.location.href;
   getSession()
@@ -97,7 +97,8 @@ export const saveDesiteEventInDB = (event_name, video_id) => {
           user_id: "",
           cookie_id: cookie_id,
           page_full_url: currentURL,
-          video_id: video_id
+          video_id: video_id,
+          user_email: user_email
         };
       if (session) {
         const { accessToken } = session;

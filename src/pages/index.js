@@ -330,11 +330,11 @@ function Form({ showOffer, onVariableChange }) {
                     buttonName: 'exampleButton', // Custom event data
                 });
                 logEvent('FormSubmitSuccess', details);
-                saveDesiteEventInDB("form_submit_success", utmTags.v);
+                saveDesiteEventInDB("form_submit_success", utmTags.v, email.value);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
                 logEvent('FormSubmitFail', details);
-                saveDesiteEventInDB("form_submit_fail", utmTags.v);
+                saveDesiteEventInDB("form_submit_fail", utmTags.v, email.value);
 			}
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
@@ -342,7 +342,7 @@ function Form({ showOffer, onVariableChange }) {
 			setStatus('Buscar oferta para o curso');
 			setResult('Ocorreu um erro.');
             logEvent('FormSubmitCatchError', details);
-            saveDesiteEventInDB("form_submit_catch_error", utmTags.v);
+            saveDesiteEventInDB("form_submit_catch_error", utmTags.v, email.value);
 		}
         sendEventsToAPI();
 	};
