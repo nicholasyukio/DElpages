@@ -77,10 +77,10 @@ const OfertaBreve = ({isMobile}) => {
     const queryParams = new URLSearchParams(location.search);
     const offerId = queryParams.get('id');
     const offerInfo = {
-        D09MAI24_09h_36h: {
-            headline: "Oferta especial válida de 09h00 de 09/05/24 às 21h00 de 10/05/24",
-            startTime: "2024-05-09T09:00:00.000-03:00",
-            endTime: "2024-05-10T21:00:00.000-03:00",
+        D15MAI24_09h_36h: {
+            headline: "Oferta especial válida de 09h00 de 15/05/24 às 21h00 de 16/05/24",
+            startTime: "2024-05-15T09:00:00.000-03:00",
+            endTime: "2024-05-16T21:00:00.000-03:00",
             price: "R$ 426,72 / ano",
             pricePix: "R$ 405,38",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=a3db2519-109b-44bd-90b6-d40eafab76f4",
