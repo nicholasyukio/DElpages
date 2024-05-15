@@ -234,8 +234,8 @@ function NewHeaderCTA({isMobile}) {
         return (
             <div id="headercta" className="new-header-container">
                 <SectionTracker sectionId="HeaderCTA" />
-                <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
-                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, criei um curso online de circuitos elétricos (o Domínio Elétrico) e posso te ajudar a aprender a matéria.</p>
+                <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
+                <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este curso online para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Veja todas as informações sobre o conteúdo do curso nesta página.</p>
                 <FormButton buttonName="HeaderCTA" />
             </div>
           );
@@ -243,8 +243,8 @@ function NewHeaderCTA({isMobile}) {
         return (
             <div id="headercta" className="new-header-container">
                 <SectionTracker sectionId="HeaderCTA" />
-                <h2 className='highlighted-heading'>Você também ficou insatisfeito com as aulas de circuitos da sua faculdade. Acertei?</h2>
-                <p>Eu, (<b>Prof. Nicholas Yukio</b>), tive uma história parecida, mas depois de muito estudo, criei um curso online de circuitos elétricos (o Domínio Elétrico) e posso te ajudar a aprender a matéria.</p>
+                <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
+                <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este curso online para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Veja todas as informações sobre o conteúdo do curso nesta página.</p>
                 <FormButton buttonName="HeaderCTA" />
             </div>
           );
