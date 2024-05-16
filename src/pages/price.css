@@ -27,3 +27,8 @@
   font-size: 1.0em; /* Adjust the size as needed */
   font-weight: 400;
 }
+
+.header-with-reduced-margin {
+  margin-top: 1px;
+  margin-bottom: 1px; 
+}

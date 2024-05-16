@@ -58,7 +58,7 @@ async function isOfferActive(startTimeString, endTimeString) {
 const DescricaoInicialOferta = () => {
     return (
         <>
-        <h2>Receba o acesso imediato a:</h2>
+        <h2 className='header-with-reduced-margin'>Receba o acesso imediato a:</h2>
         <ul className='content-listing'>
             <li><b>Conteúdo principal: </b>11 módulos (~88 horas de aulas gravadas)</li>
             <li><b>DE Labs: </b>aulas experimentais de circuitos elétricos em laboratório</li>

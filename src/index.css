@@ -275,7 +275,7 @@ display: none;
   margin: 0 auto;
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   border-radius: 25px;
   border: 1px solid #ccc; /* Largura e cor da borda */
   box-shadow: 0 0 10px #fbffd9; /* Sombra com deslocamento, difusão e cor */
@@ -309,6 +309,8 @@ display: none;
 }
 .urgente {
   color: #170069;
+  margin-top: 5px;
+  margin-bottom: 5px; 
 }
 
 .empty-div-header {
