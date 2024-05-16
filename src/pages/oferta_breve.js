@@ -84,7 +84,7 @@ const OfertaBreve = ({isMobile}) => {
             price: "R$ 426,72 / ano",
             pricePix: "R$ 405,38",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=a3db2519-109b-44bd-90b6-d40eafab76f4",
-            priceParcelado12x: "12 x R$ 40,35",
+            priceParcelado12x: "12x R$ 40,35",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
         },
         YTGADSmaio34n8fd: {
@@ -94,7 +94,7 @@ const OfertaBreve = ({isMobile}) => {
             price: "R$ 280 / ano",
             pricePix: "R$ 266",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
-            priceParcelado12x: "12 x R$ 26,48",
+            priceParcelado12x: "12x R$ 26,48",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
         },
         YTGADS284jknds84: {
@@ -104,7 +104,7 @@ const OfertaBreve = ({isMobile}) => {
             price: "R$ 280 / ano",
             pricePix: "R$ 266",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
-            priceParcelado12x: "12 x R$ 26,48",
+            priceParcelado12x: "12x R$ 26,48",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
         },
         default: {
@@ -114,7 +114,7 @@ const OfertaBreve = ({isMobile}) => {
             price: "R$ 508 / ano",
             pricePix: "R$ 482,60",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=e90b6774-e5b1-4fb2-adf2-00a1bc4ac89a",
-            priceParcelado12x: "12 x R$ 48,04",
+            priceParcelado12x: "12x R$ 48,04",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6d6a37c5-3866-4859-83c6-2f0f998c9847"
         }
     };
@@ -174,7 +174,7 @@ const OfertaBreve = ({isMobile}) => {
             <div className="offer-container">
                 <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
-                <h2 className="urgente" align="center">De <span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
+                <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
                 <h2>Agora escolha a sua forma de pagamento:</h2>
                 {isMobile &&
                 <>
