@@ -87,6 +87,16 @@ const OfertaBreve = ({isMobile}) => {
             priceParcelado12x: "12 x R$ 40,35",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
         },
+        YTGADSmaio34n8fd: {
+            headline: "Oferta especial válida em maio/2024:",
+            startTime: "2024-04-25T00:00:01.000-03:00",
+            endTime: "2125-04-25T23:59:59.000-03:00",
+            price: "R$ 280 / ano",
+            pricePix: "R$ 266",
+            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
+            priceParcelado12x: "12 x R$ 26,48",
+            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
+        },
         YTGADS284jknds84: {
             headline: "Oferta especial válida em maio/2024:",
             startTime: "2024-04-25T00:00:01.000-03:00",
@@ -165,7 +175,6 @@ const OfertaBreve = ({isMobile}) => {
                 <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
                 <h2 className="urgente" align="center">De <span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
-                <h3 align="center">(desconto de 16%)</h3>
                 <h2>Agora escolha a sua forma de pagamento:</h2>
                 {isMobile &&
                 <>
