@@ -71,15 +71,17 @@ code {
 }
 
 .btn-inscricao {
-  background-color: #007BFF; /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
+  background-color: #000d7e; /* Cor de fundo do botão */
+  color: #fdff6e; /* Cor do texto do botão */
   padding: 10px 20px; /* Espaçamento interno do botão */
   border: none; /* Remove a borda padrão do botão */
   border-radius: 5px; /* Arredondamento das bordas */
+  box-shadow: 0 0 15px #b9fa91;
   text-align: center; /* Centraliza o texto horizontalmente */
   text-decoration: none; /* Remove a decoração de link do texto */
   display: block;
-  font-size: 16px; /* Tamanho da fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: 600;
   cursor: pointer; /* Altera o cursor ao passar por cima */
   margin: 0 auto;
 }
@@ -267,7 +269,7 @@ display: none;
 }
 
 .offer-container {
-  background: #fbffd9;
+  background: #f0f7c8;
   color: #000000;
   max-width: 600px; /* Largura máxima do contêiner de texto */
   margin: 0 auto;

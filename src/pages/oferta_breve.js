@@ -58,15 +58,15 @@ async function isOfferActive(startTimeString, endTimeString) {
 const DescricaoInicialOferta = () => {
     return (
         <>
-        <h2>Para você ter acesso a:</h2>
+        <h2>Receba o acesso imediato a:</h2>
         <ul className='content-listing'>
-            <li><b>Conteúdo principal: </b>11 módulos (mais de 88 horas de aulas gravadas)</li>
+            <li><b>Conteúdo principal: </b>11 módulos (~88 horas de aulas gravadas)</li>
             <li><b>DE Labs: </b>aulas experimentais de circuitos elétricos em laboratório</li>
-            <li><b>Matemática do Elétron: </b>curso de revisão de matemática básica para circuitos elétricos (cerca de 25 horas de aulas gravadas)</li>
-            <li><b>Suporte: </b>acompanhamento individual de tira-dúvidas pelo Telegram</li>
+            <li><b>MdE: </b>curso de revisão de matemática básica para circuitos (~25 horas)</li>
+            <li><b>Suporte: </b>tutoria individual direto com o Prof. Nicholas Yukio</li>
             <li><b>Comunidade: </b>grupo exclusivo de alunos no Telegram</li>
-            <li><b>Acesso: </b>1 ano de acesso com suporte à plataforma do curso em site próprio no sistema Moodle</li>
-            <li><b>Extras: </b>outros conteúdos que só quem entra fica sabendo (surpresa)</li>
+            <li><b>Período: </b>1 ano de acesso ao curso (em <i>curso.dominioeletrico.com.br</i>)</li>
+            <li><b>Certificado de conclusão: </b> (apenas para quem terminar o curso)</li>
         </ul>
         </>
     );
@@ -88,7 +88,7 @@ const OfertaBreve = ({isMobile}) => {
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
         },
         YTGADS284jknds84: {
-            headline: "Oferta especial para campanha feita no YouTube:",
+            headline: "Oferta especial válida em maio/2024:",
             startTime: "2024-04-25T00:00:01.000-03:00",
             endTime: "2125-04-25T23:59:59.000-03:00",
             price: "R$ 426,72 / ano",
@@ -162,7 +162,7 @@ const OfertaBreve = ({isMobile}) => {
             <>
             <section id="form" className="section">
             <div className="offer-container">
-                <h2 align="center">{offerHeadline}</h2>
+                <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
                 <h2 className="urgente" align="center">De <span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
                 <h3 align="center">(desconto de 16%)</h3>
@@ -177,7 +177,7 @@ const OfertaBreve = ({isMobile}) => {
                     <div className='payment-form'>
                         <h3 align="left">À vista no Pix ou boleto:</h3>
                         <p>preço base: <span className="original-price">{originalPrice}</span><br />
-                        com a oferta aplicada: <span className="original-price">{originalPricePix}</span><br />
+                        com a oferta aplicada: <span className="original-price">{offerPrice}</span><br />
                         <span className="offer-price">-5% do Pix/boleto: <b>{offerPricePix}</b></span></p>
                         <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
                     </div>
@@ -197,7 +197,7 @@ const OfertaBreve = ({isMobile}) => {
                             <div className='payment-form'>
                             <h3 align="left">À vista no Pix ou boleto:</h3>
                             <p>preço base: <span className="original-price">{originalPrice}</span><br />
-                            com a oferta aplicada: <span className="original-price">{originalPricePix}</span><br />
+                            com a oferta aplicada: <span className="original-price">{offerPrice}</span><br />
                             <span className="offer-price">-5% do Pix/boleto: <b>{offerPricePix}</b></span></p>
                             <button className="btn-pagamento" onClick={handleClickForPix}>Pagar com Pix/boleto</button>
                             </div>
