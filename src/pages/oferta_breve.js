@@ -101,11 +101,11 @@ const OfertaBreve = ({isMobile}) => {
             headline: "Oferta especial válida em maio/2024:",
             startTime: "2024-04-25T00:00:01.000-03:00",
             endTime: "2125-04-25T23:59:59.000-03:00",
-            price: "R$ 426,72 / ano",
-            pricePix: "R$ 405,38",
-            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=a3db2519-109b-44bd-90b6-d40eafab76f4",
-            priceParcelado12x: "12 x R$ 40,35",
-            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
+            price: "R$ 280 / ano",
+            pricePix: "R$ 266",
+            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
+            priceParcelado12x: "12 x R$ 26,48",
+            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
         },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
