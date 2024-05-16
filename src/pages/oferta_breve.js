@@ -174,7 +174,7 @@ const OfertaBreve = ({isMobile}) => {
             <div className="offer-container">
                 <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
-                <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
+                <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por apenas: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
                 <h2>Agora escolha a sua forma de pagamento:</h2>
                 {isMobile &&
                 <>
