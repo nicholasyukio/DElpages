@@ -320,6 +320,13 @@ const OfertaBreve = ({isMobile}) => {
             )}
             {stage === 2 && (
                 <div className="auth-container">
+                <img 
+                src="/dominio_eletrico_logo_2024_curso.png" 
+                alt="Curso Domínio Elétrico" 
+                width="240" 
+                className="logo-image" 
+                style={{ marginTop: '10px' }} 
+                />
                 <h2>Para começar a sua inscrição no curso, preencha os dados:</h2>
                 <div className='form'>
                   <div className="formfield">
