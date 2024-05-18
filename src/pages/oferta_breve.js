@@ -1,8 +1,10 @@
 // Filename - pages/oferta_breve.js
 import React, { useEffect, useState } from 'react';
+import { Button, TextField} from '@mui/material'
 import { useLocation } from 'react-router-dom';
 import './price.css';
 import {saveDesiteEventInDB} from './tracking';
+import {createOrder} from '../pagarme';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -58,7 +60,7 @@ async function isOfferActive(startTimeString, endTimeString) {
 const DescricaoInicialOferta = () => {
     return (
         <>
-        <h2 className='header-with-reduced-margin'>Receba o acesso imediato a:</h2>
+        <h2 className='header-with-reduced-margin'>Receba o acesso a:</h2>
         <ul className='content-listing'>
             <li><b>Conteúdo principal: </b>11 módulos (~88 horas de aulas gravadas)</li>
             <li><b>DE Labs: </b>aulas experimentais de circuitos elétricos em laboratório</li>
@@ -73,6 +75,89 @@ const DescricaoInicialOferta = () => {
 }
 
 const OfertaBreve = ({isMobile}) => {
+    const [stage, setStage] = useState(1); // 1 = offer, 2 = form, 3 = checkout
+    const [buttonText, setButtonText] = useState("Ir para o pagamento");
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [nameErr, setNameErr] = useState('');
+    const [emailErr, setEmailErr] = useState('');
+  
+    const formInputChange = (formField, value) => {
+      if (formField === "name") {
+        setName(value);
+      }
+      if (formField === "email") {
+        setEmail(value);
+      }
+    };
+  
+    const validation = () => {
+      return new Promise((resolve,reject)=>{
+        if (name === '' && email === '') {
+          setNameErr("Digite o seu nome");
+          setEmailErr("Digite o seu email");
+          resolve({name: "Name is Required", email:"Email is Required"});
+        }
+        else if (name === '') {
+          setNameErr("Digite o seu nome");
+          resolve({name: "Name is required", email:""});
+        }
+        else if (email === '') {
+          setEmailErr("Digite o seu email");
+          resolve({name: "", email:"Email is Required"});
+        }
+        else{
+          resolve({name: "", email:""});
+        }
+        reject('')
+      });
+    };
+
+    const callCheckout = async (name, email) => {
+        let details = {
+            name: name,
+            email: email
+        };
+        try {
+            const response = await fetch('https://api.dominioeletrico.com.br/getcheckout/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(details),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+    
+            const data = await response.json();
+            const paymentUrl = data.checkouts[0].payment_url;
+            console.log(`Payment URL: ${paymentUrl}`);
+            return paymentUrl;
+        } catch (error) {
+            console.error('Error:', error);
+            throw error; // Re-throw the error to be caught by the next catch block
+        }
+    };
+
+    const handleClickForm = (e) => {
+        setButtonText("Redirecionando para o pagamento...");
+        setNameErr("");
+        setEmailErr("");
+        validation()
+        .then((res) => {
+            console.log(`Name: ${name}, email: ${email}`);
+            return callCheckout(name, email);  // Ensure the promise is returned here
+        })
+        .then((paymentUrl) => {
+            console.log(`handleClickForm payment URL: ${paymentUrl}`);
+            window.location.href = paymentUrl;
+        })
+        .catch(err => console.log(err));
+      }
+
+
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const offerId = queryParams.get('id');
@@ -155,7 +240,9 @@ const OfertaBreve = ({isMobile}) => {
             buttonName: 'clickForCreditCard',
         });
         saveDesiteEventInDB("click_for_credit_card", URLparams.v);
-        window.location.href = offerLinkCartaoDeCredito;
+        if (!offerId) {
+            window.location.href = offerLinkCartaoDeCredito;
+        }
     };
 
     const handleClickForPix = () => {
@@ -164,19 +251,31 @@ const OfertaBreve = ({isMobile}) => {
             buttonName: 'clickForPix',
         });
         saveDesiteEventInDB("click_for_pix", URLparams.v);
-        window.location.href = offerLinkPix;
+        if (!offerId) {
+            window.location.href = offerLinkPix;
+        }
+    };
+
+    const handleClickForPagarme = () => {
+        window.dataLayer.push({
+            event: 'clickForPagarme',
+            buttonName: 'clickForPagarme',
+        });
+        saveDesiteEventInDB("click_for_pagarme", URLparams.v);
+        setStage(2);
     };
 
     if (offerInfo.hasOwnProperty(offerId) && offerActive) {
         return (
-            <>
             <section id="form" className="section">
+            {stage === 1 && (
             <div className="offer-container">
                 <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
                 <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por apenas: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
-                <h2>Agora escolha a sua forma de pagamento:</h2>
-                {isMobile &&
+                <h3 className="urgente" align="center">ou à vista no Pix/boleto: <b>{offerPricePix}</b> (5% de desconto) </h3>
+                <button className="btn-pagamento-unique" onClick={handleClickForPagarme}>Escolher forma de pagamento</button>
+                {/* {isMobile &&
                 <>
                     <div className='payment-form'>
                         <h3 align="left">No cartão de crédito (até 12x):</h3>
@@ -213,14 +312,49 @@ const OfertaBreve = ({isMobile}) => {
                         </td>    
                     </tr>
                 </table>
-                }
+                } */}
                 <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
                 <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
-                <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
-                <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
+                <p>Se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
             </div>
+            )}
+            {stage === 2 && (
+                <div className="auth-container">
+                <h2>Para começar a sua inscrição no curso, preencha os dados:</h2>
+                <div className='form'>
+                  <div className="formfield">
+                    <TextField
+                      value={name}
+                      onChange={(e) => formInputChange("name", e.target.value)}
+                      label="nome"
+                      helperText={nameErr}
+                    />
+                  </div>
+                  <div className="formfield">
+                    <TextField
+                      value={email}
+                      onChange={(e) => formInputChange("email", e.target.value)}
+                      label="email"
+                      helperText={emailErr}
+                    />
+                  </div>
+                  <div className='formfield'>
+                    <Button type='submit' variant='contained' onClick={handleClickForm}>{buttonText}</Button>
+                    <h4 align="center">Você será redirecionado ao pagamento na Pagar.me: </h4>
+                    <img 
+                    src="/pagarme_logo.png" 
+                    alt="Pagar.me" 
+                    width="180" 
+                    style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }} 
+                    />
+                    <p className="politicadeprivacidade">Seus dados estão seguros. <br /><a href="../politicadeprivacidade">Política de privacidade</a></p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             </section>
-            </>
+            
         );
     } else {
         return (

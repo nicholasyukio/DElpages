@@ -297,6 +297,25 @@ display: none;
 .btn-pagamento:hover {
   background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
+
+.btn-pagamento-unique {
+  width: 80%; /* Set the button width to 100% */
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Arredondamento das bordas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block; /* Change to block-level element */
+  font-size: 20px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 10px auto 10px auto; /* Center the button horizontally */
+}
+.btn-pagamento-unique:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
 .header-container {
   text-align: left;
   padding: 5px 5px 5px 20px;
@@ -331,6 +350,19 @@ display: none;
   background: #f5fbfc;
   color: #000000;
   max-width: 240px; /* Largura máxima do contêiner de texto */
+  margin: 20px auto auto auto;
+  display: grid;
+  text-align: left; /* Alinhar o texto à esquerda */
+  padding: 5px 20px 20px 20px;
+  border-radius: 15px;
+  border: 1px solid #ccc; /* Largura e cor da borda */
+  box-shadow: 0 0 2px rgb(255, 255, 255); /* Sombra com deslocamento, difusão e cor */
+}
+
+.auth-container-pagarme {
+  background: #f5fbfc;
+  color: #000000;
+  max-width: 360px; /* Largura máxima do contêiner de texto */
   margin: 20px auto auto auto;
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */
