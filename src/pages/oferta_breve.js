@@ -218,7 +218,7 @@ const OfertaBreve = ({isMobile}) => {
 
     useEffect(() => {
         const formElement = document.getElementById('form');
-        if (formElement) {
+        if (formElement && stage === 2) {
           formElement.scrollIntoView({ behavior: 'smooth' });
         }
       }, [stage]);
