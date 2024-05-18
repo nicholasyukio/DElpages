@@ -216,6 +216,13 @@ const OfertaBreve = ({isMobile}) => {
         checkOfferValidity();
     }, [offerStartTime, offerEndTime]);
 
+    useEffect(() => {
+        const formElement = document.getElementById('form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, [stage]);
+
     const offerActive = (offerValid === "active"); 
 
     let offerHeadline = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].headline: offerInfo["default"].headline;
