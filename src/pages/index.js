@@ -224,7 +224,7 @@ function FormButton({ buttonName }) {
 
     return (
         <button className="btn-inscricao" onClick={handleClick}>
-            Inscreva-se no curso
+            Quero fazer o curso
         </button>
     );
 }

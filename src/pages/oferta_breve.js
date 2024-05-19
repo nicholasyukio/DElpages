@@ -76,7 +76,7 @@ const DescricaoInicialOferta = () => {
 
 const OfertaBreve = ({isMobile}) => {
     const [stage, setStage] = useState(1); // 1 = offer, 2 = form, 3 = checkout
-    const [buttonText, setButtonText] = useState("Ir para o pagamento");
+    const [buttonText, setButtonText] = useState("Prosseguir");
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [nameErr, setNameErr] = useState('');
@@ -281,7 +281,7 @@ const OfertaBreve = ({isMobile}) => {
                 <DescricaoInicialOferta />
                 <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por apenas: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
                 <h3 className="urgente" align="center">ou à vista no Pix/boleto: <b>{offerPricePix}</b> (5% de desconto) </h3>
-                <button className="btn-pagamento-unique" onClick={handleClickForPagarme}>Escolher forma de pagamento</button>
+                <button className="btn-pagamento-unique" onClick={handleClickForPagarme}>Fazer inscrição no curso</button>
                 {/* {isMobile &&
                 <>
                     <div className='payment-form'>
@@ -354,13 +354,13 @@ const OfertaBreve = ({isMobile}) => {
                   </div>
                   <div className='formfield'>
                     <Button type='submit' variant='contained' onClick={handleClickForm}>{buttonText}</Button>
-                    <h4 align="center">Você será redirecionado ao pagamento na Pagar.me: </h4>
+                    {/* <h4 align="center">Você será redirecionado ao pagamento na Pagar.me: </h4>
                     <img 
                     src="/pagarme_logo.png" 
                     alt="Pagar.me" 
                     width="180" 
                     style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }} 
-                    />
+                    /> */}
                     <p className="politicadeprivacidade">Seus dados estão seguros. <br /><a href="../politicadeprivacidade">Política de privacidade</a></p>
                   </div>
                 </div>
