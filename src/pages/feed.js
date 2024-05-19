@@ -5,6 +5,7 @@ import Rodape from './rodape.js';
 import './watch.css';
 import { getUserId, Greeting , ButtonAccount } from './greeting.js';
 import {saveDesiteEventInDB} from './tracking';
+import withLoginPrompt from './with_login_prompt.js';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -860,4 +861,8 @@ const SavedVideosPage = () => {
 	);
 };
 
-export {Feed, SavedVideosPage, Playlist};
+const FeedWithLoginPrompt = withLoginPrompt(Feed);
+const SavedVideosPageWithLoginPrompt = withLoginPrompt(SavedVideosPage);
+const PlaylistWithLoginPrompt = withLoginPrompt(Playlist);
+
+export {FeedWithLoginPrompt, SavedVideosPageWithLoginPrompt, PlaylistWithLoginPrompt};

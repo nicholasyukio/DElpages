@@ -8,7 +8,7 @@ import {saveDesiteEventInDB} from './tracking.js';
 
 const utmTags = extractUTMTags();
 
-const Logon = () => {
+const Logon = ({useRodape = true, redirect = ""}) => {
 
   const Navigate = useNavigate();
   let nam = "";
@@ -63,12 +63,11 @@ const Logon = () => {
           .then((data)=>{
             setLoginErr('');
             saveDesiteEventInDB("login", "");
-            Navigate('/');
-            /* if (utmTags.redirect === '') {
+            if (redirect === '') {
               Navigate('/');
             } else {
-              Navigate(utmTags.redirect);
-            } */
+              window.location.href = redirect;
+            }
           },(err)=>{
             // console.log(err);
             setLoginErr(err.message)
@@ -118,9 +117,9 @@ const Logon = () => {
       <h3>Esqueceu sua senha? <br /><a href="recover">Resete a sua senha</a></h3>
     </div>
     </section>
-    <Rodape />
+    {useRodape && <Rodape />}
     </>
   )
 }
 
-export default Logon
+export default Logon;

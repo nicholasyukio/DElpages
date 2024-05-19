@@ -12,6 +12,7 @@ import { FeedHeaderComponent } from './feed.js';
 import userpool from '../userpool';
 import { EmailShareButton, TelegramShareButton, WhatsappShareButton } from "react-share";
 import { EmailIcon, TelegramIcon, WhatsappIcon } from "react-share";
+import withLoginPrompt from './with_login_prompt.js';
 
 const extractURLparams = () => {
     const queryString = window.location.search;
@@ -531,4 +532,5 @@ const Watch = () => {
     }
 };
 
-export default Watch;
+const WatchWithLoginPrompt = withLoginPrompt(Watch);
+export default WatchWithLoginPrompt;
