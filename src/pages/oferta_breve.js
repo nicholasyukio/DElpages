@@ -290,7 +290,7 @@ const OfertaBreve = ({isMobile}) => {
                 <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
                 <DescricaoInicialOferta />
                 <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por apenas: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
-                <h3 className="urgente" align="center">ou à vista no Pix/boleto: <b>{offerPricePix}</b> (5% de desconto) </h3>
+                <h3 className="urgente" align="center">ou à vista no Pix/boleto: <b>{offerPricePix}</b></h3>
                 <button className="btn-pagamento-unique" onClick={handleClickForPagarme}>Fazer inscrição no curso</button>
                 {/* {isMobile &&
                 <>
