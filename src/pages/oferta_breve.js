@@ -192,6 +192,16 @@ const OfertaBreve = ({isMobile}) => {
             priceParcelado12x: "12x R$ 26,48",
             linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
         },
+        D20MAI24_11h_24h: {
+            headline: "Oferta especial válida de 11h00 de 20/05/24 às 11h00 de 21/05/24",
+            startTime: "2024-05-20T09:00:00.000-03:00",
+            endTime: "2024-05-21T11:00:00.000-03:00",
+            price: "R$ 426,72 / ano",
+            pricePix: "R$ 405,38",
+            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
+            priceParcelado12x: "12x R$ 40,35",
+            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
+        },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
             startTime: "2024-04-08T08:00:00.000-03:00",
