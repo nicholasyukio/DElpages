@@ -162,46 +162,6 @@ const OfertaBreve = ({isMobile}) => {
     const queryParams = new URLSearchParams(location.search);
     const offerId = queryParams.get('id');
     const offerInfo = {
-        D15MAI24_09h_36h: {
-            headline: "Oferta especial válida de 09h00 de 15/05/24 às 21h00 de 16/05/24",
-            startTime: "2024-05-15T09:00:00.000-03:00",
-            endTime: "2024-05-16T21:00:00.000-03:00",
-            price: "R$ 426,72 / ano",
-            pricePix: "R$ 405,38",
-            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=a3db2519-109b-44bd-90b6-d40eafab76f4",
-            priceParcelado12x: "12x R$ 40,35",
-            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
-        },
-        YTGADSmaio34n8fd: {
-            headline: "Oferta especial válida em maio/2024:",
-            startTime: "2024-04-25T00:00:01.000-03:00",
-            endTime: "2125-04-25T23:59:59.000-03:00",
-            price: "R$ 280 / ano",
-            pricePix: "R$ 266",
-            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
-            priceParcelado12x: "12x R$ 26,48",
-            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
-        },
-        YTGADS284jknds84: {
-            headline: "Oferta especial válida em maio/2024:",
-            startTime: "2024-04-25T00:00:01.000-03:00",
-            endTime: "2125-04-25T23:59:59.000-03:00",
-            price: "R$ 280 / ano",
-            pricePix: "R$ 266",
-            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
-            priceParcelado12x: "12x R$ 26,48",
-            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
-        },
-        D20MAI24_11h_24h: {
-            headline: "Oferta especial válida de 11h00 de 20/05/24 às 11h00 de 21/05/24",
-            startTime: "2024-05-20T09:00:00.000-03:00",
-            endTime: "2024-05-21T11:00:00.000-03:00",
-            price: "R$ 426,72 / ano",
-            pricePix: "R$ 405,38",
-            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=66e444ea-7b98-403b-bcb9-a80004eefa6c",
-            priceParcelado12x: "12x R$ 40,35",
-            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=6daf1dfe-67ee-4f56-aefd-4f25e1dba713"
-        },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
             startTime: "2024-04-08T08:00:00.000-03:00",
