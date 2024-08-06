@@ -368,7 +368,7 @@ const Watch = () => {
       }, [])
 
     const videoId = URLparams.v;
-    const [showOffer, setGlobalVariable] = useState(false);
+    const [showOffer, setGlobalVariable] = useState(true);
 
     const [videoInfo, setVideoInfo] = useState([]);
     let videoTitle = '';
@@ -384,6 +384,7 @@ const Watch = () => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
+            console.log(data);
             setVideoInfo(data);
         } catch (error) {
             console.error('Fetch error:', error);
