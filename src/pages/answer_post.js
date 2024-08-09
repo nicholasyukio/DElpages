@@ -126,7 +126,7 @@ export const AnswerText = () => {
   const [metadata, setMetadata] = useState({});
 
   useEffect(() => {
-    import(`../posts/${postId}.md`)
+    import(`../../public/posts/${postId}.md`)
       .then(res => fetch(res.default))
       .then(res => res.text())
       .then(text => {
