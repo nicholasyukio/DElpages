@@ -7,6 +7,7 @@ import OfertaBreve from './oferta_breve.js';
 import { getCurrentTimeFromWorldTimeAPI, logEvent, SectionTracker, sendEventsToAPI } from './tracking.js';
 import { v4 as uuidv4 } from 'uuid';
 import {saveDesiteEventInDB} from './tracking';
+import {FilteredPageList, PageList, KnowCourseFromBlogButton, AnswerText} from './answer_post';
 
 const extractUTMTags = () => {
     const queryString = window.location.search;
@@ -154,7 +155,73 @@ const Direto = () => {
 	);
 };
 
-export { Home, Espera, Direto };
+const AnswerList = () => {
+    const [showOffer, setGlobalVariable] = useState(false);
+
+    const handleVariableChange = (newValue) => {
+        // Update the globalVariable when needed
+        setGlobalVariable(newValue);
+    };
+
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+	return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+		<PageList />
+        <BioBlog />
+        </section>
+        <Rodape />
+        </>
+	);
+};
+
+const Answer = () => {
+    const [showOffer, setGlobalVariable] = useState(false);
+
+    const handleVariableChange = (newValue) => {
+        // Update the globalVariable when needed
+        setGlobalVariable(newValue);
+    };
+
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+	return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+		<AnswerText />
+        <BioBlog />
+        </section>
+        <Rodape />
+        </>
+	);
+};
+
+export { Home, Espera, Direto, Answer, AnswerList };
 
 function NewIntro() {
     // State to track the device type
@@ -176,7 +243,7 @@ function NewIntro() {
     if (isMobile) {
         return(
             <div className="content-container-header">
-                <div className='empty-div-header'></div>
+                <div className='empty-div-Quero fazerheader'></div>
                 <NewHeaderCTA isMobile={isMobile}/>
             </div>
         );
@@ -385,6 +452,21 @@ function CircuitImage() {
     );
 }
 
+/* function AnswerText() {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    return (     
+    <section className="section">
+    <h2 align="center">O Domínio Elétrico é um curso online de circuitos elétricos. Como assim?</h2>
+    <div className="content-container-single-column">
+        <SectionTracker sectionId="AnswerText" />
+        <p>Ao longo desta página, você verá todas as informações importantes do curso e poderá decidir se faz sentido para você. Para se inscrever no curso, clique no botão abaixo.</p>
+        <FormButton buttonName="BriefDescription" />
+    </div>
+    </section>
+    );
+} */
+
 function BriefDescription() {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -430,6 +512,30 @@ function Bio() {
         <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
         <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
         <FormButton buttonName="Bio" />
+        </div>
+    </div>
+    </section>
+    );
+}
+
+function BioBlog() {
+    return (
+    <section className="section">
+    <div className="content-container">
+    <SectionTracker sectionId="Bio" />
+        <figure>
+        <img src="/foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
+        </figure>
+        <div className="text">
+        <h2>Sobre o Prof. Nicholas Yukio</h2>
+        <p>Sou engenheiro eletrônico formado no ITA em 2017. </p>
+        <p>Comecei a vida profissional como professor da disciplina de circuitos elétricos no ITA, onde trabalhei de 2018 até março de 2020.</p>
+        <p>Em 2019, levei meu ensino de circuitos elétricos para a internet, com minhas aulas públicas no Canal do Elétron.</p>
+        <p>No início de 2020, criei meu curso online de circuitos elétricos, o Domínio Elétrico, focado em alunos de engenharia.</p>
+        <p>De lá para cá, já são cerca de 500 alunos do curso que aprendem comigo e que podem tirar dúvidas individualmente comigo.</p>
+        <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
+        <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
+        <KnowCourseFromBlogButton buttonName="BlogBioButton" />
         </div>
     </div>
     </section>

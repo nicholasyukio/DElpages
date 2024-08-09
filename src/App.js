@@ -5,7 +5,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Home , Espera, Direto } from "./pages/index";
+import { Home , Espera, Direto, Answer, AnswerList } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
 import Oferta from "./pages/oferta";
@@ -19,6 +19,9 @@ import { FeedWithLoginPrompt , SavedVideosPageWithLoginPrompt, PlaylistWithLogin
 import Cookies from 'js-cookie';
 import { v4 as uuidv4 } from 'uuid';
 import CookieConsent from './pages/cookie_consent';
+import { Buffer } from 'buffer';
+
+window.Buffer = Buffer;
 
 export default function App() {
   useEffect(() => {
@@ -39,6 +42,8 @@ export default function App() {
         <Route path="/" element={<FeedWithLoginPrompt />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
         <Route path="/direto-dominio-eletrico" element={<Direto />} />
+        <Route path="/anslist" element={<AnswerList />} />
+        <Route path="/answer/:postId" element={<Answer />} />
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
         <Route path="/termosdeuso" element={<TermosDeUso />} />
         <Route path="/oferta" element={<Oferta />} />
