@@ -75,97 +75,21 @@ const DescricaoInicialOferta = () => {
 }
 
 const OfertaBreve = ({isMobile}) => {
-    const [stage, setStage] = useState(1); // 1 = offer, 2 = form, 3 = checkout
-    const [buttonText, setButtonText] = useState("Prosseguir");
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [nameErr, setNameErr] = useState('');
-    const [emailErr, setEmailErr] = useState('');
-  
-    const formInputChange = (formField, value) => {
-      if (formField === "name") {
-        setName(value);
-      }
-      if (formField === "email") {
-        setEmail(value);
-      }
-    };
-  
-    const validation = () => {
-      return new Promise((resolve,reject)=>{
-        if (name === '' && email === '') {
-          setNameErr("Digite o seu nome");
-          setEmailErr("Digite o seu email");
-          resolve({name: "Name is Required", email:"Email is Required"});
-        }
-        else if (name === '') {
-          setNameErr("Digite o seu nome");
-          resolve({name: "Name is required", email:""});
-        }
-        else if (email === '') {
-          setEmailErr("Digite o seu email");
-          resolve({name: "", email:"Email is Required"});
-        }
-        else{
-          resolve({name: "", email:""});
-        }
-        reject('')
-      });
-    };
-
-    const callCheckout = async (name, email) => {
-        let details = {
-            name: name,
-            email: email
-        };
-        try {
-            const response = await fetch('https://api.dominioeletrico.com.br/getcheckout/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(details),
-            });
-    
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-    
-            const data = await response.json();
-            const paymentUrl = data.checkouts[0].payment_url;
-            console.log(`Payment URL: ${paymentUrl}`);
-            return paymentUrl;
-        } catch (error) {
-            console.error('Error:', error);
-            throw error; // Re-throw the error to be caught by the next catch block
-        }
-    };
-
-    const handleClickForm = (e) => {
-        setButtonText("Redirecionando para o pagamento...");
-        setNameErr("");
-        setEmailErr("");
-        validation()
-        .then((res) => {
-            console.log(`Name: ${name}, email: ${email}`);
-            return callCheckout(name, email);  // Ensure the promise is returned here
-        })
-        .then((paymentUrl) => {
-            console.log(`handleClickForm payment URL: ${paymentUrl}`);
-            window.location.href = paymentUrl;
-        })
-        .catch(err => console.log(err));
-      }
-
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const offerId = queryParams.get('id');
     const offerInfo = {
+        dynamic: {
+            headline: "Desconto de 16%, válido até ",
+            price: "R$ 426,72 / ano",
+            pricePix: "R$ 405,38",
+            linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=a3db2519-109b-44bd-90b6-d40eafab76f4",
+            priceParcelado12x: "12x R$ 40,35",
+            linkCartaoDeCredito: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=bee6ca52-ff5e-44ef-aaa9-a95827c5e240"
+        },
         default: {
             headline: "Preço para você assinar a plataforma do curso:",
-            startTime: "2024-04-08T08:00:00.000-03:00",
-            endTime: "2124-04-11T08:00:00.000-03:00",
             price: "R$ 508 / ano",
             pricePix: "R$ 482,60",
             linkPix: "https://pague.lia.com.br/dominio-eletrico/oferta?offer_id=e90b6774-e5b1-4fb2-adf2-00a1bc4ac89a",
@@ -174,42 +98,84 @@ const OfertaBreve = ({isMobile}) => {
         }
     };
     
-    const offerStartTime = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].startTime: offerInfo["default"].startTime;
-    const offerEndTime = offerInfo.hasOwnProperty(offerId) ? offerInfo[offerId].endTime: offerInfo["default"].endTime;
     const [offerValid, setOfferValid] = useState(false);
 
-    useEffect(() => {
+    // Função para decodificar o Base64
+    const decodeBase64 = (base64) => {
+        return decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+    };
+
+    // Função para validar o código da oferta
+    const validateOfferCode = (offerCode) => {
+        try {
+            const expirationDate = decodeBase64(offerCode);
+            const now = new Date().toISOString();
+    
+            // Verifica se a data de expiração é válida
+            const isValidDate = !isNaN(Date.parse(expirationDate));
+    
+            if (!isValidDate) {
+                console.log(`Offer expiration date is invalid: ${expirationDate}`);
+                return false; // Data inválida
+            }
+    
+            console.log(`Offer expiration date: ${expirationDate}, validity: ${now < expirationDate}`);
+            return now < expirationDate;
+    
+        } catch (error) {
+            console.error("Error validating offer code:", error);
+            return false; // Erro ao decodificar ou data inválida
+        }
+    };
+
+    function formatExpirationDate(expirationDate) {
+        // Converte a string de data em um objeto Date
+        const date = new Date(expirationDate);
+    
+        // Extrai dia, mês e ano
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Meses são baseados em zero
+        const year = date.getFullYear().toString().slice(-2);
+    
+        // Extrai horas e minutos
+        const hours = date.getHours().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+    
+        // Monta a string no formato desejado
+        return `${day}/${month}/${year} às ${hours}:${minutes}`;
+    }
+    
+
+/*     useEffect(() => {
         async function checkOfferValidity() {
             const valid = await isOfferActive(offerStartTime, offerEndTime);
             setOfferValid(valid);
         }
         checkOfferValidity();
-    }, [offerStartTime, offerEndTime]);
+    }, [offerStartTime, offerEndTime]); */
 
+    // useEffect para validar a oferta quando o componente for montado ou o código da oferta mudar
     useEffect(() => {
-        const formElement = document.getElementById('form');
-        if (formElement && stage === 2) {
-          formElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, [stage]);
+        const valid = validateOfferCode(offerId);
+        setOfferValid(valid);
+    }, [offerId]);
 
-    const offerActive = (offerValid === "active"); 
+    const expirationDate = offerValid ? decodeBase64(offerId) : "";
+    const deadline = offerValid ? formatExpirationDate(expirationDate): "";
+    console.log(deadline);
 
-    let offerHeadline = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].headline: offerInfo["default"].headline;
-    const offerPrice = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].price: offerInfo["default"].price;
-    const offerPricePix = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].pricePix: offerInfo["default"].pricePix;
-    const offerLinkPix = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].linkPix: offerInfo["default"].linkPix;
-    const offerPriceParcelado12x = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].priceParcelado12x: offerInfo["default"].priceParcelado12x;
-    const offerLinkCartaoDeCredito = offerInfo.hasOwnProperty(offerId) && offerActive ? offerInfo[offerId].linkCartaoDeCredito: offerInfo["default"].linkCartaoDeCredito;
+    let offerHeadline = offerValid ? `${offerInfo["dynamic"].headline} ${deadline}`: offerInfo["default"].headline;
+    const offerPrice = offerValid ? offerInfo["dynamic"].price: offerInfo["default"].price;
+    const offerPricePix = offerValid ? offerInfo["dynamic"].pricePix: offerInfo["default"].pricePix;
+    const offerLinkPix = offerValid ? offerInfo["dynamic"].linkPix: offerInfo["default"].linkPix;
+    const offerPriceParcelado12x = offerValid ? offerInfo["dynamic"].priceParcelado12x: offerInfo["default"].priceParcelado12x;
+    const offerLinkCartaoDeCredito = offerValid ? offerInfo["dynamic"].linkCartaoDeCredito: offerInfo["default"].linkCartaoDeCredito;
     
-
     const originalPrice = offerInfo["default"].price;
     const originalPricePix = offerInfo["default"].pricePix;
     const originalPriceParcelado12x = offerInfo["default"].priceParcelado12x;
-
-    if (offerValid === "late") {
-        offerHeadline = "Oferta expirada. Veja o preço padrão do curso:";
-    }
 
     const handleClickForCreditCard = () => {
         window.dataLayer.push({
@@ -217,9 +183,7 @@ const OfertaBreve = ({isMobile}) => {
             buttonName: 'clickForCreditCard',
         });
         saveDesiteEventInDB("click_for_credit_card", URLparams.v);
-        if (!offerId) {
-            window.location.href = offerLinkCartaoDeCredito;
-        }
+        window.location.href = offerLinkCartaoDeCredito;
     };
 
     const handleClickForPix = () => {
@@ -228,31 +192,19 @@ const OfertaBreve = ({isMobile}) => {
             buttonName: 'clickForPix',
         });
         saveDesiteEventInDB("click_for_pix", URLparams.v);
-        if (!offerId) {
-            window.location.href = offerLinkPix;
-        }
+        window.location.href = offerLinkPix;
     };
 
-    const handleClickForPagarme = () => {
-        window.dataLayer.push({
-            event: 'clickForPagarme',
-            buttonName: 'clickForPagarme',
-        });
-        saveDesiteEventInDB("click_for_pagarme", URLparams.v);
-        setStage(2);
-    };
-
-    if (offerInfo.hasOwnProperty(offerId) && offerActive) {
+    if (offerValid) {
         return (
             <section id="form" className="section">
-            {stage === 1 && (
             <div className="offer-container">
-                <h2 align="center" className='highlighted-heading'>{offerHeadline}</h2>
+                <h2 align="center">{offerHeadline}</h2>
                 <DescricaoInicialOferta />
-                <h2 className="urgente" align="center"><span className="original-price">{originalPriceParcelado12x}</span>, por apenas: <span className="offer-price">{offerPriceParcelado12x}</span></h2>
-                <h3 className="urgente" align="center">ou à vista no Pix/boleto: <b>{offerPricePix}</b></h3>
-                <button className="btn-pagamento-unique" onClick={handleClickForPagarme}>Fazer inscrição no curso</button>
-                {/* {isMobile &&
+                <h2 align='center' className="original-price">de {originalPriceParcelado12x}</h2>
+                <h2 align='center' className="urgente">por {offerPriceParcelado12x}</h2>
+                <h2>Agora escolha a sua forma de pagamento:</h2>
+                {isMobile &&
                 <>
                     <div className='payment-form'>
                         <h3 align="left">No cartão de crédito (até 12x):</h3>
@@ -289,56 +241,13 @@ const OfertaBreve = ({isMobile}) => {
                         </td>    
                     </tr>
                 </table>
-                } */}
+                } 
                 <p>Falta pouco para você começar a dominar os circuitos elétricos!</p>
                 <h3 className="urgente" align="left">Aviso: Estas condições podem mudar a qualquer momento.</h3>
-                <p>Se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
+                <p><b>Lembre-se que você tem 7 dias de garantia de satisfação incondicional.</b></p>
+                <p>Ou seja, se você estiver em dúvida se o curso é para você, fique tranquilo porque você terá 7 dias a partir da inscrição para pedir reembolso integral caso não goste do curso por qualquer motivo.</p>
             </div>
-            )}
-            {stage === 2 && (
-                <div className="auth-container">
-                <img 
-                src="/dominio_eletrico_logo_2024_curso.png" 
-                alt="Curso Domínio Elétrico" 
-                width="240" 
-                className="logo-image" 
-                style={{ marginTop: '10px' }} 
-                />
-                <h2>Para começar a sua inscrição no curso, preencha os dados:</h2>
-                <div className='form'>
-                  <div className="formfield">
-                    <TextField
-                      value={name}
-                      onChange={(e) => formInputChange("name", e.target.value)}
-                      label="nome"
-                      helperText={nameErr}
-                    />
-                  </div>
-                  <div className="formfield">
-                    <TextField
-                      value={email}
-                      onChange={(e) => formInputChange("email", e.target.value)}
-                      label="email"
-                      helperText={emailErr}
-                    />
-                  </div>
-                  <div className='formfield'>
-                    <Button type='submit' variant='contained' onClick={handleClickForm}>{buttonText}</Button>
-                    {/* <h4 align="center">Você será redirecionado ao pagamento na Pagar.me: </h4>
-                    <img 
-                    src="/pagarme_logo.png" 
-                    alt="Pagar.me" 
-                    width="180" 
-                    style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }} 
-                    /> */}
-                    <p className="politicadeprivacidade">Seus dados estão seguros. <br /><a href="../politicadeprivacidade">Política de privacidade</a></p>
-                  </div>
-                </div>
-              </div>
-            )}
-
             </section>
-            
         );
     } else {
         return (
