@@ -46,7 +46,7 @@ export function FilteredPageList({ count }) {
   const [filteredPages, setFilteredPages] = useState([]);
 
   function getRandomNumbers(count) {
-    const maxNumber = 299; // Máximo de 299 para sorteio
+    const maxNumber = 999; // Máximo de 299 para sorteio
     const numbers = new Set();
 
     while (numbers.size < count) {
