@@ -6,7 +6,7 @@ def generate_offer_code(expiration_date):
     return offer_code
 
 # Exemplo de uso:
-expiration_date = "2024-08-21T12:00:25"
+expiration_date = "2024-08-16T09:00:00"
 offer_code = generate_offer_code(expiration_date)
 print(offer_code)  # Esse será o código da oferta que você envia para o front-end
 

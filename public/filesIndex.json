@@ -1498,5 +1498,3505 @@
     "number": 299,
     "filename": "00299-o-que-e-um-trigger-ttl-e-como-ele-e-utilizado-em-projetos-de-circuitos-logicos.md",
     "title": "O que é um Trigger TTL e como ele é utilizado em projetos de circuitos lógicos?"
+  },
+  {
+    "number": 300,
+    "filename": "00300-como-a-tensao-se-comporta-em-resistores-em-paralelo.md",
+    "title": "Como a tensão se comporta em resistores em paralelo?"
+  },
+  {
+    "number": 301,
+    "filename": "00301-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 302,
+    "filename": "00302-como-o-teorema-de-thevenin-e-o-teorema-de-norton-sao-utilizados-na-analise-de-circuitos.md",
+    "title": "Como o Teorema de Thévenin e o Teorema de Norton são utilizados na análise de circuitos?"
+  },
+  {
+    "number": 303,
+    "filename": "00303-como-ocorre-a-carga-e-descarga-de-um-capacitor-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como ocorre a carga e descarga de um capacitor em um circuito de primeira ordem?"
+  },
+  {
+    "number": 304,
+    "filename": "00304-o-que-e-uma-resposta-amortecida-em-um-circuito-lc-de-segunda-ordem.md",
+    "title": "O que é uma resposta amortecida em um circuito LC de segunda ordem?"
+  },
+  {
+    "number": 305,
+    "filename": "00305-o-que-e-a-impedancia-em-circuitos-rlc-em-corrente-alternada.md",
+    "title": "O que é a impedância em circuitos RLC em corrente alternada?"
+  },
+  {
+    "number": 306,
+    "filename": "00306-qual-a-diferenca-entre-circuitos-monofasicos-e-trifasicos.md",
+    "title": "Qual a diferença entre circuitos monofásicos e trifásicos?"
+  },
+  {
+    "number": 307,
+    "filename": "00307-como-a-aplicacao-de-um-degrau-de-tensao-afeta-um-circuito-passa-faixas-em-serie.md",
+    "title": "Como a Aplicação de um Degrau de Tensão Afeta um Circuito Passa-Faixas em Série?"
+  },
+  {
+    "number": 308,
+    "filename": "00308-como-os-mosfets-funcionam-em-circuitos-eletricos.md",
+    "title": "Como os MOSFETs Funcionam em Circuitos Elétricos?"
+  },
+  {
+    "number": 309,
+    "filename": "00309-o-que-e-um-multivibrador-biestavel-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um multivibrador biestável e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 310,
+    "filename": "00310-como-converter-numeros-decimais-para-binarios-em-circuitos-digitais.md",
+    "title": "Como converter números decimais para binários em circuitos digitais?"
+  },
+  {
+    "number": 311,
+    "filename": "00311-o-que-e-o-regime-permanente-em-circuitos-eletricos.md",
+    "title": "O que é o Regime Permanente em Circuitos Elétricos?"
+  },
+  {
+    "number": 312,
+    "filename": "00312-o-que-e-um-elemento-passivo-em-um-circuito-eletrico.md",
+    "title": "O que é um elemento passivo em um circuito elétrico?"
+  },
+  {
+    "number": 313,
+    "filename": "00313-o-que-sao-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "O que são componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 314,
+    "filename": "00314-como-determinar-a-potencia-maxima-transferida-para-uma-carga-em-um-circuito.md",
+    "title": "Como determinar a potência máxima transferida para uma carga em um circuito?"
+  },
+  {
+    "number": 315,
+    "filename": "00315-como-a-energia-armazenada-em-um-circuito-rl-e-obtida-e-simulada.md",
+    "title": "Como a energia armazenada em um circuito RL é obtida e simulada?"
+  },
+  {
+    "number": 316,
+    "filename": "00316-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 317,
+    "filename": "00317-o-que-e-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é impedância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 318,
+    "filename": "00318-qual-e-a-diferenca-entre-sistemas-trifasicos-equilibrados-e-monofasicos.md",
+    "title": "Qual é a diferença entre sistemas trifásicos equilibrados e monofásicos?"
+  },
+  {
+    "number": 319,
+    "filename": "00319-o-que-e-um-filtro-passa-faixas-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um filtro passa-faixas e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 320,
+    "filename": "00320-como-funcionam-os-transistores-mosfet-e-hbt-em-circuitos-eletricos.md",
+    "title": "Como funcionam os transistores MOSFET e HBT em circuitos elétricos?"
+  },
+  {
+    "number": 321,
+    "filename": "00321-como-funcionam-os-filtros-em-circuitos-analogicos.md",
+    "title": "Como funcionam os filtros em circuitos analógicos?"
+  },
+  {
+    "number": 322,
+    "filename": "00322-como-converter-uma-expressao-booleana-em-um-mapa-de-karnaugh-e-vice-versa.md",
+    "title": "Como converter uma expressão booleana em um mapa de Karnaugh e vice-versa?"
+  },
+  {
+    "number": 323,
+    "filename": "00323-o-que-e-o-regime-permanente-senoidal-em-circuitos-eletricos.md",
+    "title": "O que é o regime permanente senoidal em circuitos elétricos?"
+  },
+  {
+    "number": 324,
+    "filename": "00324-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 325,
+    "filename": "00325-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 326,
+    "filename": "00326-como-a-linearidade-afeta-a-analise-de-circuitos-eletricos.md",
+    "title": "Como a Linearidade Afeta a Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 327,
+    "filename": "00327-o-que-e-um-circuito-de-primeira-ordem-e-como-ele-funciona.md",
+    "title": "O que é um circuito de primeira ordem e como ele funciona?"
+  },
+  {
+    "number": 328,
+    "filename": "00328-o-que-e-um-circuito-criticamente-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito criticamente amortecido e como ele se comporta?"
+  },
+  {
+    "number": 329,
+    "filename": "00329-como-funciona-um-circuito-rlc-serie-em-regime-senoidal.md",
+    "title": "Como funciona um circuito RLC série em regime senoidal?"
+  },
+  {
+    "number": 330,
+    "filename": "00330-o-que-e-uma-conexao-estrela-triangulo-em-circuitos-trifasicos.md",
+    "title": "O que é uma conexão estrela-triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 331,
+    "filename": "00331-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-rlc.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos RLC?"
+  },
+  {
+    "number": 332,
+    "filename": "00332-como-determinar-se-um-transistor-bjt-esta-em-saturacao.md",
+    "title": "Como Determinar se um Transistor BJT Está em Saturação?"
+  },
+  {
+    "number": 333,
+    "filename": "00333-o-que-e-um-filtro-de-wien-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um filtro de Wien e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 334,
+    "filename": "00334-o-que-e-um-flip-flop-e-qual-sua-importancia-em-circuitos-digitais.md",
+    "title": "O que é um Flip-Flop e qual sua importância em circuitos digitais?"
+  },
+  {
+    "number": 335,
+    "filename": "00335-qual-a-diferenca-entre-circuitos-analogicos-e-digitais.md",
+    "title": "Qual a diferença entre circuitos analógicos e digitais?"
+  },
+  {
+    "number": 336,
+    "filename": "00336-o-que-e-um-ramo-em-um-circuito-eletrico.md",
+    "title": "O que é um ramo em um circuito elétrico?"
+  },
+  {
+    "number": 337,
+    "filename": "00337-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 338,
+    "filename": "00338-o-que-e-o-teorema-de-thevenin-e-como-ele-facilita-a-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele facilita a análise de circuitos?"
+  },
+  {
+    "number": 339,
+    "filename": "00339-como-resolver-circuitos-de-primeira-ordem-com-fontes-de-corrente.md",
+    "title": "Como Resolver Circuitos de Primeira Ordem com Fontes de Corrente?"
+  },
+  {
+    "number": 340,
+    "filename": "00340-o-que-e-um-circuito-super-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito super-amortecido e como ele se comporta?"
+  },
+  {
+    "number": 341,
+    "filename": "00341-como-a-associacao-de-componentes-rlc-afeta-a-amplitude-maxima-em-circuitos-de-corrente-alternada.md",
+    "title": "Como a associação de componentes RLC afeta a amplitude máxima em circuitos de corrente alternada?"
+  },
+  {
+    "number": 342,
+    "filename": "00342-como-a-potencia-e-calculada-em-circuitos-trifasicos.md",
+    "title": "Como a Potência é Calculada em Circuitos Trifásicos?"
+  },
+  {
+    "number": 343,
+    "filename": "00343-como-a-funcao-impulso-e-aplicada-na-analise-avancada-de-circuitos.md",
+    "title": "Como a Função Impulso é Aplicada na Análise Avançada de Circuitos?"
+  },
+  {
+    "number": 344,
+    "filename": "00344-como-os-semicondutores-influenciam-o-funcionamento-dos-circuitos-eletricos.md",
+    "title": "Como os Semicondutores Influenciam o Funcionamento dos Circuitos Elétricos?"
+  },
+  {
+    "number": 345,
+    "filename": "00345-como-funciona-a-implementacao-pratica-de-um-amplificador-analogico-em-ac.md",
+    "title": "Como funciona a implementação prática de um amplificador analógico em AC?"
+  },
+  {
+    "number": 346,
+    "filename": "00346-como-converter-um-numero-binario-para-decimal-e-vice-versa.md",
+    "title": "Como converter um número binário para decimal e vice-versa?"
+  },
+  {
+    "number": 347,
+    "filename": "00347-como-funcionam-as-portas-logicas-ttl-em-circuitos-analogicos.md",
+    "title": "Como funcionam as portas lógicas TTL em circuitos analógicos?"
+  },
+  {
+    "number": 348,
+    "filename": "00348-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 349,
+    "filename": "00349-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 350,
+    "filename": "00350-como-funciona-o-teorema-da-superposicao-em-circuitos-eletricos.md",
+    "title": "Como Funciona o Teorema da Superposição em Circuitos Elétricos?"
+  },
+  {
+    "number": 351,
+    "filename": "00351-como-a-energia-e-obtida-em-circuitos-de-primeira-ordem.md",
+    "title": "Como a energia é obtida em circuitos de primeira ordem?"
+  },
+  {
+    "number": 352,
+    "filename": "00352-qual-e-a-diferenca-entre-um-circuito-rlc-subamortecido-e-um-criticamente-amortecido.md",
+    "title": "Qual é a diferença entre um circuito RLC subamortecido e um criticamente amortecido?"
+  },
+  {
+    "number": 353,
+    "filename": "00353-como-calcular-a-impedancia-equivalente-em-circuitos-de-corrente-alternada.md",
+    "title": "Como calcular a impedância equivalente em circuitos de corrente alternada?"
+  },
+  {
+    "number": 354,
+    "filename": "00354-qual-e-a-diferenca-entre-potencia-ativa-reativa-e-aparente-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre potência ativa, reativa e aparente em circuitos trifásicos?"
+  },
+  {
+    "number": 355,
+    "filename": "00355-como-a-transformada-de-laplace-e-aplicada-na-analise-avancada-de-circuitos.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise Avançada de Circuitos?"
+  },
+  {
+    "number": 356,
+    "filename": "00356-como-funciona-a-juncao-pn-em-semicondutores.md",
+    "title": "Como Funciona a Junção PN em Semicondutores?"
+  },
+  {
+    "number": 357,
+    "filename": "00357-o-que-e-um-amplificador-biestavel-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um amplificador biestável e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 358,
+    "filename": "00358-como-os-flip-flops-funcionam-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops Funcionam em Circuitos Digitais?"
+  },
+  {
+    "number": 359,
+    "filename": "00359-o-que-e-um-trigger-em-circuitos-digitais.md",
+    "title": "O que é um Trigger em Circuitos Digitais?"
+  },
+  {
+    "number": 360,
+    "filename": "00360-o-que-e-a-lei-de-kirchhoff-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 361,
+    "filename": "00361-qual-a-funcao-de-um-capacitor-em-um-circuito-eletrico.md",
+    "title": "Qual a função de um capacitor em um circuito elétrico?"
+  },
+  {
+    "number": 362,
+    "filename": "00362-o-que-e-uma-supermalha-em-circuitos-eletricos.md",
+    "title": "O que é uma Supermalha em Circuitos Elétricos?"
+  },
+  {
+    "number": 363,
+    "filename": "00363-o-que-e-um-circuito-de-primeira-ordem-e-como-ele-se-comporta-ao-longo-do-tempo.md",
+    "title": "O que é um circuito de primeira ordem e como ele se comporta ao longo do tempo?"
+  },
+  {
+    "number": 364,
+    "filename": "00364-o-que-e-um-circuito-de-segunda-ordem-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito de segunda ordem e como ele se comporta?"
+  },
+  {
+    "number": 365,
+    "filename": "00365-como-funciona-a-transferencia-de-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "Como funciona a transferência de potência em circuitos de corrente alternada?"
+  },
+  {
+    "number": 366,
+    "filename": "00366-o-que-e-um-circuito-trifasico-equilibrado-em-configuracao-triangulo-triangulo.md",
+    "title": "O que é um circuito trifásico equilibrado em configuração triângulo-triângulo?"
+  },
+  {
+    "number": 367,
+    "filename": "00367-como-a-transformada-de-fourier-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 368,
+    "filename": "00368-qual-a-diferenca-entre-um-mosfet-e-um-bjt-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre um MOSFET e um BJT em circuitos elétricos?"
+  },
+  {
+    "number": 369,
+    "filename": "00369-o-que-e-um-amplificador-operacional-e-como-ele-funciona.md",
+    "title": "O que é um amplificador operacional e como ele funciona?"
+  },
+  {
+    "number": 370,
+    "filename": "00370-como-converter-um-numero-decimal-para-binario-e-vice-versa-em-circuitos-digitais.md",
+    "title": "Como converter um número decimal para binário e vice-versa em circuitos digitais?"
+  },
+  {
+    "number": 371,
+    "filename": "00371-como-configurar-um-dac-em-um-circuito-digital.md",
+    "title": "Como configurar um DAC em um circuito digital?"
+  },
+  {
+    "number": 372,
+    "filename": "00372-o-que-e-a-lei-de-kirchhoff-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 373,
+    "filename": "00373-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 374,
+    "filename": "00374-o-que-e-uma-supermalha-e-como-ela-e-utilizada-na-analise-de-circuitos.md",
+    "title": "O que é uma supermalha e como ela é utilizada na análise de circuitos?"
+  },
+  {
+    "number": 375,
+    "filename": "00375-o-que-acontece-com-a-tensao-em-um-capacitor-apos-a-comutacao-em-um-circuito-de-primeira-ordem.md",
+    "title": "O que acontece com a tensão em um capacitor após a comutação em um circuito de primeira ordem?"
+  },
+  {
+    "number": 376,
+    "filename": "00376-o-que-e-uma-resposta-criticamente-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta criticamente amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 377,
+    "filename": "00377-o-que-e-a-potencia-instantanea-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a potência instantânea em circuitos de corrente alternada?"
+  },
+  {
+    "number": 378,
+    "filename": "00378-o-que-e-um-sistema-trifasico-equilibrado-e-qual-sua-importancia-em-circuitos-eletricos.md",
+    "title": "O que é um sistema trifásico equilibrado e qual sua importância em circuitos elétricos?"
+  },
+  {
+    "number": 379,
+    "filename": "00379-o-que-e-a-propriedade-de-parseval-em-circuitos-rlc.md",
+    "title": "O que é a Propriedade de Parseval em Circuitos RLC?"
+  },
+  {
+    "number": 380,
+    "filename": "00380-o-que-e-um-transistor-de-heterojuncao-bipolar-hbt-e-como-ele-funciona.md",
+    "title": "O que é um Transistor de Heterojunção Bipolar (HBT) e como ele funciona?"
+  },
+  {
+    "number": 381,
+    "filename": "00381-como-funciona-um-oscilador-astavel-em-circuitos-analogicos.md",
+    "title": "Como funciona um oscilador astável em circuitos analógicos?"
+  },
+  {
+    "number": 382,
+    "filename": "00382-como-converter-uma-expressao-booleana-em-um-circuito-digital.md",
+    "title": "Como converter uma expressão booleana em um circuito digital?"
+  },
+  {
+    "number": 383,
+    "filename": "00383-qual-a-diferenca-entre-sinais-analogicos-e-digitais-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre sinais analógicos e digitais em circuitos elétricos?"
+  },
+  {
+    "number": 384,
+    "filename": "00384-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 385,
+    "filename": "00385-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 386,
+    "filename": "00386-o-que-e-o-teorema-de-thevenin-e-como-ele-simplifica-a-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele simplifica a análise de circuitos?"
+  },
+  {
+    "number": 387,
+    "filename": "00387-como-funciona-a-resposta-natural-de-um-circuito-rl-de-primeira-ordem.md",
+    "title": "Como funciona a resposta natural de um circuito RL de primeira ordem?"
+  },
+  {
+    "number": 388,
+    "filename": "00388-o-que-e-um-circuito-de-segunda-ordem-e-quais-sao-os-casos-de-resposta-possiveis.md",
+    "title": "O que é um circuito de segunda ordem e quais são os casos de resposta possíveis?"
+  },
+  {
+    "number": 389,
+    "filename": "00389-o-que-e-a-potencia-maxima-transferida-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a potência máxima transferida em circuitos de corrente alternada?"
+  },
+  {
+    "number": 390,
+    "filename": "00390-qual-a-diferenca-entre-um-circuito-trifasico-equilibrado-e-um-desequilibrado.md",
+    "title": "Qual a diferença entre um circuito trifásico equilibrado e um desequilibrado?"
+  },
+  {
+    "number": 391,
+    "filename": "00391-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-rlc.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos RLC?"
+  },
+  {
+    "number": 392,
+    "filename": "00392-qual-a-diferenca-entre-um-mesfet-e-um-hemt.md",
+    "title": "Qual a diferença entre um MESFET e um HEMT?"
+  },
+  {
+    "number": 393,
+    "filename": "00393-o-que-e-um-schmitt-trigger-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um Schmitt Trigger e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 394,
+    "filename": "00394-como-funcionam-os-circuitos-logicos-combinacionais.md",
+    "title": "Como funcionam os circuitos lógicos combinacionais?"
+  },
+  {
+    "number": 395,
+    "filename": "00395-como-medir-a-corrente-em-um-circuito-serie.md",
+    "title": "Como medir a corrente em um circuito série?"
+  },
+  {
+    "number": 396,
+    "filename": "00396-o-que-e-um-curto-circuito-e-como-ele-afeta-um-sistema-eletrico.md",
+    "title": "O que é um curto-circuito e como ele afeta um sistema elétrico?"
+  },
+  {
+    "number": 397,
+    "filename": "00397-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos elétricos?"
+  },
+  {
+    "number": 398,
+    "filename": "00398-como-a-transferencia-de-energia-e-afetada-pela-resistencia-em-um-circuito.md",
+    "title": "Como a Transferência de Energia é Afetada pela Resistência em um Circuito?"
+  },
+  {
+    "number": 399,
+    "filename": "00399-como-a-comutacao-afeta-a-resposta-de-um-circuito-rc-de-primeira-ordem.md",
+    "title": "Como a comutação afeta a resposta de um circuito RC de primeira ordem?"
+  },
+  {
+    "number": 400,
+    "filename": "00400-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 401,
+    "filename": "00401-o-que-e-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é impedância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 402,
+    "filename": "00402-qual-e-a-importancia-do-fator-de-potencia-em-circuitos-trifasicos.md",
+    "title": "Qual é a importância do fator de potência em circuitos trifásicos?"
+  },
+  {
+    "number": 403,
+    "filename": "00403-como-a-serie-de-fourier-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Série de Fourier é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 404,
+    "filename": "00404-qual-a-diferenca-entre-um-diodo-e-um-transistor-bjt.md",
+    "title": "Qual a diferença entre um diodo e um transistor BJT?"
+  },
+  {
+    "number": 405,
+    "filename": "00405-o-que-e-um-circuito-schmitt-trigger-e-como-ele-funciona.md",
+    "title": "O que é um Circuito Schmitt Trigger e como ele funciona?"
+  },
+  {
+    "number": 406,
+    "filename": "00406-como-converter-uma-tabela-verdade-em-um-circuito-digital.md",
+    "title": "Como converter uma tabela-verdade em um circuito digital?"
+  },
+  {
+    "number": 407,
+    "filename": "00407-o-que-e-um-circuito-rc-de-primeira-ordem-e-como-ele-se-comporta-em-regime-transitorio.md",
+    "title": "O que é um circuito RC de primeira ordem e como ele se comporta em regime transitório?"
+  },
+  {
+    "number": 408,
+    "filename": "00408-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 409,
+    "filename": "00409-o-que-e-um-capacitor-e-como-ele-funciona-em-um-circuito-eletrico.md",
+    "title": "O que é um capacitor e como ele funciona em um circuito elétrico?"
+  },
+  {
+    "number": 410,
+    "filename": "00410-o-que-e-o-teorema-de-superposicao-e-como-ele-e-aplicado-na-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Superposição e como ele é aplicado na análise de circuitos?"
+  },
+  {
+    "number": 411,
+    "filename": "00411-como-obter-a-resposta-de-um-circuito-rl-de-primeira-ordem.md",
+    "title": "Como Obter a Resposta de um Circuito RL de Primeira Ordem?"
+  },
+  {
+    "number": 412,
+    "filename": "00412-como-a-continuidade-das-variaveis-afeta-circuitos-de-segunda-ordem.md",
+    "title": "Como a Continuidade das Variáveis Afeta Circuitos de Segunda Ordem?"
+  },
+  {
+    "number": 413,
+    "filename": "00413-o-que-e-o-valor-rms-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o valor RMS em circuitos de corrente alternada?"
+  },
+  {
+    "number": 414,
+    "filename": "00414-o-que-e-o-fator-de-potencia-em-circuitos-trifasicos.md",
+    "title": "O que é o fator de potência em circuitos trifásicos?"
+  },
+  {
+    "number": 415,
+    "filename": "00415-o-que-e-a-resposta-ao-degrau-em-um-circuito-rlc.md",
+    "title": "O que é a resposta ao degrau em um circuito RLC?"
+  },
+  {
+    "number": 416,
+    "filename": "00416-qual-a-diferenca-entre-mosfet-e-mesfet.md",
+    "title": "Qual a diferença entre MOSFET e MESFET?"
+  },
+  {
+    "number": 417,
+    "filename": "00417-como-funciona-o-oscilador-de-wien-em-circuitos-analogicos.md",
+    "title": "Como funciona o oscilador de Wien em circuitos analógicos?"
+  },
+  {
+    "number": 418,
+    "filename": "00418-como-mapas-de-karnaugh-simplificam-circuitos-combinacionais.md",
+    "title": "Como Mapas de Karnaugh Simplificam Circuitos Combinacionais?"
+  },
+  {
+    "number": 419,
+    "filename": "00419-como-medir-a-resposta-permanente-em-um-circuito-senoidal.md",
+    "title": "Como medir a resposta permanente em um circuito senoidal?"
+  },
+  {
+    "number": 420,
+    "filename": "00420-o-que-e-a-lei-de-kirchhoff-das-tensoes-lkt-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff das Tensões (LKT) e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 421,
+    "filename": "00421-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 422,
+    "filename": "00422-o-que-e-a-analise-nodal-em-circuitos-eletricos.md",
+    "title": "O que é a Análise Nodal em Circuitos Elétricos?"
+  },
+  {
+    "number": 423,
+    "filename": "00423-o-que-acontece-com-a-carga-de-um-capacitor-em-um-circuito-rc-de-primeira-ordem-apos-a-comutacao.md",
+    "title": "O que acontece com a carga de um capacitor em um circuito RC de primeira ordem após a comutação?"
+  },
+  {
+    "number": 424,
+    "filename": "00424-o-que-e-um-circuito-de-segunda-ordem-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito de segunda ordem e como ele se comporta?"
+  },
+  {
+    "number": 425,
+    "filename": "00425-o-que-e-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é impedância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 426,
+    "filename": "00426-o-que-e-um-circuito-trifasico-e-onde-ele-e-usado.md",
+    "title": "O que é um circuito trifásico e onde ele é usado?"
+  },
+  {
+    "number": 427,
+    "filename": "00427-o-que-e-a-funcao-de-transferencia-em-um-filtro-passa-faixas.md",
+    "title": "O que é a Função de Transferência em um Filtro Passa-Faixas?"
+  },
+  {
+    "number": 428,
+    "filename": "00428-como-funciona-a-juncao-pn-em-semicondutores.md",
+    "title": "Como Funciona a Junção PN em Semicondutores?"
+  },
+  {
+    "number": 429,
+    "filename": "00429-o-que-e-um-circuito-astavel-e-como-ele-funciona.md",
+    "title": "O que é um Circuito Astável e como ele funciona?"
+  },
+  {
+    "number": 430,
+    "filename": "00430-como-os-mapas-de-karnaugh-ajudam-na-simplificacao-de-circuitos-digitais.md",
+    "title": "Como os Mapas de Karnaugh ajudam na simplificação de circuitos digitais?"
+  },
+  {
+    "number": 431,
+    "filename": "00431-o-que-e-um-filtro-passa-alto-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um filtro passa-alto e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 432,
+    "filename": "00432-o-que-e-um-curto-circuito-e-como-ele-afeta-um-circuito-eletrico.md",
+    "title": "O que é um curto-circuito e como ele afeta um circuito elétrico?"
+  },
+  {
+    "number": 433,
+    "filename": "00433-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 434,
+    "filename": "00434-como-aplicar-o-teorema-de-superposicao-em-circuitos-eletricos.md",
+    "title": "Como aplicar o Teorema de Superposição em Circuitos Elétricos?"
+  },
+  {
+    "number": 435,
+    "filename": "00435-como-a-constante-de-tempo-afeta-a-resposta-de-um-circuito-rc.md",
+    "title": "Como a Constante de Tempo Afeta a Resposta de um Circuito RC?"
+  },
+  {
+    "number": 436,
+    "filename": "00436-o-que-e-uma-resposta-super-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta super-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 437,
+    "filename": "00437-como-o-teorema-de-norton-e-aplicado-em-circuitos-de-corrente-alternada.md",
+    "title": "Como o Teorema de Norton é aplicado em circuitos de corrente alternada?"
+  },
+  {
+    "number": 438,
+    "filename": "00438-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões estrela e triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 439,
+    "filename": "00439-como-a-transformada-de-laplace-e-utilizada-na-analise-avancada-de-circuitos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise Avançada de Circuitos?"
+  },
+  {
+    "number": 440,
+    "filename": "00440-como-a-juncao-de-um-diodo-afeta-a-tensao-em-um-circuito-com-bjt.md",
+    "title": "Como a junção de um diodo afeta a tensão em um circuito com BJT?"
+  },
+  {
+    "number": 441,
+    "filename": "00441-o-que-e-um-circuito-astavel-e-como-ele-funciona.md",
+    "title": "O que é um Circuito Astável e como ele funciona?"
+  },
+  {
+    "number": 442,
+    "filename": "00442-como-os-mapas-de-karnaugh-simplificam-expressoes-booleanas-em-circuitos-digitais.md",
+    "title": "Como os Mapas de Karnaugh Simplificam Expressões Booleanas em Circuitos Digitais?"
+  },
+  {
+    "number": 443,
+    "filename": "00443-o-que-e-um-sinal-ttl-e-como-ele-e-utilizado-em-circuitos-digitais.md",
+    "title": "O que é um sinal TTL e como ele é utilizado em circuitos digitais?"
+  },
+  {
+    "number": 444,
+    "filename": "00444-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 445,
+    "filename": "00445-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 446,
+    "filename": "00446-como-aplicar-o-teorema-de-superposicao-na-analise-de-circuitos-eletricos.md",
+    "title": "Como aplicar o Teorema de Superposição na análise de circuitos elétricos?"
+  },
+  {
+    "number": 447,
+    "filename": "00447-como-a-resposta-de-um-circuito-rl-de-primeira-ordem-e-influenciada-por-uma-fonte-de-tensao.md",
+    "title": "Como a Resposta de um Circuito RL de Primeira Ordem é Influenciada por uma Fonte de Tensão?"
+  },
+  {
+    "number": 448,
+    "filename": "00448-o-que-e-um-circuito-de-segunda-ordem-super-amortecido.md",
+    "title": "O que é um circuito de segunda ordem super-amortecido?"
+  },
+  {
+    "number": 449,
+    "filename": "00449-o-que-e-a-resposta-em-regime-permanente-em-circuitos-rlc-em-serie.md",
+    "title": "O que é a resposta em regime permanente em circuitos RLC em série?"
+  },
+  {
+    "number": 450,
+    "filename": "00450-qual-a-diferenca-entre-circuitos-monofasicos-e-trifasicos.md",
+    "title": "Qual a diferença entre circuitos monofásicos e trifásicos?"
+  },
+  {
+    "number": 451,
+    "filename": "00451-o-que-e-a-transformada-de-laplace-e-como-ela-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é utilizada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 452,
+    "filename": "00452-como-funciona-um-mosfet-em-um-circuito-eletrico.md",
+    "title": "Como funciona um MOSFET em um circuito elétrico?"
+  },
+  {
+    "number": 453,
+    "filename": "00453-como-funciona-um-conversor-r2r-em-circuitos-analogicos.md",
+    "title": "Como funciona um conversor R/2R em circuitos analógicos?"
+  },
+  {
+    "number": 454,
+    "filename": "00454-como-funciona-a-simplificacao-de-circuitos-logicos-digitais.md",
+    "title": "Como funciona a simplificação de circuitos lógicos digitais?"
+  },
+  {
+    "number": 455,
+    "filename": "00455-como-funciona-um-conversor-r2r-em-circuitos-eletricos.md",
+    "title": "Como funciona um conversor R/2R em circuitos elétricos?"
+  },
+  {
+    "number": 456,
+    "filename": "00456-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 457,
+    "filename": "00457-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 458,
+    "filename": "00458-como-verificar-a-tensao-em-um-no-utilizando-o-teorema-de-thevenin.md",
+    "title": "Como verificar a tensão em um nó utilizando o Teorema de Thévenin?"
+  },
+  {
+    "number": 459,
+    "filename": "00459-como-a-constante-de-tempo-afeta-a-carga-e-descarga-de-capacitores-e-indutores-em-circuitos-de-primeira-ordem.md",
+    "title": "Como a constante de tempo afeta a carga e descarga de capacitores e indutores em circuitos de primeira ordem?"
+  },
+  {
+    "number": 460,
+    "filename": "00460-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 461,
+    "filename": "00461-o-que-e-o-fator-de-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o fator de potência em circuitos de corrente alternada?"
+  },
+  {
+    "number": 462,
+    "filename": "00462-qual-a-diferenca-entre-as-conexoes-triangulo-estrela-e-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões Triângulo-Estrela e Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 463,
+    "filename": "00463-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-rlc.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos RLC?"
+  },
+  {
+    "number": 464,
+    "filename": "00464-como-funciona-um-mosfet-em-modo-saturado.md",
+    "title": "Como funciona um MOSFET em modo saturado?"
+  },
+  {
+    "number": 465,
+    "filename": "00465-o-que-e-um-circuito-r2r-e-como-ele-funciona.md",
+    "title": "O que é um circuito R/2R e como ele funciona?"
+  },
+  {
+    "number": 466,
+    "filename": "00466-como-os-transistores-mos-sao-utilizados-na-implementacao-de-circuitos-digitais.md",
+    "title": "Como os transistores MOS são utilizados na implementação de circuitos digitais?"
+  },
+  {
+    "number": 467,
+    "filename": "00467-como-funcionam-as-portas-logicas-em-circuitos-combinacionais.md",
+    "title": "Como funcionam as portas lógicas em circuitos combinacionais?"
+  },
+  {
+    "number": 468,
+    "filename": "00468-o-que-e-a-lei-de-ohm-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Ohm e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 469,
+    "filename": "00469-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 470,
+    "filename": "00470-como-determinar-a-potencia-maxima-dissipada-em-um-resistor.md",
+    "title": "Como determinar a potência máxima dissipada em um resistor?"
+  },
+  {
+    "number": 471,
+    "filename": "00471-o-que-acontece-com-a-tensao-em-um-capacitor-quando-uma-fonte-e-comutada-em-um-circuito-de-primeira-ordem.md",
+    "title": "O que acontece com a tensão em um capacitor quando uma fonte é comutada em um circuito de primeira ordem?"
+  },
+  {
+    "number": 472,
+    "filename": "00472-o-que-e-um-circuito-criticamente-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito criticamente amortecido e como ele se comporta?"
+  },
+  {
+    "number": 473,
+    "filename": "00473-o-que-e-o-valor-rms-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o valor RMS em circuitos de corrente alternada?"
+  },
+  {
+    "number": 474,
+    "filename": "00474-qual-a-diferenca-entre-a-conexao-triangulo-e-estrela-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre a conexão Triângulo e Estrela em circuitos trifásicos?"
+  },
+  {
+    "number": 475,
+    "filename": "00475-como-a-transformada-de-fourier-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 476,
+    "filename": "00476-como-funciona-um-mosfet-e-qual-a-sua-importancia-em-circuitos-eletricos.md",
+    "title": "Como funciona um MOSFET e qual a sua importância em circuitos elétricos?"
+  },
+  {
+    "number": 477,
+    "filename": "00477-como-funciona-um-circuito-astavel-com-amplificador-operacional.md",
+    "title": "Como funciona um circuito astável com amplificador operacional?"
+  },
+  {
+    "number": 478,
+    "filename": "00478-o-que-e-uma-porta-logica-e-como-ela-funciona-em-circuitos-digitais.md",
+    "title": "O que é uma porta lógica e como ela funciona em circuitos digitais?"
+  },
+  {
+    "number": 479,
+    "filename": "00479-o-que-e-a-configuracao-emissor-comum-em-circuitos-eletricos.md",
+    "title": "O que é a configuração emissor comum em circuitos elétricos?"
+  },
+  {
+    "number": 480,
+    "filename": "00480-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 481,
+    "filename": "00481-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 482,
+    "filename": "00482-como-a-transformacao-de-fontes-facilita-a-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformação de Fontes Facilita a Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 483,
+    "filename": "00483-como-a-energia-armazenada-em-um-indutor-se-comporta-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a energia armazenada em um indutor se comporta em um circuito de primeira ordem?"
+  },
+  {
+    "number": 484,
+    "filename": "00484-como-determinar-a-resposta-de-um-circuito-rlc-sub-amortecido.md",
+    "title": "Como determinar a resposta de um circuito RLC sub-amortecido?"
+  },
+  {
+    "number": 485,
+    "filename": "00485-como-funciona-a-transferencia-de-energia-em-circuitos-rlc-em-serie.md",
+    "title": "Como Funciona a Transferência de Energia em Circuitos RLC em Série?"
+  },
+  {
+    "number": 486,
+    "filename": "00486-qual-e-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Estrela e Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 487,
+    "filename": "00487-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-com-entrada-em-rampa.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos com Entrada em Rampa?"
+  },
+  {
+    "number": 488,
+    "filename": "00488-o-que-significa-um-mosfet-estar-na-regiao-de-saturacao.md",
+    "title": "O que significa um MOSFET estar na região de saturação?"
+  },
+  {
+    "number": 489,
+    "filename": "00489-o-que-e-um-oscilador-astavel-em-circuitos-analogicos.md",
+    "title": "O que é um Oscilador Astável em Circuitos Analógicos?"
+  },
+  {
+    "number": 490,
+    "filename": "00490-como-funcionam-os-circuitos-combinacionais.md",
+    "title": "Como funcionam os circuitos combinacionais?"
+  },
+  {
+    "number": 491,
+    "filename": "00491-como-a-transformada-de-fourier-e-utilizada-na-analise-de-circuitos-digitais.md",
+    "title": "Como a Transformada de Fourier é Utilizada na Análise de Circuitos Digitais?"
+  },
+  {
+    "number": 492,
+    "filename": "00492-o-que-e-uma-carga-eletrica-em-um-circuito-simples.md",
+    "title": "O que é uma carga elétrica em um circuito simples?"
+  },
+  {
+    "number": 493,
+    "filename": "00493-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 494,
+    "filename": "00494-o-que-e-o-teorema-da-transferencia-de-maxima-potencia-em-circuitos-eletricos.md",
+    "title": "O que é o Teorema da Transferência de Máxima Potência em Circuitos Elétricos?"
+  },
+  {
+    "number": 495,
+    "filename": "00495-o-que-acontece-com-a-tensao-em-um-capacitor-quando-um-circuito-rc-e-comutado.md",
+    "title": "O que acontece com a tensão em um capacitor quando um circuito RC é comutado?"
+  },
+  {
+    "number": 496,
+    "filename": "00496-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 497,
+    "filename": "00497-o-que-e-a-corrente-rms-e-por-que-ela-e-importante-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Corrente RMS e por que ela é importante em circuitos de corrente alternada?"
+  },
+  {
+    "number": 498,
+    "filename": "00498-o-que-e-um-circuito-trifasico-equilibrado-e-por-que-ele-e-usado.md",
+    "title": "O que é um circuito trifásico equilibrado e por que ele é usado?"
+  },
+  {
+    "number": 499,
+    "filename": "00499-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-com-funcoes-de-singularidade.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos com Funções de Singularidade?"
+  },
+  {
+    "number": 500,
+    "filename": "00500-como-os-semicondutores-influenciam-o-comportamento-dos-circuitos-eletricos.md",
+    "title": "Como os Semicondutores Influenciam o Comportamento dos Circuitos Elétricos?"
+  },
+  {
+    "number": 501,
+    "filename": "00501-o-que-e-um-amplificador-operacional-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um amplificador operacional e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 502,
+    "filename": "00502-como-simplificar-circuitos-digitais-usando-algebra-booleana.md",
+    "title": "Como simplificar circuitos digitais usando álgebra booleana?"
+  },
+  {
+    "number": 503,
+    "filename": "00503-como-montar-um-conversor-de-tensao-em-regime-permanente.md",
+    "title": "Como Montar um Conversor de Tensão em Regime Permanente?"
+  },
+  {
+    "number": 504,
+    "filename": "00504-o-que-sao-multiplos-e-submultiplos-de-unidades-eletricas.md",
+    "title": "O que são múltiplos e submúltiplos de unidades elétricas?"
+  },
+  {
+    "number": 505,
+    "filename": "00505-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos elétricos?"
+  },
+  {
+    "number": 506,
+    "filename": "00506-como-aplicar-o-teorema-da-superposicao-em-circuitos-eletricos.md",
+    "title": "Como aplicar o Teorema da Superposição em circuitos elétricos?"
+  },
+  {
+    "number": 507,
+    "filename": "00507-o-que-acontece-com-a-tensao-em-um-circuito-rl-apos-a-comutacao.md",
+    "title": "O que acontece com a tensão em um circuito RL após a comutação?"
+  },
+  {
+    "number": 508,
+    "filename": "00508-o-que-e-a-resposta-natural-de-um-circuito-rlc-de-segunda-ordem.md",
+    "title": "O que é a resposta natural de um circuito RLC de segunda ordem?"
+  },
+  {
+    "number": 509,
+    "filename": "00509-como-aplicar-o-teorema-de-thevenin-em-circuitos-de-corrente-alternada.md",
+    "title": "Como aplicar o Teorema de Thévenin em circuitos de corrente alternada?"
+  },
+  {
+    "number": 510,
+    "filename": "00510-o-que-e-uma-conexao-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "O que é uma conexão triângulo-triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 511,
+    "filename": "00511-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-rlc.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos RLC?"
+  },
+  {
+    "number": 512,
+    "filename": "00512-qual-a-diferenca-entre-mosfet-e-bjt.md",
+    "title": "Qual a diferença entre MOSFET e BJT?"
+  },
+  {
+    "number": 513,
+    "filename": "00513-como-os-amplificadores-operacionais-funcionam-em-circuitos-analogicos.md",
+    "title": "Como os Amplificadores Operacionais Funcionam em Circuitos Analógicos?"
+  },
+  {
+    "number": 514,
+    "filename": "00514-como-a-logica-cmos-e-utilizada-na-simplificacao-de-expressoes-logicas.md",
+    "title": "Como a Lógica CMOS é Utilizada na Simplificação de Expressões Lógicas?"
+  },
+  {
+    "number": 515,
+    "filename": "00515-como-funcionam-os-filtros-analogicos-em-circuitos-eletricos.md",
+    "title": "Como funcionam os filtros analógicos em circuitos elétricos?"
+  },
+  {
+    "number": 516,
+    "filename": "00516-o-que-e-um-curto-circuito-e-como-ele-ocorre-em-um-circuito-paralelo.md",
+    "title": "O que é um curto-circuito e como ele ocorre em um circuito paralelo?"
+  },
+  {
+    "number": 517,
+    "filename": "00517-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 518,
+    "filename": "00518-como-funciona-a-analise-nodal-em-circuitos-eletricos.md",
+    "title": "Como Funciona a Análise Nodal em Circuitos Elétricos?"
+  },
+  {
+    "number": 519,
+    "filename": "00519-como-a-tensao-varia-em-um-circuito-de-primeira-ordem-com-uma-fonte-de-tensao-constante.md",
+    "title": "Como a tensão varia em um circuito de primeira ordem com uma fonte de tensão constante?"
+  },
+  {
+    "number": 520,
+    "filename": "00520-qual-e-a-diferenca-entre-uma-resposta-subamortecida-e-uma-resposta-superamortecida-em-circuitos-rlc.md",
+    "title": "Qual é a diferença entre uma resposta subamortecida e uma resposta superamortecida em circuitos RLC?"
+  },
+  {
+    "number": 521,
+    "filename": "00521-como-calcular-a-impedancia-equivalente-em-circuitos-de-corrente-alternada.md",
+    "title": "Como calcular a impedância equivalente em circuitos de corrente alternada?"
+  },
+  {
+    "number": 522,
+    "filename": "00522-qual-e-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões estrela e triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 523,
+    "filename": "00523-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 524,
+    "filename": "00524-como-funciona-um-transistor-bipolar-em-um-circuito-eletrico.md",
+    "title": "Como funciona um transistor bipolar em um circuito elétrico?"
+  },
+  {
+    "number": 525,
+    "filename": "00525-como-um-amplificador-operacional-funciona-em-circuitos-analogicos.md",
+    "title": "Como um Amplificador Operacional Funciona em Circuitos Analógicos?"
+  },
+  {
+    "number": 526,
+    "filename": "00526-como-funciona-a-simplificacao-de-circuitos-logicos-combinacionais.md",
+    "title": "Como funciona a simplificação de circuitos lógicos combinacionais?"
+  },
+  {
+    "number": 527,
+    "filename": "00527-o-que-e-um-circuito-trigger-e-como-ele-funciona-em-projetos-analogicos.md",
+    "title": "O que é um circuito trigger e como ele funciona em projetos analógicos?"
+  },
+  {
+    "number": 528,
+    "filename": "00528-o-que-e-um-ramo-em-um-circuito-eletrico.md",
+    "title": "O que é um ramo em um circuito elétrico?"
+  },
+  {
+    "number": 529,
+    "filename": "00529-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 530,
+    "filename": "00530-o-que-e-o-teorema-de-thevenin-e-como-ele-e-aplicado-na-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele é aplicado na análise de circuitos?"
+  },
+  {
+    "number": 531,
+    "filename": "00531-como-a-carga-armazenada-em-um-capacitor-afeta-a-tensao-em-circuitos-de-primeira-ordem.md",
+    "title": "Como a carga armazenada em um capacitor afeta a tensão em circuitos de primeira ordem?"
+  },
+  {
+    "number": 532,
+    "filename": "00532-o-que-e-um-circuito-de-segunda-ordem-super-amortecido.md",
+    "title": "O que é um circuito de segunda ordem super-amortecido?"
+  },
+  {
+    "number": 533,
+    "filename": "00533-o-que-e-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é admitância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 534,
+    "filename": "00534-qual-e-a-diferenca-entre-a-conexao-estrela-e-a-conexao-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre a conexão estrela e a conexão triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 535,
+    "filename": "00535-como-a-resposta-ao-degrau-de-um-circuito-rlc-serie-e-representada-graficamente.md",
+    "title": "Como a resposta ao degrau de um circuito RLC série é representada graficamente?"
+  },
+  {
+    "number": 536,
+    "filename": "00536-qual-a-diferenca-entre-um-igbt-e-um-bjt.md",
+    "title": "Qual a diferença entre um IGBT e um BJT?"
+  },
+  {
+    "number": 537,
+    "filename": "00537-como-funciona-um-amplificador-operacional-em-um-circuito-schmitt-trigger.md",
+    "title": "Como Funciona um Amplificador Operacional em um Circuito Schmitt Trigger?"
+  },
+  {
+    "number": 538,
+    "filename": "00538-como-funcionam-os-circuitos-sequenciais-em-sistemas-digitais.md",
+    "title": "Como funcionam os circuitos sequenciais em sistemas digitais?"
+  },
+  {
+    "number": 539,
+    "filename": "00539-como-funciona-um-amplificador-operacional-em-um-circuito-eletrico.md",
+    "title": "Como Funciona um Amplificador Operacional em um Circuito Elétrico?"
+  },
+  {
+    "number": 540,
+    "filename": "00540-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 541,
+    "filename": "00541-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 542,
+    "filename": "00542-como-calcular-a-potencia-dissipada-em-um-resistor-usando-a-lei-de-ohm.md",
+    "title": "Como calcular a potência dissipada em um resistor usando a Lei de Ohm?"
+  },
+  {
+    "number": 543,
+    "filename": "00543-como-ocorre-a-descarga-de-um-indutor-em-um-circuito-rl-de-primeira-ordem.md",
+    "title": "Como ocorre a descarga de um indutor em um circuito RL de primeira ordem?"
+  },
+  {
+    "number": 544,
+    "filename": "00544-o-que-e-uma-resposta-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 545,
+    "filename": "00545-o-que-e-a-resposta-em-regime-permanente-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a resposta em regime permanente em circuitos de corrente alternada?"
+  },
+  {
+    "number": 546,
+    "filename": "00546-o-que-e-potencia-instantanea-em-circuitos-trifasicos.md",
+    "title": "O que é Potência Instantânea em Circuitos Trifásicos?"
+  },
+  {
+    "number": 547,
+    "filename": "00547-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 548,
+    "filename": "00548-como-funciona-um-mosfet-em-um-circuito-simples.md",
+    "title": "Como Funciona um MOSFET em um Circuito Simples?"
+  },
+  {
+    "number": 549,
+    "filename": "00549-como-funciona-um-conversor-digital-analogico-dac-r2r.md",
+    "title": "Como funciona um conversor digital-analógico (DAC) R/2R?"
+  },
+  {
+    "number": 550,
+    "filename": "00550-como-funciona-a-conversao-de-sinais-analogicos-para-digitais-em-circuitos-digitais.md",
+    "title": "Como funciona a conversão de sinais analógicos para digitais em circuitos digitais?"
+  },
+  {
+    "number": 551,
+    "filename": "00551-como-funcionam-as-portas-logicas-em-circuitos-digitais.md",
+    "title": "Como funcionam as portas lógicas em circuitos digitais?"
+  },
+  {
+    "number": 552,
+    "filename": "00552-o-que-e-um-ramo-em-um-circuito-eletrico.md",
+    "title": "O que é um ramo em um circuito elétrico?"
+  },
+  {
+    "number": 553,
+    "filename": "00553-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 554,
+    "filename": "00554-como-aplicar-o-teorema-de-thevenin-na-analise-de-circuitos.md",
+    "title": "Como aplicar o Teorema de Thévenin na análise de circuitos?"
+  },
+  {
+    "number": 555,
+    "filename": "00555-como-a-carga-e-descarga-de-um-capacitor-afetam-a-corrente-e-a-tensao-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a carga e descarga de um capacitor afetam a corrente e a tensão em um circuito de primeira ordem?"
+  },
+  {
+    "number": 556,
+    "filename": "00556-o-que-e-um-circuito-super-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito super-amortecido e como ele se comporta?"
+  },
+  {
+    "number": 557,
+    "filename": "00557-o-que-e-a-forma-rms-e-por-que-ela-e-importante-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a forma RMS e por que ela é importante em circuitos de corrente alternada?"
+  },
+  {
+    "number": 558,
+    "filename": "00558-o-que-e-um-circuito-trifasico-e-como-ele-e-usado-em-sistemas-eletricos.md",
+    "title": "O que é um circuito trifásico e como ele é usado em sistemas elétricos?"
+  },
+  {
+    "number": 559,
+    "filename": "00559-o-que-e-a-resposta-ao-impulso-em-circuitos-eletricos.md",
+    "title": "O que é a resposta ao impulso em circuitos elétricos?"
+  },
+  {
+    "number": 560,
+    "filename": "00560-como-funciona-a-juncao-pn-em-semicondutores.md",
+    "title": "Como Funciona a Junção PN em Semicondutores?"
+  },
+  {
+    "number": 561,
+    "filename": "00561-o-que-e-a-analise-de-pequeno-sinal-em-circuitos-analogicos.md",
+    "title": "O que é a Análise de Pequeno Sinal em Circuitos Analógicos?"
+  },
+  {
+    "number": 562,
+    "filename": "00562-como-funciona-a-simplificacao-de-circuitos-digitais.md",
+    "title": "Como funciona a simplificação de circuitos digitais?"
+  },
+  {
+    "number": 563,
+    "filename": "00563-como-funciona-um-conversor-digital-analogico-dac-r2r.md",
+    "title": "Como funciona um conversor digital-analógico (DAC) R/2R?"
+  },
+  {
+    "number": 564,
+    "filename": "00564-o-que-e-a-lei-de-kirchhoff-das-correntes-lkc-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff das Correntes (LKC) e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 565,
+    "filename": "00565-qual-a-diferenca-entre-um-diodo-e-um-transistor.md",
+    "title": "Qual a diferença entre um diodo e um transistor?"
+  },
+  {
+    "number": 566,
+    "filename": "00566-como-determinar-a-resistencia-equivalente-em-um-circuito-complexo.md",
+    "title": "Como determinar a resistência equivalente em um circuito complexo?"
+  },
+  {
+    "number": 567,
+    "filename": "00567-como-a-energia-e-armazenada-e-dissipada-em-circuitos-rc-e-rl.md",
+    "title": "Como a Energia é Armazenada e Dissipada em Circuitos RC e RL?"
+  },
+  {
+    "number": 568,
+    "filename": "00568-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 569,
+    "filename": "00569-como-determinar-a-corrente-eficaz-em-um-circuito-de-corrente-alternada.md",
+    "title": "Como determinar a corrente eficaz em um circuito de corrente alternada?"
+  },
+  {
+    "number": 570,
+    "filename": "00570-como-calcular-a-potencia-instantanea-em-um-sistema-trifasico.md",
+    "title": "Como calcular a potência instantânea em um sistema trifásico?"
+  },
+  {
+    "number": 571,
+    "filename": "00571-o-que-e-uma-singularidade-em-circuitos-eletricos-e-como-ela-afeta-a-analise-avancada.md",
+    "title": "O que é uma singularidade em circuitos elétricos e como ela afeta a análise avançada?"
+  },
+  {
+    "number": 572,
+    "filename": "00572-qual-a-diferenca-entre-um-bjt-e-um-mosfet-em-um-circuito-eletrico.md",
+    "title": "Qual a diferença entre um BJT e um MOSFET em um circuito elétrico?"
+  },
+  {
+    "number": 573,
+    "filename": "00573-como-funciona-um-oscilador-em-circuitos-analogicos.md",
+    "title": "Como funciona um oscilador em circuitos analógicos?"
+  },
+  {
+    "number": 574,
+    "filename": "00574-como-funcionam-os-flip-flops-e-latches-em-circuitos-digitais.md",
+    "title": "Como funcionam os flip-flops e latches em circuitos digitais?"
+  },
+  {
+    "number": 575,
+    "filename": "00575-como-funcionam-as-portas-logicas-ttl-em-circuitos-eletricos.md",
+    "title": "Como funcionam as portas lógicas TTL em circuitos elétricos?"
+  },
+  {
+    "number": 576,
+    "filename": "00576-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 577,
+    "filename": "00577-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletronicos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos eletrônicos?"
+  },
+  {
+    "number": 578,
+    "filename": "00578-o-que-e-uma-supermalha-e-como-ela-e-utilizada-na-analise-de-circuitos.md",
+    "title": "O que é uma supermalha e como ela é utilizada na análise de circuitos?"
+  },
+  {
+    "number": 579,
+    "filename": "00579-o-que-e-um-circuito-de-primeira-ordem-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito de primeira ordem e como ele se comporta?"
+  },
+  {
+    "number": 580,
+    "filename": "00580-o-que-e-um-circuito-de-segunda-ordem-criticamente-amortecido.md",
+    "title": "O que é um circuito de segunda ordem criticamente amortecido?"
+  },
+  {
+    "number": 581,
+    "filename": "00581-como-aplicar-o-teorema-de-norton-em-circuitos-de-corrente-alternada.md",
+    "title": "Como aplicar o Teorema de Norton em circuitos de corrente alternada?"
+  },
+  {
+    "number": 582,
+    "filename": "00582-qual-a-diferenca-entre-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre conexões Estrela e Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 583,
+    "filename": "00583-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 584,
+    "filename": "00584-como-funciona-a-regiao-de-saturacao-em-um-mosfet.md",
+    "title": "Como funciona a região de saturação em um MOSFET?"
+  },
+  {
+    "number": 585,
+    "filename": "00585-o-que-e-um-circuito-biestavel-e-como-ele-funciona.md",
+    "title": "O que é um circuito biestável e como ele funciona?"
+  },
+  {
+    "number": 586,
+    "filename": "00586-o-que-e-um-latch-em-circuitos-digitais-e-como-ele-funciona.md",
+    "title": "O que é um Latch em Circuitos Digitais e como ele funciona?"
+  },
+  {
+    "number": 587,
+    "filename": "00587-como-funcionam-os-conversores-de-tensao-em-circuitos-eletricos.md",
+    "title": "Como funcionam os conversores de tensão em circuitos elétricos?"
+  },
+  {
+    "number": 588,
+    "filename": "00588-o-que-e-a-lei-de-kirchhoff-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 589,
+    "filename": "00589-qual-a-diferenca-entre-um-capacitor-e-um-indutor-em-um-circuito-eletrico.md",
+    "title": "Qual a diferença entre um capacitor e um indutor em um circuito elétrico?"
+  },
+  {
+    "number": 590,
+    "filename": "00590-o-que-e-uma-supermalha-em-circuitos-eletricos.md",
+    "title": "O que é uma Supermalha em Circuitos Elétricos?"
+  },
+  {
+    "number": 591,
+    "filename": "00591-como-a-energia-armazenada-em-um-capacitor-afeta-a-tensao-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a energia armazenada em um capacitor afeta a tensão em um circuito de primeira ordem?"
+  },
+  {
+    "number": 592,
+    "filename": "00592-o-que-e-uma-resposta-super-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta super-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 593,
+    "filename": "00593-o-que-e-um-fasor-e-como-ele-e-utilizado-em-circuitos-rlc.md",
+    "title": "O que é um fasor e como ele é utilizado em circuitos RLC?"
+  },
+  {
+    "number": 594,
+    "filename": "00594-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões estrela e triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 595,
+    "filename": "00595-como-a-singularidade-afeta-a-analise-de-circuitos-rlc-em-serie.md",
+    "title": "Como a singularidade afeta a análise de circuitos RLC em série?"
+  },
+  {
+    "number": 596,
+    "filename": "00596-o-que-significa-um-transistor-bjt-estar-em-modo-saturado.md",
+    "title": "O que significa um transistor BJT estar em modo saturado?"
+  },
+  {
+    "number": 597,
+    "filename": "00597-qual-a-diferenca-entre-circuitos-analogicos-e-digitais.md",
+    "title": "Qual a diferença entre circuitos analógicos e digitais?"
+  },
+  {
+    "number": 598,
+    "filename": "00598-como-funciona-a-tabela-verdade-em-circuitos-digitais-cmos.md",
+    "title": "Como funciona a tabela-verdade em circuitos digitais CMOS?"
+  },
+  {
+    "number": 599,
+    "filename": "00599-como-um-conversor-dac-funciona-em-um-circuito-eletrico.md",
+    "title": "Como um conversor DAC funciona em um circuito elétrico?"
+  },
+  {
+    "number": 600,
+    "filename": "00600-como-aplicar-a-lei-de-kirchhoff-das-malhas-em-um-circuito-basico.md",
+    "title": "Como aplicar a Lei de Kirchhoff das Malhas em um circuito básico?"
+  },
+  {
+    "number": 601,
+    "filename": "00601-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 602,
+    "filename": "00602-como-aplicar-o-teorema-da-superposicao-em-circuitos-eletricos.md",
+    "title": "Como aplicar o Teorema da Superposição em circuitos elétricos?"
+  },
+  {
+    "number": 603,
+    "filename": "00603-o-que-e-a-constante-de-tempo-em-circuitos-de-primeira-ordem.md",
+    "title": "O que é a constante de tempo em circuitos de primeira ordem?"
+  },
+  {
+    "number": 604,
+    "filename": "00604-o-que-e-um-circuito-super-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito super-amortecido e como ele se comporta?"
+  },
+  {
+    "number": 605,
+    "filename": "00605-como-aplicar-o-principio-da-superposicao-em-circuitos-de-corrente-alternada.md",
+    "title": "Como aplicar o princípio da superposição em circuitos de corrente alternada?"
+  },
+  {
+    "number": 606,
+    "filename": "00606-o-que-e-o-fator-de-potencia-em-circuitos-trifasicos.md",
+    "title": "O que é o fator de potência em circuitos trifásicos?"
+  },
+  {
+    "number": 607,
+    "filename": "00607-como-a-transformada-de-laplace-e-utilizada-na-analise-avancada-de-circuitos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise Avançada de Circuitos?"
+  },
+  {
+    "number": 608,
+    "filename": "00608-qual-a-diferenca-entre-um-bjt-e-um-jfet.md",
+    "title": "Qual a diferença entre um BJT e um JFET?"
+  },
+  {
+    "number": 609,
+    "filename": "00609-o-que-e-um-circuito-astavel-e-como-ele-opera-em-sistemas-analogicos.md",
+    "title": "O que é um circuito astável e como ele opera em sistemas analógicos?"
+  },
+  {
+    "number": 610,
+    "filename": "00610-como-converter-uma-tabela-verdade-em-um-mapa-de-karnaugh-e-vice-versa.md",
+    "title": "Como converter uma tabela-verdade em um mapa de Karnaugh e vice-versa?"
+  },
+  {
+    "number": 611,
+    "filename": "00611-o-que-e-uma-porta-logica-schmitt-e-como-ela-funciona.md",
+    "title": "O que é uma porta lógica Schmitt e como ela funciona?"
+  },
+  {
+    "number": 612,
+    "filename": "00612-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 613,
+    "filename": "00613-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 614,
+    "filename": "00614-como-a-transformacao-de-fontes-afeta-a-analise-de-circuitos.md",
+    "title": "Como a Transformação de Fontes Afeta a Análise de Circuitos?"
+  },
+  {
+    "number": 615,
+    "filename": "00615-como-determinar-a-resposta-natural-de-um-circuito-rc-de-primeira-ordem.md",
+    "title": "Como determinar a resposta natural de um circuito RC de primeira ordem?"
+  },
+  {
+    "number": 616,
+    "filename": "00616-o-que-e-uma-resposta-super-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta super-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 617,
+    "filename": "00617-como-calcular-a-admitancia-equivalente-em-circuitos-de-corrente-alternada.md",
+    "title": "Como calcular a admitância equivalente em circuitos de corrente alternada?"
+  },
+  {
+    "number": 618,
+    "filename": "00618-o-que-e-um-circuito-trifasico-equilibrado.md",
+    "title": "O que é um circuito trifásico equilibrado?"
+  },
+  {
+    "number": 619,
+    "filename": "00619-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-com-entrada-em-rampa.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos com Entrada em Rampa?"
+  },
+  {
+    "number": 620,
+    "filename": "00620-como-funciona-a-juncao-pn-em-semicondutores.md",
+    "title": "Como Funciona a Junção PN em Semicondutores?"
+  },
+  {
+    "number": 621,
+    "filename": "00621-o-que-e-um-oscilador-de-wien-e-como-ele-funciona.md",
+    "title": "O que é um Oscilador de Wien e como ele funciona?"
+  },
+  {
+    "number": 622,
+    "filename": "00622-como-os-mapas-de-karnaugh-simplificam-funcoes-logicas-em-circuitos-digitais.md",
+    "title": "Como os Mapas de Karnaugh Simplificam Funções Lógicas em Circuitos Digitais?"
+  },
+  {
+    "number": 623,
+    "filename": "00623-como-montar-um-amplificador-analogico-de-segunda-ordem.md",
+    "title": "Como montar um amplificador analógico de segunda ordem?"
+  },
+  {
+    "number": 624,
+    "filename": "00624-o-que-e-um-curto-circuito-e-como-ele-ocorre-em-um-circuito-eletrico.md",
+    "title": "O que é um curto-circuito e como ele ocorre em um circuito elétrico?"
+  },
+  {
+    "number": 625,
+    "filename": "00625-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 626,
+    "filename": "00626-o-que-e-a-linearidade-em-circuitos-eletricos-e-como-ela-afeta-a-analise-de-nos.md",
+    "title": "O que é a linearidade em circuitos elétricos e como ela afeta a análise de nós?"
+  },
+  {
+    "number": 627,
+    "filename": "00627-como-a-energia-armazenada-em-um-indutor-afeta-o-comportamento-de-um-circuito-rl-de-primeira-ordem.md",
+    "title": "Como a energia armazenada em um indutor afeta o comportamento de um circuito RL de primeira ordem?"
+  },
+  {
+    "number": 628,
+    "filename": "00628-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 629,
+    "filename": "00629-como-a-analise-de-malha-e-aplicada-em-circuitos-de-corrente-alternada.md",
+    "title": "Como a análise de malha é aplicada em circuitos de corrente alternada?"
+  },
+  {
+    "number": 630,
+    "filename": "00630-o-que-e-um-circuito-trifasico-e-como-ele-funciona.md",
+    "title": "O que é um circuito trifásico e como ele funciona?"
+  },
+  {
+    "number": 631,
+    "filename": "00631-como-o-teorema-de-parseval-e-aplicado-na-analise-de-circuitos-eletricos.md",
+    "title": "Como o Teorema de Parseval é Aplicado na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 632,
+    "filename": "00632-como-funciona-um-transistor-bjt-em-um-circuito-simples.md",
+    "title": "Como funciona um transistor BJT em um circuito simples?"
+  },
+  {
+    "number": 633,
+    "filename": "00633-o-que-e-um-circuito-trigger-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um circuito trigger e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 634,
+    "filename": "00634-como-os-flip-flops-sao-utilizados-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops são Utilizados em Circuitos Digitais?"
+  },
+  {
+    "number": 635,
+    "filename": "00635-o-que-e-um-amplificador-schmitt-e-como-ele-funciona.md",
+    "title": "O que é um Amplificador Schmitt e como ele funciona?"
+  },
+  {
+    "number": 636,
+    "filename": "00636-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 637,
+    "filename": "00637-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 638,
+    "filename": "00638-como-funciona-a-analise-nodal-em-circuitos-eletricos.md",
+    "title": "Como funciona a análise nodal em circuitos elétricos?"
+  },
+  {
+    "number": 639,
+    "filename": "00639-como-a-energia-e-armazenada-em-circuitos-rc-e-rl.md",
+    "title": "Como a Energia é Armazenada em Circuitos RC e RL?"
+  },
+  {
+    "number": 640,
+    "filename": "00640-como-determinar-a-resposta-de-um-circuito-rlc-sub-amortecido.md",
+    "title": "Como determinar a resposta de um circuito RLC sub-amortecido?"
+  },
+  {
+    "number": 641,
+    "filename": "00641-o-que-e-o-fator-de-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o fator de potência em circuitos de corrente alternada?"
+  },
+  {
+    "number": 642,
+    "filename": "00642-qual-e-a-diferenca-entre-as-conexoes-triangulo-e-estrela-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Triângulo e Estrela em circuitos trifásicos?"
+  },
+  {
+    "number": 643,
+    "filename": "00643-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 644,
+    "filename": "00644-como-funcionam-os-transistores-bipolares-de-juncao-bjt.md",
+    "title": "Como Funcionam os Transistores Bipolares de Junção (BJT)?"
+  },
+  {
+    "number": 645,
+    "filename": "00645-o-que-e-um-diagrama-de-bode-e-qual-sua-importancia-em-circuitos-analogicos.md",
+    "title": "O que é um diagrama de Bode e qual sua importância em circuitos analógicos?"
+  },
+  {
+    "number": 646,
+    "filename": "00646-o-que-sao-portas-logicas-e-como-elas-funcionam-em-circuitos-digitais.md",
+    "title": "O que são portas lógicas e como elas funcionam em circuitos digitais?"
+  },
+  {
+    "number": 647,
+    "filename": "00647-o-que-e-um-trigger-em-circuitos-eletricos.md",
+    "title": "O que é um Trigger em Circuitos Elétricos?"
+  },
+  {
+    "number": 648,
+    "filename": "00648-o-que-e-a-lei-de-kirchhoff-das-correntes-lkc-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff das Correntes (LKC) e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 649,
+    "filename": "00649-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 650,
+    "filename": "00650-como-o-teorema-de-thevenin-simplifica-a-analise-de-circuitos.md",
+    "title": "Como o Teorema de Thévenin Simplifica a Análise de Circuitos?"
+  },
+  {
+    "number": 651,
+    "filename": "00651-como-a-energia-armazenada-em-um-capacitor-varia-ao-longo-do-tempo-em-um-circuito-rc.md",
+    "title": "Como a energia armazenada em um capacitor varia ao longo do tempo em um circuito RC?"
+  },
+  {
+    "number": 652,
+    "filename": "00652-como-a-resposta-de-um-circuito-rlc-de-segunda-ordem-e-determinada.md",
+    "title": "Como a resposta de um circuito RLC de segunda ordem é determinada?"
+  },
+  {
+    "number": 653,
+    "filename": "00653-o-que-e-o-valor-rms-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o valor RMS em circuitos de corrente alternada?"
+  },
+  {
+    "number": 654,
+    "filename": "00654-qual-a-diferenca-entre-sistemas-monofasicos-e-trifasicos-em-termos-de-aplicacao-e-potencia.md",
+    "title": "Qual a diferença entre sistemas monofásicos e trifásicos em termos de aplicação e potência?"
+  },
+  {
+    "number": 655,
+    "filename": "00655-como-a-transformada-de-fourier-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 656,
+    "filename": "00656-como-funciona-um-jfet-em-circuitos-eletricos.md",
+    "title": "Como Funciona um JFET em Circuitos Elétricos?"
+  },
+  {
+    "number": 657,
+    "filename": "00657-o-que-e-um-filtro-passa-baixa-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um filtro passa-baixa e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 658,
+    "filename": "00658-como-funciona-a-conversao-de-sinais-analogicos-para-digitais-em-circuitos-digitais.md",
+    "title": "Como funciona a conversão de sinais analógicos para digitais em circuitos digitais?"
+  },
+  {
+    "number": 659,
+    "filename": "00659-o-que-e-um-filtro-rlc-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um filtro RLC e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 660,
+    "filename": "00660-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 661,
+    "filename": "00661-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 662,
+    "filename": "00662-como-funciona-o-teorema-da-superposicao-em-circuitos-eletricos.md",
+    "title": "Como funciona o Teorema da Superposição em circuitos elétricos?"
+  },
+  {
+    "number": 663,
+    "filename": "00663-o-que-e-a-constante-de-tempo-em-circuitos-rc-e-rl.md",
+    "title": "O que é a constante de tempo em circuitos RC e RL?"
+  },
+  {
+    "number": 664,
+    "filename": "00664-o-que-e-um-circuito-super-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito super-amortecido e como ele se comporta?"
+  },
+  {
+    "number": 665,
+    "filename": "00665-o-que-e-a-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Admitância em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 666,
+    "filename": "00666-qual-a-diferenca-entre-as-conexoes-triangulo-estrela-e-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões Triângulo-Estrela e Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 667,
+    "filename": "00667-como-a-transformada-de-fourier-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 668,
+    "filename": "00668-como-os-transistores-bipolares-de-juncao-bjt-funcionam-em-circuitos-eletricos.md",
+    "title": "Como os Transistores Bipolares de Junção (BJT) Funcionam em Circuitos Elétricos?"
+  },
+  {
+    "number": 669,
+    "filename": "00669-como-funciona-um-amplificador-operacional-em-um-circuito-analogico.md",
+    "title": "Como funciona um amplificador operacional em um circuito analógico?"
+  },
+  {
+    "number": 670,
+    "filename": "00670-como-funcionam-as-portas-logicas-em-circuitos-digitais.md",
+    "title": "Como funcionam as portas lógicas em circuitos digitais?"
+  },
+  {
+    "number": 671,
+    "filename": "00671-o-que-e-o-regime-permanente-em-circuitos-eletricos.md",
+    "title": "O que é o regime permanente em circuitos elétricos?"
+  },
+  {
+    "number": 672,
+    "filename": "00672-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 673,
+    "filename": "00673-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 674,
+    "filename": "00674-como-a-teoria-da-superposicao-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Teoria da Superposição é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 675,
+    "filename": "00675-como-a-constante-de-tempo-afeta-a-resposta-de-um-circuito-rl.md",
+    "title": "Como a constante de tempo afeta a resposta de um circuito RL?"
+  },
+  {
+    "number": 676,
+    "filename": "00676-o-que-e-um-circuito-rlc-super-amortecido.md",
+    "title": "O que é um circuito RLC super-amortecido?"
+  },
+  {
+    "number": 677,
+    "filename": "00677-o-que-e-o-fator-de-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o fator de potência em circuitos de corrente alternada?"
+  },
+  {
+    "number": 678,
+    "filename": "00678-o-que-e-uma-conexao-estrela-triangulo-em-circuitos-trifasicos.md",
+    "title": "O que é uma conexão Estrela-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 679,
+    "filename": "00679-o-que-e-a-transformada-de-laplace-e-como-ela-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é utilizada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 680,
+    "filename": "00680-o-que-e-um-transistor-hemt-e-como-ele-funciona-em-um-circuito-saturado.md",
+    "title": "O que é um transistor HEMT e como ele funciona em um circuito saturado?"
+  },
+  {
+    "number": 681,
+    "filename": "00681-o-que-e-um-oscilador-de-wien-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um Oscilador de Wien e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 682,
+    "filename": "00682-como-os-flip-flops-funcionam-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops Funcionam em Circuitos Digitais?"
+  },
+  {
+    "number": 683,
+    "filename": "00683-o-que-e-o-regime-permanente-em-um-circuito-rlc-serie.md",
+    "title": "O que é o regime permanente em um circuito RLC série?"
+  },
+  {
+    "number": 684,
+    "filename": "00684-o-que-sao-multiplos-e-submultiplos-de-unidades-eletricas.md",
+    "title": "O que são múltiplos e submúltiplos de unidades elétricas?"
+  },
+  {
+    "number": 685,
+    "filename": "00685-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 686,
+    "filename": "00686-o-que-e-uma-supermalha-em-circuitos-eletricos.md",
+    "title": "O que é uma Supermalha em Circuitos Elétricos?"
+  },
+  {
+    "number": 687,
+    "filename": "00687-como-a-carga-em-um-capacitor-varia-ao-longo-do-tempo-em-um-circuito-rc.md",
+    "title": "Como a carga em um capacitor varia ao longo do tempo em um circuito RC?"
+  },
+  {
+    "number": 688,
+    "filename": "00688-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 689,
+    "filename": "00689-como-a-analise-nodal-e-aplicada-em-circuitos-de-corrente-alternada.md",
+    "title": "Como a análise nodal é aplicada em circuitos de corrente alternada?"
+  },
+  {
+    "number": 690,
+    "filename": "00690-o-que-e-um-circuito-trifasico-e-como-ele-funciona.md",
+    "title": "O que é um circuito trifásico e como ele funciona?"
+  },
+  {
+    "number": 691,
+    "filename": "00691-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 692,
+    "filename": "00692-como-funciona-o-modelo-equivalente-de-um-transistor-bjt-em-circuitos-eletricos.md",
+    "title": "Como funciona o modelo equivalente de um transistor BJT em circuitos elétricos?"
+  },
+  {
+    "number": 693,
+    "filename": "00693-como-funciona-um-conversor-r2r-em-circuitos-analogicos.md",
+    "title": "Como funciona um conversor R/2R em circuitos analógicos?"
+  },
+  {
+    "number": 694,
+    "filename": "00694-o-que-e-um-latch-e-como-ele-e-implementado-em-circuitos-digitais.md",
+    "title": "O que é um Latch e como ele é implementado em circuitos digitais?"
+  },
+  {
+    "number": 695,
+    "filename": "00695-o-que-e-um-amplificador-schmitt-e-como-ele-funciona.md",
+    "title": "O que é um Amplificador Schmitt e como ele funciona?"
+  },
+  {
+    "number": 696,
+    "filename": "00696-o-que-e-a-lei-de-kirchhoff-das-correntes-lkc-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Kirchhoff das Correntes (LKC) e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 697,
+    "filename": "00697-o-que-e-um-componente-eletronico-linear.md",
+    "title": "O que é um componente eletrônico linear?"
+  },
+  {
+    "number": 698,
+    "filename": "00698-o-que-e-o-teorema-de-thevenin-e-como-ele-simplifica-a-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele simplifica a análise de circuitos?"
+  },
+  {
+    "number": 699,
+    "filename": "00699-como-a-energia-e-armazenada-em-capacitores-e-indutores.md",
+    "title": "Como a Energia é Armazenada em Capacitores e Indutores?"
+  },
+  {
+    "number": 700,
+    "filename": "00700-o-que-e-um-circuito-de-segunda-ordem-sub-amortecido.md",
+    "title": "O que é um circuito de segunda ordem sub-amortecido?"
+  },
+  {
+    "number": 701,
+    "filename": "00701-o-que-e-o-fator-de-potencia-em-circuitos-rlc-em-serie.md",
+    "title": "O que é o fator de potência em circuitos RLC em série?"
+  },
+  {
+    "number": 702,
+    "filename": "00702-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões Estrela e Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 703,
+    "filename": "00703-como-a-transformada-inversa-de-laplace-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada Inversa de Laplace é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 704,
+    "filename": "00704-como-funcionam-os-transistores-de-juncao-bipolar-bjt.md",
+    "title": "Como Funcionam os Transistores de Junção Bipolar (BJT)?"
+  },
+  {
+    "number": 705,
+    "filename": "00705-como-funciona-um-amplificador-operacional-em-um-circuito-astavel.md",
+    "title": "Como funciona um amplificador operacional em um circuito astável?"
+  },
+  {
+    "number": 706,
+    "filename": "00706-como-funciona-a-simplificacao-de-expressoes-booleanas-usando-o-mapa-de-karnaugh.md",
+    "title": "Como funciona a simplificação de expressões booleanas usando o mapa de Karnaugh?"
+  },
+  {
+    "number": 707,
+    "filename": "00707-o-que-e-um-circuito-schmitt-trigger-e-como-ele-e-utilizado-em-aplicacoes-praticas.md",
+    "title": "O que é um Circuito Schmitt Trigger e como ele é utilizado em aplicações práticas?"
+  },
+  {
+    "number": 708,
+    "filename": "00708-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 709,
+    "filename": "00709-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 710,
+    "filename": "00710-como-aplicar-o-principio-da-superposicao-na-analise-de-circuitos-eletricos.md",
+    "title": "Como aplicar o princípio da superposição na análise de circuitos elétricos?"
+  },
+  {
+    "number": 711,
+    "filename": "00711-como-a-corrente-em-um-indutor-se-comporta-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a Corrente em um Indutor se Comporta em um Circuito de Primeira Ordem?"
+  },
+  {
+    "number": 712,
+    "filename": "00712-qual-e-a-diferenca-entre-uma-resposta-subamortecida-e-uma-superamortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "Qual é a diferença entre uma resposta subamortecida e uma superamortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 713,
+    "filename": "00713-o-que-e-o-fator-de-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o fator de potência em circuitos de corrente alternada?"
+  },
+  {
+    "number": 714,
+    "filename": "00714-qual-e-a-diferenca-entre-as-conexoes-estrela-triangulo-e-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Estrela-Triângulo e Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 715,
+    "filename": "00715-como-a-aplicacao-de-um-degrau-de-tensao-afeta-um-circuito-eletrico.md",
+    "title": "Como a aplicação de um degrau de tensão afeta um circuito elétrico?"
+  },
+  {
+    "number": 716,
+    "filename": "00716-como-funcionam-os-transistores-de-juncao-bipolar-bjt.md",
+    "title": "Como Funcionam os Transistores de Junção Bipolar (BJT)?"
+  },
+  {
+    "number": 717,
+    "filename": "00717-como-funciona-um-oscilador-em-circuitos-analogicos.md",
+    "title": "Como funciona um oscilador em circuitos analógicos?"
+  },
+  {
+    "number": 718,
+    "filename": "00718-como-funcionam-os-circuitos-sequenciais-em-sistemas-digitais.md",
+    "title": "Como funcionam os circuitos sequenciais em sistemas digitais?"
+  },
+  {
+    "number": 719,
+    "filename": "00719-o-que-e-o-regime-permanente-em-circuitos-rc.md",
+    "title": "O que é o Regime Permanente em Circuitos RC?"
+  },
+  {
+    "number": 720,
+    "filename": "00720-o-que-e-um-curto-circuito-e-como-ele-ocorre-em-um-circuito-eletrico.md",
+    "title": "O que é um curto-circuito e como ele ocorre em um circuito elétrico?"
+  },
+  {
+    "number": 721,
+    "filename": "00721-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletronicos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos eletrônicos?"
+  },
+  {
+    "number": 722,
+    "filename": "00722-como-aplicar-o-metodo-nodal-na-analise-de-circuitos.md",
+    "title": "Como aplicar o método nodal na análise de circuitos?"
+  },
+  {
+    "number": 723,
+    "filename": "00723-o-que-sao-circuitos-de-primeira-ordem-e-como-eles-funcionam.md",
+    "title": "O que são circuitos de primeira ordem e como eles funcionam?"
+  },
+  {
+    "number": 724,
+    "filename": "00724-como-funciona-a-resposta-de-um-circuito-rlc-paralelo-a-uma-fonte-degrau.md",
+    "title": "Como funciona a resposta de um circuito RLC paralelo a uma fonte degrau?"
+  },
+  {
+    "number": 725,
+    "filename": "00725-o-que-e-a-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Admitância em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 726,
+    "filename": "00726-o-que-e-um-sistema-trifasico-equilibrado.md",
+    "title": "O que é um sistema trifásico equilibrado?"
+  },
+  {
+    "number": 727,
+    "filename": "00727-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 728,
+    "filename": "00728-como-funcionam-os-diodos-semicondutores.md",
+    "title": "Como Funcionam os Diodos Semicondutores?"
+  },
+  {
+    "number": 729,
+    "filename": "00729-o-que-e-um-diagrama-de-bode-e-qual-sua-importancia-em-circuitos-analogicos.md",
+    "title": "O que é um diagrama de Bode e qual sua importância em circuitos analógicos?"
+  },
+  {
+    "number": 730,
+    "filename": "00730-como-os-flip-flops-sao-implementados-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops são Implementados em Circuitos Digitais?"
+  },
+  {
+    "number": 731,
+    "filename": "00731-como-funciona-um-circuito-rc-em-um-experimento-pratico.md",
+    "title": "Como funciona um circuito RC em um experimento prático?"
+  },
+  {
+    "number": 732,
+    "filename": "00732-o-que-e-um-circuito-eletrico-em-malha-aberta.md",
+    "title": "O que é um circuito elétrico em malha aberta?"
+  },
+  {
+    "number": 733,
+    "filename": "00733-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 734,
+    "filename": "00734-como-determinar-o-circuito-equivalente-de-thevenin.md",
+    "title": "Como determinar o circuito equivalente de Thévenin?"
+  },
+  {
+    "number": 735,
+    "filename": "00735-como-a-energia-armazenada-em-um-indutor-e-obtida-e-aplicada-em-circuitos-de-primeira-ordem.md",
+    "title": "Como a energia armazenada em um indutor é obtida e aplicada em circuitos de primeira ordem?"
+  },
+  {
+    "number": 736,
+    "filename": "00736-o-que-e-uma-resposta-super-amortecida-em-um-circuito-rlc-de-segunda-ordem.md",
+    "title": "O que é uma resposta super-amortecida em um circuito RLC de segunda ordem?"
+  },
+  {
+    "number": 737,
+    "filename": "00737-como-o-teorema-de-thevenin-e-aplicado-em-circuitos-rlc-em-corrente-alternada.md",
+    "title": "Como o Teorema de Thévenin é Aplicado em Circuitos RLC em Corrente Alternada?"
+  },
+  {
+    "number": 738,
+    "filename": "00738-qual-a-diferenca-entre-a-conexao-estrela-e-a-conexao-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre a conexão estrela e a conexão triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 739,
+    "filename": "00739-como-a-resposta-de-um-circuito-rlc-a-um-impulso-pode-ser-representada-graficamente.md",
+    "title": "Como a resposta de um circuito RLC a um impulso pode ser representada graficamente?"
+  },
+  {
+    "number": 740,
+    "filename": "00740-como-funciona-a-juncao-pn-em-um-diodo.md",
+    "title": "Como Funciona a Junção PN em um Diodo?"
+  },
+  {
+    "number": 741,
+    "filename": "00741-qual-a-diferenca-entre-circuitos-analogicos-e-digitais.md",
+    "title": "Qual a diferença entre circuitos analógicos e digitais?"
+  },
+  {
+    "number": 742,
+    "filename": "00742-como-funcionam-as-portas-logicas-em-circuitos-digitais.md",
+    "title": "Como funcionam as portas lógicas em circuitos digitais?"
+  },
+  {
+    "number": 743,
+    "filename": "00743-como-o-trigger-afeta-a-medida-de-sinais-senoidais-em-experimentos-de-circuitos-eletricos.md",
+    "title": "Como o Trigger Afeta a Medida de Sinais Senoidais em Experimentos de Circuitos Elétricos?"
+  },
+  {
+    "number": 744,
+    "filename": "00744-como-a-associacao-em-serie-afeta-a-tensao-em-um-circuito-eletrico.md",
+    "title": "Como a associação em série afeta a tensão em um circuito elétrico?"
+  },
+  {
+    "number": 745,
+    "filename": "00745-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 746,
+    "filename": "00746-como-aplicar-o-teorema-de-thevenin-em-um-circuito-eletrico.md",
+    "title": "Como aplicar o Teorema de Thévenin em um circuito elétrico?"
+  },
+  {
+    "number": 747,
+    "filename": "00747-como-a-associacao-de-componentes-afeta-a-resposta-de-circuitos-de-primeira-ordem.md",
+    "title": "Como a associação de componentes afeta a resposta de circuitos de primeira ordem?"
+  },
+  {
+    "number": 748,
+    "filename": "00748-o-que-e-um-circuito-rlc-criticamente-amortecido.md",
+    "title": "O que é um circuito RLC criticamente amortecido?"
+  },
+  {
+    "number": 749,
+    "filename": "00749-o-que-e-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é admitância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 750,
+    "filename": "00750-o-que-e-um-circuito-trifasico-equilibrado-e-como-ele-funciona.md",
+    "title": "O que é um circuito trifásico equilibrado e como ele funciona?"
+  },
+  {
+    "number": 751,
+    "filename": "00751-o-que-e-a-resposta-impulsiva-de-um-circuito-eletrico.md",
+    "title": "O que é a resposta impulsiva de um circuito elétrico?"
+  },
+  {
+    "number": 752,
+    "filename": "00752-como-a-juncao-pn-afeta-o-comportamento-de-um-diodo.md",
+    "title": "Como a junção PN afeta o comportamento de um diodo?"
+  },
+  {
+    "number": 753,
+    "filename": "00753-o-que-e-um-multivibrador-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um multivibrador e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 754,
+    "filename": "00754-como-converter-um-numero-decimal-para-uma-expressao-booleana.md",
+    "title": "Como converter um número decimal para uma expressão booleana?"
+  },
+  {
+    "number": 755,
+    "filename": "00755-como-a-tensao-de-saida-de-um-dac-e-determinada.md",
+    "title": "Como a Tensão de Saída de um DAC é Determinada?"
+  },
+  {
+    "number": 756,
+    "filename": "00756-o-que-e-a-lei-dos-nos-em-circuitos-eletricos.md",
+    "title": "O que é a Lei dos Nós em Circuitos Elétricos?"
+  },
+  {
+    "number": 757,
+    "filename": "00757-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 758,
+    "filename": "00758-como-a-analise-nodal-e-utilizada-para-determinar-a-corrente-em-um-resistor.md",
+    "title": "Como a Análise Nodal é Utilizada para Determinar a Corrente em um Resistor?"
+  },
+  {
+    "number": 759,
+    "filename": "00759-como-o-comportamento-de-um-capacitor-em-um-circuito-rc-de-primeira-ordem-e-influenciado-por-uma-fonte-variavel.md",
+    "title": "Como o comportamento de um capacitor em um circuito RC de primeira ordem é influenciado por uma fonte variável?"
+  },
+  {
+    "number": 760,
+    "filename": "00760-o-que-sao-circuitos-de-segunda-ordem-e-como-eles-se-comportam.md",
+    "title": "O que são circuitos de segunda ordem e como eles se comportam?"
+  },
+  {
+    "number": 761,
+    "filename": "00761-como-funciona-a-associacao-de-componentes-em-circuitos-de-corrente-alternada.md",
+    "title": "Como Funciona a Associação de Componentes em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 762,
+    "filename": "00762-qual-e-a-diferenca-entre-um-circuito-trifasico-e-um-circuito-monofasico.md",
+    "title": "Qual é a diferença entre um circuito trifásico e um circuito monofásico?"
+  },
+  {
+    "number": 763,
+    "filename": "00763-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 764,
+    "filename": "00764-como-funciona-a-regiao-de-saturacao-em-um-transistor.md",
+    "title": "Como funciona a região de saturação em um transistor?"
+  },
+  {
+    "number": 765,
+    "filename": "00765-o-que-e-um-conversor-analogico-digital-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um conversor analógico-digital e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 766,
+    "filename": "00766-como-converter-um-numero-binario-para-decimal-e-vice-versa.md",
+    "title": "Como converter um número binário para decimal e vice-versa?"
+  },
+  {
+    "number": 767,
+    "filename": "00767-o-que-e-um-circuito-schmitt-trigger-e-como-ele-funciona.md",
+    "title": "O que é um Circuito Schmitt Trigger e como ele funciona?"
+  },
+  {
+    "number": 768,
+    "filename": "00768-o-que-e-um-circuito-eletrico-simples.md",
+    "title": "O que é um circuito elétrico simples?"
+  },
+  {
+    "number": 769,
+    "filename": "00769-qual-a-funcao-de-um-capacitor-em-um-circuito-eletrico.md",
+    "title": "Qual a função de um capacitor em um circuito elétrico?"
+  },
+  {
+    "number": 770,
+    "filename": "00770-como-a-superposicao-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Superposição é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 771,
+    "filename": "00771-o-que-acontece-com-a-tensao-em-um-capacitor-apos-a-comutacao-em-um-circuito-rc.md",
+    "title": "O que acontece com a tensão em um capacitor após a comutação em um circuito RC?"
+  },
+  {
+    "number": 772,
+    "filename": "00772-o-que-e-um-circuito-super-amortecido-e-como-ele-se-comporta.md",
+    "title": "O que é um circuito super-amortecido e como ele se comporta?"
+  },
+  {
+    "number": 773,
+    "filename": "00773-o-que-e-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é impedância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 774,
+    "filename": "00774-qual-e-a-diferenca-entre-as-conexoes-estrela-triangulo-e-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Estrela-Triângulo e Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 775,
+    "filename": "00775-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 776,
+    "filename": "00776-o-que-e-um-mosfet-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um MOSFET e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 777,
+    "filename": "00777-como-funciona-a-implementacao-de-um-multivibrador-astavel-usando-bjt.md",
+    "title": "Como funciona a implementação de um multivibrador astável usando BJT?"
+  },
+  {
+    "number": 778,
+    "filename": "00778-como-funciona-a-simplificacao-de-circuitos-logicos-usando-o-mapa-de-karnaugh.md",
+    "title": "Como Funciona a Simplificação de Circuitos Lógicos Usando o Mapa de Karnaugh?"
+  },
+  {
+    "number": 779,
+    "filename": "00779-o-que-e-um-conversor-senoidal-e-como-ele-e-utilizado-em-circuitos-eletricos.md",
+    "title": "O que é um conversor senoidal e como ele é utilizado em circuitos elétricos?"
+  },
+  {
+    "number": 780,
+    "filename": "00780-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 781,
+    "filename": "00781-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 782,
+    "filename": "00782-como-a-linearidade-afeta-a-resposta-de-um-circuito-eletrico.md",
+    "title": "Como a Linearidade Afeta a Resposta de um Circuito Elétrico?"
+  },
+  {
+    "number": 783,
+    "filename": "00783-o-que-acontece-durante-a-descarga-de-um-capacitor-em-um-circuito-rc.md",
+    "title": "O que acontece durante a descarga de um capacitor em um circuito RC?"
+  },
+  {
+    "number": 784,
+    "filename": "00784-como-a-continuidade-de-corrente-e-tensao-afeta-circuitos-lc-de-segunda-ordem.md",
+    "title": "Como a Continuidade de Corrente e Tensão Afeta Circuitos LC de Segunda Ordem?"
+  },
+  {
+    "number": 785,
+    "filename": "00785-como-o-principio-da-superposicao-e-aplicado-em-circuitos-de-corrente-alternada.md",
+    "title": "Como o Princípio da Superposição é Aplicado em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 786,
+    "filename": "00786-o-que-e-uma-conexao-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "O que é uma conexão Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 787,
+    "filename": "00787-o-que-e-uma-funcao-passa-faixas-em-circuitos-rlc.md",
+    "title": "O que é uma função passa-faixas em circuitos RLC?"
+  },
+  {
+    "number": 788,
+    "filename": "00788-como-os-diodos-influenciam-a-corrente-em-um-circuito-eletrico.md",
+    "title": "Como os diodos influenciam a corrente em um circuito elétrico?"
+  },
+  {
+    "number": 789,
+    "filename": "00789-como-funciona-um-amplificador-em-um-circuito-analogico.md",
+    "title": "Como funciona um amplificador em um circuito analógico?"
+  },
+  {
+    "number": 790,
+    "filename": "00790-como-os-flip-flops-sao-utilizados-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops são Utilizados em Circuitos Digitais?"
+  },
+  {
+    "number": 791,
+    "filename": "00791-como-funcionam-os-circuitos-senoidais-em-projetos-avancados.md",
+    "title": "Como funcionam os circuitos senoidais em projetos avançados?"
+  },
+  {
+    "number": 792,
+    "filename": "00792-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 793,
+    "filename": "00793-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 794,
+    "filename": "00794-como-aplicar-o-teorema-de-norton-na-analise-de-circuitos.md",
+    "title": "Como aplicar o Teorema de Norton na análise de circuitos?"
+  },
+  {
+    "number": 795,
+    "filename": "00795-como-a-constante-de-tempo-afeta-a-resposta-de-um-circuito-rc.md",
+    "title": "Como a constante de tempo afeta a resposta de um circuito RC?"
+  },
+  {
+    "number": 796,
+    "filename": "00796-o-que-e-uma-resposta-super-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta super-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 797,
+    "filename": "00797-como-a-admitancia-afeta-a-analise-de-circuitos-em-serie-em-corrente-alternada.md",
+    "title": "Como a Admitância Afeta a Análise de Circuitos em Série em Corrente Alternada?"
+  },
+  {
+    "number": 798,
+    "filename": "00798-qual-e-a-importancia-do-fator-de-potencia-em-circuitos-trifasicos.md",
+    "title": "Qual é a importância do fator de potência em circuitos trifásicos?"
+  },
+  {
+    "number": 799,
+    "filename": "00799-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 800,
+    "filename": "00800-como-o-teorema-de-thevenin-e-aplicado-em-circuitos-com-semicondutores.md",
+    "title": "Como o Teorema de Thévenin é Aplicado em Circuitos com Semicondutores?"
+  },
+  {
+    "number": 801,
+    "filename": "00801-como-analisar-a-resposta-de-um-circuito-analogico-em-ac.md",
+    "title": "Como analisar a resposta de um circuito analógico em AC?"
+  },
+  {
+    "number": 802,
+    "filename": "00802-como-converter-uma-funcao-booleana-em-um-circuito-cmos.md",
+    "title": "Como converter uma função Booleana em um circuito CMOS?"
+  },
+  {
+    "number": 803,
+    "filename": "00803-como-funciona-o-trigger-de-schmitt-em-circuitos-analogicos.md",
+    "title": "Como funciona o Trigger de Schmitt em circuitos analógicos?"
+  },
+  {
+    "number": 804,
+    "filename": "00804-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 805,
+    "filename": "00805-qual-a-diferenca-entre-componentes-eletronicos-lineares-e-nao-lineares.md",
+    "title": "Qual a diferença entre componentes eletrônicos lineares e não lineares?"
+  },
+  {
+    "number": 806,
+    "filename": "00806-como-funciona-a-analise-nodal-em-circuitos-eletricos.md",
+    "title": "Como funciona a análise nodal em circuitos elétricos?"
+  },
+  {
+    "number": 807,
+    "filename": "00807-como-a-energia-armazenada-em-um-indutor-e-obtida-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a energia armazenada em um indutor é obtida em um circuito de primeira ordem?"
+  },
+  {
+    "number": 808,
+    "filename": "00808-o-que-sao-circuitos-de-segunda-ordem-e-como-eles-respondem-a-uma-fonte-degrau.md",
+    "title": "O que são circuitos de segunda ordem e como eles respondem a uma fonte degrau?"
+  },
+  {
+    "number": 809,
+    "filename": "00809-o-que-e-o-valor-rms-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é o valor RMS em circuitos de corrente alternada?"
+  },
+  {
+    "number": 810,
+    "filename": "00810-qual-a-diferenca-entre-um-sistema-trifasico-equilibrado-e-um-sistema-monofasico.md",
+    "title": "Qual a diferença entre um sistema trifásico equilibrado e um sistema monofásico?"
+  },
+  {
+    "number": 811,
+    "filename": "00811-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 812,
+    "filename": "00812-como-funcionam-os-transistores-bipolares-de-juncao-bjt.md",
+    "title": "Como Funcionam os Transistores Bipolares de Junção (BJT)?"
+  },
+  {
+    "number": 813,
+    "filename": "00813-o-que-e-um-amplificador-schmitt-trigger-e-como-ele-funciona.md",
+    "title": "O que é um Amplificador Schmitt Trigger e como ele funciona?"
+  },
+  {
+    "number": 814,
+    "filename": "00814-como-os-transistores-sao-utilizados-em-circuitos-digitais-combinacionais.md",
+    "title": "Como os transistores são utilizados em circuitos digitais combinacionais?"
+  },
+  {
+    "number": 815,
+    "filename": "00815-como-funciona-um-conversor-digital-analogico-dac-em-um-circuito-rc.md",
+    "title": "Como funciona um conversor digital-analógico (DAC) em um circuito RC?"
+  },
+  {
+    "number": 816,
+    "filename": "00816-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 817,
+    "filename": "00817-qual-e-a-funcao-de-um-transformador-em-um-circuito-eletrico.md",
+    "title": "Qual é a função de um transformador em um circuito elétrico?"
+  },
+  {
+    "number": 818,
+    "filename": "00818-o-que-e-uma-supermalha-e-como-ela-e-utilizada-na-analise-de-circuitos.md",
+    "title": "O que é uma Supermalha e como ela é utilizada na análise de circuitos?"
+  },
+  {
+    "number": 819,
+    "filename": "00819-o-que-acontece-em-um-circuito-rl-quando-ocorre-a-comutacao.md",
+    "title": "O que acontece em um circuito RL quando ocorre a comutação?"
+  },
+  {
+    "number": 820,
+    "filename": "00820-como-a-continuidade-afeta-circuitos-de-segunda-ordem.md",
+    "title": "Como a Continuidade Afeta Circuitos de Segunda Ordem?"
+  },
+  {
+    "number": 821,
+    "filename": "00821-como-a-impedancia-afeta-a-potencia-em-circuitos-de-corrente-alternada.md",
+    "title": "Como a Impedância Afeta a Potência em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 822,
+    "filename": "00822-o-que-e-uma-conexao-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "O que é uma conexão Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 823,
+    "filename": "00823-o-que-e-a-resposta-ao-degrau-em-um-circuito-rlc-e-qual-sua-importancia.md",
+    "title": "O que é a resposta ao degrau em um circuito RLC e qual sua importância?"
+  },
+  {
+    "number": 824,
+    "filename": "00824-o-que-e-um-transistor-bipolar-de-juncao-bjt-e-como-ele-funciona-em-um-circuito.md",
+    "title": "O que é um transistor bipolar de junção (BJT) e como ele funciona em um circuito?"
+  },
+  {
+    "number": 825,
+    "filename": "00825-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-analogicos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos analógicos?"
+  },
+  {
+    "number": 826,
+    "filename": "00826-como-converter-uma-expressao-logica-em-um-circuito-digital.md",
+    "title": "Como converter uma expressão lógica em um circuito digital?"
+  },
+  {
+    "number": 827,
+    "filename": "00827-o-que-e-uma-porta-schmitt-trigger-e-qual-sua-aplicacao-em-circuitos-eletricos.md",
+    "title": "O que é uma porta Schmitt Trigger e qual sua aplicação em circuitos elétricos?"
+  },
+  {
+    "number": 828,
+    "filename": "00828-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 829,
+    "filename": "00829-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 830,
+    "filename": "00830-como-aplicar-o-teorema-da-maxima-transferencia-de-potencia-em-um-circuito.md",
+    "title": "Como aplicar o Teorema da Máxima Transferência de Potência em um circuito?"
+  },
+  {
+    "number": 831,
+    "filename": "00831-como-analisar-circuitos-de-primeira-ordem-com-indutor-e-capacitor.md",
+    "title": "Como Analisar Circuitos de Primeira Ordem com Indutor e Capacitor?"
+  },
+  {
+    "number": 832,
+    "filename": "00832-o-que-e-um-circuito-de-segunda-ordem-sub-amortecido.md",
+    "title": "O que é um circuito de segunda ordem sub-amortecido?"
+  },
+  {
+    "number": 833,
+    "filename": "00833-o-que-e-a-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Impedância em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 834,
+    "filename": "00834-o-que-e-um-sistema-trifasico-equilibrado.md",
+    "title": "O que é um sistema trifásico equilibrado?"
+  },
+  {
+    "number": 835,
+    "filename": "00835-o-que-e-a-funcao-impulso-e-como-ela-e-aplicada-na-analise-de-circuitos.md",
+    "title": "O que é a Função Impulso e como ela é aplicada na Análise de Circuitos?"
+  },
+  {
+    "number": 836,
+    "filename": "00836-como-os-mosfets-sao-utilizados-em-circuitos-de-potencia.md",
+    "title": "Como os MOSFETs são utilizados em circuitos de potência?"
+  },
+  {
+    "number": 837,
+    "filename": "00837-o-que-e-uma-ponte-de-wheatstone-e-como-ela-e-utilizada-em-circuitos-analogicos.md",
+    "title": "O que é uma Ponte de Wheatstone e como ela é utilizada em circuitos analógicos?"
+  },
+  {
+    "number": 838,
+    "filename": "00838-o-que-e-um-circuito-combinacional-e-como-ele-funciona.md",
+    "title": "O que é um circuito combinacional e como ele funciona?"
+  },
+  {
+    "number": 839,
+    "filename": "00839-como-os-filtros-analogicos-sao-projetados-e-configurados-em-circuitos-com-bjt.md",
+    "title": "Como os filtros analógicos são projetados e configurados em circuitos com BJT?"
+  },
+  {
+    "number": 840,
+    "filename": "00840-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 841,
+    "filename": "00841-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos elétricos?"
+  },
+  {
+    "number": 842,
+    "filename": "00842-como-verificar-a-corrente-maxima-em-um-resistor-em-um-circuito-com-fonte-de-tensao.md",
+    "title": "Como verificar a corrente máxima em um resistor em um circuito com fonte de tensão?"
+  },
+  {
+    "number": 843,
+    "filename": "00843-o-que-e-um-circuito-de-primeira-ordem-e-como-ele-armazena-energia.md",
+    "title": "O que é um circuito de primeira ordem e como ele armazena energia?"
+  },
+  {
+    "number": 844,
+    "filename": "00844-como-identificar-o-tipo-de-resposta-em-circuitos-rlc-de-segunda-ordem.md",
+    "title": "Como identificar o tipo de resposta em circuitos RLC de segunda ordem?"
+  },
+  {
+    "number": 845,
+    "filename": "00845-o-que-e-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é admitância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 846,
+    "filename": "00846-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões Estrela e Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 847,
+    "filename": "00847-o-que-e-a-resposta-ao-degrau-inverso-em-um-circuito-serie.md",
+    "title": "O que é a resposta ao degrau inverso em um circuito série?"
+  },
+  {
+    "number": 848,
+    "filename": "00848-qual-a-diferenca-entre-um-igbt-e-um-mesfet.md",
+    "title": "Qual a diferença entre um IGBT e um MESFET?"
+  },
+  {
+    "number": 849,
+    "filename": "00849-o-que-e-uma-ponte-de-wheatstone-e-como-ela-e-utilizada-na-analise-de-circuitos.md",
+    "title": "O que é uma ponte de Wheatstone e como ela é utilizada na análise de circuitos?"
+  },
+  {
+    "number": 850,
+    "filename": "00850-como-funcionam-os-circuitos-combinacionais-em-sistemas-digitais.md",
+    "title": "Como funcionam os circuitos combinacionais em sistemas digitais?"
+  },
+  {
+    "number": 851,
+    "filename": "00851-como-funciona-um-amplificador-operacional-em-um-circuito-de-emissor-comum.md",
+    "title": "Como funciona um amplificador operacional em um circuito de emissor comum?"
+  },
+  {
+    "number": 852,
+    "filename": "00852-o-que-e-uma-malha-em-um-circuito-eletrico.md",
+    "title": "O que é uma malha em um circuito elétrico?"
+  },
+  {
+    "number": 853,
+    "filename": "00853-qual-a-diferenca-entre-componentes-passivos-e-ativos-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre componentes passivos e ativos em circuitos elétricos?"
+  },
+  {
+    "number": 854,
+    "filename": "00854-o-que-e-uma-supermalha-e-como-ela-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é uma Supermalha e como ela é utilizada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 855,
+    "filename": "00855-como-determinar-a-constante-de-tempo-em-circuitos-de-primeira-ordem.md",
+    "title": "Como determinar a constante de tempo em circuitos de primeira ordem?"
+  },
+  {
+    "number": 856,
+    "filename": "00856-o-que-sao-circuitos-de-segunda-ordem-sub-amortecidos-e-super-amortecidos.md",
+    "title": "O que são circuitos de segunda ordem sub-amortecidos e super-amortecidos?"
+  },
+  {
+    "number": 857,
+    "filename": "00857-como-determinar-a-amplitude-de-uma-corrente-em-um-circuito-de-corrente-alternada-usando-o-teorema-de-thevenin.md",
+    "title": "Como determinar a amplitude de uma corrente em um circuito de corrente alternada usando o Teorema de Thévenin?"
+  },
+  {
+    "number": 858,
+    "filename": "00858-o-que-e-um-circuito-trifasico-equilibrado-e-como-ele-funciona.md",
+    "title": "O que é um circuito trifásico equilibrado e como ele funciona?"
+  },
+  {
+    "number": 859,
+    "filename": "00859-o-que-e-um-filtro-passa-faixas-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um filtro passa-faixas e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 860,
+    "filename": "00860-qual-a-diferenca-entre-bjt-e-mosfet-em-circuitos-eletricos.md",
+    "title": "Qual a diferença entre BJT e MOSFET em circuitos elétricos?"
+  },
+  {
+    "number": 861,
+    "filename": "00861-o-que-e-um-oscilador-schmitt-trigger-e-como-ele-funciona.md",
+    "title": "O que é um Oscilador Schmitt Trigger e como ele funciona?"
+  },
+  {
+    "number": 862,
+    "filename": "00862-como-os-transistores-mos-sao-utilizados-em-circuitos-digitais-combinacionais.md",
+    "title": "Como os transistores MOS são utilizados em circuitos digitais combinacionais?"
+  },
+  {
+    "number": 863,
+    "filename": "00863-como-funciona-um-amplificador-emissor-comum.md",
+    "title": "Como funciona um amplificador emissor comum?"
+  },
+  {
+    "number": 864,
+    "filename": "00864-o-que-e-a-lei-das-tensoes-de-kirchhoff-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei das Tensões de Kirchhoff e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 865,
+    "filename": "00865-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 866,
+    "filename": "00866-como-aplicar-o-principio-da-superposicao-na-analise-de-circuitos.md",
+    "title": "Como aplicar o princípio da superposição na análise de circuitos?"
+  },
+  {
+    "number": 867,
+    "filename": "00867-o-que-sao-circuitos-de-primeira-ordem-e-como-eles-funcionam.md",
+    "title": "O que são circuitos de primeira ordem e como eles funcionam?"
+  },
+  {
+    "number": 868,
+    "filename": "00868-o-que-sao-circuitos-de-segunda-ordem-e-como-eles-se-comportam.md",
+    "title": "O que são circuitos de segunda ordem e como eles se comportam?"
+  },
+  {
+    "number": 869,
+    "filename": "00869-como-determinar-a-frequencia-de-ressonancia-em-um-circuito-rlc.md",
+    "title": "Como determinar a frequência de ressonância em um circuito RLC?"
+  },
+  {
+    "number": 870,
+    "filename": "00870-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões Estrela e Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 871,
+    "filename": "00871-o-que-e-a-transformada-de-laplace-e-como-ela-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é aplicada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 872,
+    "filename": "00872-como-funciona-um-diodo-em-um-circuito-eletrico.md",
+    "title": "Como funciona um diodo em um circuito elétrico?"
+  },
+  {
+    "number": 873,
+    "filename": "00873-o-que-e-um-amplificador-operacional-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um amplificador operacional e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 874,
+    "filename": "00874-o-que-sao-circuitos-combinacionais-e-como-eles-diferem-dos-circuitos-sequenciais.md",
+    "title": "O que são circuitos combinacionais e como eles diferem dos circuitos sequenciais?"
+  },
+  {
+    "number": 875,
+    "filename": "00875-como-funcionam-os-conversores-digitais-em-circuitos-eletricos.md",
+    "title": "Como funcionam os conversores digitais em circuitos elétricos?"
+  },
+  {
+    "number": 876,
+    "filename": "00876-o-que-e-a-lei-de-ohm-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Ohm e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 877,
+    "filename": "00877-qual-a-diferenca-entre-um-diodo-e-um-transistor.md",
+    "title": "Qual a diferença entre um diodo e um transistor?"
+  },
+  {
+    "number": 878,
+    "filename": "00878-como-determinar-a-resistencia-equivalente-em-um-circuito.md",
+    "title": "Como determinar a resistência equivalente em um circuito?"
+  },
+  {
+    "number": 879,
+    "filename": "00879-como-obter-a-corrente-em-um-circuito-rc-de-primeira-ordem.md",
+    "title": "Como Obter a Corrente em um Circuito RC de Primeira Ordem?"
+  },
+  {
+    "number": 880,
+    "filename": "00880-o-que-e-uma-resposta-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 881,
+    "filename": "00881-o-que-e-a-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Impedância em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 882,
+    "filename": "00882-qual-a-diferenca-entre-sistemas-monofasicos-e-trifasicos.md",
+    "title": "Qual a diferença entre sistemas monofásicos e trifásicos?"
+  },
+  {
+    "number": 883,
+    "filename": "00883-o-que-e-a-transformada-de-laplace-e-como-ela-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é aplicada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 884,
+    "filename": "00884-o-que-significa-um-transistor-bjt-estar-em-modo-saturado.md",
+    "title": "O que significa um transistor BJT estar em modo saturado?"
+  },
+  {
+    "number": 885,
+    "filename": "00885-o-que-e-um-circuito-biestavel-e-como-ele-funciona.md",
+    "title": "O que é um circuito biestável e como ele funciona?"
+  },
+  {
+    "number": 886,
+    "filename": "00886-como-os-flip-flops-sao-utilizados-em-circuitos-digitais.md",
+    "title": "Como os Flip-Flops são Utilizados em Circuitos Digitais?"
+  },
+  {
+    "number": 887,
+    "filename": "00887-como-a-transformada-de-fourier-e-aplicada-em-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Aplicada em Circuitos Elétricos?"
+  },
+  {
+    "number": 888,
+    "filename": "00888-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 889,
+    "filename": "00889-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 890,
+    "filename": "00890-o-que-e-o-teorema-de-thevenin-e-como-ele-simplifica-a-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele simplifica a análise de circuitos?"
+  },
+  {
+    "number": 891,
+    "filename": "00891-como-a-tensao-em-um-indutor-varia-ao-longo-do-tempo-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a tensão em um indutor varia ao longo do tempo em um circuito de primeira ordem?"
+  },
+  {
+    "number": 892,
+    "filename": "00892-o-que-e-um-circuito-rlc-criticamente-amortecido.md",
+    "title": "O que é um circuito RLC criticamente amortecido?"
+  },
+  {
+    "number": 893,
+    "filename": "00893-o-que-e-a-potencia-em-circuitos-de-corrente-alternada-senoidal.md",
+    "title": "O que é a potência em circuitos de corrente alternada senoidal?"
+  },
+  {
+    "number": 894,
+    "filename": "00894-qual-e-a-diferenca-entre-as-conexoes-estrela-triangulo-e-triangulo-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Estrela-Triângulo e Triângulo-Triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 895,
+    "filename": "00895-como-a-transformada-de-fourier-e-utilizada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Transformada de Fourier é Utilizada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 896,
+    "filename": "00896-como-os-transistores-bjt-e-igbt-funcionam-em-circuitos-eletricos.md",
+    "title": "Como os Transistores BJT e IGBT Funcionam em Circuitos Elétricos?"
+  },
+  {
+    "number": 897,
+    "filename": "00897-como-funciona-um-multivibrador-astavel-utilizando-amplificadores-operacionais.md",
+    "title": "Como funciona um multivibrador astável utilizando amplificadores operacionais?"
+  },
+  {
+    "number": 898,
+    "filename": "00898-como-os-mapas-de-karnaugh-simplificam-circuitos-logicos.md",
+    "title": "Como os Mapas de Karnaugh Simplificam Circuitos Lógicos?"
+  },
+  {
+    "number": 899,
+    "filename": "00899-como-funciona-um-bjt-em-um-circuito-rc-senoidal.md",
+    "title": "Como funciona um BJT em um circuito RC senoidal?"
+  },
+  {
+    "number": 900,
+    "filename": "00900-o-que-e-a-lei-de-ohm-e-como-ela-se-aplica-em-circuitos-eletricos.md",
+    "title": "O que é a Lei de Ohm e como ela se aplica em circuitos elétricos?"
+  },
+  {
+    "number": 901,
+    "filename": "00901-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 902,
+    "filename": "00902-como-a-linearidade-dos-resistores-afeta-a-analise-basica-de-circuitos.md",
+    "title": "Como a linearidade dos resistores afeta a análise básica de circuitos?"
+  },
+  {
+    "number": 903,
+    "filename": "00903-como-determinar-a-corrente-em-um-circuito-rc-de-primeira-ordem.md",
+    "title": "Como determinar a corrente em um circuito RC de primeira ordem?"
+  },
+  {
+    "number": 904,
+    "filename": "00904-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 905,
+    "filename": "00905-como-analisar-circuitos-em-serie-em-corrente-alternada.md",
+    "title": "Como Analisar Circuitos em Série em Corrente Alternada?"
+  },
+  {
+    "number": 906,
+    "filename": "00906-o-que-e-um-circuito-trifasico-equilibrado-e-como-ele-funciona.md",
+    "title": "O que é um circuito trifásico equilibrado e como ele funciona?"
+  },
+  {
+    "number": 907,
+    "filename": "00907-como-a-transformada-de-laplace-e-aplicada-na-analise-de-circuitos-em-serie.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise de Circuitos em Série?"
+  },
+  {
+    "number": 908,
+    "filename": "00908-como-funciona-a-saturacao-em-um-transistor-bjt.md",
+    "title": "Como funciona a saturação em um transistor BJT?"
+  },
+  {
+    "number": 909,
+    "filename": "00909-como-funciona-a-implementacao-de-um-multivibrador-em-circuitos-analogicos.md",
+    "title": "Como funciona a implementação de um multivibrador em circuitos analógicos?"
+  },
+  {
+    "number": 910,
+    "filename": "00910-o-que-sao-circuitos-sequenciais-e-como-eles-diferem-dos-circuitos-combinacionais.md",
+    "title": "O que são circuitos sequenciais e como eles diferem dos circuitos combinacionais?"
+  },
+  {
+    "number": 911,
+    "filename": "00911-o-que-e-um-filtro-rc-e-como-ele-funciona-em-circuitos-eletricos.md",
+    "title": "O que é um filtro RC e como ele funciona em circuitos elétricos?"
+  },
+  {
+    "number": 912,
+    "filename": "00912-o-que-e-uma-associacao-em-paralelo-de-resistores.md",
+    "title": "O que é uma associação em paralelo de resistores?"
+  },
+  {
+    "number": 913,
+    "filename": "00913-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 914,
+    "filename": "00914-o-que-e-o-teorema-de-thevenin-e-como-ele-e-aplicado-na-analise-de-circuitos.md",
+    "title": "O que é o Teorema de Thévenin e como ele é aplicado na análise de circuitos?"
+  },
+  {
+    "number": 915,
+    "filename": "00915-o-que-acontece-com-a-tensao-em-um-capacitor-quando-uma-fonte-e-comutada-em-um-circuito-de-primeira-ordem.md",
+    "title": "O que acontece com a tensão em um capacitor quando uma fonte é comutada em um circuito de primeira ordem?"
+  },
+  {
+    "number": 916,
+    "filename": "00916-o-que-e-uma-resposta-sub-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta sub-amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 917,
+    "filename": "00917-o-que-e-a-corrente-eficaz-rms-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a corrente eficaz (RMS) em circuitos de corrente alternada?"
+  },
+  {
+    "number": 918,
+    "filename": "00918-qual-e-a-diferenca-entre-as-conexoes-triangulo-triangulo-e-triangulo-estrela-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre as conexões Triângulo-Triângulo e Triângulo-Estrela em circuitos trifásicos?"
+  },
+  {
+    "number": 919,
+    "filename": "00919-como-a-transformada-de-fourier-e-aplicada-na-analise-de-circuitos-rlc.md",
+    "title": "Como a Transformada de Fourier é Aplicada na Análise de Circuitos RLC?"
+  },
+  {
+    "number": 920,
+    "filename": "00920-qual-a-diferenca-entre-mosfet-e-igbt.md",
+    "title": "Qual a diferença entre MOSFET e IGBT?"
+  },
+  {
+    "number": 921,
+    "filename": "00921-como-funciona-um-amplificador-operacional-em-um-circuito-analogico.md",
+    "title": "Como funciona um amplificador operacional em um circuito analógico?"
+  },
+  {
+    "number": 922,
+    "filename": "00922-como-funciona-um-latch-em-circuitos-digitais.md",
+    "title": "Como funciona um Latch em circuitos digitais?"
+  },
+  {
+    "number": 923,
+    "filename": "00923-como-configurar-um-amplificador-operacional-em-um-circuito-analogico.md",
+    "title": "Como configurar um amplificador operacional em um circuito analógico?"
+  },
+  {
+    "number": 924,
+    "filename": "00924-o-que-e-a-divisao-de-tensao-em-um-circuito-eletrico.md",
+    "title": "O que é a divisão de tensão em um circuito elétrico?"
+  },
+  {
+    "number": 925,
+    "filename": "00925-o-que-e-um-transistor-e-qual-a-sua-funcao-em-um-circuito-eletrico.md",
+    "title": "O que é um transistor e qual a sua função em um circuito elétrico?"
+  },
+  {
+    "number": 926,
+    "filename": "00926-o-que-e-uma-supermalha-e-como-ela-e-utilizada-na-analise-de-circuitos.md",
+    "title": "O que é uma supermalha e como ela é utilizada na análise de circuitos?"
+  },
+  {
+    "number": 927,
+    "filename": "00927-como-os-circuitos-rc-e-rl-respondem-a-uma-fonte-de-tensao.md",
+    "title": "Como os Circuitos RC e RL Respondem a uma Fonte de Tensão?"
+  },
+  {
+    "number": 928,
+    "filename": "00928-o-que-e-uma-resposta-criticamente-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é uma resposta criticamente amortecida em circuitos de segunda ordem?"
+  },
+  {
+    "number": 929,
+    "filename": "00929-como-o-teorema-da-transferencia-maxima-de-potencia-se-aplica-em-circuitos-de-corrente-alternada.md",
+    "title": "Como o Teorema da Transferência Máxima de Potência se aplica em circuitos de corrente alternada?"
+  },
+  {
+    "number": 930,
+    "filename": "00930-qual-e-a-diferenca-entre-a-conexao-triangulo-e-estrela-em-circuitos-trifasicos.md",
+    "title": "Qual é a diferença entre a conexão triângulo e estrela em circuitos trifásicos?"
+  },
+  {
+    "number": 931,
+    "filename": "00931-o-que-e-a-transformada-de-laplace-e-como-ela-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é aplicada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 932,
+    "filename": "00932-como-funciona-a-regiao-de-saturacao-em-um-mosfet.md",
+    "title": "Como funciona a região de saturação em um MOSFET?"
+  },
+  {
+    "number": 933,
+    "filename": "00933-como-funciona-a-operacao-de-um-amplificador-bjt-em-circuitos-analogicos.md",
+    "title": "Como funciona a operação de um amplificador BJT em circuitos analógicos?"
+  },
+  {
+    "number": 934,
+    "filename": "00934-qual-e-a-diferenca-entre-circuitos-combinacionais-e-sequenciais.md",
+    "title": "Qual é a diferença entre circuitos combinacionais e sequenciais?"
+  },
+  {
+    "number": 935,
+    "filename": "00935-o-que-e-um-circuito-rlc-em-serie-e-como-ele-funciona.md",
+    "title": "O que é um circuito RLC em série e como ele funciona?"
+  },
+  {
+    "number": 936,
+    "filename": "00936-o-que-e-um-curto-circuito-e-como-ele-afeta-um-circuito-eletrico.md",
+    "title": "O que é um curto-circuito e como ele afeta um circuito elétrico?"
+  },
+  {
+    "number": 937,
+    "filename": "00937-qual-a-funcao-de-um-indutor-em-um-circuito-eletrico.md",
+    "title": "Qual a função de um indutor em um circuito elétrico?"
+  },
+  {
+    "number": 938,
+    "filename": "00938-como-funciona-o-principio-da-superposicao-em-circuitos-eletricos.md",
+    "title": "Como funciona o princípio da superposição em circuitos elétricos?"
+  },
+  {
+    "number": 939,
+    "filename": "00939-como-a-tensao-se-comporta-em-um-circuito-rc-durante-a-carga-e-descarga.md",
+    "title": "Como a Tensão se Comporta em um Circuito RC Durante a Carga e Descarga?"
+  },
+  {
+    "number": 940,
+    "filename": "00940-como-determinar-a-resposta-amortecida-em-circuitos-de-segunda-ordem.md",
+    "title": "Como Determinar a Resposta Amortecida em Circuitos de Segunda Ordem?"
+  },
+  {
+    "number": 941,
+    "filename": "00941-o-que-e-um-fasor-e-como-ele-e-utilizado-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é um fasor e como ele é utilizado em circuitos de corrente alternada?"
+  },
+  {
+    "number": 942,
+    "filename": "00942-qual-a-diferenca-entre-as-conexoes-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre as conexões estrela e triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 943,
+    "filename": "00943-como-analisar-circuitos-com-fontes-de-tensao-em-rampa.md",
+    "title": "Como Analisar Circuitos com Fontes de Tensão em Rampa?"
+  },
+  {
+    "number": 944,
+    "filename": "00944-como-funcionam-os-transistores-igbt-e-hemt-em-circuitos-eletricos.md",
+    "title": "Como Funcionam os Transistores IGBT e HEMT em Circuitos Elétricos?"
+  },
+  {
+    "number": 945,
+    "filename": "00945-como-funciona-um-oscilador-de-wien-em-circuitos-analogicos.md",
+    "title": "Como funciona um Oscilador de Wien em Circuitos Analógicos?"
+  },
+  {
+    "number": 946,
+    "filename": "00946-como-converter-um-numero-decimal-para-binario-e-vice-versa.md",
+    "title": "Como converter um número decimal para binário e vice-versa?"
+  },
+  {
+    "number": 947,
+    "filename": "00947-como-funciona-a-conversao-de-sinais-analogicos-para-digitais-usando-um-conversor-r2r.md",
+    "title": "Como funciona a conversão de sinais analógicos para digitais usando um conversor R/2R?"
+  },
+  {
+    "number": 948,
+    "filename": "00948-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 949,
+    "filename": "00949-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 950,
+    "filename": "00950-como-a-superposicao-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "Como a Superposição é Aplicada na Análise de Circuitos Elétricos?"
+  },
+  {
+    "number": 951,
+    "filename": "00951-como-a-associacao-de-indutores-afeta-a-corrente-em-um-circuito-de-primeira-ordem.md",
+    "title": "Como a Associação de Indutores Afeta a Corrente em um Circuito de Primeira Ordem?"
+  },
+  {
+    "number": 952,
+    "filename": "00952-o-que-sao-circuitos-de-segunda-ordem-e-como-diferenciar-os-casos-sub-amortecido-e-super-amortecido.md",
+    "title": "O que são circuitos de segunda ordem e como diferenciar os casos sub-amortecido e super-amortecido?"
+  },
+  {
+    "number": 953,
+    "filename": "00953-como-aplicar-o-teorema-de-thevenin-em-circuitos-de-corrente-alternada.md",
+    "title": "Como aplicar o Teorema de Thévenin em circuitos de corrente alternada?"
+  },
+  {
+    "number": 954,
+    "filename": "00954-qual-a-diferenca-entre-a-conexao-estrela-e-triangulo-em-circuitos-trifasicos.md",
+    "title": "Qual a diferença entre a conexão estrela e triângulo em circuitos trifásicos?"
+  },
+  {
+    "number": 955,
+    "filename": "00955-o-que-e-a-transformada-de-laplace-e-como-ela-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é aplicada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 956,
+    "filename": "00956-como-funcionam-os-dispositivos-semicondutores-em-circuitos-eletricos.md",
+    "title": "Como Funcionam os Dispositivos Semicondutores em Circuitos Elétricos?"
+  },
+  {
+    "number": 957,
+    "filename": "00957-o-que-e-um-oscilador-de-wien-e-como-ele-funciona-em-circuitos-analogicos.md",
+    "title": "O que é um Oscilador de Wien e como ele funciona em circuitos analógicos?"
+  },
+  {
+    "number": 958,
+    "filename": "00958-como-funciona-a-simplificacao-de-circuitos-digitais-usando-o-mapa-de-karnaugh.md",
+    "title": "Como funciona a simplificação de circuitos digitais usando o mapa de Karnaugh?"
+  },
+  {
+    "number": 959,
+    "filename": "00959-como-a-tensao-senoidal-afeta-os-componentes-em-um-circuito-eletrico.md",
+    "title": "Como a tensão senoidal afeta os componentes em um circuito elétrico?"
+  },
+  {
+    "number": 960,
+    "filename": "00960-o-que-e-um-ramo-em-um-circuito-eletrico.md",
+    "title": "O que é um ramo em um circuito elétrico?"
+  },
+  {
+    "number": 961,
+    "filename": "00961-qual-a-diferenca-entre-componentes-eletronicos-passivos-e-ativos.md",
+    "title": "Qual a diferença entre componentes eletrônicos passivos e ativos?"
+  },
+  {
+    "number": 962,
+    "filename": "00962-o-que-e-a-transferencia-maxima-de-potencia-em-circuitos-eletricos.md",
+    "title": "O que é a Transferência Máxima de Potência em Circuitos Elétricos?"
+  },
+  {
+    "number": 963,
+    "filename": "00963-o-que-acontece-em-um-circuito-rc-de-primeira-ordem-quando-a-chave-e-comutada.md",
+    "title": "O que acontece em um circuito RC de primeira ordem quando a chave é comutada?"
+  },
+  {
+    "number": 964,
+    "filename": "00964-o-que-e-a-continuidade-em-circuitos-de-segunda-ordem.md",
+    "title": "O que é a continuidade em circuitos de segunda ordem?"
+  },
+  {
+    "number": 965,
+    "filename": "00965-o-que-e-impedancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é impedância em circuitos de corrente alternada?"
+  },
+  {
+    "number": 966,
+    "filename": "00966-o-que-e-um-circuito-trifasico-equilibrado-e-qual-sua-importancia.md",
+    "title": "O que é um circuito trifásico equilibrado e qual sua importância?"
+  },
+  {
+    "number": 967,
+    "filename": "00967-o-que-e-a-transformada-de-laplace-e-como-ela-e-aplicada-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é a Transformada de Laplace e como ela é aplicada na análise de circuitos elétricos?"
+  },
+  {
+    "number": 968,
+    "filename": "00968-como-funciona-a-juncao-pn-em-um-jfet-saturado.md",
+    "title": "Como funciona a junção PN em um JFET saturado?"
+  },
+  {
+    "number": 969,
+    "filename": "00969-como-os-amplificadores-operacionais-funcionam-em-circuitos-ac-e-dc.md",
+    "title": "Como os Amplificadores Operacionais Funcionam em Circuitos AC e DC?"
+  },
+  {
+    "number": 970,
+    "filename": "00970-como-os-transistores-mos-sao-utilizados-na-implementacao-de-circuitos-logicos.md",
+    "title": "Como os transistores MOS são utilizados na implementação de circuitos lógicos?"
+  },
+  {
+    "number": 971,
+    "filename": "00971-como-funciona-um-conversor-r2r-em-um-circuito-combinacional.md",
+    "title": "Como funciona um conversor R/2R em um circuito combinacional?"
+  },
+  {
+    "number": 972,
+    "filename": "00972-como-funciona-a-associacao-de-resistores-em-serie-e-paralelo.md",
+    "title": "Como Funciona a Associação de Resistores em Série e Paralelo?"
+  },
+  {
+    "number": 973,
+    "filename": "00973-qual-e-a-funcao-de-um-diodo-em-um-circuito-eletrico.md",
+    "title": "Qual é a função de um diodo em um circuito elétrico?"
+  },
+  {
+    "number": 974,
+    "filename": "00974-como-funciona-a-analise-nodal-em-circuitos-eletricos.md",
+    "title": "Como funciona a análise nodal em circuitos elétricos?"
+  },
+  {
+    "number": 975,
+    "filename": "00975-como-a-tensao-se-comporta-em-um-circuito-rc-de-primeira-ordem.md",
+    "title": "Como a tensão se comporta em um circuito RC de primeira ordem?"
+  },
+  {
+    "number": 976,
+    "filename": "00976-o-que-e-um-circuito-rlc-sub-amortecido.md",
+    "title": "O que é um circuito RLC sub-amortecido?"
+  },
+  {
+    "number": 977,
+    "filename": "00977-o-que-e-a-admitancia-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a Admitância em Circuitos de Corrente Alternada?"
+  },
+  {
+    "number": 978,
+    "filename": "00978-o-que-e-a-conexao-estrela-triangulo-em-circuitos-trifasicos-e-onde-ela-e-usada.md",
+    "title": "O que é a conexão estrela-triângulo em circuitos trifásicos e onde ela é usada?"
+  },
+  {
+    "number": 979,
+    "filename": "00979-como-a-transformada-de-laplace-e-aplicada-na-analise-avancada-de-circuitos.md",
+    "title": "Como a Transformada de Laplace é Aplicada na Análise Avançada de Circuitos?"
+  },
+  {
+    "number": 980,
+    "filename": "00980-como-determinar-se-um-bjt-esta-em-saturacao.md",
+    "title": "Como Determinar se um BJT Está em Saturação?"
+  },
+  {
+    "number": 981,
+    "filename": "00981-como-funciona-um-amplificador-operacional-em-um-circuito-analogico.md",
+    "title": "Como funciona um amplificador operacional em um circuito analógico?"
+  },
+  {
+    "number": 982,
+    "filename": "00982-como-as-portas-logicas-combinacionais-processam-expressoes-booleanas.md",
+    "title": "Como as portas lógicas combinacionais processam expressões booleanas?"
+  },
+  {
+    "number": 983,
+    "filename": "00983-o-que-e-o-regime-permanente-em-circuitos-eletricos.md",
+    "title": "O que é o regime permanente em circuitos elétricos?"
+  },
+  {
+    "number": 984,
+    "filename": "00984-o-que-e-um-no-em-um-circuito-eletrico.md",
+    "title": "O que é um nó em um circuito elétrico?"
+  },
+  {
+    "number": 985,
+    "filename": "00985-como-os-diodos-funcionam-em-circuitos-eletricos.md",
+    "title": "Como os Diodos Funcionam em Circuitos Elétricos?"
+  },
+  {
+    "number": 986,
+    "filename": "00986-o-que-e-o-metodo-da-superposicao-na-analise-de-circuitos-eletricos.md",
+    "title": "O que é o método da superposição na análise de circuitos elétricos?"
+  },
+  {
+    "number": 987,
+    "filename": "00987-como-os-capacitores-e-indutores-afetam-o-comportamento-de-circuitos-de-primeira-ordem.md",
+    "title": "Como os Capacitores e Indutores Afetam o Comportamento de Circuitos de Primeira Ordem?"
+  },
+  {
+    "number": 988,
+    "filename": "00988-como-a-continuidade-da-corrente-afeta-circuitos-de-segunda-ordem.md",
+    "title": "Como a continuidade da corrente afeta circuitos de segunda ordem?"
+  },
+  {
+    "number": 989,
+    "filename": "00989-o-que-e-a-potencia-complexa-em-circuitos-de-corrente-alternada.md",
+    "title": "O que é a potência complexa em circuitos de corrente alternada?"
+  },
+  {
+    "number": 990,
+    "filename": "00990-qual-a-diferenca-entre-sistemas-monofasicos-e-trifasicos.md",
+    "title": "Qual a diferença entre sistemas monofásicos e trifásicos?"
+  },
+  {
+    "number": 991,
+    "filename": "00991-como-a-transformada-de-laplace-e-utilizada-na-analise-de-circuitos-passivos.md",
+    "title": "Como a Transformada de Laplace é Utilizada na Análise de Circuitos Passivos?"
+  },
+  {
+    "number": 992,
+    "filename": "00992-qual-a-diferenca-entre-um-transistor-hemt-e-um-transistor-bjt.md",
+    "title": "Qual a diferença entre um transistor HEMT e um transistor BJT?"
+  },
+  {
+    "number": 993,
+    "filename": "00993-como-os-filtros-analogicos-afetam-a-resposta-em-frequencia-de-um-sinal.md",
+    "title": "Como os filtros analógicos afetam a resposta em frequência de um sinal?"
+  },
+  {
+    "number": 994,
+    "filename": "00994-como-funcionam-os-flip-flops-em-circuitos-digitais.md",
+    "title": "Como funcionam os flip-flops em circuitos digitais?"
+  },
+  {
+    "number": 995,
+    "filename": "00995-como-a-configuracao-de-um-dac-afeta-a-tensao-de-saida-em-um-sinal-senoidal.md",
+    "title": "Como a configuração de um DAC afeta a tensão de saída em um sinal senoidal?"
+  },
+  {
+    "number": 996,
+    "filename": "00996-o-que-e-uma-associacao-em-serie-de-resistores-e-como-ela-funciona.md",
+    "title": "O que é uma associação em série de resistores e como ela funciona?"
+  },
+  {
+    "number": 997,
+    "filename": "00997-qual-a-diferenca-entre-componentes-eletronicos-ativos-e-passivos.md",
+    "title": "Qual a diferença entre componentes eletrônicos ativos e passivos?"
+  },
+  {
+    "number": 998,
+    "filename": "00998-o-que-e-a-linearidade-em-circuitos-eletricos-e-como-ela-afeta-a-analise-nodal.md",
+    "title": "O que é a linearidade em circuitos elétricos e como ela afeta a análise nodal?"
+  },
+  {
+    "number": 999,
+    "filename": "00999-o-que-e-um-circuito-rc-de-primeira-ordem-e-como-ele-armazena-energia.md",
+    "title": "O que é um circuito RC de primeira ordem e como ele armazena energia?"
   }
 ]
