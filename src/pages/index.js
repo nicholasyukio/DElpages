@@ -111,7 +111,7 @@ const Espera = () => {
         <EletronQuest />
         <Depoimentos />
         <SpecialWarnings /> */}
-        {showOffer === false ? <Form showOffer={showOffer} onVariableChange={handleVariableChange} /> : <OfertaBreve isMobile={isMobile}/>}
+        <OfertaBreve isMobile={isMobile}/>
         <Bio />
         <Rodape />
         </>
