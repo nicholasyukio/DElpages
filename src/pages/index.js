@@ -1,15 +1,16 @@
 // Filename - pages/index.js
 import React, { useState } from 'react';
-import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+//import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
-import OfertaBreve from './oferta_breve.js';
-import { getCurrentTimeFromWorldTimeAPI, logEvent, SectionTracker, sendEventsToAPI } from './tracking.js';
-import { v4 as uuidv4 } from 'uuid';
-import {saveDesiteEventInDB} from './tracking';
-import {FilteredPageList, PageList, KnowCourseFromBlogButton, AnswerText} from './answer_post';
+import Checkout from './checkout.js';
+//import OfertaBreve from './oferta_breve.js';
+//import { getCurrentTimeFromWorldTimeAPI, logEvent, SectionTracker, sendEventsToAPI } from './tracking.js';
+//import { v4 as uuidv4 } from 'uuid';
+//import {saveDesiteEventInDB} from './tracking';
+import { PageList, KnowCourseFromBlogButton, AnswerText} from './answer_post';
 
-const extractUTMTags = () => {
+/* const extractUTMTags = () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const utmTags = {};
@@ -36,12 +37,12 @@ logEvent('startTime', currentDate);
 window.addEventListener('beforeunload', () => {
     // Call sendEventsToAPI just before the user exits the page
     sendEventsToAPI();
-});
+}); */
 
 /* let user=userpool.getCurrentUser();
 console.log(user); */
 
-const Home = () => {
+/* const Home = () => {
     const [showOffer, setGlobalVariable] = useState(false);
 
     const handleVariableChange = (newValue) => {
@@ -72,15 +73,15 @@ const Home = () => {
         <Rodape />
         </>
 	);
-};
+}; */
 
 const Espera = () => {
-    const [showOffer, setGlobalVariable] = useState(false);
+    //const [showOffer, setGlobalVariable] = useState(false);
 
-    const handleVariableChange = (newValue) => {
+    //const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
-        setGlobalVariable(newValue);
-    };
+      //  setGlobalVariable(newValue);
+    //};
 
     const [isMobile, setIsMobile] = React.useState(false);
     // Function to check if the device is a mobile
@@ -111,7 +112,7 @@ const Espera = () => {
         <EletronQuest />
         <Depoimentos />
         <SpecialWarnings /> */}
-        <OfertaBreve isMobile={isMobile}/>
+        <Checkout isMobile={isMobile}/>
         <Bio />
         <Rodape />
         </>
@@ -140,7 +141,7 @@ const Direto = () => {
         </section>
         <BriefDescription />
         <CourseContent />
-        <OfertaBreve isMobile={isMobile}/>
+        <Checkout isMobile={isMobile}/>
         <Depoimentos />
         {/* <StudentsProfile /> */}
         <ElectronicsContent />
@@ -156,12 +157,12 @@ const Direto = () => {
 };
 
 const AnswerList = () => {
-    const [showOffer, setGlobalVariable] = useState(false);
+    //const [showOffer, setGlobalVariable] = useState(false);
 
-    const handleVariableChange = (newValue) => {
+    //const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
-        setGlobalVariable(newValue);
-    };
+      //  setGlobalVariable(newValue/);
+    //};
 
     const [isMobile, setIsMobile] = React.useState(false);
     // Function to check if the device is a mobile
@@ -189,12 +190,12 @@ const AnswerList = () => {
 };
 
 const Answer = () => {
-    const [showOffer, setGlobalVariable] = useState(false);
+/*     const [showOffer, setGlobalVariable] = useState(false);
 
     const handleVariableChange = (newValue) => {
         // Update the globalVariable when needed
         setGlobalVariable(newValue);
-    };
+    }; */
 
     const [isMobile, setIsMobile] = React.useState(false);
     // Function to check if the device is a mobile
@@ -221,7 +222,7 @@ const Answer = () => {
 	);
 };
 
-export { Home, Espera, Direto, Answer, AnswerList };
+export { Espera, Direto, Answer, AnswerList };
 
 function NewIntro() {
     // State to track the device type
@@ -261,7 +262,7 @@ function NewIntro() {
 function Video() {
     return (
         <div className="video-container">
-            <SectionTracker sectionId="Video" />
+            {/* <SectionTracker sectionId="Video" /> */}
             <div style={{ position: 'auto' }}>
             <iframe 
             src="https://iframe.mediadelivery.net/embed/236258/d1284905-28a8-4af9-88b0-9b06f85da446?autoplay=false&loop=false&muted=false&preload=true&responsive=true" 
@@ -279,12 +280,12 @@ function Video() {
 function FormButton({ buttonName }) {
     const handleClick = () => {
         // Push the data to the dataLayer when the button is clicked
-        window.dataLayer.push({
+        /* window.dataLayer.push({
             event: 'clickForOfertaDE', // Custom event name
             buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
         });
         logEvent('ButtonClick', `${buttonName} clicked`);
-        saveDesiteEventInDB("click_oferta", utmTags.v);
+        saveDesiteEventInDB("click_oferta", utmTags.v); */
         // Redirect the user after pushing the data to GTM if needed
         window.location.href = '#form'; // Redirect to the form anchor
     };
@@ -300,7 +301,7 @@ function NewHeaderCTA({isMobile}) {
     if (isMobile) {
         return (
             <div id="headercta" className="new-header-container">
-                <SectionTracker sectionId="HeaderCTA" />
+                {/* <SectionTracker sectionId="HeaderCTA" /> */}
                 <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
                 <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este curso online para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Veja todas as informações sobre o conteúdo do curso nesta página.</p>
                 <FormButton buttonName="HeaderCTA" />
@@ -309,7 +310,7 @@ function NewHeaderCTA({isMobile}) {
     } else {
         return (
             <div id="headercta" className="new-header-container">
-                <SectionTracker sectionId="HeaderCTA" />
+                {/* <SectionTracker sectionId="HeaderCTA" /> */}
                 <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
                 <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este curso online para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Veja todas as informações sobre o conteúdo do curso nesta página.</p>
                 <FormButton buttonName="HeaderCTA" />
@@ -318,18 +319,18 @@ function NewHeaderCTA({isMobile}) {
     }
 }
 
-function HeaderCTA() {
+/* function HeaderCTA() {
     return (
       <div id="headercta" className="header-container">
-          <SectionTracker sectionId="HeaderCTA" />
+          <SectionTracker sectionId="HeaderCTA" /> 
           <h2>O curso online de circuitos em nível de engenharia</h2>
           <p>Para começar a aprender circuitos com as minhas aulas e tirar dúvidas direto comigo (<b>Prof. Nicholas Yukio</b>), leia mais sobre o curso nesta página ou, se quiser, clique direto no botão abaixo.</p>
           <FormButton buttonName="HeaderCTA" />
       </div>
     );
-}
+} */
 
-function Form({ showOffer, onVariableChange }) {
+/* function Form({ showOffer, onVariableChange }) {
     // Google ReCaptcha v3
     const [token, setToken] = useState("");
     const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
@@ -396,20 +397,20 @@ function Form({ showOffer, onVariableChange }) {
                     event: 'formSubmission', // Custom event name
                     buttonName: 'exampleButton', // Custom event data
                 });
-                logEvent('FormSubmitSuccess', details);
-                saveDesiteEventInDB("form_submit_success", utmTags.v, email.value);
+                //logEvent('FormSubmitSuccess', details);
+                //saveDesiteEventInDB("form_submit_success", utmTags.v, email.value);
 			} else if (result.status === 'fail') {
 				alert('Ocorreu um erro. Tente novamente mais tarde.');
-                logEvent('FormSubmitFail', details);
-                saveDesiteEventInDB("form_submit_fail", utmTags.v, email.value);
+                //logEvent('FormSubmitFail', details);
+                //saveDesiteEventInDB("form_submit_fail", utmTags.v, email.value);
 			}
 		} catch (error) {
             setRefreshReCaptcha(!refreshReCaptcha);
 			console.error(error);
 			setStatus('Buscar oferta para o curso');
 			setResult('Ocorreu um erro.');
-            logEvent('FormSubmitCatchError', details);
-            saveDesiteEventInDB("form_submit_catch_error", utmTags.v, email.value);
+            //logEvent('FormSubmitCatchError', details);
+            //saveDesiteEventInDB("form_submit_catch_error", utmTags.v, email.value);
 		}
         sendEventsToAPI();
 	};
@@ -442,7 +443,7 @@ function Form({ showOffer, onVariableChange }) {
           </form>
       </div>
     );
-}
+} */
 
 function CircuitImage() {
     return (
@@ -478,7 +479,7 @@ function BriefDescription() {
     <section className="section">
     <h2 align="center">O Domínio Elétrico é um curso online de circuitos elétricos. Como assim?</h2>
     <div className="content-container">
-        <SectionTracker sectionId="BriefDescription" />
+        {/* <SectionTracker sectionId="BriefDescription" /> */}
         <div>
         {isVideoLoaded ? <Video /> : <CircuitImage />}
         <button className='btn-video' onClick={handleButtonClick}>Ver vídeo sobre o curso</button>
@@ -498,7 +499,7 @@ function Bio() {
     return (
     <section className="section">
     <div className="content-container">
-    <SectionTracker sectionId="Bio" />
+    {/* <SectionTracker sectionId="Bio" /> */}
         <figure>
         <img src="/foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
         </figure>
@@ -522,7 +523,7 @@ function BioBlog() {
     return (
     <section className="section">
     <div className="content-container">
-    <SectionTracker sectionId="Bio" />
+    {/* <SectionTracker sectionId="Bio" /> */}
         <figure>
         <img src="/foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
         </figure>
@@ -558,7 +559,7 @@ function CourseContent() {
     return (
         <section className="section">
         <div className="content-container-single-column">
-        <SectionTracker sectionId="CourseContent" />
+        {/* <SectionTracker sectionId="CourseContent" /> */}
         <h2>Veja o conteúdo principal do curso:</h2>
         <p>(clique nos nomes dos módulos para ver a lista das aulas com a duração de cada uma):</p>
         <div className="module" onClick={(event) => toggleLessonList(event)}>
@@ -843,7 +844,7 @@ function CourseContent() {
     );
 }
 
-function StudentsProfile() {
+/* function StudentsProfile() {
     return (
     <section className="section">
     <SectionTracker sectionId="StudentsProfile" />
@@ -861,12 +862,12 @@ function StudentsProfile() {
     </div>
     </section>
     );
-}
+} */
 
 function ElectronicsContent() {
     return (
     <section className="section">
-        <SectionTracker sectionId="ElectronicsContent" />
+        {/* <SectionTracker sectionId="ElectronicsContent" /> */}
         <div className="content-container">
         <figure>
             <img src="/circuito_eletronico_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
@@ -884,7 +885,7 @@ function ElectronicsContent() {
 function FromBasicsToAdvanced() {
     return (
     <section className="section">
-        <SectionTracker sectionId="FromBasicsToAdvanced" />
+        {/* <SectionTracker sectionId="FromBasicsToAdvanced" /> */}
         <div className="content-container">
         <figure>
         <img src="/do_basico_ao_avancado_fundo_transparente.png" alt="Imagem da Seção 1" width="800" />
@@ -902,7 +903,7 @@ function FromBasicsToAdvanced() {
 function MatematicaDoEletron() {
     return (
     <section className="section">
-        <SectionTracker sectionId="MatematicaDoEletron" />
+        {/* <SectionTracker sectionId="MatematicaDoEletron" /> */}
         <div className="content-container">
         <figure>
         <img src="/logo_mat_de.png" alt="Logo do curso MdE" width="800" />
@@ -920,7 +921,7 @@ function MatematicaDoEletron() {
 function TheoryAndPractice() {
     return (
     <section className="section">
-        <SectionTracker sectionId="TheoryAndPractice" />
+        {/* <SectionTracker sectionId="TheoryAndPractice" /> */}
         <div className="content-container">
         <figure>
         <img src="/de_labs.jpg" alt="Imagem da Seção 1" width="800" />
@@ -935,7 +936,7 @@ function TheoryAndPractice() {
     );
 }
 
-function EletronQuest() {
+/* function EletronQuest() {
     return (
     <section className="section">
     <SectionTracker sectionId="EletronQuest" />
@@ -951,7 +952,7 @@ function EletronQuest() {
     </div>
     </section>
     );
-}
+} */
 
 function Depoimentos() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -965,13 +966,13 @@ function Depoimentos() {
         const enlargedImage = document.getElementById('enlarged-image');
         enlargedImage.src = src;
         overlay.style.display = 'flex';
-        logEvent('ButtonClick', 'enlargeImage clicked');
+        //logEvent('ButtonClick', 'enlargeImage clicked');
     }
     
     function closeOverlay() {
         const overlay = document.getElementById('image-overlay');
         overlay.style.display = 'none';
-        logEvent('ButtonClick', 'closeOverlay clicked');
+        //logEvent('ButtonClick', 'closeOverlay clicked');
     }
     
     function moveCarousel(direction) {
@@ -988,7 +989,7 @@ function Depoimentos() {
             updatedVisibleImagesIndices.push(index + 1);
         }
         setVisibleImagesIndices(updatedVisibleImagesIndices);
-        logEvent('ButtonClick', 'moveCarousel clicked');
+        //logEvent('ButtonClick', 'moveCarousel clicked');
     }
 
     function CarouselItem({ imageNumber, onClick }) {
@@ -1002,7 +1003,7 @@ function Depoimentos() {
 
     return (
     <section className="section">
-    <SectionTracker sectionId="Depoimentos" />
+    {/* <SectionTracker sectionId="Depoimentos" /> */}
     <h2>O que dizem os alunos do curso?</h2>
     <p>(Clique nas imagens para ampliar)</p>
     <div className="carousel-container">
@@ -1033,7 +1034,7 @@ function Depoimentos() {
     );
 }
 
-function SpecialWarnings() {
+/* function SpecialWarnings() {
     return (
     <section className="section">
     <SectionTracker sectionId="SpecialWarnings" />
@@ -1052,4 +1053,4 @@ function SpecialWarnings() {
     </div>
     </section>
     );
-}
+} */

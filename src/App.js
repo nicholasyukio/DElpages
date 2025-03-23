@@ -5,17 +5,17 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Home , Espera, Direto, Answer, AnswerList } from "./pages/index";
+import { Espera, Direto, Answer, AnswerList } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
-import Oferta from "./pages/oferta";
+/* import Oferta from "./pages/oferta";
 import Login from "./pages/login";
 import WatchWithLoginPrompt from "./pages/watch";
 import Signup from './pages/signup';
 import Logon from './pages/logon';
 import VerifyAccount from './pages/verify';
-import Recover from "./pages/recover.js";
-import { FeedWithLoginPrompt , SavedVideosPageWithLoginPrompt, PlaylistWithLoginPrompt } from "./pages/feed";
+import Recover from "./pages/recover.js"; 
+import { FeedWithLoginPrompt , SavedVideosPageWithLoginPrompt, PlaylistWithLoginPrompt } from "./pages/feed"; */
 import Cookies from 'js-cookie';
 import { v4 as uuidv4 } from 'uuid';
 import CookieConsent from './pages/cookie_consent';
@@ -39,14 +39,14 @@ export default function App() {
     <Router>
       <CookieConsent />
       <Routes>
-        <Route path="/" element={<FeedWithLoginPrompt />} />
+        <Route path="/" element={<Direto />} />
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
         <Route path="/direto-dominio-eletrico" element={<Direto />} />
         <Route path="/anslist" element={<AnswerList />} />
         <Route path="/answer/:postId" element={<Answer />} />
         <Route path="/politicadeprivacidade" element={<PoliticaDePrivacidade />} />
         <Route path="/termosdeuso" element={<TermosDeUso />} />
-        <Route path="/oferta" element={<Oferta />} />
+        {/* <Route path="/oferta" element={<Oferta />} />
         <Route path="/login" element={<Login />} />
         <Route path="/watch" element={<WatchWithLoginPrompt />} />
         <Route path="/feed" element={<FeedWithLoginPrompt />} />
@@ -55,7 +55,7 @@ export default function App() {
         <Route path='/signup' element={<Signup />}/>
         <Route path='/logon' element={<Logon />}/>
         <Route path="/verify" element={<VerifyAccount/>}/>
-        <Route path="/recover" element={<Recover/>}/>
+        <Route path="/recover" element={<Recover/>}/> */}
       </Routes>
     </Router>
   );

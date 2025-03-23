@@ -349,7 +349,7 @@ display: none;
 .auth-container {
   background: #f5fbfc;
   color: #000000;
-  max-width: 240px; /* Largura máxima do contêiner de texto */
+  max-width: 480px; /* Largura máxima do contêiner de texto */
   margin: 20px auto auto auto;
   display: grid;
   text-align: left; /* Alinhar o texto à esquerda */

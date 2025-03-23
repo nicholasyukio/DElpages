@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import MathJax from 'react-mathjax2';
 import { useParams } from 'react-router-dom';
 import matter from 'gray-matter';
 import { Helmet } from 'react-helmet';
-import { logEvent, saveDesiteEventInDB } from './tracking.js';
+// import { logEvent, saveDesiteEventInDB } from './tracking.js';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -107,7 +106,7 @@ export function KnowCourseFromBlogButton({ buttonName }) {
           event: 'clickFromBlog', // Custom event name
           buttonName: 'clickFromBlog', // Custom event data, you can adjust this as needed
       });
-      logEvent('ButtonClick', `${buttonName} clicked`);
+      // logEvent('ButtonClick', `${buttonName} clicked`);
       // saveDesiteEventInDB("blog_click", utmTags.v);
       // Redirect the user after pushing the data to GTM if needed
       window.location.href = '/direto-dominio-eletrico'; // Redirect to the form anchor

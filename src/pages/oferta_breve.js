@@ -1,12 +1,12 @@
 // Filename - pages/oferta_breve.js
-import React, { useEffect, useState } from 'react';
-import { Button, TextField} from '@mui/material'
-import { useLocation } from 'react-router-dom';
-import './price.css';
-import {saveDesiteEventInDB} from './tracking';
-import {createOrder} from '../pagarme';
+//import React, { useEffect, useState } from 'react';
+//import { Button, TextField} from '@mui/material'
+//import { useLocation } from 'react-router-dom';
+//import './price.css';
+//import {saveDesiteEventInDB} from './tracking';
+//import {createOrder} from '../pagarme';
 
-const extractURLparams = () => {
+/* const extractURLparams = () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const utmTags = {};
@@ -18,11 +18,11 @@ const extractURLparams = () => {
     utmTags.id = urlParams.get('id') || '';
     utmTags.v = urlParams.get('v') || '';
     return utmTags;
-};
+}; */
 
-const URLparams = extractURLparams();
+//const URLparams = extractURLparams();
 
-async function getCurrentTimeFromWorldTimeAPI() {
+/* async function getCurrentTimeFromWorldTimeAPI() {
     try {
         const response = await fetch('https://worldtimeapi.org/api/ip');
         const data = await response.json();
@@ -32,9 +32,9 @@ async function getCurrentTimeFromWorldTimeAPI() {
         console.error('Error fetching current time from WorldTimeAPI:', error);
         return null;
     }
-}
+} */
 
-async function isOfferActive(startTimeString, endTimeString) {
+/* async function isOfferActive(startTimeString, endTimeString) {
     try {
         const startDate = new Date(startTimeString);
         const endDate = new Date(endTimeString);
@@ -55,9 +55,9 @@ async function isOfferActive(startTimeString, endTimeString) {
         console.error('Error checking offer validity:', error);
         return "error";
     }
-}
+} */
 
-const DescricaoInicialOferta = () => {
+/* const DescricaoInicialOferta = () => {
     return (
         <>
         <h2 className='header-with-reduced-margin'>Receba o acesso a:</h2>
@@ -72,9 +72,9 @@ const DescricaoInicialOferta = () => {
         </ul>
         </>
     );
-}
+} */
 
-const OfertaBreve = ({isMobile}) => {
+/* const OfertaBreve = ({isMobile}) => {
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
@@ -100,7 +100,7 @@ const OfertaBreve = ({isMobile}) => {
     
     const [offerValid, setOfferValid] = useState(false);
 
-    // Função para decodificar o Base64
+/*     // Função para decodificar o Base64
     const decodeBase64 = (base64) => {
         return decodeURIComponent(atob(base64).split('').map(function(c) {
             return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
@@ -128,7 +128,7 @@ const OfertaBreve = ({isMobile}) => {
             console.error("Error validating offer code:", error);
             return false; // Erro ao decodificar ou data inválida
         }
-    };
+    }; 
 
     function formatExpirationDate(expirationDate) {
         // Converte a string de data em um objeto Date
@@ -148,13 +148,13 @@ const OfertaBreve = ({isMobile}) => {
     }
     
 
-/*     useEffect(() => {
+    useEffect(() => {
         async function checkOfferValidity() {
             const valid = await isOfferActive(offerStartTime, offerEndTime);
             setOfferValid(valid);
         }
         checkOfferValidity();
-    }, [offerStartTime, offerEndTime]); */
+    }, [offerStartTime, offerEndTime]); 
 
     // useEffect para validar a oferta quando o componente for montado ou o código da oferta mudar
     useEffect(() => {
@@ -162,8 +162,8 @@ const OfertaBreve = ({isMobile}) => {
         setOfferValid(valid);
     }, [offerId]);
 
-    const expirationDate = offerValid ? decodeBase64(offerId) : "";
-    const deadline = offerValid ? formatExpirationDate(expirationDate): "";
+    // const expirationDate = offerValid ? decodeBase64(offerId) : "";
+    // const deadline = offerValid ? formatExpirationDate(expirationDate): "";
     console.log(deadline);
 
     let offerHeadline = offerValid ? `${offerInfo["dynamic"].headline} ${deadline}`: offerInfo["default"].headline;
@@ -301,6 +301,6 @@ const OfertaBreve = ({isMobile}) => {
             </>
             );
     }
-};
+}; 
 
-export default OfertaBreve;
+export default OfertaBreve; */
