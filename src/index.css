@@ -70,6 +70,14 @@ code {
   margin: 0 auto;  /* Center the image horizontally */
 }
 
+.btn-submit {
+  float: right;
+}
+
+.errormsg {
+  color: red;
+}
+
 .btn-inscricao {
   background-color: #000d7e; /* Cor de fundo do botão */
   color: #fdff6e; /* Cor do texto do botão */
@@ -374,4 +382,9 @@ display: none;
 
 .formfield {
   margin: 0px 0px 15px 0px;
+}
+
+.birthday_label {
+  font-weight: 700;
+  margin: 0px 0px 10px 0px;
 }
