@@ -358,6 +358,7 @@ const CepField = ({cep, setCep, endereco, setEndereco}) => {
         bairro: data.bairro || '',
         cidade: data.localidade || '',
         estado: data.uf || '',
+        numero: '',
       });
       //console.log(`Nome da rua: ${data.logradouro}`);
     } else {
