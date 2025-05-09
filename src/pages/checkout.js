@@ -30,6 +30,22 @@ const DescricaoInicialOferta = () => {
     );
 }
 
+const DescricaoInicialSite = () => {
+  return (
+      <>
+      <h2 className='header-with-reduced-margin'>Assine o plano premium no site e tenha acesso aos cursos:</h2>
+      <ul className='content-listing'>
+          <li><b>Domínio Elétrico (Conteúdo principal): </b>11 módulos (~88 horas de aulas gravadas)</li>
+          <li><b>Domínio Elétrico Labs: </b>aulas experimentais de circuitos elétricos em laboratório</li>
+          <li><b>Matemática do Elétron: </b>curso de revisão de matemática básica para circuitos (~25 horas)</li>
+          <li><b>Lives Canal do Elétron: </b>gravação de 24 lives de resolução de exercícios feitas no YouTube</li>
+          <li><b>Como estudar melhor na engenharia: </b>Orientações e princípios gerais para os estudos</li>
+          <li><b>(além dos cursos gratuitos) </b>Conteúdos gratuitos do site continuam disponíveis</li>
+      </ul>
+      </>
+  );
+}
+
 const BirthdaySelect = ({day, month, year, setDay, setMonth, setYear})  => {
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
   const months = [
@@ -97,11 +113,11 @@ const BirthdaySelect = ({day, month, year, setDay, setMonth, setYear})  => {
   );
 }
 
-const StartForm = ({name, email, phone, cpf, setName, setEmail, setPhone, setCpf, errors, paymentMethod, setPaymentMethod, value, handleSubmit}) => {
+const StartForm = ({name, email, phone, cpf, setName, setEmail, setPhone, setCpf, errors, paymentMethod, setPaymentMethod, value, handleSubmit, inside}) => {
   return (
     <div className="auth-container">
     <div className='contact_form'>
-    <DescricaoInicialOferta />
+    {inside == true ? (<DescricaoInicialSite />) : (<DescricaoInicialOferta />)}
     <h4 align="center">Por apenas <b>R$ {value.toFixed(2)} / ano</b></h4>
     <h3 align="center">Para começar a sua inscrição, preencha os dados:</h3>
     <div className="formfield">
@@ -590,7 +606,8 @@ const CardInfo = (
     interestRate,
     errors,
     setStep,
-    handleSubmit
+    handleSubmit,
+    isSubmitting
   })  => {
   const months = [
     'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -713,13 +730,14 @@ const CardInfo = (
         </Grid>
         <Grid item xs={8}>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Button 
+          <Button
+          disabled={isSubmitting} 
           onClick={handleSubmit} 
           className="btn-submit" 
           variant="contained"
           color="primary"
           >
-          Finalizar pagamento
+          {isSubmitting ? "Processando..." : "Finalizar pagamento"}
           </Button>
           </div>
         </Grid>
@@ -757,7 +775,7 @@ async function enrollStudent(name, email, payment_method, value, payment_option)
   }
 }
 
-const Checkout = ({ isMobile }) => {
+const Checkout = ({ isMobile, inside }) => {
   const [step, setStep] = useState('start'); 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -789,6 +807,7 @@ const Checkout = ({ isMobile }) => {
   const [payStatus, setPayStatus] = useState('PENDING');
   const [pix_code, setPix_code] = useState('');
   const [customer_id, setCustomerId] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [password, setPassword] = useState('');
   //const pix_code = "00020126580014br.gov.bcb.pix0136c58843a5-5c59-45b1-aefd-f28ecd88b8d35204000053039865406400.005802BR5922N__Y__M__SUGIMOTO_LTDA6015Sao_Jose_dos_Ca610912235-05062240520CursoDominioEletrico6304E2F8";
@@ -1016,7 +1035,8 @@ const Checkout = ({ isMobile }) => {
       if (validateAddressinfo()) setStep('card'); 
     } 
     else if (step === 'card') {
-      if (validateCard()) {
+      if (validateCard() && !isSubmitting) {
+        setIsSubmitting(true);
         try {
           const result = await createCardCharge();
           setPayStatus(result.status);
@@ -1031,6 +1051,8 @@ const Checkout = ({ isMobile }) => {
           }
         } catch (error) {
           console.error("Error in charge:", error);
+        } finally {
+          setIsSubmitting(false); // unlock submission
         }
       } 
     }
@@ -1054,6 +1076,7 @@ const Checkout = ({ isMobile }) => {
         setPaymentMethod={setPaymentMethod}
         value={value}
         handleSubmit={handleSubmit}
+        inside={inside}
         />
       )}
 
@@ -1101,6 +1124,7 @@ const Checkout = ({ isMobile }) => {
         errors={errors}
         setStep={setStep}
         handleSubmit={handleSubmit}
+        isSubmitting={isSubmitting}
         />
       )}
 
