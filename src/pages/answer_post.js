@@ -4,6 +4,7 @@ import rehypeRaw from 'rehype-raw';
 import { useParams } from 'react-router-dom';
 import matter from 'gray-matter';
 import { Helmet } from 'react-helmet';
+import { notify } from '../services/notify';
 // import { logEvent, saveDesiteEventInDB } from './tracking.js';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -106,6 +107,7 @@ export function KnowCourseFromBlogButton({ buttonName }) {
           event: 'clickFromBlog', // Custom event name
           buttonName: 'clickFromBlog', // Custom event data, you can adjust this as needed
       });
+      notify("CLIQUE DE POST", "Alguém acessou um answer_post e clicou no botão!");
       // logEvent('ButtonClick', `${buttonName} clicked`);
       // saveDesiteEventInDB("blog_click", utmTags.v);
       // Redirect the user after pushing the data to GTM if needed

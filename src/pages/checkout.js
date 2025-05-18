@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { MenuItem, TextField, Grid, Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
+import { notify } from '../services/notify';
 import QRCode from 'react-qr-code'; // Install this library using npm install qrcode.react
 import {
   FormControl,
@@ -1005,18 +1006,10 @@ const Checkout = ({ isMobile, inside }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Send form data to Formspree (replace with your Formspree endpoint)
-    //await fetch('https://formspree.io/f/xpwpdvky', {
-    //  method: 'POST',
-    //  body: JSON.stringify({ name, email }),
-    //  headers: {
-    //    'Content-Type': 'application/json',
-    //  },
-    //});
     if (step === 'start') {
       if (validateStart()) {
         if (paymentMethod === 'credit_card') {
+          notify("CHECKOUT: start > addressinfo", "Alguém entrou no checkout e foi do start para addressinfo.");
           setStep('addressinfo'); 
         } else {
           try {
@@ -1028,12 +1021,16 @@ const Checkout = ({ isMobile, inside }) => {
           } catch (error) {
             console.error("Error in charge:", error);
           }
+          notify("CHECKOUT: start > pix", "Alguém entrou no checkout e foi do start para pix.");
           setStep('pix');
         }
       }
     } 
     else if (step === 'addressinfo') {
-      if (validateAddressinfo()) setStep('card'); 
+      if (validateAddressinfo()) {
+        notify("CHECKOUT: addressinfo > card", "Alguém entrou no checkout e foi do addressinfo para card.");
+        setStep('card');
+      }
     } 
     else if (step === 'card') {
       if (validateCard() && !isSubmitting) {
@@ -1049,6 +1046,7 @@ const Checkout = ({ isMobile, inside }) => {
           }
           else {
             setErrors("O pagamento não foi aprovado. Verifique os dados do seu cartão ou entre em contato com o banco emissor do seu cartão.");
+            notify("CHECKOUT: card", "Alguém chegou à parte final do checkout, mas o pagamento não foi aprovado.");
           }
         } catch (error) {
           console.error("Error in charge:", error);
