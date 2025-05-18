@@ -672,6 +672,7 @@ async function enrollStudent(name, email, payment_method, value, payment_option)
     name: name,
     email: email,
     payment_method: payment_method,
+    user_id: null, // later replace with user_id
     paid_amount: value,
     payment_option: payment_option
   };
