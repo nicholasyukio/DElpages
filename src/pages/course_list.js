@@ -152,7 +152,7 @@ const AllCoursesList = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await fetch('${baseAPI_URL}/courses');
+      const response = await fetch(`${baseAPI_URL}/courses`);
       if (!response.ok) throw new Error('Failed to fetch courses');
       const data = await response.json();
       setCourses(data);
