@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import { Button, TextField,Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import { authenticate } from '../services/authenticate';
+import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../services/AuthContext.js';
 import Rodape from './rodape.js';
 import {extractUTMTags} from './utm_tags.js';
 import {saveDesiteEventInDB} from './tracking.js';
 
 const utmTags = extractUTMTags();
 
-const Logon = ({useRodape = true, redirect = ""}) => {
+const Logon = ({useRodape = true}) => {
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const redirect = searchParams.get('redirect') || '/allcourses';
 
-  const Navigate = useNavigate();
+  const { login, logout, user } = useAuth();
+  
   let nam = "";
 
   const [email, setEmail] = useState('');
@@ -34,49 +39,58 @@ const Logon = ({useRodape = true, redirect = ""}) => {
         setEmailErr("Digite o seu email");
         setPasswordErr("Digite a senha desejada");
         resolve({email:"Email is Required",password:"Password is required"});
+        return reject();
       }
       else if (email === '') {
         setEmailErr("Digite o seu email");
         resolve({email:"Email is Required",password:""});
+        return reject();
       }
       else if (password === '') {
         setPasswordErr("Digite a senha desejada");
         resolve({email:"",password:"Password is required"});
+        return reject();
       }
       else if (password.length < 6) {
         setPasswordErr("Mínimo de 8 caracteres");
-        resolve({email:"",password:"must be 8 character"});
-      }
-      else{
         resolve({email:"",password:""});
+        return reject();
+      } else {
+        resolve({ email: "", password: "" });
       }
     });
   };
 
   const handleClick = () => {
+    console.log("Click login");
     setEmailErr("");
     setPasswordErr("");
     validation()
-      .then((res) => {
-        if (res.email === '' && res.password === '') {
-          authenticate(email,password)
-          .then((data)=>{
+      .then(() => {
+        console.log("Validation passed");
+        login(email, password)
+          .then(() => {
+            console.log("Entered then after login");
             setLoginErr('');
             saveDesiteEventInDB("login", "");
-            if (redirect === '') {
-              Navigate('/');
+            //navigate(redirect, { replace: true });
+            window.location.href = redirect;
+            /* if (redirect === '') {
+              navigate('/allcourses');
             } else {
               window.location.href = redirect;
-            }
-          },(err)=>{
-            // console.log(err);
-            setLoginErr(err.message)
+            } */
           })
-          .catch(err=>console.log(err))
-        }
-      }, err => console.log(err))
-      .catch(err => console.log(err));
-  }
+          .catch(err => {
+            console.log("Login error:", err.message);
+            setLoginErr(err.message);
+          });
+      })
+      .catch(() => {
+        // Validation failed, do nothing here
+        console.log("Validation failed");
+      });
+  };
 
   if (utmTags.nam === 'restricted') {
     nam = "Faça login para acessar esta página:";
@@ -86,9 +100,21 @@ const Logon = ({useRodape = true, redirect = ""}) => {
 
   return (
     <>
-    <section id="form" className="section">
-    <img src="/site_de_logo.png" alt="Logo do Domínio Elétrico" width="280" className="logo-image" />
+    <section id="form" className="sectionf">
+    <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
     <div className="auth-container">
+    {user ? (
+      <>
+      <h2>Você já está logado como <b>{user.attributes?.name || user.cognitoUser.getUsername()}</b>.</h2>
+      <p>Se desejar sair da sua conta, clique no botão abaixo:</p>
+      <div className='form'>
+        <div className='formfield'>
+          <Button type='button' variant='contained' onClick={logout}>Sair da conta</Button>
+        </div>
+      </div>
+    </>
+     ) : (
+      <>
       <h2>{nam}</h2>
       <div className='contact_form'>
         <div className="formfield">
@@ -115,6 +141,8 @@ const Logon = ({useRodape = true, redirect = ""}) => {
       </div>
       <h3>Não tem conta ainda? <br /><a href="signup">Crie uma gratuitamente</a></h3>
       <h3>Esqueceu sua senha? <br /><a href="recover">Resete a sua senha</a></h3>
+      </>
+      )} 
     </div>
     </section>
     {useRodape && <Rodape />}

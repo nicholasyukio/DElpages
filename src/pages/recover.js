@@ -1,7 +1,6 @@
 import { Button, TextField} from '@mui/material';
 import React, { useState } from "react";
-import { CognitoUser } from "amazon-cognito-identity-js";
-import userpool from '../userpool';
+import { useAuth } from '../services/AuthContext.js';
 import Rodape from "./rodape";
 
 const Recover = () => {
@@ -11,31 +10,20 @@ const Recover = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const getUser = () => {
-    return new CognitoUser({
-      Username: email.toLowerCase(),
-      Pool: userpool
-    });
-  };
+  const { forgotPassword, confirmPassword: confirmPasswordCognito } = useAuth();
 
-  const sendCode = event => {
+  const sendCode = async (event) => {
     event.preventDefault();
-
-    getUser().forgotPassword({
-      onSuccess: data => {
-        console.log("onSuccess:", data);
-      },
-      onFailure: err => {
-        console.error("onFailure:", err);
-      },
-      inputVerificationCode: data => {
-        console.log("Input code:", data);
+    try {
+      await forgotPassword(email.toLowerCase(), () => {
         setStage(2);
-      }
-    });
+      });
+    } catch (err) {
+      console.error("Erro ao enviar código:", err);
+    }
   };
 
-  const resetPassword = event => {
+  const resetPassword = async (event) => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
@@ -43,21 +31,18 @@ const Recover = () => {
       return;
     }
 
-    getUser().confirmPassword(code, password, {
-      onSuccess: data => {
-        console.log("onSuccess:", data);
-        setStage(3);
-      },
-      onFailure: err => {
-        console.error("onFailure:", err);
-      }
-    });
+    try {
+      await confirmPasswordCognito(email.toLowerCase(), code, password);
+      setStage(3);
+    } catch (err) {
+      console.error("Erro ao redefinir senha:", err);
+    }
   };
 
   return (
     <>
     <section id="form" className="section">
-    <img src="/site_de_logo.png" alt="Logo do Domínio Elétrico" width="280" className="logo-image" />
+    <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
     <div className="auth-container">
       {stage === 1 && (
         <>

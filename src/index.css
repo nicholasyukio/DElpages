@@ -114,11 +114,106 @@ code {
   background-color: #17da58; /* Cor de fundo ao passar o mouse */
 }
 
+.courses-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr; /* default: 1 column */
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 columns */
+  }
+}
+
+@media (min-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr); /* desktop: 3 columns */
+  }
+}
+
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+  color: #000; /* black text */
+  text-align: left;
+}
+
+.course-container {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+  align-items: center;
+  color: #000; /* black text */
+}
+
+.course_section {
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.course_section h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.lessons {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lesson {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.lesson-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.lesson-description {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.lesson-text {
+  text-align: left;
+}
+
+
 .section {
   padding: 30px 0;
   text-align: center;
   grid-template-columns: 1fr 2fr; /* Define uma coluna para a imagem e uma coluna para o texto */
   gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.sectionf {
+  padding: 30px 0;
+  text-align: center;
+  gap: 20px; 
 }
 
 /* Estilos de layout responsivo para dispositivos móveis */
@@ -387,4 +482,97 @@ display: none;
 .birthday_label {
   font-weight: 700;
   margin: 0px 0px 10px 0px;
+}
+
+.enroll-button {
+  width: auto; /* Set the button width to 100% */
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 0.3rem 0.75rem;
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 20px;
+  text-decoration: none; /* Remove a decoração de link do texto */
+  display: block; /* Change to block-level element */
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  margin: 0 auto; /* Center the button horizontally */
+}
+.enroll-button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Course page */
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Optional, helps on smaller screens */
+  gap: 1rem; /* Optional spacing between items */
+}
+
+.course-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.enrollment-status {
+  display: flex;
+  align-items: center;
+}
+
+.enrolled-badge {
+  background-color: #28a745; /* A green "success" tone */
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.not-enrolled-badge {
+  background-color: #4b4b4b; /* A green "success" tone */
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.premium-course {
+  background-color: #eebb22; /* gold */
+  color: #121213;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.free-course {
+  background-color: #339af0; /* light blue */
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.enrollment-status {
+  font-style: italic;
+  color: #888;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Optional: space between the items */
 }

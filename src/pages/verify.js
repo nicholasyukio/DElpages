@@ -17,7 +17,7 @@ function VerifyAccount() {
   return (
     <>
     <section id="form" className="section">
-    <img src="/site_de_logo.png" alt="Logo do Domínio Elétrico" width="280" className="logo-image" />
+    <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
     <h1>Verificação de conta</h1>
     <div className="form-container">
       <h2>Agora falta verificar seu email ({utmTags.email})</h2>

@@ -4,11 +4,17 @@ import React, { useState } from 'react';
 import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import Checkout from './checkout.js';
+import CheckoutSite from './checkout_site.js';
+import { AllCoursesList, CourseList, Lesson } from './course_list';
+import { useParams } from 'react-router-dom';
+import userpool from '../userpool';
 //import OfertaBreve from './oferta_breve.js';
 //import { getCurrentTimeFromWorldTimeAPI, logEvent, SectionTracker, sendEventsToAPI } from './tracking.js';
 //import { v4 as uuidv4 } from 'uuid';
 //import {saveDesiteEventInDB} from './tracking';
 import { PageList, KnowCourseFromBlogButton, AnswerText} from './answer_post';
+import LessonSidebar from '../components/LessonSidebar';
+import '../components/LessonSidebar.css';
 
 /* const extractUTMTags = () => {
     const queryString = window.location.search;
@@ -39,8 +45,8 @@ window.addEventListener('beforeunload', () => {
     sendEventsToAPI();
 }); */
 
-/* let user=userpool.getCurrentUser();
-console.log(user); */
+let user=userpool.getCurrentUser();
+console.log(user);
 
 /* const Home = () => {
     const [showOffer, setGlobalVariable] = useState(false);
@@ -141,7 +147,8 @@ const Direto = () => {
         </section>
         <BriefDescription />
         <CourseContent />
-        <Checkout isMobile={isMobile}/>
+        <Checkout isMobile={isMobile}
+        />
         <Depoimentos />
         {/* <StudentsProfile /> */}
         <ElectronicsContent />
@@ -222,7 +229,130 @@ const Answer = () => {
 	);
 };
 
-export { Espera, Direto, Answer, AnswerList };
+const AllCoursesPage = () => {
+    const { courseId } = useParams();
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+    return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <AllCoursesList/>
+        </section>
+        <Rodape />
+        </>
+    );
+};
+
+const CoursePage = () => {
+    const { courseId } = useParams();
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+    return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <CourseList courseId={courseId}/>
+        </section>
+        <Rodape />
+        </>
+    );
+};
+
+const SiteCheckout = () => {
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+    return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+        <CheckoutSite isMobile={isMobile}/>
+        </section>
+        <Rodape />
+        </>
+    );
+};
+
+const LessonPage = () => {
+    const { courseId, sectionId, lessonId } = useParams();
+    const [isMobile, setIsMobile] = React.useState(false);
+    const [currentSectionId, setCurrentSectionId] = useState(sectionId);
+    const [currentLessonId, setCurrentLessonId] = useState(lessonId);
+    
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    
+    React.useEffect(() => {
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
+    const handleLessonChange = (newSectionId, newLessonId) => {
+        setCurrentSectionId(newSectionId);
+        setCurrentLessonId(newLessonId);
+    };
+
+    return (
+        <>
+        <LessonSidebar 
+            courseId={courseId} 
+            currentLessonId={currentLessonId}
+            onLessonChange={handleLessonChange}
+        />
+            <section className="section">
+            <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+            {/* <div className="lesson-content" style={{ marginLeft: '300px' }}> */}
+                <Lesson 
+                    courseId={courseId} 
+                    sectionId={currentSectionId} 
+                    lessonId={currentLessonId} 
+                />
+            {/* </div> */}
+            </section>
+            <Rodape />
+        </>
+    );
+};
+
+
+
+export { SiteCheckout, AllCoursesPage, CoursePage, LessonPage, Espera, Direto, Answer, AnswerList };
 
 function NewIntro() {
     // State to track the device type
