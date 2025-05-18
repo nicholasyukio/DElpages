@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../services/AuthContext.js';
 import { useParams, useNavigate } from 'react-router-dom';
 
+const baseAPI_URL = process.env.REACT_APP_BACKEND_API_BASE_ENDPOINT;
+
 const LessonSidebar = ({ courseId, currentLessonId, onLessonChange }) => {
   const { logout } = useAuth();
 
@@ -23,7 +25,7 @@ const LessonSidebar = ({ courseId, currentLessonId, onLessonChange }) => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/courses/${courseId}`);
+        const res = await fetch(`${baseAPI_URL}/courses/${courseId}`);
         if (!res.ok) throw new Error('Course not found');
         const data = await res.json();
         setCourse(data);

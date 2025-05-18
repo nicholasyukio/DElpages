@@ -17,6 +17,8 @@ const extractURLparams = () => {
 };
 
 const URLparams = extractURLparams();
+const baseAPI_URL = process.env.REACT_APP_BACKEND_API_BASE_ENDPOINT;
+const base_URL = process.env.REACT_APP_BASE_URL;
 
 function Video({ videoId, isMobileDevice, videoThumbnailURL }) {
   console.log("Video props:", { videoId, isMobileDevice, videoThumbnailURL });
@@ -81,7 +83,7 @@ const Lesson = ({ courseId, sectionId, lessonId }) => {
   // Fetch lesson data
   const getLesson = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/courses/${courseId}/sections/${sectionId}/lessons/${lessonId}`);
+      const response = await fetch(`${baseAPI_URL}/courses/${courseId}/sections/${sectionId}/lessons/${lessonId}`);
       if (!response.ok) throw new Error('Failed to fetch lesson data');
 
       const data = await response.json();
@@ -96,7 +98,7 @@ const Lesson = ({ courseId, sectionId, lessonId }) => {
   useEffect(() => {
     const fetchVideoInfo = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/videoinfo/${videoId}`);
+        const response = await fetch(`${baseAPI_URL}/videoinfo/${videoId}`);
         if (!response.ok) throw new Error('Failed to fetch video info');
 
         const data = await response.json();
@@ -133,7 +135,7 @@ const Lesson = ({ courseId, sectionId, lessonId }) => {
         <Video videoId={videoId} isMobileDevice={isMobile} videoThumbnailURL={videoThumbnailURL} />
       </div>
       <p className="lesson-text">{lessonInfo.description || 'This is the text under the video, aligned to the left.'}</p>
-      <a href={`http://localhost:3000/coursepage/${courseId}`}>
+      <a href={`${base_URL}/coursepage/${courseId}`}>
         Página de conteúdo do curso
       </a>
     </div>
@@ -150,7 +152,7 @@ const AllCoursesList = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/courses');
+      const response = await fetch('${baseAPI_URL}/courses');
       if (!response.ok) throw new Error('Failed to fetch courses');
       const data = await response.json();
       setCourses(data);
@@ -167,7 +169,7 @@ const AllCoursesList = () => {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:5000/get-user-data/${user.cognitoUser.username}`);
+      const res = await fetch(`${baseAPI_URL}/get-user-data/${user.cognitoUser.username}`);
       const data = await res.json(); // assume it's a list of course IDs
       setEnrolledCourseIds(data.courses_enrolled);
     } catch (err) {
@@ -221,7 +223,7 @@ const AllCoursesList = () => {
                     <span className="not-enrolled-badge">Não iniciado</span>
                   )}
                 </p>
-                <a href={`http://localhost:3000/coursepage/${course.courseId}`}>
+                <a href={`${base_URL}/coursepage/${course.courseId}`}>
                   {enrollmentLoading ? (
                       <span>Verificando...</span>
                     ) : enrolledCourseIds.includes(course.courseId) ? (
@@ -265,7 +267,7 @@ const CourseList = ({ courseId }) => {
   const getUserInfo = async () => {
     if (user) {
       try {
-        const res = await fetch(`http://localhost:5000/get-user-data/${user.cognitoUser.username}`);
+        const res = await fetch(`${baseAPI_URL}/get-user-data/${user.cognitoUser.username}`);
         const data = await res.json();
         console.log("userData: ");
         console.log(data);
@@ -280,7 +282,7 @@ const CourseList = ({ courseId }) => {
 
   const fetchCourse = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/courses/${courseId}`);
+      const res = await fetch(`${baseAPI_URL}/courses/${courseId}`);
       if (!res.ok) {
         throw new Error('Course not found');
       }
@@ -305,7 +307,7 @@ const CourseList = ({ courseId }) => {
 
   return (
     <div className="course-container">
-      <a href={`http://localhost:3000/allcourses`}>
+      <a href={`${base_URL}/allcourses`}>
         Voltar para a listagem de todos os cursos
       </a>
       <div className="course-header">
@@ -343,7 +345,7 @@ const CourseList = ({ courseId }) => {
                 <h4 className="lesson-title">{lesson.title}</h4>
                 <p className="lesson-description">{lesson.description}</p>
                 {isEnrolled && (
-                    <a href={`http://localhost:3000/courses/${courseId}/sections/${section.sectionId}/lessons/${lesson.lessonId}`}>
+                    <a href={`${base_URL}/courses/${courseId}/sections/${section.sectionId}/lessons/${lesson.lessonId}`}>
                     Assistir à aula
                     </a>
                 )}
