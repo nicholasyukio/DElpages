@@ -102,7 +102,7 @@ const Logon = ({useRodape = true}) => {
     <>
     <section id="form" className="sectionf">
     <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-    <div className="auth-container">
+    <div className="auth-container-signup">
     {user ? (
       <>
       <h2>Você já está logado como <b>{user.attributes?.name || user.cognitoUser.getUsername()}</b>.</h2>

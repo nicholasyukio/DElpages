@@ -93,8 +93,8 @@ export function FilteredPageList({ count }) {
           </Link>
           <h1>Conheça também a parte de aulas gratuitas do site Domínio Elétrico</h1>
           <p>Aqui no site Domínio Elétrico, você tem acesso a aulas avulsas sobre vários assuntos de circuitos elétricos. São aulas teóricas, aulas de exercícios resolvidos e também vídeos de experimentos em laboratório. São aulas avulsas, sem ordem definida, que servem como amostra do que você pode aprender no curso pago. Você pode acessar e assistir às aulas aqui no site, sem a interrupção de anúncios como no YouTube, com uma conta gratuita aqui no site.</p>
-          <Link to={`/`}>
-          Conhecer a parte de aulas gratuitas do site Domínio Elétrico
+          <Link to={`/signup`}>
+          Começar a estudar gratuitamente
           </Link>
       </div>
   );
@@ -107,16 +107,16 @@ export function KnowCourseFromBlogButton({ buttonName }) {
           event: 'clickFromBlog', // Custom event name
           buttonName: 'clickFromBlog', // Custom event data, you can adjust this as needed
       });
-      notify("CLIQUE DE POST", "Alguém acessou um answer_post e clicou no botão!");
+      notify("CLIQUE DE POST", "Alguém acessou um answer_post e clicou no botão para SignUp!");
       // logEvent('ButtonClick', `${buttonName} clicked`);
       // saveDesiteEventInDB("blog_click", utmTags.v);
       // Redirect the user after pushing the data to GTM if needed
-      window.location.href = '/direto-dominio-eletrico'; // Redirect to the form anchor
+      window.location.href = '/signup'; // Redirect to the form anchor
   };
 
   return (
       <button className="btn-inscricao" onClick={handleClick}>
-          Conhecer o curso Domínio Elétrico
+          Começar a estudar gratuitamente
       </button>
   );
 }
@@ -149,6 +149,7 @@ export const AnswerText = () => {
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {content}
       </ReactMarkdown>
+      <h3><b>Para estudar circuitos elétricos com aulas em vídeo do Prof. Nicholas Yukio, clique no botão abaixo para criar uma conta gratuita no nosso site:</b></h3>
       <KnowCourseFromBlogButton buttonName="BlogButton" />
       <FilteredPageList count={10} />
     </div>

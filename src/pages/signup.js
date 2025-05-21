@@ -5,6 +5,7 @@ import Rodape from './rodape.js';
 import {extractUTMTags} from './utm_tags.js';
 import Cookies from 'js-cookie';
 import { useAuth } from '../services/AuthContext.js';
+import { notify } from '../services/notify';
 
 const utmTags = extractUTMTags();
 
@@ -37,23 +38,23 @@ const Signup = () => {
         setNameErr("Digite o seu nome");
         setEmailErr("Digite o seu email");
         setPasswordErr("Digite a senha desejada");
-        resolve({name: "Name is Required", email:"Email is Required",password:"Password is required"});
+        resolve({name: "Nome é obrigatório", email:"email necessário",password:"senha necessária"});
       }
       else if (name === '') {
         setNameErr("Digite o seu nome");
-        resolve({name: "Name is required", email:"",password:""});
+        resolve({name: "Nome é obrigatório", email:"",password:""});
       }
       else if (email === '') {
         setEmailErr("Digite o seu email");
-        resolve({name: "", email:"Email is Required",password:""});
+        resolve({name: "", email:"email necessário",password:""});
       }
       else if (password === '') {
         setPasswordErr("Digite a senha desejada");
-        resolve({name: "", email:"",password:"Password is required"});
+        resolve({name: "", email:"",password:"senha necessária"});
       }
       else if (password.length < 8) {
         setPasswordErr("Mínimo de 8 caracteres");
-        resolve({name: "", email:"",password:"must be 8 character"});
+        resolve({name: "", email:"",password:"precisa ter pelo menos 8 caracteres"});
       }
       else{
         resolve({name: "", email:"",password:""});
@@ -76,6 +77,7 @@ const Signup = () => {
                 buttonName: 'signUpButton',
               });
               const user_id = data.userSub;
+              notify("SITE SIGNUP", `${name} (${email}) se cadastrou no site!`);
               Navigate(`/verify?email=${email}`);
             })
             .catch((err) => {
@@ -92,8 +94,13 @@ const Signup = () => {
     <>
     <section id="form" className="section">
     <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
-    <div className="auth-container">
+    <div className="auth-container-signup">
       <h2>Crie uma conta no site gratuitamente:</h2>
+      <ul className="signup-benefits">
+        <li>✅ 7 cursos/playlists gratuitos de circuitos elétricos</li>
+        <li>✅ Total de 174 aulas gratuitas</li>
+        <li>✅ Se quiser mais, conteúdo premium depois</li>
+      </ul>
       <div className='form'>
         <div className="formfield">
           <TextField
