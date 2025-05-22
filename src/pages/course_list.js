@@ -134,7 +134,7 @@ const Lesson = ({ courseId, sectionId, lessonId }) => {
       <div className="video-wrapper">
         <Video videoId={videoId} isMobileDevice={isMobile} videoThumbnailURL={videoThumbnailURL} />
       </div>
-      <p className="lesson-text">{lessonInfo.description || 'This is the text under the video, aligned to the left.'}</p>
+      <p className="lesson-text">{lessonInfo.description || ''}</p>
       <a href={`${base_URL}/coursepage/${courseId}`}>
         Página de conteúdo do curso
       </a>
