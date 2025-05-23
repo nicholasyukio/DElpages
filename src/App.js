@@ -5,12 +5,12 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { AllCoursesPage, CoursePage, LessonPage, Espera, Direto, Answer, AnswerList, SiteCheckout } from "./pages/index";
+import { AllCoursesPage, CoursePage, Home, LessonPage, Espera, Direto, Answer, AnswerList, SiteCheckout } from "./pages/index";
 import PoliticaDePrivacidade from "./pages/politicadeprivacidade";
 import TermosDeUso from "./pages/termosdeuso";
 import ProtectedRoute from './components/ProtectedRoute';
 import Login from "./pages/login";
-import Signup from './pages/signup';
+import {Signup} from './pages/signup';
 import Logon from './pages/logon';
 import VerifyAccount from './pages/verify';
 import Recover from "./pages/recover.js"; 
@@ -38,7 +38,7 @@ export default function App() {
       <CookieConsent />
       <Routes>
         {/* Homepage */}
-        <Route path="/" element={<Direto />} />
+        <Route path="/" element={<Home />} />
         {/* Course Landing Page */}
         <Route path="/espera-dominio-eletrico" element={<Espera />} />
         <Route path="/direto-dominio-eletrico" element={<Direto />} />

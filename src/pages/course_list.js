@@ -206,6 +206,7 @@ const AllCoursesList = () => {
         {courses.map(course => (
           <div key={course.courseId} className="course-card">
             <h2>{course.title}</h2>
+            <img className="thumbnail" src={course.thumbnail_url} alt="Thumbnail do curso" />
             <p>{course.description}</p>
             <p><strong>Professor:</strong> {course.instructor}</p>
             {course.availability === 'free' ? (
@@ -239,6 +240,87 @@ const AllCoursesList = () => {
     </div>
   );
 };
+
+const AllCoursesListForHome = () => {
+  const { login, logout, user } = useAuth();
+  const [courses, setCourses] = useState([]);
+  const [loadingCourses, setLoadingCourses] = useState(true);
+  const [enrolledCourseIds, setEnrolledCourseIds] = useState([]);
+  const [enrollmentLoading, setEnrollmentLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const fetchCourses = async () => {
+    try {
+      const response = await fetch(`${baseAPI_URL}/courses`);
+      if (!response.ok) throw new Error('Failed to fetch courses');
+      const data = await response.json();
+      setCourses(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoadingCourses(false);
+    }
+  };
+
+  const fetchEnrolledCourses = async () => {
+    if (!user) {
+      setEnrollmentLoading(false);
+      return;
+    }
+    try {
+      const res = await fetch(`${baseAPI_URL}/get-user-data/${user.cognitoUser.username}`);
+      const data = await res.json(); // assume it's a list of course IDs
+      setEnrolledCourseIds(data.courses_enrolled);
+    } catch (err) {
+      console.error("Failed to fetch enrolled courses", err);
+    } finally {
+      setEnrollmentLoading(false);
+    }
+  };
+  
+  useEffect(() => {
+    fetchCourses();
+    fetchEnrolledCourses();
+  }, []);
+
+  if (loadingCourses) return <p>Loading courses...</p>;
+  if (error) return <p>Error: {error}</p>;
+  if (courses.length === 0) return <p>No courses found.</p>;
+
+  return (
+    <div className="course-container">
+      <h1>Todos os cursos disponíveis no site</h1>
+      <div className="courses-grid">
+        {courses.map(course => (
+          <div key={course.courseId} className="course-card">
+            <h2>{course.title}</h2>
+            <img className="thumbnail" src={course.thumbnail_url} alt="Thumbnail do curso" />
+            <p>{course.description}</p>
+            <p><strong>Professor:</strong> {course.instructor}</p>
+            {course.availability === 'free' ? (
+            <span className="free-course">Gratuito</span>
+            ):(
+            <span className="premium-course">Premium</span>
+            )}            
+{/*             <div className="flex-row">
+                <a href={`${base_URL}/coursepage/${course.courseId}`}>
+                  {enrollmentLoading ? (
+                      <span>Verificando...</span>
+                    ) : enrolledCourseIds.includes(course.courseId) ? (
+                      <span>Continuar</span>
+                    ) : (
+                      <span>Conhecer</span>
+                    )}
+                </a>
+            </div> */}
+            <div className='create-account'><a href='#form'><h4>Criar minha conta</h4></a></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 const CourseList = ({ courseId }) => {
   const [course, setCourse] = useState(null);
@@ -358,4 +440,4 @@ const CourseList = ({ courseId }) => {
   );
 };
 
-export {AllCoursesList, CourseList, Lesson};
+export {AllCoursesList, AllCoursesListForHome, CourseList, Lesson};

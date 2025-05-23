@@ -5,7 +5,7 @@ import { toggleLessonList } from './course_content_script.js';
 import Rodape from './rodape.js';
 import Checkout from './checkout.js';
 import CheckoutSite from './checkout_site.js';
-import { AllCoursesList, CourseList, Lesson } from './course_list';
+import { AllCoursesList, AllCoursesListForHome, CourseList, Lesson } from './course_list';
 import { useParams } from 'react-router-dom';
 import userpool from '../userpool';
 //import OfertaBreve from './oferta_breve.js';
@@ -15,6 +15,7 @@ import userpool from '../userpool';
 import { PageList, KnowCourseFromBlogButton, AnswerText} from './answer_post';
 import LessonSidebar from '../components/LessonSidebar';
 import '../components/LessonSidebar.css';
+import { SignupSite } from './signup.js';
 
 /* const extractUTMTags = () => {
     const queryString = window.location.search;
@@ -158,6 +159,35 @@ const Direto = () => {
         {/* <EletronQuest />
         <SpecialWarnings /> */}
         <Bio />
+        <Rodape />
+        </>
+	);
+};
+
+const Home = () => {
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+	return (
+        <>
+        <section className="section">
+        <img src="/dominio_eletrico_logo_2023.png" alt="Logo do Domínio Elétrico" width="300" className="logo-image" />
+		<NewIntroSite />
+        <AllCoursesListForHome/>
+        </section>
+        <BriefDescriptionSite/>
+        <SignupSite />
+        <BioSite />
         <Rodape />
         </>
 	);
@@ -352,7 +382,7 @@ const LessonPage = () => {
 
 
 
-export { SiteCheckout, AllCoursesPage, CoursePage, LessonPage, Espera, Direto, Answer, AnswerList };
+export { SiteCheckout, AllCoursesPage, Home, CoursePage, LessonPage, Espera, Direto, Answer, AnswerList };
 
 function NewIntro() {
     // State to track the device type
@@ -382,6 +412,41 @@ function NewIntro() {
         return(
             <div className="content-container-header">
                 <NewHeaderCTA isMobile={isMobile}/>
+                <div className='empty-div-header'></div>
+            </div>
+        );
+    }
+
+}
+
+function NewIntroSite() {
+    // State to track the device type
+    const [isMobile, setIsMobile] = React.useState(false);
+    // Function to check if the device is a mobile
+    const checkIfMobile = () => {
+        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+        setIsMobile(isMobileDevice);
+    };
+
+    // Check the device type when the component mounts
+    React.useEffect(() => {
+        checkIfMobile();
+        // Add event listener to check if the device type changes
+        window.addEventListener('resize', checkIfMobile);
+        // Remove event listener on component unmount
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+    if (isMobile) {
+        return(
+            <div className="content-container-header">
+                <div className='empty-div-header'></div>
+                <NewHeaderCTASite isMobile={isMobile}/>
+            </div>
+        );
+    } else {
+        return(
+            <div className="content-container-header">
+                <NewHeaderCTASite isMobile={isMobile}/>
                 <div className='empty-div-header'></div>
             </div>
         );
@@ -427,6 +492,26 @@ function FormButton({ buttonName }) {
     );
 }
 
+function FormButtonSite({ buttonName }) {
+    const handleClick = () => {
+        // Push the data to the dataLayer when the button is clicked
+        /* window.dataLayer.push({
+            event: 'clickForOfertaDE', // Custom event name
+            buttonName: 'clickForOfertaDE', // Custom event data, you can adjust this as needed
+        });
+        logEvent('ButtonClick', `${buttonName} clicked`);
+        saveDesiteEventInDB("click_oferta", utmTags.v); */
+        // Redirect the user after pushing the data to GTM if needed
+        window.location.href = '#form'; // Redirect to the form anchor
+    };
+
+    return (
+        <button className="btn-inscricao" onClick={handleClick}>
+            Criar minha conta no site
+        </button>
+    );
+}
+
 function NewHeaderCTA({isMobile}) {
     if (isMobile) {
         return (
@@ -444,6 +529,28 @@ function NewHeaderCTA({isMobile}) {
                 <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
                 <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este curso online para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Veja todas as informações sobre o conteúdo do curso nesta página.</p>
                 <FormButton buttonName="HeaderCTA" />
+            </div>
+          );
+    }
+}
+
+function NewHeaderCTASite({isMobile}) {
+    if (isMobile) {
+        return (
+            <div id="headercta" className="new-header-container">
+                {/* <SectionTracker sectionId="HeaderCTA" /> */}
+                <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
+                <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este site para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Temos cursos gratuitos e pagos na nossa área de membros. Veja abaixo.</p>
+                <FormButtonSite buttonName="HeaderCTA" />
+            </div>
+          );
+    } else {
+        return (
+            <div id="headercta" className="new-header-container">
+                {/* <SectionTracker sectionId="HeaderCTA" /> */}
+                <h2 className='highlighted-heading'>Está difícil aprender a matéria de circuitos elétricos?</h2>
+                <p>Eu, <b>Prof. Nicholas Yukio</b>, engenheiro eletrônico pelo ITA, criei este site para quem não consegue aprender só com o material do curso técnico ou faculdade.</p><p>Temos cursos gratuitos e pagos na nossa área de membros. Veja abaixo.</p>
+                <FormButtonSite buttonName="HeaderCTA" />
             </div>
           );
     }
@@ -625,6 +732,33 @@ function BriefDescription() {
     );
 }
 
+function BriefDescriptionSite() {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    const handleButtonClick = () => {
+      setIsVideoLoaded(!isVideoLoaded);
+    };
+
+    return (     
+    <section className="section">
+    <h2 align="center">O Domínio Elétrico é um site para estudar circuitos elétricos. Como assim?</h2>
+    <div className="content-container">
+        {/* <SectionTracker sectionId="BriefDescription" /> */}
+        <div>
+        {isVideoLoaded ? <Video /> : <CircuitImage />}
+        <button className='btn-video' onClick={handleButtonClick}>Ver vídeo sobre o curso</button>
+        </div>
+        <div className="text">
+        <p><strong>"Circuitos Elétricos"</strong> é o nome comum para matérias estudadas em cursos superiores de engenharia, principalmente elétrica e eletrônica. Essa matéria costuma ser ministrada nas disciplinas de Circuitos Elétricos I, II e III e é fundamental para a formação de profissionais dessas engenharias.</p>
+        <p><strong>Porém,</strong> é comum que os alunos de faculdades brasileiras, tanto públicas quanto privadas, tenham dificuldades para aprender a matéria apenas com o material e aulas do professor da faculdade. O site Domínio Elétrico vem atender melhor essa demanda com diversos cursos de circuitos elétricos com aulas didáticas, exercícios resolvidos e muito mais.</p>
+        <p>Com uma conta gratuita você já consegue começar a aprender aqui no site Domínio Elétrico.</p>
+        <FormButtonSite buttonName="BriefDescription" />
+        </div>
+    </div>
+    </section>
+    );
+}
+
 function Bio() {
     return (
     <section className="section">
@@ -643,6 +777,30 @@ function Bio() {
         <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
         <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
         <FormButton buttonName="Bio" />
+        </div>
+    </div>
+    </section>
+    );
+}
+
+function BioSite() {
+    return (
+    <section className="section">
+    <div className="content-container">
+    {/* <SectionTracker sectionId="Bio" /> */}
+        <figure>
+        <img src="/foto_pessoal_pequena-768x765.jpg" alt="Imagem da Seção 1" width="360" className="bio-image" />
+        </figure>
+        <div className="text">
+        <h2>Sobre o Prof. Nicholas Yukio</h2>
+        <p>Sou engenheiro eletrônico formado no ITA em 2017. </p>
+        <p>Comecei a vida profissional como professor da disciplina de circuitos elétricos no ITA, onde trabalhei de 2018 até março de 2020.</p>
+        <p>Em 2019, levei meu ensino de circuitos elétricos para a internet, com minhas aulas públicas no Canal do Elétron.</p>
+        <p>No início de 2020, criei meu curso online de circuitos elétricos, o Domínio Elétrico, focado em alunos de engenharia.</p>
+        <p>De lá para cá, já são cerca de 500 alunos do curso que aprendem comigo e que podem tirar dúvidas individualmente comigo.</p>
+        <p>Muitos são alunos de diversas faculdades, públicas e privadas, mas há também alunos de cursos técnicos e profissionais já formados que querem revisar seus conhecimentos.</p>
+        <p>A minha missão aqui é: ensinar da melhor forma possível quem quer estudar sério circuitos elétricos.</p>
+        <FormButtonSite buttonName="Bio" />
         </div>
     </div>
     </section>
