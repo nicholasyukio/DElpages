@@ -9,10 +9,9 @@ export async function notify(title, message) {
   try {
     const response = await fetch(`${baseAPI_URL}/notify`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload),
+      keepalive: true
     });
     const result = await response.json();
     console.log("Nofify response:", result);
