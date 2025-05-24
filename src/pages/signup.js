@@ -105,6 +105,7 @@ const Signup = () => {
         <div className="formfield">
           <TextField
             value={name}
+            fullWidth
             onChange={(e) => formInputChange("name", e.target.value)}
             label="nome"
             helperText={nameErr}
@@ -113,6 +114,7 @@ const Signup = () => {
         <div className="formfield">
           <TextField
             value={email}
+            fullWidth
             onChange={(e) => formInputChange("email", e.target.value)}
             label="email"
             helperText={emailErr}
@@ -121,6 +123,7 @@ const Signup = () => {
         <div className='formfield'>
           <TextField
             value={password}
+            fullWidth
             onChange={(e) => { formInputChange("password", e.target.value) }}
             type="password"
             label="senha"
@@ -232,6 +235,7 @@ const SignupSite = () => {
         <div className="formfield">
           <TextField
             value={name}
+            fullWidth
             onChange={(e) => formInputChange("name", e.target.value)}
             label="nome"
             helperText={nameErr}
@@ -240,6 +244,7 @@ const SignupSite = () => {
         <div className="formfield">
           <TextField
             value={email}
+            fullWidth
             onChange={(e) => formInputChange("email", e.target.value)}
             label="email"
             helperText={emailErr}
@@ -248,6 +253,7 @@ const SignupSite = () => {
         <div className='formfield'>
           <TextField
             value={password}
+            fullWidth
             onChange={(e) => { formInputChange("password", e.target.value) }}
             type="password"
             label="senha"
